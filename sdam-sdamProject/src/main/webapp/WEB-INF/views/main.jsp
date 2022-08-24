@@ -218,20 +218,16 @@
 					치매예방에도 상당한 효과가 있는 것으로 입증됐습니다. 또한 우울증이 있거나, 주의력이
 					떨어지는 사람들에게도 효과가 있는 것으로 확인됩니다.</p>
 					<h5 class="mb-3">
-						<i class="far fa-check-circle text-primary me-3"></i>Free Car
-						Parking
+						<i class="far fa-check-circle text-primary me-3"></i>우울증 감소
 					</h5>
 					<h5 class="mb-3">
-						<i class="far fa-check-circle text-primary me-3"></i>Natural
-						Environment
+						<i class="far fa-check-circle text-primary me-3"></i>감정에 관한 의사소통 향상
 					</h5>
 					<h5 class="mb-3">
-						<i class="far fa-check-circle text-primary me-3"></i>Professional
-						Guide & Security
+						<i class="far fa-check-circle text-primary me-3"></i>섬세한 운동 능력 향상
 					</h5>
 					<h5 class="mb-3">
-						<i class="far fa-check-circle text-primary me-3"></i>World Best
-						Animals
+						<i class="far fa-check-circle text-primary me-3"></i>작업의 집중력 향상
 					</h5>
 					<a class="btn btn-primary py-3 px-5 mt-3" href="">Read More</a>
 				</div>
@@ -253,26 +249,26 @@
 				<div class="col-md-6 col-lg-3 text-center wow fadeIn"
 					data-wow-delay="0.1s">
 					<i class="fa fa-paw fa-3x text-primary mb-3"></i>
-					<h1 class="text-white mb-2" data-toggle="counter-up">12345</h1>
-					<p class="text-white mb-0">Total Animal</p>
+					<h1 class="text-white mb-2" data-toggle="counter-up">95000</h1>
+					<p class="text-white mb-0">2021년 유기견 수</p>
 				</div>
 				<div class="col-md-6 col-lg-3 text-center wow fadeIn"
 					data-wow-delay="0.3s">
 					<i class="fa fa-users fa-3x text-primary mb-3"></i>
-					<h1 class="text-white mb-2" data-toggle="counter-up">12345</h1>
-					<p class="text-white mb-0">Daily Vigitors</p>
+					<h1 class="text-white mb-2" data-toggle="counter-up">864805</h1>
+					<p class="text-white mb-0">2021년 치매상병자 수</p>
 				</div>
 				<div class="col-md-6 col-lg-3 text-center wow fadeIn"
 					data-wow-delay="0.5s">
 					<i class="fa fa-certificate fa-3x text-primary mb-3"></i>
 					<h1 class="text-white mb-2" data-toggle="counter-up">12345</h1>
-					<p class="text-white mb-0">Total Membership</p>
+					<p class="text-white mb-0">대기 중인 테라피스트</p>
 				</div>
 				<div class="col-md-6 col-lg-3 text-center wow fadeIn"
 					data-wow-delay="0.7s">
 					<i class="fa fa-shield-alt fa-3x text-primary mb-3"></i>
 					<h1 class="text-white mb-2" data-toggle="counter-up">12345</h1>
-					<p class="text-white mb-0">Save Wild Life</p>
+					<p class="text-white mb-0">대기 중인 테라피독</p>
 				</div>
 			</div>
 		</div>
@@ -280,7 +276,7 @@
 	<!-- Facts End -->
 
 	<!-- Service Start -->
-	<div class="container-xxl py-5">
+	<!-- <div class="container-xxl py-5">
 		<div class="container">
 			<div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
 				<div class="col-lg-6">
@@ -362,7 +358,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<!-- Service End -->
 
 	<!-- Animal Start -->
@@ -372,16 +368,14 @@
 				data-wow-delay="0.1s">
 				<div class="col-lg-6">
 					<p>
-						<span class="text-primary me-2">#</span>Our Animals
+						<span class="text-primary me-2">#</span>쓰담쓰담의 테라피독
 					</p>
 					<h1 class="display-5 mb-0">
-						Let`s See Our <span class="text-primary">Zoofari</span> Awsome
-						Animals
+						Let`s See Our <span class="text-primary">TherapyDog</span>
 					</h1>
 				</div>
 				<div class="col-lg-6 text-lg-end">
-					<a class="btn btn-primary py-3 px-5" href="">Explore More
-						Animals</a>
+					<a class="btn btn-primary py-3 px-5" href="">테라피독 더보기</a>
 				</div>
 			</div>
 			<div class="row g-4">
