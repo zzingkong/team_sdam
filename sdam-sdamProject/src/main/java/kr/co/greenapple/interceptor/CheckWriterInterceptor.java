@@ -1,4 +1,4 @@
-package kr.co.softcampus.interceptor;
+package kr.co.greenapple.interceptor;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -8,9 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.web.servlet.HandlerInterceptor;
 
-import kr.co.softcampus.beans.ContentBean;
-import kr.co.softcampus.beans.UserBean;
-import kr.co.softcampus.service.BoardService;
+import kr.co.greenapple.beans.ContentBean;
+import kr.co.greenapple.beans.UserBean;
+import kr.co.greenapple.service.BoardService;
 
 public class CheckWriterInterceptor implements HandlerInterceptor {
 

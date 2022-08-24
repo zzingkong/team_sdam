@@ -1,4 +1,4 @@
-package kr.co.softcampus.controller;
+package kr.co.greenapple.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,10 +8,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import kr.co.softcampus.beans.BoardInfoBean;
-import kr.co.softcampus.beans.ContentBean;
-import kr.co.softcampus.service.MainService;
-import kr.co.softcampus.service.TopMenuService;
+import kr.co.greenapple.beans.BoardInfoBean;
+import kr.co.greenapple.beans.ContentBean;
+import kr.co.greenapple.service.MainService;
+import kr.co.greenapple.service.TopMenuService;
 
 @Controller
 public class MainController {

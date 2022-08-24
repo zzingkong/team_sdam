@@ -1,4 +1,4 @@
-package kr.co.softcampus.controller;
+package kr.co.greenapple.controller;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import kr.co.softcampus.beans.UserBean;
+import kr.co.greenapple.beans.UserBean;
 
 @Controller
 public class HomeController {

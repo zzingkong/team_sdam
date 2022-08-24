@@ -1,4 +1,4 @@
-package kr.co.softcampus.controller;
+package kr.co.greenapple.controller;
 
 import javax.annotation.Resource;
 import javax.validation.Valid;
@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import kr.co.softcampus.beans.UserBean;
-import kr.co.softcampus.service.UserService;
-import kr.co.softcampus.validator.UserValidator;
+import kr.co.greenapple.beans.UserBean;
+import kr.co.greenapple.service.UserService;
+import kr.co.greenapple.validator.UserValidator;
 
 @Controller
 @RequestMapping("/user")

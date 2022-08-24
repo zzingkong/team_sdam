@@ -1,4 +1,4 @@
-package kr.co.softcampus.beans;
+package kr.co.greenapple.beans;
 
 public class PageBean {
 

@@ -1,4 +1,4 @@
-package kr.co.softcampus.dao;
+package kr.co.greenapple.dao;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import kr.co.softcampus.beans.ContentBean;
+import kr.co.greenapple.beans.ContentBean;
 
 @Repository
 public class BoardDao {

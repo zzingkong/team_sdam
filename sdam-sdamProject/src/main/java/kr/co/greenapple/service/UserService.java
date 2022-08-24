@@ -1,4 +1,4 @@
-package kr.co.softcampus.service;
+package kr.co.greenapple.service;
 
 import javax.annotation.Resource;
 
@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
-import kr.co.softcampus.beans.UserBean;
-import kr.co.softcampus.dao.UserDao;
+import kr.co.greenapple.beans.UserBean;
+import kr.co.greenapple.dao.UserDao;
 
 @Service
 public class UserService {

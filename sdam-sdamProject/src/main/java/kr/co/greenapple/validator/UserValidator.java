@@ -1,9 +1,9 @@
-package kr.co.softcampus.validator;
+package kr.co.greenapple.validator;
 
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
-import kr.co.softcampus.beans.UserBean;
+import kr.co.greenapple.beans.UserBean;
 
 public class UserValidator implements Validator{
 

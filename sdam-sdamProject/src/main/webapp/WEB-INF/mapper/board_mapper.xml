@@ -3,7 +3,7 @@
 
 <mapper namespace="board">
 
-	<insert id="addContentInfo" parameterType="kr.co.softcampus.beans.ContentBean">
+	<insert id="addContentInfo" parameterType="kr.co.greenapple.beans.ContentBean">
 		<selectKey keyProperty="content_idx" order="BEFORE" resultType="java.lang.Integer">
 			select content_seq.nextval from dual
 		</selectKey>
@@ -25,7 +25,7 @@
 		]]>
 	</select>
 	
-	<select id="getContentList" parameterType="java.lang.Integer" resultType="kr.co.softcampus.beans.ContentBean">
+	<select id="getContentList" parameterType="java.lang.Integer" resultType="kr.co.greenapple.beans.ContentBean">
 		<![CDATA[
 			select a1.content_idx, a1.content_subject, a2.user_name as content_writer_name, to_char(a1.content_date, 'YYYY-MM-DD') as content_date
 			from content_table a1, user_table a2
@@ -35,7 +35,7 @@
 		]]>
 	</select>
 	
-	<select id="getContentInfo" parameterType="java.lang.Integer" resultType="kr.co.softcampus.beans.ContentBean">
+	<select id="getContentInfo" parameterType="java.lang.Integer" resultType="kr.co.greenapple.beans.ContentBean">
 		<![CDATA[
 			select a2.user_name as content_writer_name, to_char(a1.content_date, 'YYYY-MM-DD') as content_date,
 			a1.content_subject, a1.content_text, a1.content_file, a1.content_writer_idx
@@ -45,7 +45,7 @@
 		]]>
 	</select>
 	
-	<update id="modifyContentInfo" parameterType="kr.co.softcampus.beans.ContentBean">
+	<update id="modifyContentInfo" parameterType="kr.co.greenapple.beans.ContentBean">
 		<![CDATA[
 			update content_table
 			set content_subject = #{content_subject}, content_text = #{content_text},

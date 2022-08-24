@@ -1,4 +1,4 @@
-package kr.co.softcampus.service;
+package kr.co.greenapple.service;
 
 import java.io.File;
 import java.util.List;
@@ -13,10 +13,10 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import kr.co.softcampus.beans.ContentBean;
-import kr.co.softcampus.beans.PageBean;
-import kr.co.softcampus.beans.UserBean;
-import kr.co.softcampus.dao.BoardDao;
+import kr.co.greenapple.beans.ContentBean;
+import kr.co.greenapple.beans.PageBean;
+import kr.co.greenapple.beans.UserBean;
+import kr.co.greenapple.dao.BoardDao;
 
 @Service
 @PropertySource("/WEB-INF/properties/option.properties")

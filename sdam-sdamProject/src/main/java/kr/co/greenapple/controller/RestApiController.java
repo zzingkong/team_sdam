@@ -1,11 +1,11 @@
-package kr.co.softcampus.controller;
+package kr.co.greenapple.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import kr.co.softcampus.service.UserService;
+import kr.co.greenapple.service.UserService;
 
 @RestController
 public class RestApiController {

@@ -14,9 +14,9 @@
 	<annotation-driven/>
 	
 	<!-- 스캔할 bean들이 모여있는 패키지를 지정한다. -->
-	<context:component-scan base-package="kr.co.softcampus.controller"/>
-	<context:component-scan base-package="kr.co.softcampus.dao"/>
-	<context:component-scan base-package="kr.co.softcampus.service"/>
+	<context:component-scan base-package="kr.co.greenapple.controller"/>
+	<context:component-scan base-package="kr.co.greenapple.dao"/>
+	<context:component-scan base-package="kr.co.greenapple.service"/>
 	
 	<!-- Controller의 메서드에서 반환하는 문자열 앞 뒤에 붙힐 경로 정보를 셋팅한다. -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -56,19 +56,19 @@
 	<interceptors>
 		<interceptor>
 			<mapping path="/**/"/>
-			<beans:bean class="kr.co.softcampus.interceptor.TopMenuInterceptor"/>
+			<beans:bean class="kr.co.greenapple.interceptor.TopMenuInterceptor"/>
 		</interceptor>
 		<interceptor>
 			<mapping path="/user/modify"/>
 			<mapping path="/user/logout"/>
 			<mapping path="/board/*"/>
 			<exclude-mapping path="/board/main"/>
-			<beans:bean class="kr.co.softcampus.interceptor.CheckLoginInterceptor"/>
+			<beans:bean class="kr.co.greenapple.interceptor.CheckLoginInterceptor"/>
 		</interceptor>
 		<interceptor>
 			<mapping path="/board/modify"/>
 			<mapping path="/board/delete"/>
-			<beans:bean class="kr.co.softcampus.interceptor.CheckWriterInterceptor"/>
+			<beans:bean class="kr.co.greenapple.interceptor.CheckWriterInterceptor"/>
 		</interceptor>
 	</interceptors>
 	

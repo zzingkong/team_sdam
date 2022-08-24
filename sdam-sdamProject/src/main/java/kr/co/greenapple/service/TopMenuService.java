@@ -1,12 +1,12 @@
-package kr.co.softcampus.service;
+package kr.co.greenapple.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import kr.co.softcampus.beans.BoardInfoBean;
-import kr.co.softcampus.dao.TopMenuDao;
+import kr.co.greenapple.beans.BoardInfoBean;
+import kr.co.greenapple.dao.TopMenuDao;
 
 @Service
 public class TopMenuService {

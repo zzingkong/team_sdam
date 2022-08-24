@@ -1,10 +1,10 @@
-package kr.co.softcampus.dao;
+package kr.co.greenapple.dao;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import kr.co.softcampus.beans.UserBean;
+import kr.co.greenapple.beans.UserBean;
 
 @Repository
 public class UserDao {

@@ -1,4 +1,4 @@
-package kr.co.softcampus.service;
+package kr.co.greenapple.service;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import kr.co.softcampus.beans.ContentBean;
-import kr.co.softcampus.dao.BoardDao;
+import kr.co.greenapple.beans.ContentBean;
+import kr.co.greenapple.dao.BoardDao;
 
 @Service
 public class MainService {

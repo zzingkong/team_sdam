@@ -10,7 +10,7 @@
 		]]>
 	</select>
 	
-	<insert id="addUserInfo" parameterType="kr.co.softcampus.beans.UserBean">
+	<insert id="addUserInfo" parameterType="kr.co.greenapple.beans.UserBean">
 		<![CDATA[
 			insert into user_table
 			(user_idx, user_name, user_id, user_pw)
@@ -18,7 +18,7 @@
 		]]>
 	</insert>
 	
-	<select id="getLoginUserInfo" parameterType="kr.co.softcampus.beans.UserBean" resultType="kr.co.softcampus.beans.UserBean">
+	<select id="getLoginUserInfo" parameterType="kr.co.greenapple.beans.UserBean" resultType="kr.co.greenapple.beans.UserBean">
 		<![CDATA[
 			select user_idx, user_name
 			from user_table
@@ -26,7 +26,7 @@
 		]]>
 	</select>
 	
-	<select id="getModifyUserInfo" parameterType="java.lang.Integer" resultType="kr.co.softcampus.beans.UserBean">
+	<select id="getModifyUserInfo" parameterType="java.lang.Integer" resultType="kr.co.greenapple.beans.UserBean">
 		<![CDATA[
 			select user_id, user_name
 			from user_table
@@ -34,7 +34,7 @@
 		]]>
 	</select>
 	
-	<update id="modifyUserInfo" parameterType="kr.co.softcampus.beans.UserBean">
+	<update id="modifyUserInfo" parameterType="kr.co.greenapple.beans.UserBean">
 		<![CDATA[
 			update user_table
 			set user_pw = #{user_pw}

@@ -1,4 +1,4 @@
-package kr.co.softcampus.interceptor;
+package kr.co.greenapple.interceptor;
 
 import java.util.List;
 
@@ -10,9 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.web.servlet.HandlerInterceptor;
 
-import kr.co.softcampus.beans.BoardInfoBean;
-import kr.co.softcampus.beans.UserBean;
-import kr.co.softcampus.service.TopMenuService;
+import kr.co.greenapple.beans.BoardInfoBean;
+import kr.co.greenapple.beans.UserBean;
+import kr.co.greenapple.service.TopMenuService;
 
 public class TopMenuInterceptor implements HandlerInterceptor{
 

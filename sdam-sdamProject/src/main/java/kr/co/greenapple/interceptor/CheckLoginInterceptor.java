@@ -1,4 +1,4 @@
-package kr.co.softcampus.interceptor;
+package kr.co.greenapple.interceptor;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.web.servlet.HandlerInterceptor;
 
-import kr.co.softcampus.beans.UserBean;
+import kr.co.greenapple.beans.UserBean;
 
 public class CheckLoginInterceptor implements HandlerInterceptor{
 	
