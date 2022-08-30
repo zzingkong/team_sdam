@@ -33,8 +33,9 @@
 						class="fab fa-instagram"></i></a>
 				</div> -->
 				<div class="h-100 d-inline-flex align-items-center py-3 me-4">
-					<a role="button" href="${root }user/join" class="btn btn-primary btn-sm">회원가입</a>
-					<a role="button" href="${root }user/login" class="btn btn-primary btn-sm">로그인</a>
+					<a role="button" href="${root }user/join_select" class="btn btn-primary me-2">회원가입</a>
+					<a role="button" href="${root }user/login" class="btn btn-primary me-2">로그인</a>
+				</div>
 			</div>
 		</div>
 	</div>
