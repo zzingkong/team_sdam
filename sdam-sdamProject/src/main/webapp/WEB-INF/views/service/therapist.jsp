@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Therapist3</title>
+<title>Therapist</title>
 </head>
 
 
