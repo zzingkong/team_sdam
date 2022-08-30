@@ -13,8 +13,8 @@
 	<insert id="addUserInfo" parameterType="kr.co.greenapple.beans.UserBean">
 		<![CDATA[
 			insert into user_table
-			(user_idx, user_name, user_id, user_pw)
-			values (user_seq.nextval, #{user_name}, #{user_id}, #{user_pw})
+			(user_idx, user_name, user_id, user_pw, user_tel, user_address)
+			values (user_seq.nextval, #{user_name}, #{user_id}, #{user_pw}, #{user_tel}, #{user_address})
 		]]>
 	</insert>
 	

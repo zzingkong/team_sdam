@@ -22,6 +22,9 @@ public class UserBean {
 	@Pattern(regexp = "[a-zA-Z0-9]*")
 	private String user_pw2;
 	
+	private String user_tel;
+	private String user_address;
+	
 	private boolean userIdExist;
 	private boolean userLogin;
 	
@@ -75,6 +78,22 @@ public class UserBean {
 
 	public void setUserLogin(boolean userLogin) {
 		this.userLogin = userLogin;
+	}
+
+	public String getUser_tel() {
+		return user_tel;
+	}
+
+	public void setUser_tel(String user_tel) {
+		this.user_tel = user_tel;
+	}
+
+	public String getUser_address() {
+		return user_address;
+	}
+
+	public void setUser_address(String user_address) {
+		this.user_address = user_address;
 	}
 	
 }

@@ -52,9 +52,17 @@ public class UserController {
 			return "user/login_fail";
 		}
 	}
-	@GetMapping("/join")
-	public String join(@ModelAttribute("joinUserBean") UserBean joinUserBean) {
-		return "user/join";
+	@GetMapping("/join_user")
+	public String join_user(@ModelAttribute("joinUserBean") UserBean joinUserBean) {
+		return "user/join_user";
+	}
+	@GetMapping("/join_therapist")
+	public String join_therapist(@ModelAttribute("joinUserBean") UserBean joinUserBean) {
+		return "user/join_therapist";
+	}
+	@GetMapping("/join_company")
+	public String join_company(@ModelAttribute("joinUserBean") UserBean joinUserBean) {
+		return "user/join_company";
 	}
 	@GetMapping("/join_select")
 	public String join_select(@ModelAttribute("joinUserBean") UserBean joinUserBean) {
