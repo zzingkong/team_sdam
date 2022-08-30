@@ -78,7 +78,7 @@
 				</div>
 			</div>
 			<div class="col-lg-5 px-5 text-end">
-				<div class="h-100 d-inline-flex align-items-center py-3 me-4">
+				<!-- <div class="h-100 d-inline-flex align-items-center py-3 me-4">
 					<small class="fa fa-phone-alt text-primary me-2"></small> <small>+012
 						345 6789</small>
 				</div>
@@ -91,7 +91,10 @@
 						class="fab fa-linkedin-in"></i></a> <a
 						class="btn btn-sm-square bg-white text-primary me-0" href=""><i
 						class="fab fa-instagram"></i></a>
-				</div>
+				</div> -->
+				<div class="h-100 d-inline-flex align-items-center py-3 me-4">
+					<a role="button" href="${root }user/join" class="btn btn-primary btn-sm">회원가입</a>
+					<a role="button" href="${root }user/login" class="btn btn-primary btn-sm">로그인</a>
 			</div>
 		</div>
 	</div>
@@ -102,7 +105,7 @@
 		class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-4 px-lg-5 wow fadeIn"
 		data-wow-delay="0.1s">
 		<a href="${root }main" class="navbar-brand p-0"> <img
-			class="img-fluid me-3" src="img/icon/logo001.png" alt="Icon" />
+			class="img-fluid me-3" src="img/icon/logo001.png" alt="Logo" />
 		</a>
 		<button type="button" class="navbar-toggler" data-bs-toggle="collapse"
 			data-bs-target="#navbarCollapse">
@@ -110,20 +113,28 @@
 		</button>
 		<div class="collapse navbar-collapse py-4 py-lg-0" id="navbarCollapse">
 			<div class="navbar-nav ms-auto">
-				<a href="about.html" class="nav-item nav-link">서비스 소개</a>
+				<a href="about.html" class="nav-item nav-link">쓰담쓰담 소개</a>
 				<div class="nav-item dropdown">
 					<a href="#" class="nav-link dropdown-toggle"
-						data-bs-toggle="dropdown">서비스 예약</a>
+						data-bs-toggle="dropdown">테라피</a>
 					<div class="dropdown-menu rounded-0 rounded-bottom m-0">
-						<a href="animal.html" class="dropdown-item">테라피스트</a> <a
-							href="membership.html" class="dropdown-item">테라피독</a> <a
-							href="visiting.html" class="dropdown-item">내 주변지역</a>
+						<a href="animal.html" class="dropdown-item">테라피스트</a> 
+						<a href="membership.html" class="dropdown-item">테라피독</a> 
+						<a href="visiting.html" class="dropdown-item">서비스 신청</a>
 					</div>
 				</div>
-				<a href="contact.html" class="nav-item nav-link">고객센터</a>
+				<div class="nav-item dropdown">
+					<a href="#" class="nav-link dropdown-toggle"
+						data-bs-toggle="dropdown">고객센터</a>
+					<div class="dropdown-menu rounded-0 rounded-bottom m-0">
+						<a href="#" class="dropdown-item">QnA</a> 
+						<a href="#" class="dropdown-item">FAQ</a>
+						<a href="#" class="dropdown-item">입양문의</a> 
+					</div>
+				</div>
 			</div>
-			<a href="" class="btn btn-primary">서비스 신청하기<i
-				class="fa fa-arrow-right ms-3"></i></a>
+			<!-- <a href="" class="btn btn-primary">테라피 신청하기<i
+				class="fa fa-arrow-right ms-3"></i></a> -->
 		</div>
 	</nav>
 	<!-- Navbar End -->
@@ -144,46 +155,15 @@
 							Search</button>
 						</div>
 
-						<!-- 1. 약도 노드 -->
 
-						<div id="daumRoughmapContainer1661320710479"
-							class="root_daum_roughmap root_daum_roughmap_landing"
-							style="max-width: 500px; margin-bottom: 10px"></div>
-
-						<!-- 2. 설치 스크립트 -->
-						<script charset="UTF-8" class="daum_roughmap_loader_script"
-							src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
-
-						<!-- 3. 실행 스크립트 -->
-						<script charset="UTF-8">
-							new daum.roughmap.Lander({
-								"timestamp" : "1661320710479",
-								"key" : "2bh5n",
-								"mapWidth" : "500",
-								"mapHeight" : "240"
-							}).render();
-						</script>
-
-						<div>
+						<!-- <div>
 							<a href="" class="btn btn-primary py-sm-3 px-3 px-sm-5 me-5">서비스
 								신청하기</a>
-						</div>
-
-
-						<!-- <button
-                type="button"
-                class="btn-play"
-                data-bs-toggle="modal"
-                data-src="https://www.youtube.com/embed/DWRcNpR6Kdc"
-                data-bs-target="#videoModal"
-              >
-                <span></span>
-              </button>
-              <h6 class="text-white m-0 ms-4 d-none d-sm-block">Watch Video</h6> -->
+						</div> -->
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+			<div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="padding:0px">
 				<div class="owl-carousel header-carousel">
 					<div class="owl-carousel-item">
 						<img class="img-fluid" src="img/carousel-1.jpg" alt="" />
@@ -528,7 +508,7 @@
 	<!-- Visiting Hours End -->
 
 	<!-- Membership Start -->
-	<div class="container-xxl py-5">
+	<!-- <div class="container-xxl py-5">
 		<div class="container">
 			<div class="row g-5 mb-5 align-items-end wow fadeInUp"
 				data-wow-delay="0.1s">
@@ -604,7 +584,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<!-- Membership End -->
 
 	<!-- Testimonial Start -->
