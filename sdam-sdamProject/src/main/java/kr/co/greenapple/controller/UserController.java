@@ -56,6 +56,10 @@ public class UserController {
 	public String join(@ModelAttribute("joinUserBean") UserBean joinUserBean) {
 		return "user/join";
 	}
+	@GetMapping("/join_select")
+	public String join_select(@ModelAttribute("joinUserBean") UserBean joinUserBean) {
+		return "user/join_select";
+	}
 	
 	@PostMapping("/join_pro")
 	public String join_pro(@Valid @ModelAttribute("joinUserBean") UserBean joinUserBean, BindingResult result) {
