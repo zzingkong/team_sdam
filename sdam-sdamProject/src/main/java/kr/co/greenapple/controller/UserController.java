@@ -31,6 +31,10 @@ public class UserController {
 	@Lazy
 	private UserBean loginUserBean;
 	
+	@Resource(name = "joinUserBean")
+	@Lazy
+	private UserBean joinUserBean;
+	
 	@GetMapping("/login")
 	public String login(@ModelAttribute("loginInfo") UserBean loginInfo, @RequestParam(value = "fail", defaultValue = "false") boolean fail, Model model) {
 		
@@ -52,6 +56,8 @@ public class UserController {
 			return "user/login_fail";
 		}
 	}
+	
+	
 	@GetMapping("/join_user")
 	public String join_user(@ModelAttribute("joinUserBean") UserBean joinUserBean) {
 		return "user/join_user";
@@ -72,7 +78,7 @@ public class UserController {
 	@PostMapping("/join_pro")
 	public String join_pro(@Valid @ModelAttribute("joinUserBean") UserBean joinUserBean, BindingResult result) {
 		if(result.hasErrors()) {
-			return "user/join";
+			return "user/join_select";
 		}
 		
 		userService.addUserInfo(joinUserBean);

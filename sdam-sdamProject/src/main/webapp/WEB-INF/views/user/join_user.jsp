@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<c:set var="root" value="${pageContext.request.contextPath }/"/>
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<c:set var="root" value="${pageContext.request.contextPath }/" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,7 +21,7 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-    
+
 <!-- Favicon -->
 <link href="img/favicon.ico" rel="icon" />
 
@@ -79,88 +79,127 @@
 	function resetUserIdExist(){
 		$("#userIdExist").val('false')
 	}
+	
+	function checkUserTelExist(){
+		var user_tel = $("#user_tel").val()
+		
+		if(user_tel.lenght == 0){
+			alert("전화번호를 입력해주세요")
+			return
+		}
+		$.ajax({
+			url : '${root}user/checkUserTelExist/'+user_tel,
+			type : 'get',
+			dataType : 'text',
+			success : function(result){
+				if(result.trim() == 'true'){
+					alert('확인이 완료되었습니다')
+					$("#userTelExist").val('true')
+				}else {
+					alert('이미 가입된 전화번호입니다')
+					$("#userTelExist").val('false')
+				}
+			}
+		})
+	}
+	
+	function resetUserTelExist(){
+		$("#userTelExist").val('false')
+	}
 </script>
 <body>
 
-<c:import url="/WEB-INF/views/include/top_menu.jsp"></c:import>
+	<c:import url="/WEB-INF/views/include/top_menu.jsp"></c:import>
 
 	<!-- Page Header Start -->
-    <div
-      class="container-fluid header-bg py-5 mb-5 wow fadeIn"
-      data-wow-delay="0.1s"
-    >
-      <div class="container py-5">
-        <h1 class="display-4 text-white mb-3 animated slideInDown">
-          회원가입
-        </h1>
-        <nav aria-label="breadcrumb animated slideInDown">
-          <ol class="breadcrumb mb-0">
-            <li class="breadcrumb-item">
-              <a class="text-white" href="${root }main">Home</a>
-            </li>
-            <li class="breadcrumb-item">
-              <a class="text-white" href="${root }user/join_select">회원가입</a>
-            </li>
-            <li class="breadcrumb-item text-primary active" aria-current="page">
-              개인회원
-            </li>
-          </ol>
-        </nav>
-      </div>
-    </div>
-    <!-- Page Header End -->
-    
-<div class="container" style="margin-top:100px">
-	<div class="row">
-		<div class="col-sm-3"></div>
-		<div class="col-sm-6">
-			<div class="card shadow">
-				<div class="card-body">
-					<form:form action="${root }user/join_pro" method="post" modelAttribute="joinUserBean">
-						<form:hidden path="userIdExist"/>
-						<div class="form-group">
-							<form:label path="user_name">이름</form:label>
-							<form:input path="user_name" class="form-control"/>
-							<form:errors path="user_name" style="color:red"/>
-						</div>
-						<div class="form-group">
-							<form:label path="user_id">아이디</form:label>
-							<div class="input-group">
-								<form:input path="user_id" class="form-control" onkeypress="resetUserIdExist()"/>
-								<div class="input-group-append">
-									<button type="button" class="btn btn-primary" onclick="checkUserIdExist()">중복확인</button>
+	<div class="container-fluid header-bg py-5 mb-5 wow fadeIn"
+		data-wow-delay="0.1s">
+		<div class="container py-5">
+			<h1 class="display-4 text-white mb-3 animated slideInDown">회원가입
+			</h1>
+			<nav aria-label="breadcrumb animated slideInDown">
+				<ol class="breadcrumb mb-0">
+					<li class="breadcrumb-item"><a class="text-white"
+						href="${root }main">Home</a></li>
+					<li class="breadcrumb-item"><a class="text-white"
+						href="${root }user/join_select">회원가입</a></li>
+					<li class="breadcrumb-item text-primary active" aria-current="page">
+						개인회원</li>
+				</ol>
+			</nav>
+		</div>
+	</div>
+	<!-- Page Header End -->
+	
+	<!-- Join Form Start -->
+	<div class="row g-4 mb-5">
+		<div class="container" style="margin-top: 100px">
+			<div class="row">
+				<div class="col-sm-3"></div>
+				<div class="col-sm-6">
+					<div class="card shadow">
+						<div class="card-body">
+							<form:form action="${root }user/join_pro" method="post"
+								modelAttribute="joinUserBean">
+								<form:hidden path="userIdExist" />
+								<form:hidden path="userTelExist" />
+								<form:hidden path="user_info" value="user" />
+								<div class="form-group">
+									<form:label path="user_name">이름</form:label>
+									<form:input path="user_name" class="form-control" />
+									<form:errors path="user_name" style="color:red" />
 								</div>
-							</div>
-							<form:errors path="user_id" style="color:red"/>
-						</div>
-						<div class="form-group">
-							<form:label path="user_pw">비밀번호</form:label>
-							<form:password path="user_pw" class="form-control"/>
-							<form:errors path="user_pw" style="color:red"/>
-						</div>
-						<div class="form-group">
-							<form:label path="user_pw2">비밀번호 확인</form:label>
-							<form:password path="user_pw2" class="form-control"/>
-							<form:errors path="user_pw2" style="color:red"/>
-						</div>
-						<div class="form-group">
-							<form:label path="user_tel">전화번호</form:label>
-							<form:input path="user_tel" class="form-control"/>
-							<form:errors path="user_tel" style="color:red"/>
-						</div>
-						<div class="form-group">
-							<form:label path="user_address">주소</form:label>
-							<div class="input-group mb-1">
-								<form:input path="user_address" id="address_input" class="form-control"/>
-								<div class="input-group-append">
-									<button type="button" class="btn btn-primary" id="address_kakao"">주소검색</button>
+								<div class="form-group">
+									<form:label path="user_id">아이디</form:label>
+									<div class="input-group">
+										<form:input path="user_id" class="form-control"
+											onkeypress="resetUserIdExist()" />
+										<div class="input-group-append">
+											<button type="button" class="btn btn-primary"
+												onclick="checkUserIdExist()">중복확인</button>
+										</div>
+									</div>
+									<form:errors path="user_id" style="color:red" />
 								</div>
-							</div>
-							<form:input path="user_address" id="address_input" class="form-control"/>
-							<form:errors path="user_address" style="color:red"/>
-						</div>
-						<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-						<script>
+								<div class="form-group">
+									<form:label path="user_pw">비밀번호</form:label>
+									<form:password path="user_pw" class="form-control" />
+									<form:errors path="user_pw" style="color:red" />
+								</div>
+								<div class="form-group">
+									<form:label path="user_pw2">비밀번호 확인</form:label>
+									<form:password path="user_pw2" class="form-control" />
+									<form:errors path="user_pw2" style="color:red" />
+								</div>
+								<div class="form-group">
+									<form:label path="user_tel">전화번호</form:label>
+									<div class="input-group">
+										<form:input path="user_tel" class="form-control"
+											onkeypress="resetUserTelExist()" placeholder="-를 제외하고 작성" />
+										<div class="input-group-append">
+											<button type="button" class="btn btn-primary"
+												onclick="checkUserTelExist()">중복확인</button>
+										</div>
+									</div>
+									<form:errors path="user_tel" style="color:red" />
+								</div>
+								<div class="form-group">
+									<form:label path="user_address">주소</form:label>
+									<div class="input-group mb-1">
+										<form:input path="user_address" id="address_input"
+											class="form-control" />
+										<div class="input-group-append">
+											<button type="button" class="btn btn-primary"
+												id="address_kakao"">주소검색</button>
+										</div>
+									</div>
+									<form:input path="user_address" id="address_input"
+										class="form-control" placeholder="상세주소 입력" />
+									<form:errors path="user_address" style="color:red" />
+								</div>
+								<script
+									src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+								<script>
 						window.onload = function(){
 						    document.getElementById("address_kakao").addEventListener("click", function(){ //주소입력칸을 클릭하면
 						        //카카오 지도 발생
@@ -173,20 +212,23 @@
 						    });
 						}
 						</script>
-						<div class="form-group">
-							<div class="text-right">
-								<form:button class="btn btn-primary">회원가입</form:button>
-							</div>
+								<div class="form-group">
+									<div class="text-right">
+										<form:button class="btn btn-primary">회원가입</form:button>
+									</div>
+								</div>
+							</form:form>
 						</div>
-					</form:form>
+					</div>
 				</div>
+				<div class="col-sm-3"></div>
 			</div>
 		</div>
-		<div class="col-sm-3"></div>
 	</div>
-</div>
+	<!-- Join Form End -->
+	
 
-<c:import url="/WEB-INF/views/include/bottom_info.jsp"></c:import>
+	<c:import url="/WEB-INF/views/include/bottom_info.jsp"></c:import>
 
 </body>
 </html>

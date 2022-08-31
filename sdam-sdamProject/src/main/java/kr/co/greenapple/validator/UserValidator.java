@@ -33,6 +33,14 @@ public class UserValidator implements Validator{
 			}
 			
 		}
+//		전화번호 중복 검사
+		if(beanName.equals("joinUserBean")) {
+			
+			if(userBean.isUserIdExist() == false) {
+				errors.rejectValue("user_tel", "DontCheckUserTelExist");
+			}
+			
+		}
 		
 	}
 

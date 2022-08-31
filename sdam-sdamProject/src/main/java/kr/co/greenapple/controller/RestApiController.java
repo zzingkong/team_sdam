@@ -14,7 +14,14 @@ public class RestApiController {
 	
 	@GetMapping("/user/checkUserIdExist/{user_id}")
 	public String checkUserIdExist(@PathVariable String user_id) {
-		boolean chk = userService.checkuserIdExist(user_id);
+		boolean chk = userService.checkUserIdExist(user_id);
+		
+		return chk + "";
+	}
+	
+	@GetMapping("/user/checkUserTelExist/{user_tel}")
+	public String checkUserTelExist(@PathVariable String user_tel) {
+		boolean chk = userService.checkUserTelExist(user_tel);
 		
 		return chk + "";
 	}

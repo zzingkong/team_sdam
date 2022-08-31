@@ -10,11 +10,19 @@
 		]]>
 	</select>
 	
+	<select id="checkUserTelExist" parameterType="java.lang.String" resultType="java.lang.String">
+		<![CDATA[
+			select user_name
+			from user_table
+			where user_tel = #{user_tel}
+		]]>
+	</select>
+	
 	<insert id="addUserInfo" parameterType="kr.co.greenapple.beans.UserBean">
 		<![CDATA[
 			insert into user_table
-			(user_idx, user_name, user_id, user_pw, user_tel, user_address)
-			values (user_seq.nextval, #{user_name}, #{user_id}, #{user_pw}, #{user_tel}, #{user_address})
+			(user_idx, user_name, user_id, user_pw, user_tel, user_address, user_info)
+			values (user_seq.nextval, #{user_name}, #{user_id}, #{user_pw}, #{user_tel}, #{user_address}, #{user_info})
 		]]>
 	</insert>
 	

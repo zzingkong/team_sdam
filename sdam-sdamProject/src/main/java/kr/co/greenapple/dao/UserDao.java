@@ -15,6 +15,10 @@ public class UserDao {
 	public String checkUserIdExist(String user_id) {
 		return sqlSessionTemplate.selectOne("user.checkUserIdExist", user_id);  
 	}
+	
+	public String checkUserTelExist(String user_tel) {
+		return sqlSessionTemplate.selectOne("user.checkUserTelExist", user_tel);  
+	}
 
 	public void addUserInfo(UserBean joinUserBean) {
 		sqlSessionTemplate.insert("user.addUserInfo", joinUserBean);

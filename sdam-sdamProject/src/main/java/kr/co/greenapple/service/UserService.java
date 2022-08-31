@@ -18,8 +18,18 @@ public class UserService {
 	@Lazy
 	private UserBean loginUserBean;
 	
-	public boolean checkuserIdExist(String user_id) {
+	public boolean checkUserIdExist(String user_id) {
 		String user_name = userDao.checkUserIdExist(user_id);
+		
+		if(user_name == null) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	public boolean checkUserTelExist(String user_tel) {
+		String user_name = userDao.checkUserTelExist(user_tel);
 		
 		if(user_name == null) {
 			return true;
