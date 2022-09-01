@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.Mapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import kr.co.greenapple.beans.BoardInfoBean;
@@ -47,6 +46,13 @@ public class MainController {
 	public String therapydog() {
 		
 		return "service/therapydog";
+	}
+	
+	//테라피스트
+	@RequestMapping("service/therapist")
+	public String therapist() {
+		
+		return "service/therapist";
 	}
 	
 	//고객센터	
