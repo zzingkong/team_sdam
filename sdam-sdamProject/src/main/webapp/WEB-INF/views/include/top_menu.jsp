@@ -59,18 +59,18 @@
 					<a href="#" class="nav-link dropdown-toggle"
 						data-bs-toggle="dropdown">테라피</a>
 					<div class="dropdown-menu rounded-0 rounded-bottom m-0">
-						<a href="animal.html" class="dropdown-item">테라피스트</a> 
-						<a href="membership.html" class="dropdown-item">테라피독</a> 
-						<a href="visiting.html" class="dropdown-item">서비스 신청</a>
+						<a href="${root }service/therapist" class="dropdown-item">테라피스트</a> 
+						<a href="${root }service/therapydog" class="dropdown-item">테라피독</a> 
+						<a href="##" class="dropdown-item">서비스 신청</a>
 					</div>
 				</div>
 				<div class="nav-item dropdown">
 					<a href="#" class="nav-link dropdown-toggle"
 						data-bs-toggle="dropdown">고객센터</a>
 					<div class="dropdown-menu rounded-0 rounded-bottom m-0">
-						<a href="#" class="dropdown-item">QnA</a> 
-						<a href="#" class="dropdown-item">FAQ</a>
-						<a href="#" class="dropdown-item">입양문의</a> 
+						<a href="${root }customer/faq" class="dropdown-item">FAQ</a> 
+						<a href="${root }customer/qna" class="dropdown-item">QnA</a>
+						<a href="${root }customer/adopt" class="dropdown-item">입양문의</a> 
 					</div>
 				</div>
 			</div>

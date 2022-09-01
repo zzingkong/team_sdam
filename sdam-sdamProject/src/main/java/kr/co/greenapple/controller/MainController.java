@@ -56,14 +56,14 @@ public class MainController {
 	}
 	
 	//고객센터	
-	@GetMapping("customer/faq")
+	@GetMapping("/customer/faq")
 	public String faq() {
 		
 		return "customer/faq";
 	}
 
 	
-	@GetMapping("customer/qna")
+	@GetMapping("/customer/qna")
 	public String qna() {
 		
 		return "customer/qna";
@@ -75,7 +75,7 @@ public class MainController {
 //		return "customer/qna_write";
 //	}
 
-	@GetMapping("customer/adopt")
+	@GetMapping("/customer/adopt")
 	public String adopt() {
 		
 		return "customer/adopt";
