@@ -61,7 +61,7 @@
 					<div class="dropdown-menu rounded-0 rounded-bottom m-0">
 						<a href="${root }service/therapist" class="dropdown-item">테라피스트</a> 
 						<a href="${root }service/therapydog" class="dropdown-item">테라피독</a> 
-						<a href="#" class="dropdown-item">서비스 신청</a>
+						<a href="##" class="dropdown-item">서비스 신청</a>
 					</div>
 				</div>
 				<div class="nav-item dropdown">
