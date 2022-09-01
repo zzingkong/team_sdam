@@ -42,13 +42,14 @@ public class MainController {
 		return "main";
 	}
 	
+	//테라피독
 	@RequestMapping("/service/therapydog")
 	public String therapydog() {
+		
 		return "service/therapydog";
 	}
 	
-	//고객센터
-	
+	//고객센터	
 	@GetMapping("customer/faq")
 	public String faq() {
 		
