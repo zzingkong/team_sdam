@@ -41,44 +41,4 @@ public class MainController {
 		return "main";
 	}
 	
-	//테라피독
-	@RequestMapping("/service/therapydog")
-	public String therapydog() {
-		
-		return "service/therapydog";
-	}
-	
-	//테라피스트
-	@RequestMapping("service/therapist")
-	public String therapist() {
-		
-		return "service/therapist";
-	}
-	
-	//고객센터	
-	@GetMapping("/customer/faq")
-	public String faq() {
-		
-		return "customer/faq";
-	}
-
-	
-	@GetMapping("/customer/qna")
-	public String qna() {
-		
-		return "customer/qna";
-	}
-	
-//	@GetMapping("customer/qna")
-//	public String qna_write() {
-//		
-//		return "customer/qna_write";
-//	}
-
-	@GetMapping("/customer/adopt")
-	public String adopt() {
-		
-		return "customer/adopt";
-	}
-	
 }
