@@ -89,17 +89,12 @@
 			</div>
 		</div>
 		
-		<!-- class g-5 mb-5로 그리드(레이아웃) 수정 -> 출력 순서 등 조정 -> 디비에서 뿌리기 -->
-<!-- 		<div class="row g-4">
-		
-			<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s"> -->
-			<div class="row">
-		
+		<div class="row">		
 			<div class="wow fadeInUp" data-wow-delay="0.2s" style="display:flex; flex-direction:row; flex-wrap:wrap;">
 			
 				<!-- <div class="row g-4"> -->
 					<div class="col-lg-4 col-md-6" style="padding-bottom:4em;">
-						<a class="animal-item" href="../img/animal-md-1.jpg" data-lightbox="animal">
+						<a class="animal-item" href="#" onclick="popup();">
 							<div class="position-relative">
 							<img class="img-fluid" src="../img/animal-md-1.jpg" alt="" />
 								<div class="animal-text p-4">
@@ -109,19 +104,9 @@
 							</div>
 						</a>
 					</div>
-					<div class="col-lg-4 col-md-6">
-						<a class="animal-item" href="../img/animal-md-1.jpg" data-lightbox="animal">
-							<div class="position-relative">
-							<img class="img-fluid" src="../img/animal-md-1.jpg" alt="" />
-								<div class="animal-text p-4">
-									<p class="text-white small text-uppercase mb-0">#테라피독지역추가(user에서추출?) #견종 #?</p>
-									<h5 class="text-white mb-0">테라피독이름 >></h5>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="col-lg-4 col-md-6">
-						<a class="animal-item" href="../img/animal-md-1.jpg" data-lightbox="animal">
+					
+					<div class="col-lg-4 col-md-6" style="padding-bottom:4em;">
+						<a class="animal-item" href="#" onclick="popup();">
 							<div class="position-relative">
 							<img class="img-fluid" src="../img/animal-md-1.jpg" alt="" />
 								<div class="animal-text p-4">
@@ -131,8 +116,9 @@
 							</div>
 						</a>
 					</div>
-					<div class="col-lg-4 col-md-6">
-						<a class="animal-item" href="../img/animal-md-1.jpg" data-lightbox="animal">
+					
+					<div class="col-lg-4 col-md-6" style="padding-bottom:4em;">
+						<a class="animal-item" href="#" onclick="popup();">
 							<div class="position-relative">
 							<img class="img-fluid" src="../img/animal-md-1.jpg" alt="" />
 								<div class="animal-text p-4">
@@ -142,47 +128,68 @@
 							</div>
 						</a>
 					</div>
-				<!-- </div> -->
+					
+					<div class="col-lg-4 col-md-6" style="padding-bottom:4em;">
+						<a class="animal-item" href="#" onclick="popup();">
+							<div class="position-relative">
+							<img class="img-fluid" src="../img/animal-md-1.jpg" alt="" />
+								<div class="animal-text p-4">
+									<p class="text-white small text-uppercase mb-0">#대전 #리트리버 #귀여움</p>
+									<h5 class="text-white mb-0">임댕댕 >></h5>
+								</div>
+							</div>
+						</a>
+					</div>
+					
+<!-- 				<div class="col-lg-4 col-md-6">
+						<a class="animal-item" href="../img/animal-md-1.jpg" data-lightbox="animal">
+							<div class="position-relative">
+							<img class="img-fluid" src="../img/animal-md-1.jpg" alt="" />
+								<div class="animal-text p-4">
+									<p class="text-white small text-uppercase mb-0">#지역(USER에서추출가능?) #견종 #키워드?</p>
+									<h5 class="text-white mb-0">이름 >></h5>
+								</div>
+							</div>
+						</a>
+					</div> 
+				</div> -->
 				
-			</div>
-			
-			<!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-				<div class="row g-4">
-					<div class="col-12">
-						<a class="animal-item" href="../img/animal-lg-2.jpg" data-lightbox="animal">
-							<div class="position-relative">
-							<img class="img-fluid" src="../img/animal-lg-2.jpg" alt="" />
-								<div class="animal-text p-4">
-									<p class="text-white small text-uppercase mb-0">Animal</p>
-									<h5 class="text-white mb-0">Elephant</h5>
-								</div>
-							</div>
-						</a>
-					</div>
-				</div>
-			</div>
-			
-			<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-				<div class="row g-4">
-					<div class="col-12">
-						<a class="animal-item" href="../img/animal-md-3.jpg" data-lightbox="animal">
-							<div class="position-relative">
-							<img class="img-fluid" src="../img/animal-md-3.jpg" alt="" />
-								<div class="animal-text p-4">
-									<p class="text-white small text-uppercase mb-0">Animal</p>
-									<h5 class="text-white mb-0">Elephant</h5>
-								</div>
-							</div>
-						</a>
-					</div>
-				</div>
-			</div> -->
-			
+			</div>		
 		</div>
 		<!-- 수정 -->
 		
 	</div>
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">임댕댕(dog_name)</h5>
+        <button type="button" class="btn-close" onclick="pop1();" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img class="img-fluid" src="../img/animal-md-1.jpg" alt="" />
+        <div></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" onclick="pop1();">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+var myModal = new bootstrap.Modal(document.getElementById('myModal'));
+function popup() {
+	myModal.show();
+}
+function pop1() {
+	myModal.hide();
+}
+</script>
 
 <!-- Animal End -->
 <c:import url="/WEB-INF/views/include/bottom_info.jsp"></c:import>
