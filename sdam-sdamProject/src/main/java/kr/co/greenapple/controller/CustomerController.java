@@ -12,7 +12,7 @@ public class CustomerController {
 		@GetMapping("/customer/faq")
 		public String faq() {
 			
-			return "customer/faq2";
+			return "customer/faq";
 		}
 
 		
