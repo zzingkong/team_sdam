@@ -14,4 +14,11 @@ public class ServiceController {
 		return "service/therapydog";
 	}
 	
+	@GetMapping("/therapist")
+	public String therapist() {
+
+		return "service/therapist";
+	}
+	
+	
 }
