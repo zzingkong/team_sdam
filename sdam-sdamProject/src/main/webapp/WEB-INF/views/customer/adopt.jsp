@@ -95,59 +95,22 @@
     </div>
     <!-- Page Header End -->
 
-    <!-- Join Select Start -->
-    <div class="container-xxl py-5">
-      <div class="container">
-      	<h3
-          class="display-6 text-center mb-5 wow fadeInUp"
-          data-wow-delay="0.1s"
-        >
-          입양문의
-        </h3>
-        <div class="row g-4 mb-5">
-          <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s" style="cursor: pointer" onclick="location.href='${root }user/join_company';">
-            <div class="h-100 bg-light d-flex align-items-center p-5">
-              <div class="btn-lg-square bg-white flex-shrink-0">
-                <i class="fa fa-hospital-alt text-primary"></i>
-              </div>
-              <div class="ms-4">
-                <h5 class="mb-2"><span class="text-primary me-2">♥</span>기업</h5>
-                <p class="mb-2">
-                  보호소 또는 훈련소 등 단체회원은 사업자등록증 인증을 통해 기업 등록을 할 수 있습니다
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s" style="cursor: pointer" onclick="location.href='${root }user/join_therapist';">
-            <div class="h-100 bg-light d-flex align-items-center p-5">
-              <div class="btn-lg-square bg-white flex-shrink-0">
-                <i class="fa fa-handshake text-primary"></i>
-              </div>
-              <div class="ms-4">
-              	<h5 class="mb-2"><span class="text-primary me-2">♥</span>테라피스트</h5>
-                <p class="mb-2">
-                  기업에 소속되어 있거나 개인 활동을 하는 테라피스트는 자격증 인증을 통해 가입할 수 있습니다
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.5s" style="cursor: pointer" onclick="location.href='${root }user/join_user';">
-            <div class="h-100 bg-light d-flex align-items-center p-5">
-              <div class="btn-lg-square bg-white flex-shrink-0">
-                <i class="fa fa-user-circle text-primary"></i>
-              </div>
-              <div class="ms-4">
-              	<h5 class="mb-2"><span class="text-primary me-2">♥</span>개인회원</h5>
-                <p class="mb-2">
-                  테라피 서비스를 이용하고자 하는 고객과 보호자는 별도의 인증 없이 가입할 수 있습니다
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Join Select End -->
+  	<div class="container-xxl py-5">
+		<div class="container">
+			<!-- <h3 class="display-6 text-center mb-5 wow fadeInUp pb-5" data-wow-delay="0.1s">자주 묻는 질문 (FAQ)</h3> -->
+			<div class="row g-5 mb-5 align-items-end wow fadeInUp"
+				data-wow-delay="0.1s">
+				<div class="col-lg-6">
+					<h1 class="display-6 mb-0 pb-3">입양문의</h1>
+					<p>
+						<span class="text-primary me-2">#</span>쓰담쓰담 테라피독의 새 가족이 되어주세요!
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
 
    	<c:import url="/WEB-INF/views/include/bottom_info.jsp"></c:import>
 
