@@ -85,7 +85,7 @@
 				<h1 class="display-6 mb-0">우리는 쓰담쓰담의 <span class="text-primary">테라피독</span>입니다</h1>
 			</div>
 			<div class="col-lg-6 text-lg-end">
-				<a class="btn btn-primary py-3 px-5" href="">테라피독 등록하기</a>
+				<a class="btn btn-primary py-3 px-5" href="${root}service/adddog">테라피독 등록하기</a>
 			</div>
 		</div>
 		
@@ -163,7 +163,7 @@
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">임댕댕(dog_name)</h5>
@@ -171,7 +171,8 @@
       </div>
       <div class="modal-body">
         <img class="img-fluid" src="../img/animal-md-1.jpg" alt="" />
-        <div></div>
+        <div class="mt-3">견종 / 성별 / 나이 / 지역</div>
+        <div>소개글입니다. 귀여운 임댕댕</div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" onclick="pop1();">Close</button>
@@ -184,6 +185,7 @@
 <script>
 var myModal = new bootstrap.Modal(document.getElementById('myModal'));
 function popup() {
+	myModal.toggle()
 	myModal.show();
 }
 function pop1() {
