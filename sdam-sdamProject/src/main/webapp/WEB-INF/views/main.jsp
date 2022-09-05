@@ -114,7 +114,7 @@
 		</button>
 		<div class="collapse navbar-collapse py-4 py-lg-0" id="navbarCollapse">
 			<div class="navbar-nav ms-auto">
-				<a href="about.html" class="nav-item nav-link">쓰담쓰담소개</a>
+				<a href="${root }introduce/intro" class="nav-item nav-link">쓰담쓰담소개</a>
 				<div class="nav-item dropdown">
 					<a href="#" class="nav-link dropdown-toggle"
 						data-bs-toggle="dropdown">테라피</a>

@@ -131,7 +131,7 @@
 <!-- 					</div> -->
 				
 				<div class="card" style="width: 18rem; margin-right:35px;">
-				  <img src="${root}image/therapist2.jpg" class="card-img-top"  style="height:30rem;" alt="...">
+				  <img src="${root}image/therapist.JPG" class="card-img-top"  style="height:30rem;" alt="...">
 					  <div class="card-body">
 					    <h5 class="card-title">김혜진 테라피스트</h5>
 					    <p class="card-text">주요지역 : 경북 / 경남 <br>
@@ -146,7 +146,7 @@
 				</div>
 				
 				<div class="card" style="width: 18rem; margin-right:40px;">
-				  <img src="${root}image/therapist2.jpg" class="card-img-top" style="height:30rem;" alt="...">
+				  <img src="${root}image/therapist.JPG" class="card-img-top" style="height:30rem;" alt="...">
 					  <div class="card-body">
 					    <h5 class="card-title">임유리나 테라피스트</h5>
 					    <p class="card-text">주요지역 : 세종 / 대전 <br>
@@ -160,7 +160,7 @@
 				</div>
 				
 				<div class="card" style="width: 18rem; margin-right:40px;">
-				  <img src="${root}image/therapist2.jpg" class="card-img-top" style="height:30rem;" alt="...">
+				  <img src="${root}image/therapist.JPG" class="card-img-top" style="height:30rem;" alt="...">
 					  <div class="card-body">
 					    <h5 class="card-title">이세령 테라피스트</h5>
 					    <p class="card-text">주요지역 : 경기 / 서울 <br>
@@ -174,7 +174,7 @@
 				</div>
 				
 				<div class="card" style="width: 18rem;">
-				  <img src="${root}image/therapist2.jpg" class="card-img-top"  style="height:30rem;" alt="...">
+				  <img src="${root}image/therapist.JPG" class="card-img-top"  style="height:30rem;" alt="...">
 					  <div class="card-body">
 					    <h5 class="card-title">강효선 테라피스트</h5>
 					    <p class="card-text">주요지역 : 충북 / 충남 <br>
