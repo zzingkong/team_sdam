@@ -185,7 +185,7 @@
 <script>
 var myModal = new bootstrap.Modal(document.getElementById('myModal'));
 function popup() {
-	myModal.toggle()
+	myModal.toggle();
 	myModal.show();
 }
 function pop1() {
