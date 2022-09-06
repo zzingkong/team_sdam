@@ -71,8 +71,8 @@
    </div>
 </div>
 <!--서비스 소개 -->
-<div class="container-xxl py-5">
-		<div class="container">
+<div class="container-xxl py-5 ">
+		<div class="container mb-3">
 			<div class="row g-5">
 				<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
 					
@@ -80,15 +80,15 @@
 						#<span class="text-primary"> 테라피독</span> <span class="text-primary">테라피스트</span>
 						란?
 					</h1>
-					<p class="mb-3 fw-bold">테라피 독(Therapy Dog)</p><p>애니멀 테라피의 테라피(therapy)와 독(Dog)의 합성어로 동물 매개치료를 위해 훈련된 <br>강아지를 말합니다.
+					<p class="mb-3 fs-4 text fw-bold">테라피 독(Therapy Dog)</p><p>애니멀 테라피의 테라피(therapy)와 독(Dog)의 합성어로 동물 매개치료를 위해 <br> 훈련된 강아지를 말합니다.
 					<br><br>
-					<P class="mb-3 fw-bold">테라피스트(Therapist)</p><p>애니멀 테라피 서비스를 주도하는 훈련사로, 테라피독의 행동을 통제하고 치매상병자와의 교감을 돕는 역할입니다.
+					<P class="mb-3 fs-4 text fw-bold">테라피스트(Therapist)</p><p>애니멀 테라피 서비스를 주도하는 훈련사로, 테라피독의 행동을 통제하고 치매상병자와의 교감을 돕는 역할입니다.
 					</p>
 														
 				</div>
 				<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
 					<div class="img-border">
-						<img class="img-fluid" src="${root}/image/logo.png" alt="" />
+						<img class="img-fluid" src="${root}/image/dog1.jpg" alt="" />
 					</div>
 				</div>
 			</div>
@@ -96,45 +96,42 @@
 	</div>
     
     <!-- 서비스 신청 설명 시작 -->
-    <div class="container">
+    <div class="container mb-3">
 	   	 <div class="row g-5 mb-5 align-items-end wow fadeInUp" data-wow-delay="0.1s">
 	    	<div class="col-lg-12">            
 	            <h1 class="display-5 mb-0"># <span class="text-primary"> 서비스 신청</span>은 어떻게 하나요?</h1>         
 	         </div>
 	    </div>    
 		<div class="row g-5">
-				<div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">					
-					<p class="mb-3">"애니멀 테라피"란 환자가 직접 동물을 만지거나 안아보면서 상호
-					교감을 통해 사람의 정신적, 육체적 고통을 경감시키는 방법입니다.<br>
-					동물과의 놀이는 어르신들의 심장질환이나 고혈압 등에 효과가 있을 뿐만 아니라,
-					치매예방에도 상당한 효과가 있는 것으로 입증됐습니다. 또한 우울증이 있거나, 주의력이
-					떨어지는 사람들에게도 효과가 있는 것으로 확인됩니다.</p>
+				<div class="col-lg-12 wow fadeInUp ms-2" data-wow-delay="0.1s">					
+					<p class="mb-3 fs-3 fw-bold"> 쉽고 간편하게 신청해요! <br>
+					원하는 테라피스트와 테라피독을 선택하세요! <br> </p>
+					<p>			
 					
 					<div class="col-lg-12 wow fadeInUp" data-wow-delay="0.5s">
-						<div class="img-border">
-						<img class="w-75 h-75" src="${root}/image/서비스신청절차.PNG" alt="" />				
-						</div>
+						<!-- <div class="img-border"> -->
+						<img class="w-100 h-75 ms-2" src="${root}/image/서비스신청절차.PNG" alt="" />				
+						<!-- </div> -->
 					</div>
 				</div>
 			</div>
 		</div>  
 <!-- 입양 소개글 -->
 		<div class="container">
-	 		<div class="row g-5 mb-5 align-items-end wow fadeInUp" data-wow-delay="0.1s">
+ 		  <div class="row g-5 mb-5 align-items-end wow fadeInUp" data-wow-delay="0.1s">
 		    	<div class="col-lg-12">            
 		            <h1 class="display-5 mb-0">#<span class="text-primary"> 입양해요!</span></h1> 
 		        </div>
-		      </div>
-			            <p class="mb-3">"내가 만난 테라피독을 입양하여 평생의 반려견으로..!! ""사지말고 입양해요!!"
-			            <br> 저희 쓰담쓰담은 매년증가하는 유기/유실견 수가 사회적 문제로 주목받는 만큼 
-			     		작은 도움이 되고자 입양절차를 진행하고 있습니다. <br>작은 관심으로 유기/유실견들에게 따뜻한 손길을
-			     		보내주세요
-			            </p>     
-		      
+	      </div>			           
+	            <p class="fs-3 fw-bold">"내가 만난 테라피독을 입양하여 평생의 반려견으로..!!" <br>
+	            "사지말고 입양해요!!"</p>
+	            <br> 저희 쓰담쓰담은 매년증가하는 유기/유실견 수가 사회적 문제로 주목받는 만큼 
+	     		작은 도움이 되고자 입양절차를 진행하고 있습니다.<br>유기/유실견들에게 따뜻한 손길을
+	     		보내주세요 
 	       		 <div>
-		            <a class="btn btn-primary py-3 px-5 mt-3" href="">입양문의</a>
+		            <a class="btn btn-primary py-3 px-5 mt-3" href="${root }customer/adopt">입양문의</a>
 			     </div>   
-	   		</div> 
+   		</div> 
 		
 <!-- Animal End -->
 
