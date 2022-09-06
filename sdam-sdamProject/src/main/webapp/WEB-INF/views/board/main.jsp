@@ -40,9 +40,9 @@
 	rel="stylesheet" />
 
 <!-- Libraries Stylesheet -->
-<link href="lib/animate/animate.min.css" rel="stylesheet" />
-<link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
-<link href="lib/owlcarousel/assets/owl.carousel.min.css"
+<link href="../lib/animate/animate.min.css" rel="stylesheet" />
+<link href="../lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+<link href="../lib/owlcarousel/assets/owl.carousel.min.css"
 	rel="stylesheet" />
 
 <!-- Customized Bootstrap Stylesheet -->
@@ -54,6 +54,50 @@
 <body>
 
 <c:import url="/WEB-INF/views/include/top_menu.jsp" />
+
+<!-- 22.09.06 QnA 연결(임시) -->
+<c:if test="${board_info_idx == 4}">
+    <!-- Page Header Start -->
+    <div class="container-fluid header-bg py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+      <div class="container py-5">
+        <h1 class="display-4 text-white mb-3 animated slideInDown">
+          고객센터
+        </h1>
+        <nav aria-label="breadcrumb animated slideInDown">
+		  <ol class="breadcrumb mb-0">
+			<li class="breadcrumb-item">
+				<a class="text-white" href="${root }main">Home</a>
+			</li>
+			<li class="breadcrumb-item">
+				<a class="text-white">고객센터</a>
+			</li>
+            <li class="breadcrumb-item text-primary active" aria-current="page" href="${root }customer/qna">
+            	QnA
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <!-- Page Header End -->
+ 
+<!-- QnA 배너 연결 -->   
+	<div class="container-xxl">
+		<div class="container">
+			<!-- <h3 class="display-6 text-center mb-5 wow fadeInUp pb-5" data-wow-delay="0.1s">자주 묻는 질문 (FAQ)</h3> -->
+			<div class="row g-5 mb-5 align-items-end wow fadeInUp"
+				data-wow-delay="0.1s">
+				<div class="col-lg-6">
+					<h1 class="display-6 mb-0 pb-3">QnA</h1>
+					<p>
+						<span class="text-primary me-2">#</span>문의 사항을 게시판에 남겨주세요.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</c:if>
+<!-- --------- QnA end ----------- -->
+
 
 <!-- 게시글 리스트 -->
 <div class="container" style="margin-top:100px">
