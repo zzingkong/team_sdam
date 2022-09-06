@@ -115,7 +115,49 @@
 	</div>
 
 
-   	<c:import url="/WEB-INF/views/include/bottom_info.jsp"></c:import>
+	<div class="container px-4 py-5" id="featured-3">
+		<h2 class="pb-2 border-bottom">입양 절차</h2>
+		<div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+			<div class="feature col">
+				<div class="feature-icon bg-primary bg-gradient">
+					<i class=""></i>
+				</div>
+				<h2>Featured title</h2>
+				<p>Paragraph of text beneath the heading to explain the heading.
+					We'll add onto it with another sentence and probably just keep
+					going until we run out of words.</p>
+
+			</div>
+			<div class="feature col">
+				<div class="feature-icon bg-primary bg-gradient">
+					<svg class="bi" width="1em" height="1em">
+						<use xlink:href="#people-circle" /></svg>
+				</div>
+				<h2>Featured title</h2>
+				<p>Paragraph of text beneath the heading to explain the heading.
+					We'll add onto it with another sentence and probably just keep
+					going until we run out of words.</p>
+
+			</div>
+			<div class="feature col">
+				<div class="feature-icon bg-primary bg-gradient">
+					<svg class="bi" width="1em" height="1em">
+						<use xlink:href="#toggles2" /></svg>
+				</div>
+				<h2>Featured title</h2>
+				<p>Paragraph of text beneath the heading to explain the heading.
+					We'll add onto it with another sentence and probably just keep
+					going until we run out of words.</p>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+	<c:import url="/WEB-INF/views/include/bottom_info.jsp"></c:import>
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"

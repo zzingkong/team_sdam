@@ -98,22 +98,24 @@
     </div>
     <!-- Page Header End -->
 
-    <!-- FAQ 배너 Start -->
-	<div class="container-xxl py-5">
+	<div class="container-xxl pt-5">
+	<div class="container">
+		<div class="row g-5 mb-5 align-items-end wow fadeInUp"
+			data-wow-delay="0.1s">
+			<div class="col-lg-6">
+				<h1 class="display-6 mb-0 pb-3">자주 묻는 질문(FAQ)</h1>
+				<p>
+					<span class="text-primary me-2">#</span>쓰담쓰담 이용에 관련하여 자주 질문하시는 내용에 대한 답변을 모았습니다.
+				</p>
+			</div>
+		</div>
+		</div>
+	</div>
+
+	<!-- FAQ Content Start -->
+	<div class="container-xxl pb-5">
 		<div class="container">
 			<!-- <h3 class="display-6 text-center mb-5 wow fadeInUp pb-5" data-wow-delay="0.1s">자주 묻는 질문 (FAQ)</h3> -->
-			<div class="row g-5 mb-5 align-items-end wow fadeInUp" data-wow-delay="0.1s">
-				<div class="col-lg-6">
-					<h1 class="display-6 mb-0 pb-3">
-						자주 묻는 질문(FAQ)
-					</h1>
-					<p>
-						<span class="text-primary me-2">#</span>쓰담쓰담 이용에 관련하여 자주 질문하시는 내용에 대한 답변을 모았습니다.
-					</p>
-				</div>
-			</div>
-
-
 			<div class="accordion m-sm-auto my-sm-5" id="accordionExample">
 				<div class="accordion-item">
 					<h2 class="accordion-header" id="headingOne">

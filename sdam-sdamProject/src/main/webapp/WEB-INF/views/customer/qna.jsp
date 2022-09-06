@@ -103,7 +103,7 @@
 				<div class="col-lg-6">
 					<h1 class="display-6 mb-0 pb-3">QnA</h1>
 					<p>
-						<span class="text-primary me-2">#</span>문의 사항을 남겨주세요.
+						<span class="text-primary me-2">#</span>문의 사항을 게시판에 남겨주세요.
 					</p>
 				</div>
 			</div>

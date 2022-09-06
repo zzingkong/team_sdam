@@ -54,14 +54,14 @@
 		</button>
 		<div class="collapse navbar-collapse py-4 py-lg-0" id="navbarCollapse">
 			<div class="navbar-nav ms-auto">
-				<a href="about.html" class="nav-item nav-link">쓰담쓰담 소개</a>
+				<a href="${root }main" class="nav-item nav-link">쓰담쓰담 소개</a>
 				<div class="nav-item dropdown">
 					<a href="#" class="nav-link dropdown-toggle"
 						data-bs-toggle="dropdown">테라피</a>
 					<div class="dropdown-menu rounded-0 rounded-bottom m-0">
 						<a href="${root }service/therapist" class="dropdown-item">테라피스트</a> 
 						<a href="${root }service/therapydog" class="dropdown-item">테라피독</a> 
-						<a href="##" class="dropdown-item">서비스 신청</a>
+					<!-- <a href="##" class="dropdown-item">서비스 신청</a> -->
 					</div>
 				</div>
 				<div class="nav-item dropdown">
