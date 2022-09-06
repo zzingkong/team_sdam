@@ -95,6 +95,10 @@
     </div>
     <!-- Page Header End -->
 
+
+
+
+	<!-- content -->
   	<div class="container-xxl py-5">
 		<div class="container">
 			<!-- <h3 class="display-6 text-center mb-5 wow fadeInUp pb-5" data-wow-delay="0.1s">자주 묻는 질문 (FAQ)</h3> -->
@@ -109,8 +113,7 @@
 			</div>
 		</div>
 	</div>
-	
-	
+
 
    	<c:import url="/WEB-INF/views/include/bottom_info.jsp"></c:import>
 
@@ -132,8 +135,6 @@
     <!-- Template Javascript -->
     <script src="../js/main.js"></script>
   </body>
-
-
 
 </body>
 </html>
