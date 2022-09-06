@@ -1,15 +1,27 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<c:set var="root" value="${pageContext.request.contextPath }/" />
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<c:set var="root" value="${pageContext.request.contextPath }/"/>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>테라피스트</title>
+<meta charset="utf-8" />
+<title>쓰담쓰담</title>
 <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 <meta content="" name="keywords" />
 <meta content="" name="description" />
+
+<!-- Bootstrap CDN -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
 
 <!-- Favicon -->
 <link href="../img/favicon.ico" rel="icon" />
@@ -41,35 +53,46 @@
 <!-- Template Stylesheet -->
 <link href="../css/style.css" rel="stylesheet" />
 </head>
-
 <body>
 	<!-- Spinner Start -->
-	<div id="spinner"
-		class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-		<div class="spinner-border text-primary"
-			style="width: 3rem; height: 3rem" role="status">
-			<span class="sr-only">Loading...</span>
-		</div>
-	</div>
-	<!-- Spinner End -->
-
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div
+        class="spinner-border text-primary"
+        style="width: 3rem; height: 3rem"
+        role="status"
+      >
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <!-- Spinner End -->
+	
+	<!-- TOP MENU -->
 	<c:import url="/WEB-INF/views/include/top_menu.jsp"></c:import>
 
 	<!-- Page Header Start -->
 	<div class="container-fluid header-bg py-5 my-n2 wow fadeIn"
 		data-wow-delay="0.1s">
 		<div class="container py-5">
-			<h1 class="display-4 text-white mb-3 animated slideInDown">
-				테라피스트(Therapist)</h1>
-			<nav aria-label="breadcrumb animated slideInDown">
-				<ol class="breadcrumb mb-0">
-					<li class="breadcrumb-item"><a class="text-white" href="#">서비스예약
-							/ </a></li>
-					<li class="breadcrumb-item text-primary active" aria-current="page">
-						테라피스트</li>
-				</ol>
-			</nav>
-		</div>
+		<h1 class="display-4 text-white mb-3 animated slideInDown">
+          테라피스트 (Therapist)
+		</h1>
+		<nav aria-label="breadcrumb animated slideInDown">
+			<ol class="breadcrumb mb-0">
+				<li class="breadcrumb-item">
+					<a class="text-white" href="${root }main">Home</a>
+				</li>
+				<li class="breadcrumb-item text-white">
+					테라피
+				</li>
+				<li class="breadcrumb-item text-primary active" aria-current="page">
+					테라피스트
+				</li>
+			</ol>
+		</nav>
+	</div>
 	</div>
 	<!-- Page Header End -->
 	
@@ -113,7 +136,7 @@
 					</select>
 				</div>
 				
-				<div class="col-3 p-1 mb-2">	
+				<div class="col-3 p-1 mb-2 offset-1">	
 					<div class="input-group mb-2">
 	  						<input type="text" class="form-control" placeholder="검색어를 입력하세요" aria-label="Recipient's username" aria-describedby="button-addon2">
 	  						<button class="btn btn-primary" type="button" id="button-addon2">검색</button>

@@ -255,89 +255,6 @@
 	<!-- Facts End -->
 
 	<!-- Service Start -->
-	<!-- <div class="container-xxl py-5">
-		<div class="container">
-			<div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
-				<div class="col-lg-6">
-					<p>
-						<span class="text-primary me-2">#</span>Our Services
-					</p>
-					<h1 class="display-5 mb-0">
-						Special Services For <span class="text-primary">Zoofari</span>
-						Visitors
-					</h1>
-				</div>
-				<div class="col-lg-6">
-					<div
-						class="bg-primary h-100 d-flex align-items-center py-4 px-4 px-sm-5">
-						<i class="fa fa-3x fa-mobile-alt text-white"></i>
-						<div class="ms-4">
-							<p class="text-white mb-0">Call for more info</p>
-							<h2 class="text-white mb-0">+012 345 6789</h2>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row gy-5 gx-4">
-				<div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp"
-					data-wow-delay="0.1s">
-					<img class="img-fluid mb-3" src="img/icon/icon-2.png" alt="Icon" />
-					<h5 class="mb-3">Car Parking</h5>
-					<span>Erat ipsum justo amet duo et elitr dolor, est duo duo
-						eos lorem sed diam stet diam sed stet.</span>
-				</div>
-				<div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp"
-					data-wow-delay="0.3s">
-					<img class="img-fluid mb-3" src="img/icon/icon-3.png" alt="Icon" />
-					<h5 class="mb-3">Animal Photos</h5>
-					<span>Erat ipsum justo amet duo et elitr dolor, est duo duo
-						eos lorem sed diam stet diam sed stet.</span>
-				</div>
-				<div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp"
-					data-wow-delay="0.5s">
-					<img class="img-fluid mb-3" src="img/icon/icon-4.png" alt="Icon" />
-					<h5 class="mb-3">Guide Services</h5>
-					<span>Erat ipsum justo amet duo et elitr dolor, est duo duo
-						eos lorem sed diam stet diam sed stet.</span>
-				</div>
-				<div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp"
-					data-wow-delay="0.7s">
-					<img class="img-fluid mb-3" src="img/icon/icon-5.png" alt="Icon" />
-					<h5 class="mb-3">Food & Beverages</h5>
-					<span>Erat ipsum justo amet duo et elitr dolor, est duo duo
-						eos lorem sed diam stet diam sed stet.</span>
-				</div>
-				<div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp"
-					data-wow-delay="0.1s">
-					<img class="img-fluid mb-3" src="img/icon/icon-6.png" alt="Icon" />
-					<h5 class="mb-3">Zoo Shopping</h5>
-					<span>Erat ipsum justo amet duo et elitr dolor, est duo duo
-						eos lorem sed diam stet diam sed stet.</span>
-				</div>
-				<div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp"
-					data-wow-delay="0.3s">
-					<img class="img-fluid mb-3" src="img/icon/icon-7.png" alt="Icon" />
-					<h5 class="mb-3">Free Hi Speed Wi-Fi</h5>
-					<span>Erat ipsum justo amet duo et elitr dolor, est duo duo
-						eos lorem sed diam stet diam sed stet.</span>
-				</div>
-				<div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp"
-					data-wow-delay="0.5s">
-					<img class="img-fluid mb-3" src="img/icon/icon-8.png" alt="Icon" />
-					<h5 class="mb-3">Play Ground</h5>
-					<span>Erat ipsum justo amet duo et elitr dolor, est duo duo
-						eos lorem sed diam stet diam sed stet.</span>
-				</div>
-				<div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp"
-					data-wow-delay="0.7s">
-					<img class="img-fluid mb-3" src="img/icon/icon-9.png" alt="Icon" />
-					<h5 class="mb-3">Rest House</h5>
-					<span>Erat ipsum justo amet duo et elitr dolor, est duo duo
-						eos lorem sed diam stet diam sed stet.</span>
-				</div>
-			</div>
-		</div>
-	</div> -->
 	<!-- Service End -->
 
 	<!-- Animal Start -->
@@ -446,268 +363,48 @@
 	<!-- Animal End -->
 
 	<!-- Visiting Hours Start -->
-	<div
-		class="container-xxl bg-primary visiting-hours my-5 py-5 wow fadeInUp"
-		data-wow-delay="0.1s">
-		<div class="container py-5">
-			<div class="row g-5">
-				<div class="col-md-6 wow fadeIn" data-wow-delay="0.3s">
-					<h1 class="display-6 text-white mb-5">Visiting Hours</h1>
-					<ul class="list-group list-group-flush">
-						<li class="list-group-item"><span>Monday</span> <span>9:00AM
-								- 6:00PM</span></li>
-						<li class="list-group-item"><span>Tuesday</span> <span>9:00AM
-								- 6:00PM</span></li>
-						<li class="list-group-item"><span>Wednesday</span> <span>9:00AM
-								- 6:00PM</span></li>
-						<li class="list-group-item"><span>Thursday</span> <span>9:00AM
-								- 6:00PM</span></li>
-						<li class="list-group-item"><span>Friday</span> <span>9:00AM
-								- 6:00PM</span></li>
-						<li class="list-group-item"><span>Saturday</span> <span>9:00AM
-								- 6:00PM</span></li>
-						<li class="list-group-item"><span>Sunday</span> <span>Closed</span>
-						</li>
-					</ul>
-				</div>
-				<div class="col-md-6 text-light wow fadeIn" data-wow-delay="0.5s">
-					<h1 class="display-6 text-white mb-5">Contact Info</h1>
-					<table class="table">
-						<tbody>
-							<tr>
-								<td>Office</td>
-								<td>123 Street, New York, USA</td>
-							</tr>
-							<tr>
-								<td>Zoo</td>
-								<td>123 Street, New York, USA</td>
-							</tr>
-							<tr>
-								<td>Ticket</td>
-								<td>
-									<p class="mb-2">+012 345 6789</p>
-									<p class="mb-0">ticket@example.com</p>
-								</td>
-							</tr>
-							<tr>
-								<td>Support</td>
-								<td>
-									<p class="mb-2">+012 345 6789</p>
-									<p class="mb-0">support@example.com</p>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-		</div>
-	</div>
 	<!-- Visiting Hours End -->
 
 	<!-- Membership Start -->
-	<!-- <div class="container-xxl py-5">
-		<div class="container">
-			<div class="row g-5 mb-5 align-items-end wow fadeInUp"
-				data-wow-delay="0.1s">
-				<div class="col-lg-6">
-					<p>
-						<span class="text-primary me-2">#</span>Membership
-					</p>
-					<h1 class="display-5 mb-0">
-						You Can Be A Proud Member Of <span class="text-primary">Zoofari</span>
-					</h1>
-				</div>
-				<div class="col-lg-6 text-lg-end">
-					<a class="btn btn-primary py-3 px-5" href="">Special Pricing</a>
-				</div>
-			</div>
-			<div class="row g-4">
-				<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-					<div class="membership-item position-relative">
-						<img class="img-fluid" src="img/animal-lg-1.jpg" alt="" />
-						<h1 class="display-1">01</h1>
-						<h4 class="text-white mb-3">Popular</h4>
-						<h3 class="text-primary mb-4">$99.00</h3>
-						<p>
-							<i class="fa fa-check text-primary me-3"></i>10% discount
-						</p>
-						<p>
-							<i class="fa fa-check text-primary me-3"></i>2 adult and 2 child
-						</p>
-						<p>
-							<i class="fa fa-check text-primary me-3"></i>Free animal
-							exhibition
-						</p>
-						<a class="btn btn-outline-light px-4 mt-3" href="">Get Started</a>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-					<div class="membership-item position-relative">
-						<img class="img-fluid" src="img/animal-lg-2.jpg" alt="" />
-						<h1 class="display-1">02</h1>
-						<h4 class="text-white mb-3">Standard</h4>
-						<h3 class="text-primary mb-4">$149.00</h3>
-						<p>
-							<i class="fa fa-check text-primary me-3"></i>15% discount
-						</p>
-						<p>
-							<i class="fa fa-check text-primary me-3"></i>4 adult and 4 child
-						</p>
-						<p>
-							<i class="fa fa-check text-primary me-3"></i>Free animal
-							exhibition
-						</p>
-						<a class="btn btn-outline-light px-4 mt-3" href="">Get Started</a>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-					<div class="membership-item position-relative">
-						<img class="img-fluid" src="img/animal-lg-3.jpg" alt="" />
-						<h1 class="display-1">03</h1>
-						<h4 class="text-white mb-3">Premium</h4>
-						<h3 class="text-primary mb-4">$199.00</h3>
-						<p>
-							<i class="fa fa-check text-primary me-3"></i>20% discount
-						</p>
-						<p>
-							<i class="fa fa-check text-primary me-3"></i>6 adult and 6 child
-						</p>
-						<p>
-							<i class="fa fa-check text-primary me-3"></i>Free animal
-							exhibition
-						</p>
-						<a class="btn btn-outline-light px-4 mt-3" href="">Get Started</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
 	<!-- Membership End -->
 
 	<!-- Testimonial Start -->
-	<div class="container-xxl py-5">
-		<div class="container">
-			<h1 class="display-5 text-center mb-5 wow fadeInUp"
-				data-wow-delay="0.1s">Our Clients Say!</h1>
-			<div class="owl-carousel testimonial-carousel wow fadeInUp"
-				data-wow-delay="0.1s">
-				<div class="testimonial-item text-center">
-					<img
-						class="img-fluid rounded-circle border border-2 p-2 mx-auto mb-4"
-						src="img/testimonial-1.jpg" style="width: 100px; height: 100px" />
-					<div class="testimonial-text rounded text-center p-4">
-						<p>Clita clita tempor justo dolor ipsum amet kasd amet duo
-							justo duo duo labore sed sed. Magna ut diam sit et amet stet eos
-							sed clita erat magna elitr erat sit sit erat at rebum justo sea
-							clita.</p>
-						<h5 class="mb-1">Patient Name</h5>
-						<span class="fst-italic">Profession</span>
-					</div>
-				</div>
-				<div class="testimonial-item text-center">
-					<img
-						class="img-fluid rounded-circle border border-2 p-2 mx-auto mb-4"
-						src="img/testimonial-2.jpg" style="width: 100px; height: 100px" />
-					<div class="testimonial-text rounded text-center p-4">
-						<p>Clita clita tempor justo dolor ipsum amet kasd amet duo
-							justo duo duo labore sed sed. Magna ut diam sit et amet stet eos
-							sed clita erat magna elitr erat sit sit erat at rebum justo sea
-							clita.</p>
-						<h5 class="mb-1">Patient Name</h5>
-						<span class="fst-italic">Profession</span>
-					</div>
-				</div>
-				<div class="testimonial-item text-center">
-					<img
-						class="img-fluid rounded-circle border border-2 p-2 mx-auto mb-4"
-						src="img/testimonial-3.jpg" style="width: 100px; height: 100px" />
-					<div class="testimonial-text rounded text-center p-4">
-						<p>Clita clita tempor justo dolor ipsum amet kasd amet duo
-							justo duo duo labore sed sed. Magna ut diam sit et amet stet eos
-							sed clita erat magna elitr erat sit sit erat at rebum justo sea
-							clita.</p>
-						<h5 class="mb-1">Patient Name</h5>
-						<span class="fst-italic">Profession</span>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 	<!-- Testimonial End -->
 
 	<!-- Footer Start -->
 	<div
-		class="container-fluid footer bg-dark text-light footer mt-5 pt-5 wow fadeIn"
+		class="container-fluid footer bg-dark text-light footer mt-5 py-5 wow fadeIn"
 		data-wow-delay="0.1s">
-		<div class="container py-5">
+		<div class="container pt-3 pb-3">
 			<div class="row g-5">
-				<div class="col-lg-3 col-md-6">
-					<h5 class="text-light mb-4">Address</h5>
+				<div class="col-lg-9 col-md-6">
+					<!-- <h5 class="text-light mb-4">Address</h5> -->
 					<p class="mb-2">
-						<i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA
+						<i class="fa fa-map-marker-alt me-3"></i>대전광역시 동구 우암로 352-21
 					</p>
 					<p class="mb-2">
-						<i class="fa fa-phone-alt me-3"></i>+012 345 67890
+						<i class="fa fa-phone-alt me-3"></i>+042 123 4567
 					</p>
 					<p class="mb-2">
-						<i class="fa fa-envelope me-3"></i>info@example.com
+						<i class="fa fa-envelope me-3"></i>admin@sdam-sdam.com
 					</p>
-					<div class="d-flex pt-2">
-						<a class="btn btn-outline-light btn-social" href=""><i
-							class="fab fa-twitter"></i></a> <a
-							class="btn btn-outline-light btn-social" href=""><i
-							class="fab fa-facebook-f"></i></a> <a
-							class="btn btn-outline-light btn-social" href=""><i
-							class="fab fa-youtube"></i></a> <a
-							class="btn btn-outline-light btn-social" href=""><i
-							class="fab fa-linkedin-in"></i></a>
-					</div>
 				</div>
+
 				<div class="col-lg-3 col-md-6">
-					<h5 class="text-light mb-4">Quick Links</h5>
-					<a class="btn btn-link" href="">About Us</a> <a
-						class="btn btn-link" href="">Contact Us</a> <a
-						class="btn btn-link" href="">Our Services</a> <a
-						class="btn btn-link" href="">Terms & Condition</a> <a
-						class="btn btn-link" href="">Support</a>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<h5 class="text-light mb-4">Popular Links</h5>
-					<a class="btn btn-link" href="">About Us</a> <a
-						class="btn btn-link" href="">Contact Us</a> <a
-						class="btn btn-link" href="">Our Services</a> <a
-						class="btn btn-link" href="">Terms & Condition</a> <a
-						class="btn btn-link" href="">Support</a>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<h5 class="text-light mb-4">Newsletter</h5>
-					<p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+				<!-- 	<h5 class="text-light mb-4">Newsletter</h5> -->					
 					<div class="position-relative mx-auto" style="max-width: 400px">
-						<input class="form-control border-0 w-100 py-3 ps-4 pe-5"
-							type="text" placeholder="Your email" />
-						<button type="button"
-							class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">
-							SignUp</button>
+						<button type="button" class="btn btn-outline-warning px-5 py-2 mb-4">광고문의</button>
+						<!-- <a href="" class="btn btn-primary">광고문의<i class="fa fa-arrow-right ms-3"></i></a> -->
 					</div>
+					<div class="text-center text-md-start mb-3 mb-md-0">
+						<p>&copy; <a class="border-bottom" href="#">sdam-sdam</a>, All
+						Right Reserved.</p>
+					</div>					
+
 				</div>
 			</div>
 		</div>
-		<div class="container">
-			<div class="copyright">
-				<div class="row">
-					<div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-						&copy; <a class="border-bottom" href="#">Your Site Name</a>, All
-						Right Reserved.
-					</div>
-					<div class="col-md-6 text-center text-md-end">
-						<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-						Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML
-							Codex</a> <br />Distributed By: <a href="https://themewagon.com"
-							target="_blank">ThemeWagon</a>
-					</div>
-				</div>
-			</div>
-		</div>
+
 	</div>
 	<!-- Footer End -->
 
