@@ -99,9 +99,9 @@
 	<!-- Service Start -->
 	<div class="container-xxl py-5">
 		<div class="container">
-			<div class="row g-5 mb-2 wow fadeInUp label" data-wow-delay="0.1s">
+			<div class="row g-5 mb-4 wow fadeInUp label" data-wow-delay="0.1s">
 				
-				<div class="col-2 p-1 mb-2">
+				<div class="col-2 p-1 mb-5">
 					<select class="form-select" aria-label="Default select example">
 						<option selected>지역별</option>
 						<option value="1">서울/경기</option>
@@ -109,7 +109,7 @@
 						<option value="3">경상도</option>
 					</select> 
 				</div>
-				<div class="col-2 p-1 mb-2">
+				<div class="col-2 p-1 mb-5">
 						<select class="form-select" aria-label="Default select example">
 							<option selected>경력</option>
 							<option value="1">1년~5년</option>
@@ -119,7 +119,7 @@
 						</select> 
 				</div>
 					
-				<div class="col-2 p-1 mb-2">
+				<div class="col-2 p-1 mb-5">
 					<select class="form-select" aria-label="Default select example">
 						<option selected>별점순</option>
 						<option value="1">1.0~3.0</option>
@@ -128,7 +128,7 @@
 					</select> 					
 				</div>
 					
-				<div class="col-2 p-1 mb-2">
+				<div class="col-2 p-1 mb-5">
 					<select class="form-select" aria-label="Default select example">
 						<option selected>성별</option>
 						<option value="1">여자 테라피스트</option>
@@ -136,7 +136,7 @@
 					</select>
 				</div>
 				
-				<div class="col-3 p-1 mb-2 offset-1">	
+				<div class="col-3 p-1 mb-5 offset-1">	
 					<div class="input-group mb-2">
 	  						<input type="text" class="form-control" placeholder="검색어를 입력하세요" aria-label="Recipient's username" aria-describedby="button-addon2">
 	  						<button class="btn btn-primary" type="button" id="button-addon2">검색</button>
@@ -153,7 +153,7 @@
 <!-- 							</button> -->
 <!-- 					</div> -->
 				
-				<div class="card" style="width: 18rem; margin-right:35px;">
+				<div class="card" style="width: 18rem; margin-left:5px; margin-right:45px;">
 				  <img src="${root}image/therapist.JPG" class="card-img-top"  style="height:30rem;" alt="...">
 					  <div class="card-body">
 					    <h5 class="card-title">김혜진 테라피스트</h5>
@@ -161,28 +161,27 @@
 						경력: 6년<br></p>
 
 			           <div class="row">
-				           <div class="col"><a href="#" class="btn btn-primary" style="width:100px;">더보기</a></div>	   
-				           <div class="col text-end pt-1"><img src="${root}/image/heart.png"><span class="align-bottom"> 2,500</span> </div>
+				           <div class="col"><a href="#" class="btn btn-primary" style="width:100px; margin-top:20px;">더보기</a></div>	   
+				           <div class="col text-end pt-4"><img src="${root}/image/heart.png"><span class="align-bottom"> 2,500</span> </div>
 			           </div>
-
 					</div>
 				</div>
 				
-				<div class="card" style="width: 18rem; margin-right:40px;">
+				<div class="card" style="width: 18rem; margin-left:7px; margin-right:45px;">
 				  <img src="${root}image/therapist.JPG" class="card-img-top" style="height:30rem;" alt="...">
 					  <div class="card-body">
 					    <h5 class="card-title">임유리나 테라피스트</h5>
 					    <p class="card-text">주요지역 : 세종 / 대전 <br>
 						경력: 15년<br></p>						
 						 <div class="row">
-				           <div class="col"><a href="#" class="btn btn-primary" style="width:100px;">더보기</a></div>	   
-				           <div class="col text-end pt-1"><img src="${root}/image/heart.png"><span class="align-bottom"> 2,500</span> </div>
+				           <div class="col"><a href="#" class="btn btn-primary" style="width:100px; margin-top:20px;">더보기</a></div>	   
+				           <div class="col text-end pt-4"><img src="${root}/image/heart.png"><span class="align-bottom"> 2,500</span> </div>
 			           	 </div>		           
 						
 					  </div>
 				</div>
 				
-				<div class="card" style="width: 18rem; margin-right:40px;">
+				<div class="card" style="width: 18rem; margin-left:7px; margin-right:45px;">
 				  <img src="${root}image/therapist.JPG" class="card-img-top" style="height:30rem;" alt="...">
 					  <div class="card-body">
 					    <h5 class="card-title">이세령 테라피스트</h5>
@@ -190,22 +189,22 @@
 						경력: 6년<br></p>
 						
 				  		<div class="row">
-				           <div class="col"><a href="#" class="btn btn-primary" style="width:100px;">더보기</a></div>	   
-				           <div class="col text-end pt-1"><img src="${root}/image/heart.png"><span class="align-bottom"> 2,500</span> </div>
+				           <div class="col"><a href="#" class="btn btn-primary" style="width:100px; margin-top:20px;">더보기</a></div>	   
+				           <div class="col text-end pt-4"><img src="${root}/image/heart.png"><span class="align-bottom"> 2,500</span> </div>
 			           	</div>
 					</div>
 				</div>
 				
-				<div class="card" style="width: 18rem;">
-				  <img src="${root}image/therapist.JPG" class="card-img-top"  style="height:30rem;" alt="...">
+				<div class="card" style="width: 18rem; ">
+				  <img src="${root}image/therapist.JPG" class="card-img-top"  style="height:30rem; " alt="...">
 					  <div class="card-body">
 					    <h5 class="card-title">강효선 테라피스트</h5>
 					    <p class="card-text">주요지역 : 충북 / 충남 <br>
 						경력: 6년<br></p>
 					   
 					   <div class="row">
-				           <div class="col"><a href="#" class="btn btn-primary" style="width:100px;">더보기</a></div>	   
-				           <div class="col text-end pt-1"><img src="${root}/image/heart.png"><span class="align-bottom"> 2,500</span> </div>
+				           <div class="col"><a href="#" class="btn btn-primary" style="width:100px; margin-top:20px;">더보기</a></div>	   
+				           <div class="col text-end pt-4"><img src="${root}/image/heart.png"><span class="align-bottom"> 2,500</span> </div>
 			           	 </div>
 					</div>
 				</div>
