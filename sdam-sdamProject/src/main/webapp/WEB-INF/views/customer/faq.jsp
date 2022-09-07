@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
 <c:set var="root" value="${pageContext.request.contextPath }/"/>
 <!DOCTYPE html>
 <html>
@@ -13,8 +13,8 @@
 <meta content="" name="description" />
 
 <!-- Bootstrap CDN -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<!-- <link rel="stylesheet" -->
+<!-- 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"> -->
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script
@@ -122,12 +122,12 @@
 						<button class="accordion-button" type="button"
 							data-bs-toggle="collapse" data-bs-target="#collapseOne"
 							aria-expanded="true" aria-controls="collapseOne">
-							Question #1  </button>
+							Question #1 쓰담쓰담 서비스 이용 시간이 어떻게 되나요?</button>
 					</h2>
 					<div id="collapseOne" class="accordion-collapse collapse show"
 						aria-labelledby="headingOne" data-bs-parent="#accordionExample">
 						<div class="accordion-body">
-							<strong>This is the first item's accordion body.</strong> It is
+							<strong>최소 30분부터 최대 3시간까지 이용이 가능합니다.</strong> It is
 							shown by default, until the collapse plugin adds the appropriate
 							classes that we use to style each element. These classes control
 							the overall appearance, as well as the showing and hiding via CSS
@@ -292,8 +292,7 @@
 
     <!-- Template Javascript -->
     <script src="../js/main.js"></script>
-  </body>
-
+    
 </body>
 </html>
 
