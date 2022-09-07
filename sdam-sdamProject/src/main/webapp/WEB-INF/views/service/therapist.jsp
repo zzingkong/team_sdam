@@ -161,7 +161,7 @@
 						경력: 6년<br></p>
 
 			           <div class="row">
-				           <div class="col"><a href="#" class="btn btn-primary" style="width:100px; margin-top:20px;">더보기</a></div>	   
+				           <div class="col"><a href="${root}service/therapistdetail" class="btn btn-primary" style="width:100px; margin-top:20px;">더보기</a></div>	   
 				           <div class="col text-end pt-4"><img src="${root}/image/heart.png"><span class="align-bottom"> 2,500</span> </div>
 			           </div>
 					</div>

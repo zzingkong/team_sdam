@@ -46,4 +46,9 @@ public class ServiceController {
 
 		return "service/therapist";
 	}
+	//테라피스트 더보기
+	@GetMapping("/therapistdetail")
+	public String therapistdetail() {
+		return "service/therapistdetail";
+	}
 }
