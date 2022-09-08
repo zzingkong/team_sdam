@@ -77,7 +77,7 @@
 				<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
 					
 					<h1 class="display-5 mb-4">
-						#<span class="text-primary"> 테라피독</span> <span class="text-primary">테라피스트</span>
+						#<span class="text-primary"> 테라피독 / </span> <span class="text-primary">테라피스트</span>
 						란?
 					</h1>
 					<p class="mb-3 fs-4 text fw-bold">테라피 독(Therapy Dog)</p><p>애니멀 테라피의 테라피(therapy)와 독(Dog)의 합성어로 동물 매개치료를 위해 <br> 훈련된 강아지를 말합니다.

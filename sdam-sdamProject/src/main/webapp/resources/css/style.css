@@ -405,8 +405,7 @@
 /*** Membership ***/
 .membership-item {
     padding: 45px 30px;
-    color: #FFFFFF;
-    background: rgba(0, 0, 0, .7);
+    color: #FFFFFF;    
 }
 
 .membership-item img {
