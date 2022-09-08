@@ -84,10 +84,10 @@
         <nav aria-label="breadcrumb animated slideInDown">
           <ol class="breadcrumb mb-0">
 				<li class="breadcrumb-item">
-					<a class="text-white" href="${root }main">Home</a>
+					<a class="text-white" href="${root }main">Home &nbsp;/</a>
 				</li>
 				<li class="breadcrumb-item">
-					<a class="text-white">고객센터</a>
+					<a class="text-white">고객센터 &nbsp;/</a>
 				</li>
             <li class="breadcrumb-item text-primary active" aria-current="page" href="${root }customer/faq">
             	FAQ
