@@ -69,12 +69,10 @@
 		<div class="row gx-0 d-none d-lg-flex">
 			<div class="col-lg-7 px-5 text-start">
 				<div class="h-100 d-inline-flex align-items-center py-3 me-4">
-					<small class="fa fa-map-marker-alt text-primary me-2"></small> <small>123
-						Street, New York, USA</small>
+					<small class="fa fa-map-marker-alt text-primary me-2"></small> <small>대전광역시 동구 우암로 352-21</small>
 				</div>
 				<div class="h-100 d-inline-flex align-items-center py-3">
-					<small class="far fa-clock text-primary me-2"></small> <small>Mon
-						- Fri : 09.00 AM - 09.00 PM</small>
+					<small class="far fa-clock text-primary me-2"></small> <small>월 - 금 | AM 09:00 - PM 06.00</small>
 				</div>
 			</div>
 			<div class="col-lg-5 px-5 text-end">
@@ -115,7 +113,7 @@
 		<div class="collapse navbar-collapse py-4 py-lg-0" id="navbarCollapse">
 			<div class="navbar-nav ms-auto">
 				<div class="nav-item dropdown">
-					<a href="${root }introduce/intro" class="nav-item nav-link">쓰담쓰담 소개</a>
+					<a href="${root }introduce/intro" class="nav-item nav-link">쓰담쓰담소개</a>
 				</div>
 				<div class="nav-item dropdown">
 					<a href="#" class="nav-link"
@@ -210,7 +208,7 @@
 					<h5 class="mb-3">
 						<i class="far fa-check-circle text-primary me-3"></i>작업의 집중력 향상
 					</h5>
-					<a class="btn btn-primary py-3 px-5 mt-3" href="">Read More</a>
+					<a class="btn btn-primary py-3 px-5 mt-3" href="${root }introduce/intro">서비스 소개</a>
 				</div>
 				<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
 					<div class="img-border">
@@ -230,25 +228,25 @@
 				<div class="col-md-6 col-lg-3 text-center wow fadeIn"
 					data-wow-delay="0.1s">
 					<i class="fa fa-paw fa-3x text-primary mb-3"></i>
-					<h1 class="text-white mb-2" data-toggle="counter-up">95000</h1>
+					<h1 class="text-white mb-2" data-toggle="counter-up">128717</h1>
 					<p class="text-white mb-0">2021년 유기견 수</p>
 				</div>
 				<div class="col-md-6 col-lg-3 text-center wow fadeIn"
 					data-wow-delay="0.3s">
 					<i class="fa fa-users fa-3x text-primary mb-3"></i>
-					<h1 class="text-white mb-2" data-toggle="counter-up">864805</h1>
+					<h1 class="text-white mb-2" data-toggle="counter-up">886173</h1>
 					<p class="text-white mb-0">2021년 치매상병자 수</p>
 				</div>
 				<div class="col-md-6 col-lg-3 text-center wow fadeIn"
 					data-wow-delay="0.5s">
 					<i class="fa fa-certificate fa-3x text-primary mb-3"></i>
-					<h1 class="text-white mb-2" data-toggle="counter-up">12345</h1>
+					<h1 class="text-white mb-2" data-toggle="counter-up">123</h1>
 					<p class="text-white mb-0">대기 중인 테라피스트</p>
 				</div>
 				<div class="col-md-6 col-lg-3 text-center wow fadeIn"
 					data-wow-delay="0.7s">
 					<i class="fa fa-shield-alt fa-3x text-primary mb-3"></i>
-					<h1 class="text-white mb-2" data-toggle="counter-up">12345</h1>
+					<h1 class="text-white mb-2" data-toggle="counter-up">1004</h1>
 					<p class="text-white mb-0">대기 중인 테라피독</p>
 				</div>
 			</div>
@@ -283,8 +281,8 @@
 								<div class="position-relative">
 									<img class="img-fluid" src="img/animal-md-1.jpg" alt="" />
 									<div class="animal-text p-4">
-										<p class="text-white small text-uppercase mb-0">Animal</p>
-										<h5 class="text-white mb-0">Elephant</h5>
+										<p class="text-white small text-uppercase mb-0">#대전 #리트리버 #귀여움</p>
+										<h5 class="text-white mb-0">임댕댕 >></h5>
 									</div>
 								</div>
 							</a>
@@ -295,8 +293,8 @@
 								<div class="position-relative">
 									<img class="img-fluid" src="img/animal-lg-1.jpg" alt="" />
 									<div class="animal-text p-4">
-										<p class="text-white small text-uppercase mb-0">Animal</p>
-										<h5 class="text-white mb-0">Elephant</h5>
+										<p class="text-white small text-uppercase mb-0">#대전 #리트리버 #귀여움</p>
+										<h5 class="text-white mb-0">임댕댕 >></h5>
 									</div>
 								</div>
 							</a>
@@ -311,8 +309,8 @@
 								<div class="position-relative">
 									<img class="img-fluid" src="img/animal-lg-2.jpg" alt="" />
 									<div class="animal-text p-4">
-										<p class="text-white small text-uppercase mb-0">Animal</p>
-										<h5 class="text-white mb-0">Elephant</h5>
+										<p class="text-white small text-uppercase mb-0">#대전 #리트리버 #귀여움</p>
+										<h5 class="text-white mb-0">임댕댕 >></h5>
 									</div>
 								</div>
 							</a>
@@ -323,8 +321,8 @@
 								<div class="position-relative">
 									<img class="img-fluid" src="img/animal-md-2.jpg" alt="" />
 									<div class="animal-text p-4">
-										<p class="text-white small text-uppercase mb-0">Animal</p>
-										<h5 class="text-white mb-0">Elephant</h5>
+										<p class="text-white small text-uppercase mb-0">#대전 #리트리버 #귀여움</p>
+										<h5 class="text-white mb-0">임댕댕 >></h5>
 									</div>
 								</div>
 							</a>
@@ -339,8 +337,8 @@
 								<div class="position-relative">
 									<img class="img-fluid" src="img/animal-md-3.jpg" alt="" />
 									<div class="animal-text p-4">
-										<p class="text-white small text-uppercase mb-0">Animal</p>
-										<h5 class="text-white mb-0">Elephant</h5>
+										<p class="text-white small text-uppercase mb-0">#대전 #리트리버 #귀여움</p>
+										<h5 class="text-white mb-0">임댕댕 >></h5>
 									</div>
 								</div>
 							</a>
@@ -351,8 +349,8 @@
 								<div class="position-relative">
 									<img class="img-fluid" src="img/animal-lg-3.jpg" alt="" />
 									<div class="animal-text p-4">
-										<p class="text-white small text-uppercase mb-0">Animal</p>
-										<h5 class="text-white mb-0">Elephant</h5>
+										<p class="text-white small text-uppercase mb-0">#대전 #리트리버 #귀여움</p>
+										<h5 class="text-white mb-0">임댕댕 >></h5>
 									</div>
 								</div>
 							</a>

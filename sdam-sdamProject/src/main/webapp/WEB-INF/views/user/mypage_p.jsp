@@ -6,13 +6,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>마음을 치료하는 테라피독</title>
+<title>마이페이지</title>
 <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 <meta content="" name="keywords" />
 <meta content="" name="description" />
 
 <!-- Bootstrap CDN -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
@@ -57,18 +56,15 @@
 <div class="container-fluid header-bg py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
 	<div class="container py-5">
 		<h1 class="display-4 text-white mb-3 animated slideInDown">
-          테라피독 (Therapy Dog)
+          마이페이지 (My Page)
 		</h1>
 		<nav aria-label="breadcrumb animated slideInDown">
 			<ol class="breadcrumb mb-0">
 				<li class="breadcrumb-item">
-					<a class="text-white" href="${root }main">Home</a>
-				</li>
-				<li class="breadcrumb-item text-white">
-					테라피
+					<a class="text-white" href="${root }main">Home &nbsp;/ </a>
 				</li>
 				<li class="breadcrumb-item text-primary active" aria-current="page">
-					테라피독
+					마이페이지
 				</li>
 			</ol>
 		</nav>
@@ -76,22 +72,47 @@
 </div>
 <!-- Page Header End -->
 
+이 화면이 회원정보 화면인걸 어떻게 알려줄까?
+
 <!-- Start -->
 <div class="container-xxl py-5" style="display:flex;">
-<!-- 	<div class="container"> -->
-	<div class="col-lg-3" style="border:1px solid;">메뉴?</div>
-	<div class="col-lg-9" style="border:1px solid;">
-		<h1 class="display-5 text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-			Our Clients Say!
-		</h1>
-        
-<!-- <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s"> -->
-		<div class="testimonial-item text-center">
+	
+<%-- <div class="collapse navbar-collapse py-4 py-lg-0" >
+			<div class="navbar-nav ms-auto">
+				<div class=" dropdown">
+					<a href="${root }introduce/intro" class="nav-item nav-link">쓰담쓰담소개</a>
+				</div> --%>
+
+<!-- <div class="container"> -->
+	<div class="col-lg-3">
+<!-- 	<p class="mb-3"><a href="#">회원정보</a>회원정보</p>
+		<p class="mb-3">예약관리</p>
+		<p class="mb-3">게시물관리</p>
+		<p class="mb-3">회원탈퇴</p> -->
+
+		<nav class="nav flex-column">
+			<a class="nav-link active" aria-current="page" href="#">회원정보</a> <!-- aria-current 현재페이지 -->
+			<a class="nav-link" href="#">예약관리</a>
+			<a class="nav-link" href="#">게시물관리</a>
+			<a class="nav-link" href="#">회원탈퇴</a> 
+			<!-- tabindex="-1" aria-disabled="true" 키보드 사용자 상호작용 불가 / https://getbootstrap.kr/docs/5.1/utilities/interactions/-->
+		</nav>	
+	</div>
+	
+	<div class="col-lg-9 bg-white card shadow">  
+<!-- <div class="owl-carousel testimonial-carousel wow fadeInUp text-center" data-wow-delay="0.1s"> -->
+		<div class="testimonial-item">
+		<div class="mt-4 mb-4 ms-5 wow fadeInUp">
 			<img class="img-fluid rounded-circle border border-2 p-2 mx-auto mb-4" src="../image/testimonial-1.jpg" style="width: 100px; height: 100px"/>
-			<div class="testimonial-text rounded text-center p-4">
-				<p> 자기소개 </p>
-				<h5 class="mb-1">차은우</h5>
-				<span class="fst-italic">Profession</span>
+			<h4 class="display-7" data-wow-delay="0.1s">테라피스트 차은우님 안녕하세요.</h4>
+		</div>
+			<div class="testimonial-text rounded p-4 ms-4">
+				<p class="mb-1">이름</p>
+				<p class="mb-1">아이디</p>
+				<p class="mb-1">전화번호</p>
+				<p class="mb-1">생일</p>
+				<p class="mb-2">주소</p><br/>
+				<span class="fst-italic">회원정보수정</span>
 			</div>
         </div>
 <!-- </div> -->

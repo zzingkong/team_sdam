@@ -9,12 +9,10 @@
 		<div class="row gx-0 d-none d-lg-flex">
 			<div class="col-lg-7 px-5 text-start">
 				<div class="h-100 d-inline-flex align-items-center py-3 me-4">
-					<small class="fa fa-map-marker-alt text-primary me-2"></small> <small>123
-						Street, New York</small>
+					<small class="fa fa-map-marker-alt text-primary me-2"></small> <small>대전광역시 동구 우암로 352-21</small>
 				</div>
 				<div class="h-100 d-inline-flex align-items-center py-3">
-					<small class="far fa-clock text-primary me-2"></small> <small>Mon
-						- Fri : 09.00 AM - 09.00 PM</small>
+					<small class="far fa-clock text-primary me-2"></small> <small>월 - 금 | AM 09:00 - PM 06.00</small>
 				</div>
 			</div>
 			<div class="col-lg-5 px-5 text-end">
@@ -55,7 +53,7 @@
 		<div class="collapse navbar-collapse py-4 py-lg-0" id="navbarCollapse">
 			<div class="navbar-nav ms-auto">
 				<div class="nav-item dropdown">
-					<a href="${root }introduce/intro" class="nav-item nav-link">쓰담쓰담 소개</a>
+					<a href="${root }introduce/intro" class="nav-item nav-link">쓰담쓰담소개</a>
 				</div>
 				<div class="nav-item dropdown">
 					<a href="#" class="nav-link"
