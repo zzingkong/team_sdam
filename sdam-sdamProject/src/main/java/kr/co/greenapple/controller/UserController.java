@@ -117,4 +117,11 @@ public class UserController {
 		UserValidator validator1 = new UserValidator();
 		binder.addValidators(validator1);
 	}
+	
+	//마이페이지
+	@GetMapping("/mypage_p")
+	public String mypage_p() {
+		
+		return "user/mypage_p";
+	}
 }

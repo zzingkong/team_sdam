@@ -79,6 +79,7 @@
 <!-- Animal Start -->
 <div class="container-xxl py-5">
 	<div class="container">
+	
 		<div class="row g-5 mb-5 align-items-end wow fadeInUp" data-wow-delay="0.1s">
 			<div class="col-lg-6" >
 				<p><span class="text-primary me-2">#</span>테라피독(Therapy Dog)</p>
@@ -140,23 +141,9 @@
 							</div>
 						</a>
 					</div>
-					
-<!-- 				<div class="col-lg-4 col-md-6">
-						<a class="animal-item" href="../img/animal-md-1.jpg" data-lightbox="animal">
-							<div class="position-relative">
-							<img class="img-fluid" src="../img/animal-md-1.jpg" alt="" />
-								<div class="animal-text p-4">
-									<p class="text-white small text-uppercase mb-0">#지역(USER에서추출가능?) #견종 #키워드?</p>
-									<h5 class="text-white mb-0">이름 >></h5>
-								</div>
-							</div>
-						</a>
-					</div> 
-				</div> -->
 				
 			</div>		
 		</div>
-		<!-- 수정 -->
 		
 	</div>
 </div>
@@ -192,8 +179,9 @@ function pop1() {
 	myModal.hide();
 }
 </script>
-
 <!-- Animal End -->
+
+<!-- BOTTOM MENU -->
 <c:import url="/WEB-INF/views/include/bottom_info.jsp"></c:import>
 
 <!-- Back to Top -->
