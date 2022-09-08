@@ -114,18 +114,20 @@
 		</button>
 		<div class="collapse navbar-collapse py-4 py-lg-0" id="navbarCollapse">
 			<div class="navbar-nav ms-auto">
-				<a href="${root }introduce/intro" class="nav-item nav-link">쓰담쓰담 소개</a>
 				<div class="nav-item dropdown">
-					<a href="#" class="nav-link dropdown-toggle"
-						data-bs-toggle="dropdown">테라피</a>
+					<a href="${root }introduce/intro" class="nav-item nav-link">쓰담쓰담 소개</a>
+				</div>
+				<div class="nav-item dropdown">
+					<a href="#" class="nav-link"
+						data-bs-toggle="dropdown">테라피&nbsp;<i class="bi bi-chevron-down"></i></a>
 					<div class="dropdown-menu rounded-0 rounded-bottom m-0">
 						<a href="${root }service/therapist" class="dropdown-item">테라피스트</a> 
 						<a href="${root }service/therapydog" class="dropdown-item">테라피독</a> 
 					</div>
 				</div>
 				<div class="nav-item dropdown">
-					<a href="#" class="nav-link dropdown-toggle"
-						data-bs-toggle="dropdown">고객센터</a>
+					<a href="#" class="nav-link"
+						data-bs-toggle="dropdown">고객센터&nbsp;<i class="bi bi-chevron-down"></i></a>
 					<div class="dropdown-menu rounded-0 rounded-bottom m-0">
 						<a href="${root }customer/faq" class="dropdown-item">FAQ</a>
 						<a href="${root }customer/qna" class="dropdown-item">QnA</a> 						

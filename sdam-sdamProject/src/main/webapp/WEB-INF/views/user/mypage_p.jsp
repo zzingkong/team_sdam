@@ -41,7 +41,7 @@
 <link href="../css/style.css" rel="stylesheet" />
 </head>
 
-<body>
+<body class="bg-light">
 <!-- Spinner Start -->
 <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
 	<div class="spinner-border text-primary" style="width: 3rem; height: 3rem" role="status">
@@ -76,110 +76,29 @@
 </div>
 <!-- Page Header End -->
 
-<!-- Animal Start -->
-<div class="container-xxl py-5">
-	<div class="container">
-	
-		<div class="row g-5 mb-5 align-items-end wow fadeInUp" data-wow-delay="0.1s">
-			<div class="col-lg-6" >
-				<p><span class="text-primary me-2">#</span>테라피독(Therapy Dog)</p>
-				<h1 class="display-6 mb-0">우리는 쓰담쓰담의 <span class="text-primary">테라피독</span>입니다</h1>
+<!-- Start -->
+<div class="container-xxl py-5" style="display:flex;">
+<!-- 	<div class="container"> -->
+	<div class="col-lg-3" style="border:1px solid;">메뉴?</div>
+	<div class="col-lg-9" style="border:1px solid;">
+		<h1 class="display-5 text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+			Our Clients Say!
+		</h1>
+        
+<!-- <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s"> -->
+		<div class="testimonial-item text-center">
+			<img class="img-fluid rounded-circle border border-2 p-2 mx-auto mb-4" src="../image/testimonial-1.jpg" style="width: 100px; height: 100px"/>
+			<div class="testimonial-text rounded text-center p-4">
+				<p> 자기소개 </p>
+				<h5 class="mb-1">차은우</h5>
+				<span class="fst-italic">Profession</span>
 			</div>
-			<div class="col-lg-6 text-lg-end">
-				<a class="btn btn-primary py-3 px-5" href="${root}service/adddog">테라피독 등록하기</a>
-			</div>
-		</div>
-		
-		<div class="row">		
-			<div class="wow fadeInUp" data-wow-delay="0.2s" style="display:flex; flex-direction:row; flex-wrap:wrap;">
-			
-				<!-- <div class="row g-4"> -->
-					<div class="col-lg-4 col-md-6" style="padding-bottom:4em;">
-						<a class="animal-item" href="#" onclick="popup();">
-							<div class="position-relative">
-							<img class="img-fluid" src="../img/animal-md-1.jpg" alt="" />
-								<div class="animal-text p-4">
-									<p class="text-white small text-uppercase mb-0">#대전 #리트리버 #귀여움</p>
-									<h5 class="text-white mb-0">임댕댕 >></h5>
-								</div>
-							</div>
-						</a>
-					</div>
-					
-					<div class="col-lg-4 col-md-6" style="padding-bottom:4em;">
-						<a class="animal-item" href="#" onclick="popup();">
-							<div class="position-relative">
-							<img class="img-fluid" src="../img/animal-md-1.jpg" alt="" />
-								<div class="animal-text p-4">
-									<p class="text-white small text-uppercase mb-0">#대전 #리트리버 #귀여움</p>
-									<h5 class="text-white mb-0">임댕댕 >></h5>
-								</div>
-							</div>
-						</a>
-					</div>
-					
-					<div class="col-lg-4 col-md-6" style="padding-bottom:4em;">
-						<a class="animal-item" href="#" onclick="popup();">
-							<div class="position-relative">
-							<img class="img-fluid" src="../img/animal-md-1.jpg" alt="" />
-								<div class="animal-text p-4">
-									<p class="text-white small text-uppercase mb-0">#대전 #리트리버 #귀여움</p>
-									<h5 class="text-white mb-0">임댕댕 >></h5>
-								</div>
-							</div>
-						</a>
-					</div>
-					
-					<div class="col-lg-4 col-md-6" style="padding-bottom:4em;">
-						<a class="animal-item" href="#" onclick="popup();">
-							<div class="position-relative">
-							<img class="img-fluid" src="../img/animal-md-1.jpg" alt="" />
-								<div class="animal-text p-4">
-									<p class="text-white small text-uppercase mb-0">#대전 #리트리버 #귀여움</p>
-									<h5 class="text-white mb-0">임댕댕 >></h5>
-								</div>
-							</div>
-						</a>
-					</div>
-				
-			</div>		
-		</div>
-		
+        </div>
+<!-- </div> -->
 	</div>
+<!-- 	</div> -->
 </div>
-
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">임댕댕(dog_name)</h5>
-        <button type="button" class="btn-close" onclick="pop1();" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <img class="img-fluid" src="../img/animal-md-1.jpg" alt="" />
-        <div class="mt-3">견종 / 성별 / 나이 / 지역</div>
-        <div>소개글입니다. 귀여운 임댕댕</div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" onclick="pop1();">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<script>
-var myModal = new bootstrap.Modal(document.getElementById('myModal'));
-function popup() {
-	myModal.toggle();
-	myModal.show();
-}
-function pop1() {
-	myModal.hide();
-}
-</script>
-<!-- Animal End -->
+<!-- End -->
 
 <!-- BOTTOM MENU -->
 <c:import url="/WEB-INF/views/include/bottom_info.jsp"></c:import>
