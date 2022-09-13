@@ -114,19 +114,37 @@
               <h1 class="display-5 mb-3"><span class="text-primary">김혜진</span> 테라피스트</h1>
               <h4 class="text-black mb-3">주요지역 : 세종 / 대전</h4>
               <h4 class="mb-4">경력 : 6년</h4>
-              <p class="text-dark"><i class="fa fa-check text-primary me-3">
-                 </i>現 쓰담보호소 원장
-              </p>              
-              <p class="text-dark">
-                <i class="fa fa-check text-primary me-3"></i>現 쓰담쓰담 테라피스트 
-              </p>
-              <p class="text-dark"><i class="fa fa-check text-primary me-3">
-               </i>tv 동물농장 652회 출연
-              </p>              
-              <p class="text-dark"><i class="fa fa-check text-primary me-3">
-               </i>씨담씨담 위원회 부장
-              </p>  
-                          
+              <div>
+	              <p class="text-dark"><i class="fa fa-check text-primary me-3">
+	                 </i>現 쓰담보호소 원장
+	              </p>              
+	              <p class="text-dark">
+	                <i class="fa fa-check text-primary me-3"></i>現 쓰담쓰담 테라피스트 
+	              </p>
+	              <p class="text-dark"><i class="fa fa-check text-primary me-3">
+	               </i>tv 동물농장 652회 출연
+	              </p>              
+	              <p class="text-dark"><i class="fa fa-check text-primary me-3">
+	               </i>씨담씨담 위원회 부장
+	              </p>
+	          </div>  
+	           <div>
+	              <p class="text-dark"><i class="fa fa-check text-primary me-3">
+	               </i>씨담씨담 위원회 부장
+	              </p> 
+	              <p class="text-dark"><i class="fa fa-check text-primary me-3">
+	               </i>씨담씨담 위원회 부장
+	              </p> 
+	              <p class="text-dark"><i class="fa fa-check text-primary me-3">
+	               </i>씨담씨담 위원회 부장
+	              </p> 
+	              <p class="text-dark"><i class="fa fa-check text-primary me-3">
+	               </i>씨담씨담 위원회 부장
+	              </p> 
+	              <p class="text-dark"><i class="fa fa-check text-primary me-3">
+	               </i>씨담씨담 위원회 부장
+	              </p> 
+	           </div>           
               <a class="btn btn-primary py-3 px-5 mt-3" href="">신청하기</a>
             </div>
           </div>
