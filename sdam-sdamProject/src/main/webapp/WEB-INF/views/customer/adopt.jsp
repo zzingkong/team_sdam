@@ -152,12 +152,34 @@
 	</div>
 
 
-	<div class="container px-4 py-5 mt-4" id="featured-3">
-		<h2 class="pb-2 border-bottom"><i class="bi bi-check-lg"></i> 입양 신청서 작성하기</h2>
-		<div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-		</div>
+<div class="container px-4 py-5 mt-4" id="featured-3">
+	<h2 class="pb-2 border-bottom"><i class="bi bi-check-lg"></i> 입양 신청서 작성하기</h2>	
+			<!-- 입양작성 폼 -->
+		<div class="container px-4 py-3" id="featured-3">
+			<form class="row g-3">
+			  <div class="col-12">
+			    <label for="inputEmail4" class="form-label">이 름</label>
+			    <input type="text" class="form-control">
+			  </div>
+			  <div class="col-12">
+			    <label for="inputPassword4" class="form-label">전화번호</label>
+			    <input type="text" class="form-control" placeholder="010-0000-0000">
+			  </div>
+			  <div class="col-12">
+			    <label for="inputAddress" class="form-label">이메일</label>
+			    <input type="text" class="form-control" placeholder="">
+			  </div>
+			  <div class="col-12">
+			    <label for="inputAddress2" class="form-label">방문날짜</label>
+			    <input type="text" class="form-control" placeholder="yyyy-mm-DD">
+			  </div>
+			   <div class="col-12">
+			    <button type="submit" class="btn btn-primary">제출하기</button>
+			  </div>
+			</form>		
+		
 	</div>
-
+</div>	
 
 
 	<c:import url="/WEB-INF/views/include/bottom_info.jsp"></c:import>
