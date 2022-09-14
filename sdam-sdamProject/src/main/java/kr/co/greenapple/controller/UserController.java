@@ -119,9 +119,9 @@ public class UserController {
 	}
 	
 	//마이페이지
-	@GetMapping("/mypage_p")
-	public String mypage_p() {
-		
-		return "user/mypage_p";
-	}
+	/*
+	 * @GetMapping("/mypage_p") public String mypage_p() {
+	 * 
+	 * return "user/mypage_p"; }
+	 */
 }

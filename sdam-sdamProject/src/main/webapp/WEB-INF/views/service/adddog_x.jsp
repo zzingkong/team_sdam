@@ -1,17 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <c:set var="root" value="${pageContext.request.contextPath }/"/>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>마이페이지</title>
+<title>마음을 치료하는 테라피독</title>
 <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 <meta content="" name="keywords" />
 <meta content="" name="description" />
 
 <!-- Bootstrap CDN -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
@@ -40,7 +42,7 @@
 <link href="../css/style.css" rel="stylesheet" />
 </head>
 
-<body class="bg-light">
+<body>
 <!-- Spinner Start -->
 <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
 	<div class="spinner-border text-primary" style="width: 3rem; height: 3rem" role="status">
@@ -55,16 +57,20 @@
 <!-- Page Header Start -->
 <div class="container-fluid header-bg py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
 	<div class="container py-5">
-		<h1 class="display-4 text-white mb-3 animated slideInDown">
-          마이페이지 (My Page)
-		</h1>
+		<h1 class="display-4 text-white mb-3 animated slideInDown">테라피독 등록</h1>
 		<nav aria-label="breadcrumb animated slideInDown">
 			<ol class="breadcrumb mb-0">
 				<li class="breadcrumb-item">
-					<a class="text-white" href="${root }main">Home &nbsp;/ </a>
+					<a class="text-white" href="${root }main">Home</a>
+				</li>
+				<li class="breadcrumb-item text-white">
+					테라피
+				</li>
+				<li class="breadcrumb-item text-white">
+					<a class="text-white" href="${root}service/therapydog">테라피독</a>
 				</li>
 				<li class="breadcrumb-item text-primary active" aria-current="page">
-					마이페이지
+					테라피독 등록
 				</li>
 			</ol>
 		</nav>
@@ -72,56 +78,68 @@
 </div>
 <!-- Page Header End -->
 
-이 화면이 회원정보 화면인걸 어떻게 알려줄까?
-
 <!-- Start -->
-<div class="container-xxl py-5" style="display:flex;">
-	
-<%-- <div class="collapse navbar-collapse py-4 py-lg-0" >
-			<div class="navbar-nav ms-auto">
-				<div class=" dropdown">
-					<a href="${root }introduce/intro" class="nav-item nav-link">쓰담쓰담소개</a>
-				</div> --%>
-
-<!-- <div class="container"> -->
-	<div class="col-lg-3">
-<!-- 	<p class="mb-3"><a href="#">회원정보</a>회원정보</p>
-		<p class="mb-3">예약관리</p>
-		<p class="mb-3">게시물관리</p>
-		<p class="mb-3">회원탈퇴</p> -->
-
-		<nav class="nav flex-column">
-			<a class="nav-link active" aria-current="page" href="#">회원정보</a> <!-- aria-current 현재페이지 -->
-			<a class="nav-link" href="#">예약관리</a>
-			<a class="nav-link" href="#">게시물관리</a>
-			<a class="nav-link" href="#">회원탈퇴</a> 
-			<!-- tabindex="-1" aria-disabled="true" 키보드 사용자 상호작용 불가 / https://getbootstrap.kr/docs/5.1/utilities/interactions/-->
-		</nav>	
-	</div>
-	
-	<div class="col-lg-9 bg-white card shadow">  
-<!-- <div class="owl-carousel testimonial-carousel wow fadeInUp text-center" data-wow-delay="0.1s"> -->
-		<div class="testimonial-item">
-		<div class="mt-4 mb-4 ms-5 wow fadeInUp">
-			<img class="img-fluid rounded-circle border border-2 p-2 mx-auto mb-4" src="../image/testimonial-1.jpg" style="width: 100px; height: 100px"/>
-			<h4 class="display-7" data-wow-delay="0.1s">테라피스트 차은우님 안녕하세요.</h4>
-		</div>
-			<div class="testimonial-text rounded p-4 ms-4">
-				<p class="mb-1">이름</p>
-				<p class="mb-1">아이디</p>
-				<p class="mb-1">전화번호</p>
-				<p class="mb-1">생일</p>
-				<p class="mb-2">주소</p><br/>
-				<span class="fst-italic">회원정보수정</span>
+<div class="container" style="margin-top:100px">
+	<div class="row">
+		<div class="col-sm-3"></div>
+		<div class="col-sm-6">
+			<div class="card shadow">
+				<div class="card-body">
+					<form:form action="${root }service/joindog" method="post" modelAttribute="dogBean">
+						<div class="form-group">
+							<form:label path="dog_name">이름</form:label>
+							<form:input path="dog_name" class="form-control"/>
+					<%--    <form:errors path="dog_name" style="color:red"/> --%>	
+						</div>
+						<div class="form-group">
+							<form:label path="dog_type">견종</form:label>
+							<form:input path="dog_type" class="form-control"/>
+					<%--    <form:errors path="dog_name" style="color:red"/> --%>	
+						</div>
+						<div class="form-group">
+							<form:label path="dog_age">나이</form:label>
+							<form:input path="dog_age" class="form-control col-3"/>
+					<%--    <form:errors path="dog_name" style="color:red"/> --%>	
+						</div>
+						<div class="form-group">
+							<form:label path="dog_sex">성별</form:label><br>
+							<form:radiobutton path="dog_sex" value="XX" class="col-1"/> 여아 &nbsp;
+							<form:radiobutton path="dog_sex" value="XY" class="col-1"/> 남아
+				<%--		<form:input path="dog_sex" class="form-control"/>
+							<form:errors path="dog_name" style="color:red"/> --%>	
+						</div>
+						<div class="form-group">
+							<form:label path="dog_neu">중성화</form:label><br>
+							<form:radiobutton path="dog_neu" value="Y" class="col-1"/> 했어요 &nbsp;&nbsp;
+							<form:radiobutton path="dog_neu" value="N" class="col-1"/> 안했어요
+					<%--	<form:input path="dog_neu" class="form-control"/>		
+							<form:errors path="dog_name" style="color:red"/> --%>	
+						</div>
+						<div class="form-group">
+							<form:label path="dog_memo">소개</form:label>
+							<form:textarea path="dog_memo" class="form-control"/>
+					<%--		<form:input path="dog_memo" class="form-control"/>
+					    <form:errors path="dog_name" style="color:red"/> --%>	
+						</div>
+						<div class="form-group">
+							<form:label path="dog_pic">프로필사진</form:label>
+							<form:input type="file" path="dog_pic" class="form-control" accept="image/*"/>
+						</div>
+						
+						<div class="form-group">
+							<div class="text-right">
+								<form:button class="btn btn-primary">등록하기</form:button>
+							</div>
+						</div>
+					</form:form>
+				</div>
 			</div>
-        </div>
-<!-- </div> -->
+		</div>
+		<div class="col-sm-3"></div>
 	</div>
-<!-- 	</div> -->
 </div>
 <!-- End -->
 
-<!-- BOTTOM MENU -->
 <c:import url="/WEB-INF/views/include/bottom_info.jsp"></c:import>
 
 <!-- Back to Top -->

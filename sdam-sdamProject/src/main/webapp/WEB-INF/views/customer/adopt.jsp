@@ -13,7 +13,7 @@
 <meta content="" name="description" />
 
 <!-- Bootstrap CDN -->
-<!-- <link rel="stylesheet"
+<!-- <link rel="stylesheet" -->
 <!-- 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"> -->
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -113,7 +113,7 @@
 		</div>
 	</div>
 
-	<div class="container px-4 py-3 mb-4" id="featured-3">
+	<div class="container px-4 py-3" id="featured-3">
 
 		<h2 class="pb-2 border-bottom"><i class="bi bi-check-lg"></i> 입양 절차</h2>
 		<div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
@@ -122,49 +122,64 @@
 				<div class="mb-5 text-center">
 					<img src="../image/sdamsdam_adopt_001.jpg"/>
 				</div>
-				<div class="px-3">
-					<div>
-						<h3><span class="text-primary me-2 h1">1</span> 입양 신청서 작성</h3>
-					</div>
-					<p>서비스를 이용하며 만난 테라피독 중, 가족이 되고 싶은 테라피독을 선택하여 입양 신청서를 작성합니다.</p>
+				<div>
+					<h3><span class="text-primary me-2 h1">1</span> 입양 신청서 작성</h3>
 				</div>
+				<p>서비스를 이용하며 만난 테라피독 중, 가족이 되고 싶은 테라피독을 선택하여 입양 신청서를 작성합니다.</p>
+
 			</div>
 			<div class="feature col">
 				<div class="mb-5 text-center">
 					<img src="../image/sdamsdam_adopt_002.jpg"/>
 				</div>
-				<div class="px-3">
-					<div>
-						<h3><span class="text-primary me-2  h1">2</span> 기관 연락 기다리기</h3>
-					</div>
-					<p>신청서를 작성하면 해당 테라피독이 소속되어 있는 기관으로 연락이 갑니다. 신청 내역을 검토하여 테라피독 소속 기관에서 입양 승인 여부를 결정합니다.
-					<br>(입양 승인 과정은 2~3일 정도 소요됩니다)</p>
+				<div>
+					<h3><span class="text-primary me-2  h1">2</span> 기관 연락 기다리기</h3>
 				</div>
+				<p>신청서를 작성하면 해당 테라피독이 소속되어 있는 기관으로 연락이 갑니다. 신청 내역을 검토하여 테라피독 소속 기관에서 입양 승인 여부를 결정합니다.
+				<br>(입양 승인 과정은 2~3일 정도 소요됩니다)</p>
 
 			</div>
 			<div class="feature col">
 				<div class="mb-5 text-center">
 					<img src="../image/sdamsdam_adopt_003.jpg"/>
 				</div>
-				<div class="px-3">
-					<div>
-						<h3><span class="text-primary me-2 text-center h1">3</span> 기관 방문 및 입양절차 완료</h3>
-					</div>
-					<p>입양이 승인되면 날짜를 조율하여 테라피독이 있는 기관으로 직접 방문합니다. 간단한 검증 절차 후 내가 선택한 테라피독을 데리고 갈 수 있습니다.</p>
+				<div>
+					<h3><span class="text-primary me-2 text-center h1">3</span> 기관 방문 및 입양절차 완료</h3>
 				</div>
+				<p>입양이 승인되면 날짜를 조율하여 테라피독이 있는 기관으로 직접 방문합니다. 간단한 검증 절차 후 내가 선택한 테라피독을 데리고 갈 수 있습니다.</p>
 			</div>
 		</div>
 	</div>
 
 
-	<div class="container px-4 py-5 mt-5" id="featured-3">
-		<h2 class="pb-2 border-bottom"><i class="bi bi-check-lg"></i> 입양 신청서 작성하기</h2>
-		<div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+<div class="container px-4 py-5 mt-4" id="featured-3">
+	<h2 class="pb-2 border-bottom"><i class="bi bi-check-lg"></i> 입양 신청서 작성하기</h2>	
+			<!-- 입양작성 폼 -->
+		<div class="container px-4 py-3" id="featured-3">
+			<form class="row g-3">
+			  <div class="col-12">
+			    <label for="inputEmail4" class="form-label">이 름</label>
+			    <input type="text" class="form-control">
+			  </div>
+			  <div class="col-12">
+			    <label for="inputPassword4" class="form-label">전화번호</label>
+			    <input type="text" class="form-control" placeholder="010-0000-0000">
+			  </div>
+			  <div class="col-12">
+			    <label for="inputAddress" class="form-label">이메일</label>
+			    <input type="text" class="form-control" placeholder="">
+			  </div>
+			  <div class="col-12">
+			    <label for="inputAddress2" class="form-label">방문날짜</label>
+			    <input type="text" class="form-control" placeholder="yyyy-mm-DD">
+			  </div>
+			   <div class="col-12">
+			    <button type="submit" class="btn btn-primary">제출하기</button>
+			  </div>
+			</form>		
 		
-		
-		</div>
 	</div>
-
+</div>	
 
 
 	<c:import url="/WEB-INF/views/include/bottom_info.jsp"></c:import>
