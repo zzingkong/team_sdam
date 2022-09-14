@@ -133,7 +133,7 @@
 					</div>
 				</div>
 			</div>
-			<a href="" class="btn btn-primary">테라피 신청하기<i class="fa fa-arrow-right ms-3"></i></a>
+			<a href="${root }book/book" class="btn btn-primary">테라피 신청하기<i class="fa fa-arrow-right ms-3"></i></a>
 		</div>
 	</nav>
 	<!-- Navbar End -->

@@ -2068,7 +2068,7 @@ textarea.form-control-lg {
 }
 
 .form-select:focus {
-	border-color: #97dcb9;
+/* 	border-color: #97dcb9; */
 	outline: 0;
 	box-shadow: 0 0 0 .25rem rgba(46, 184, 114, 0.25)
 }
@@ -2140,7 +2140,7 @@ textarea.form-control-lg {
 }
 
 .form-check-input:focus {
-	border-color: #97dcb9;
+/* 	border-color: #97dcb9; */
 	outline: 0;
 	box-shadow: 0 0 0 .25rem rgba(46, 184, 114, 0.25)
 }
