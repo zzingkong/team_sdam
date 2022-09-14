@@ -12,7 +12,7 @@
 <meta content="" name="description" />
 
 <!-- Bootstrap CDN -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
@@ -62,10 +62,10 @@
 		<nav aria-label="breadcrumb animated slideInDown">
 			<ol class="breadcrumb mb-0">
 				<li class="breadcrumb-item">
-					<a class="text-white" href="${root }main">Home</a>
+					<a class="text-white" href="${root }main">Home &nbsp;/</a>
 				</li>
 				<li class="breadcrumb-item text-white">
-					테라피
+					테라피 &nbsp;/
 				</li>
 				<li class="breadcrumb-item text-primary active" aria-current="page">
 					테라피독
@@ -94,7 +94,7 @@
 			<div class="wow fadeInUp" data-wow-delay="0.2s" style="display:flex; flex-direction:row; flex-wrap:wrap;">
 			
 				<!-- <div class="row g-4"> -->
-					<div class="col-lg-4 col-md-6" style="padding-bottom:4em;">
+					<div class="col-lg-4 col-md-6 pe-3 pb-5">
 						<a class="animal-item" href="#" onclick="popup();">
 							<div class="position-relative">
 							<img class="img-fluid" src="../img/animal-md-1.jpg" alt="" />
@@ -106,7 +106,7 @@
 						</a>
 					</div>
 					
-					<div class="col-lg-4 col-md-6" style="padding-bottom:4em;">
+					<div class="col-lg-4 col-md-6 px-2 pb-5">
 						<a class="animal-item" href="#" onclick="popup();">
 							<div class="position-relative">
 							<img class="img-fluid" src="../img/animal-md-1.jpg" alt="" />
@@ -118,7 +118,7 @@
 						</a>
 					</div>
 					
-					<div class="col-lg-4 col-md-6" style="padding-bottom:4em;">
+					<div class="col-lg-4 col-md-6 ps-3 pb-5">
 						<a class="animal-item" href="#" onclick="popup();">
 							<div class="position-relative">
 							<img class="img-fluid" src="../img/animal-md-1.jpg" alt="" />
@@ -130,7 +130,7 @@
 						</a>
 					</div>
 					
-					<div class="col-lg-4 col-md-6" style="padding-bottom:4em;">
+					<div class="col-lg-4 col-md-6 pe-3 pb-5">
 						<a class="animal-item" href="#" onclick="popup();">
 							<div class="position-relative">
 							<img class="img-fluid" src="../img/animal-md-1.jpg" alt="" />
@@ -162,7 +162,8 @@
         <div>소개글입니다. 귀여운 임댕댕</div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" onclick="pop1();">Close</button>
+        <button type="button" class="btn btn-secondary" onclick="pop1();">닫기(X)</button>
+        <a href="${root}book/book"><button type="button" class="btn btn-primary">테라피신청하기</button></a>
       </div>
     </div>
   </div>

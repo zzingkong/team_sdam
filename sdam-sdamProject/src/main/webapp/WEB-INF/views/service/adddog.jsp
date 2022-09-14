@@ -13,13 +13,9 @@
 <meta content="" name="description" />
 
 <!-- Bootstrap CDN -->
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
 <!-- Favicon -->
 <link href="../img/favicon.ico" rel="icon" />
@@ -27,23 +23,16 @@
 <!-- Google Web Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-	href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Quicksand:wght@600;700&display=swap"
-	rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Quicksand:wght@600;700&display=swap" rel="stylesheet" />
 
 <!-- Icon Font Stylesheet -->
-<link
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-	rel="stylesheet" />
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
-	rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
 
 <!-- Libraries Stylesheet -->
 <link href="../lib/animate/animate.min.css" rel="stylesheet" />
 <link href="../lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
-<link href="../lib/owlcarousel/assets/owl.carousel.min.css"
-	rel="stylesheet" />
+<link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
 <!-- Customized Bootstrap Stylesheet -->
 <link href="../css/bootstrap.min.css" rel="stylesheet" />
@@ -51,6 +40,7 @@
 <!-- Template Stylesheet -->
 <link href="../css/style.css" rel="stylesheet" />
 </head>
+
 <body>
 <!-- Spinner Start -->
 <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -70,13 +60,13 @@
 		<nav aria-label="breadcrumb animated slideInDown">
 			<ol class="breadcrumb mb-0">
 				<li class="breadcrumb-item">
-					<a class="text-white" href="${root }main">Home</a>
+					<a class="text-white" href="${root }main">Home &nbsp;/</a>
 				</li>
 				<li class="breadcrumb-item text-white">
-					테라피
+					테라피  &nbsp;/
 				</li>
 				<li class="breadcrumb-item text-white">
-					<a class="text-white" href="${root}service/therapydog">테라피독</a>
+					<a class="text-white" href="${root}service/therapydog">테라피독 &nbsp;/</a>
 				</li>
 				<li class="breadcrumb-item text-primary active" aria-current="page">
 					테라피독 등록
@@ -95,48 +85,48 @@
 			<div class="card shadow">
 				<div class="card-body">
 					<form:form action="${root }service/joindog" method="post" modelAttribute="dogBean">
-						<div class="form-group">
-							<form:label path="dog_name">이름</form:label>
+						<div class="form-group pb-2">
+							<form:label path="dog_name" class="pb-2">이름</form:label>
 							<form:input path="dog_name" class="form-control"/>
 					<%--    <form:errors path="dog_name" style="color:red"/> --%>	
 						</div>
-						<div class="form-group">
-							<form:label path="dog_type">견종</form:label>
+						<div class="form-group pb-2">
+							<form:label path="dog_type" class="pb-2">견종</form:label>
 							<form:input path="dog_type" class="form-control"/>
 					<%--    <form:errors path="dog_name" style="color:red"/> --%>	
 						</div>
-						<div class="form-group">
-							<form:label path="dog_age">나이</form:label>
+						<div class="form-group pb-2">
+							<form:label path="dog_age" class="pb-2">나이</form:label>
 							<form:input path="dog_age" class="form-control col-3"/>
 					<%--    <form:errors path="dog_name" style="color:red"/> --%>	
 						</div>
-						<div class="form-group">
-							<form:label path="dog_sex">성별</form:label><br>
+						<div class="form-group pb-2">
+							<form:label path="dog_sex" class="pb-2">성별</form:label><br>
 							<form:radiobutton path="dog_sex" value="XX" class="col-1"/> 여아 &nbsp;
 							<form:radiobutton path="dog_sex" value="XY" class="col-1"/> 남아
 				<%--		<form:input path="dog_sex" class="form-control"/>
 							<form:errors path="dog_name" style="color:red"/> --%>	
 						</div>
-						<div class="form-group">
-							<form:label path="dog_neu">중성화</form:label><br>
+						<div class="form-group pb-2">
+							<form:label path="dog_neu" class="pb-2">중성화</form:label><br>
 							<form:radiobutton path="dog_neu" value="Y" class="col-1"/> 했어요 &nbsp;&nbsp;
 							<form:radiobutton path="dog_neu" value="N" class="col-1"/> 안했어요
 					<%--	<form:input path="dog_neu" class="form-control"/>		
 							<form:errors path="dog_name" style="color:red"/> --%>	
 						</div>
-						<div class="form-group">
-							<form:label path="dog_memo">소개</form:label>
+						<div class="form-group pb-2">
+							<form:label path="dog_memo" class="pb-2">소개</form:label>
 							<form:textarea path="dog_memo" class="form-control"/>
 					<%--		<form:input path="dog_memo" class="form-control"/>
 					    <form:errors path="dog_name" style="color:red"/> --%>	
 						</div>
-						<div class="form-group">
-							<form:label path="dog_pic">프로필사진</form:label>
-							<form:input type="file" path="dog_pic" class="form-control" accept="image/*"/>
+						<div class="form-group pb-4">
+							<form:label path="dog_pic" class="pb-2">프로필사진</form:label>
+							<form:input type="file" path="dog_pic" class="form-control pb-3" accept="image/*"/>
 						</div>
 						
 						<div class="form-group">
-							<div class="text-right">
+							<div class="text-end pb-1">
 								<form:button class="btn btn-primary">등록하기</form:button>
 							</div>
 						</div>
@@ -157,12 +147,12 @@
 <!-- JavaScript Libraries -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="lib/wow/wow.min.js"></script>
-<script src="lib/easing/easing.min.js"></script>
-<script src="lib/waypoints/waypoints.min.js"></script>
-<script src="lib/counterup/counterup.min.js"></script>
-<script src="lib/owlcarousel/owl.carousel.min.js"></script>
-<script src="lib/lightbox/js/lightbox.min.js"></script>
+<script src="../lib/wow/wow.min.js"></script>
+<script src="../lib/easing/easing.min.js"></script>
+<script src="../lib/waypoints/waypoints.min.js"></script>
+<script src="../lib/counterup/counterup.min.js"></script>
+<script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="../lib/lightbox/js/lightbox.min.js"></script>
 
 <!-- Template Javascript -->
 <script src="../js/main.js"></script>
