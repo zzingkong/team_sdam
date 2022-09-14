@@ -12,7 +12,7 @@
 <meta content="" name="description" />
 
 <!-- Bootstrap CDN -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
@@ -71,7 +71,7 @@
    </div>
 </div>
 <!--서비스 소개 -->
-<div class="container-xxl py-5 ">
+<div class="container-xxl py-5 mb-5">
 		<div class="container mb-3">
 			<div class="row g-5">
 				<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -96,7 +96,7 @@
 	</div>
     
     <!-- 서비스 신청 설명 시작 -->
-    <div class="container mb-3">
+    <div class="container mb-5">
 	   	 <div class="row g-5 mb-5 align-items-end wow fadeInUp" data-wow-delay="0.1s">
 	    	<div class="col-lg-12">            
 	            <h1 class="display-5 mb-0"># <span class="text-primary"> 서비스 신청</span>은 어떻게 하나요?</h1>         

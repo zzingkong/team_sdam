@@ -117,7 +117,7 @@
 
 		<h2 class="pb-2 border-bottom"><i class="bi bi-check-lg"></i> 입양 절차</h2>
 		<div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-			<div class="feature col">
+			<div class="feature col px-3">
 				
 				<div class="mb-5 text-center">
 					<img src="../image/sdamsdam_adopt_001.jpg"/>
@@ -128,7 +128,7 @@
 				<p>서비스를 이용하며 만난 테라피독 중, 가족이 되고 싶은 테라피독을 선택하여 입양 신청서를 작성합니다.</p>
 
 			</div>
-			<div class="feature col">
+			<div class="feature col px-3">
 				<div class="mb-5 text-center">
 					<img src="../image/sdamsdam_adopt_002.jpg"/>
 				</div>
@@ -139,7 +139,7 @@
 				<br>(입양 승인 과정은 2~3일 정도 소요됩니다)</p>
 
 			</div>
-			<div class="feature col">
+			<div class="feature col px-3">
 				<div class="mb-5 text-center">
 					<img src="../image/sdamsdam_adopt_003.jpg"/>
 				</div>
@@ -151,35 +151,41 @@
 		</div>
 	</div>
 
-
 <div class="container px-4 py-5 mt-4" id="featured-3">
 	<h2 class="pb-2 border-bottom"><i class="bi bi-check-lg"></i> 입양 신청서 작성하기</h2>	
-			<!-- 입양작성 폼 -->
-		<div class="container px-4 py-3" id="featured-3">
-			<form class="row g-3">
-			  <div class="col-12">
-			    <label for="inputEmail4" class="form-label">이 름</label>
-			    <input type="text" class="form-control">
-			  </div>
-			  <div class="col-12">
-			    <label for="inputPassword4" class="form-label">전화번호</label>
-			    <input type="text" class="form-control" placeholder="010-0000-0000">
-			  </div>
-			  <div class="col-12">
-			    <label for="inputAddress" class="form-label">이메일</label>
-			    <input type="text" class="form-control" placeholder="">
-			  </div>
-			  <div class="col-12">
-			    <label for="inputAddress2" class="form-label">방문날짜</label>
-			    <input type="text" class="form-control" placeholder="yyyy-mm-DD">
-			  </div>
-			   <div class="col-12">
-			    <button type="submit" class="btn btn-primary">제출하기</button>
-			  </div>
-			</form>		
-		
-	</div>
-</div>	
+
+	<div class="containerpx-4 py-5 mt-4" id="featured-3">
+		<div class="row">
+			<div class="col-sm-3"></div>
+			<div class="col-sm-6">
+				<div class="card shadow">
+					<div class="card-body">
+						<div class="col-12">
+			    			<label for="inputEmail4" class="form-label mb-1">이 름</label>
+			   				 <input type="text" class="form-control mb-3">
+			  			</div>
+						<div class="col-12">
+						    <label for="inputPassword4" class="form-label mb-1">전화번호</label>
+						    <input type="text" class="form-control mb-3" placeholder="010-0000-0000">
+					  	</div>
+					   	<div class="col-12">
+						    <label for="inputAddress" class="form-label mb-1">이메일</label>
+						    <input type="text" class="form-control mb-3" placeholder="">
+					  	</div>
+					  	<div class="col-12 mb-4">
+						    <label for="inputAddress2" class="form-label  mb-1">방문날짜</label>
+						    <input type="text" class="form-control mb-3" placeholder="yyyy-mm-dd">
+					  	</div>
+					   	<div class="col-12">
+						    <button type="submit" class="btn btn-primary">제출하기</button>
+					 	</div>				
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-3"></div>
+		</div>
+</div> 
+</div>
 
 
 	<c:import url="/WEB-INF/views/include/bottom_info.jsp"></c:import>
