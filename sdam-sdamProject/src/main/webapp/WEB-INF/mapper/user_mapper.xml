@@ -36,7 +36,7 @@
 	
 	<select id="getModifyUserInfo" parameterType="java.lang.Integer" resultType="kr.co.greenapple.beans.UserBean">
 		<![CDATA[
-			select user_id, user_name
+			select user_id, user_name, user_tel, user_address
 			from user_table
 			where user_idx = #{user_idx}
 		]]>
@@ -45,7 +45,7 @@
 	<update id="modifyUserInfo" parameterType="kr.co.greenapple.beans.UserBean">
 		<![CDATA[
 			update user_table
-			set user_pw = #{user_pw}
+			set user_pw = #{user_pw}, user_tel = #{user_tel}, user_address = #{user_address} 
 			where user_idx = #{user_idx}
 		]]>
 	</update>

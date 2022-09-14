@@ -58,6 +58,10 @@ public class UserService {
 		modifyUserBean.setUser_id(loginInfo.getUser_id());
 		modifyUserBean.setUser_name(loginInfo.getUser_name());
 		modifyUserBean.setUser_idx(loginInfo.getUser_idx());
+		
+		//회원정보수정
+		modifyUserBean.setUser_tel(loginInfo.getUser_tel());
+		modifyUserBean.setUser_address(loginInfo.getUser_address());
 	}
 	
 	public void modifyUserInfo(UserBean modifyUserBean) {
