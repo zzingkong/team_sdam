@@ -119,12 +119,13 @@
 			</h1>
 			<nav aria-label="breadcrumb animated slideInDown">
 				<ol class="breadcrumb mb-0">
-					<li class="breadcrumb-item"><a class="text-white"
-						href="${root }main">Home</a></li>
-					<li class="breadcrumb-item"><a class="text-white"
-						href="${root }user/join_select">회원가입</a></li>
+					<li class="breadcrumb-item text-white"><a class="text-white"
+						href="${root }main">Home</a> &nbsp;/</li>
 					<li class="breadcrumb-item text-primary active" aria-current="page">
-						개인회원</li>
+						<a class="text-white" href="${root }user/join_select">회원가입 &nbsp;/</a>
+						
+					</li>
+					<li class="breadcrumb-item text-primary active" aria-current="page">개인회원</li>
 				</ol>
 			</nav>
 		</div>

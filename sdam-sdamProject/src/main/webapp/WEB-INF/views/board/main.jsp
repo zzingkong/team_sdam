@@ -67,17 +67,12 @@
           고객센터
         </h1>
         <nav aria-label="breadcrumb animated slideInDown">
-          <ol class="breadcrumb mb-0">
-				<li class="breadcrumb-item">
-					<a class="text-white" href="${root }main">Home</a>
-				</li>
-				<li class="breadcrumb-item">
-					<a class="text-white">고객센터</a>
-				</li>
-            <li class="breadcrumb-item text-primary active" aria-current="page" href="${root }customer/faq">
-            	FAQ
-            </li>
-          </ol>
+				<ol class="breadcrumb mb-0">
+					<li class="breadcrumb-item text-white"><a class="text-white"
+						href="${root }main">Home</a> &nbsp;/</li>
+					<li class="breadcrumb-item text-primary active text-white" aria-current="page">고객센터 &nbsp;/</li>	
+					<li class="breadcrumb-item text-primary active" aria-current="page">QnA</li>
+				</ol>
         </nav>
       </div>
     </div>

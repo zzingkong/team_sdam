@@ -35,7 +35,7 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
 	rel="stylesheet" />
 <link
-	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
 	rel="stylesheet" />
 
 <!-- Libraries Stylesheet -->
@@ -63,10 +63,8 @@
 			</h1>
 			<nav aria-label="breadcrumb animated slideInDown">
 				<ol class="breadcrumb mb-0">
-					<li class="breadcrumb-item"><a class="text-white"
-						href="${root }main">Home</a></li>
-					<li class="breadcrumb-item text-primary active" aria-current="page">
-						로그인</li>
+					<li class="breadcrumb-item text-white"><a class="text-white" href="${root }main">Home</a> &nbsp;/</li>
+					<li class="breadcrumb-item text-primary active" aria-current="page">로그인</li>
 				</ol>
 			</nav>
 		</div>
@@ -79,28 +77,32 @@
 			<div class="col-sm-3"></div>
 			<div class="col-sm-6">
 				<div class="card shadow">
-					<div class="card-body">
+					<div class="card-body my-2">
 						<c:if test="${fail == true }">
 							<div class="alert alert-danger">
 								<h3>로그인 실패</h3>
 								<p>아이디 비밀번호를 확인해주세요</p>
 							</div>
 						</c:if>
-						<form:form action="${root }user/login_pro" method="post"
-							modelAttribute="loginInfo">
-							<div class="form-group">
+						<form:form action="${root }user/login_pro" method="post" modelAttribute="loginInfo">
+							<div class="form-group my-3 mx-2">
 								<form:label path="user_id">아이디</form:label>
-								<form:input path="user_id" class="form-control" />
+								<form:input path="user_id" class="form-control mt-2" />
 								<form:errors path="user_id" style="color:red" />
 							</div>
-							<div class="form-group">
+							<div class="form-group  my-3 mx-2">
 								<form:label path="user_pw">비밀번호</form:label>
-								<form:password path="user_pw" class="form-control" />
+								<form:password path="user_pw" class="form-control mt-2" />
 								<form:errors path="user_pw" style="color:red" />
 							</div>
-							<div class="form-group text-right">
-								<form:button class="btn btn-primary">로그인</form:button>
-								<a href="${root }user/join" class="btn btn-danger">회원가입</a>
+							<div class="form-group text-center my-5 mx-2">
+								<form:button class="btn btn-primary w-100">로그인</form:button>
+								
+							</div>
+							<div class="text-center my-5 mx-2">
+								<a href="#">아이디 찾기</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="#">비밀번호 찾기</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="${root }user/join_select">회원가입</a>
 							</div>
 						</form:form>
 					</div>
