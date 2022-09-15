@@ -118,10 +118,14 @@ public class UserController {
 		binder.addValidators(validator1);
 	}
 	
-	//마이페이지
-	/*
-	 * @GetMapping("/mypage_p") public String mypage_p() {
-	 * 
-	 * return "user/mypage_p"; }
-	 */
+	//MemDelServlet
+//	@RequestMapping(value = "/member/del.do", method = RequestMethod.GET)
+//	public String del(String memId) {
+
+		//String memId = req.getParameter("memId"); //전송되어 온 파라미터 값을 꺼내서 String 변수로 받아
+//		int num = memberService.delMember(memId); //받은걸 db에서 삭제하고, 받은 갯수를 화면에 출력하기 위해 변수로 받아
+			
+		//2)list를 보여준다
+//		return "redirect:/member/list.do";
+//	}
 }

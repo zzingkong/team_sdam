@@ -72,13 +72,13 @@
 		<nav aria-label="breadcrumb animated slideInDown">
 			<ol class="breadcrumb mb-0">
 				<li class="breadcrumb-item">
-					<a class="text-white" href="${root }main">Home</a>
+					<a class="text-white" href="${root }main">Home &nbsp;/</a>
 				</li>
 				<li class="breadcrumb-item text-white">
-					테라피
+					테라피 &nbsp;/
 				</li>
 				<li class="breadcrumb-item text-white">
-					<a class="text-white" href="${root}service/therapist">테라피스트</a>
+					<a class="text-white" href="${root}service/therapist">테라피스트 &nbsp;/</a>
 				</li>
 				<li class="breadcrumb-item text-primary active" aria-current="page">
 					테라피스트 소개

@@ -82,7 +82,7 @@
 		<nav aria-label="breadcrumb animated slideInDown">
 			<ol class="breadcrumb mb-0">
 				<li class="breadcrumb-item">
-					<a class="text-white" href="${root }main">Home &nbsp;</a>
+					<a class="text-white" href="${root }main">Home &nbsp;/</a>
 				</li>
 				<li class="breadcrumb-item text-white">
 					테라피 &nbsp;/
