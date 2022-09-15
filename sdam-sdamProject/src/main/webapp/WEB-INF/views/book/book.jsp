@@ -60,6 +60,7 @@
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"> -->
 <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.bundle.min.js"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+<link href="../css/bootstrap-datepicker.kr.js" rel="stylesheet" />
 
 
 </head>
@@ -96,7 +97,7 @@
 	<!-- Page Header End -->
 
 
-
+	<!-- -------------------------- -->
 	<div class="container-xxl py-5">
 		<div class="container">
 			<div class="row g-5 mb-5 align-items-end wow fadeInUp"
@@ -112,6 +113,11 @@
 			</div>
 		</div>
 	</div>
+	<!-- ------------------------- -->
+
+
+
+
 
 
 	<div class="container my-3">
@@ -131,12 +137,12 @@
 	
 	
 	
-	
-		<div class="">
+	<!-- 지역 선택 -->
+		<div class="pb-5">
 			<h2 class="pb-2 border-bottom my-5">
 				<span class="text-primary me-2">1</span> 지역 선택
 			</h2>
-				<div class="form-check ml-3">
+				<div class="form-check ml-3 text-center">
 					<div class="form-check form-check-inline">
 						<input class="form-check-input" type="radio"
 							name="flexRadioDefault" id="flexRadioDefault1" checked> <label
@@ -197,14 +203,15 @@
 					</div>
 				</div>
 		</div>
+		<!-- ------------- -->
 
 
 
 
 
+
+		<!-- 날짜 및 시간선택 -->
 <div class="py-5">
-
-
 	<h2 class="pb-2 border-bottom my-5">
 		<span class="text-primary me-2">2</span> 날짜 및 시간 선택
 	</h2>
@@ -213,7 +220,7 @@
 		<div class="row justify-content-center mx-0">
 			<div class="col-lg-10">
 				<div class="card border-0">
-					<form autocomplete="off">
+					<form autocomplete="off"">
 							<div class="row form-group">
 								<label for="date" class="col-sm-1 col-form-label">날짜 선택</label>
 								<div class="col-sm-4">
@@ -301,14 +308,11 @@
 										<div class="col-md-2 col-4 my-1 px-2">
 											<input type="radio" class="btn-check" name="btnradio" id="btnradio17" autocomplete="off" checked>
   											<label class="btn btn-outline-primary" for="btnradio17">17:00 PM</label>
-										</div>
-										<div class="col-md-2 col-4 my-1 px-2">
-											<input type="radio" class="btn-check" name="btnradio" id="btnradio18" autocomplete="off" checked>
-  											<label class="btn btn-outline-primary" for="btnradio18">17:30 PM</label>
-										</div>
+										</div>		
 									</div>
 								</div>
 							</form>
+
 						</div>
 					</div>
 				</div>
@@ -317,81 +321,123 @@
 
 
 		</div>
-		
-		<h2 class="pb-2 border-bottom">
-				<span class="text-primary me-2">3</span> 테라피독 선택
-		</h2>
-		<!-- <div>
-			<div class="card" style="width: 18rem;">
-				<img src="..." class="card-img-top" alt="...">
-				<div class="card-body">
-					<p class="card-text">Some quick example text to build on the
-						card title and make up the bulk of the card's content.</p>
-				</div>
-			</div>
-			<div class="card" style="width: 18rem;">
-				<img src="..." class="card-img-top" alt="...">
-				<div class="card-body">
-					<p class="card-text">Some quick example text to build on the
-						card title and make up the bulk of the card's content.</p>
-				</div>
-			</div>
-			<div class="card" style="width: 18rem;">
-				<img src="..." class="card-img-top" alt="...">
-				<div class="card-body">
-					<p class="card-text">Some quick example text to build on the
-						card title and make up the bulk of the card's content.</p>
-				</div>
-			</div>
-			<div class="card" style="width: 18rem;">
-				<img src="..." class="card-img-top" alt="...">
-				<div class="card-body">
-					<p class="card-text">Some quick example text to build on the
-						card title and make up the bulk of the card's content.</p>
-				</div>
-			</div>
-			<div class="card" style="width: 18rem;">
-				<img src="..." class="card-img-top" alt="...">
-				<div class="card-body">
-					<p class="card-text">Some quick example text to build on the
-						card title and make up the bulk of the card's content.</p>
-				</div>
-			</div>
-		</div> -->
+		<!-- ----------------------------------------------- -->
 		
 		
 		
 		
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		<!-- 테라피독 선택 -->
+<div class="py-5">
+	<h2 class="pb-2 border-bottom my-5">
+		<span class="text-primary me-2">3</span> 테라피독 선택
+	</h2>
 
+			<div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+				<div class="col">
+					<div class="card mb-4 rounded-3 shadow-sm">
+						
+						<div class="form-check text-center">
+							<h1><input type="radio" name="exampleRadios" id="exampleRadios1" class="list-inline-item"></h1>
+							<h4><label class="form-check-label list-inline-item" for="exampleRadios1">임댕댕</label></h4>
+						</div>
 
+						<div class="card-body">
+							<div class="position-relative">
+							<img class="img-fluid" src="../img/animal-md-1.jpg" alt="" />
+								<div class="animal-text p-4">
+									<h5 class="text-white mb-0">임댕댕</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card mb-4 rounded-3 shadow-sm">
+						
+						<div class="form-check text-center">
+							<h1><input type="radio" name="flexRadioDefault" id="flexRadioDefault2"></h1>
+							<h4><label class="form-check-label" for="flexRadioDefault2">임댕댕</label></h4>
+						</div>
+						
+						<div class="card-body">
+							<div class="position-relative">
+							<img class="img-fluid" src="../img/animal-md-1.jpg" alt="" />
+								<div class="animal-text p-4">
+									<h5 class="text-white mb-0">임댕댕</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card mb-4 rounded-3 shadow-sm">
+						
+						<div class="form-check text-center">
+							<h1><input type="radio" name="flexRadioDefault" id="flexRadioDefault3"></h1>
+							<h4><label class="form-check-label" for="flexRadioDefault3">임댕댕</label></h4>
+						</div>
+						
+						<div class="card-body">
+							<div class="position-relative">
+							<img class="img-fluid" src="../img/animal-md-1.jpg" alt="" />
+								<div class="animal-text p-4">
+									<h5 class="text-white mb-0">임댕댕</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card mb-4 rounded-3 shadow-sm">
+						
+						<div class="form-check text-center">
+							<h1><input type="radio" name="flexRadioDefault" id="flexRadioDefault4"></h1>
+							<h4><label class="form-check-label" for="flexRadioDefault4">임댕댕</label></h4>
+						</div>
+						
+						<div class="card-body">
+							<div class="position-relative">
+							<img class="img-fluid" src="../img/animal-md-1.jpg" alt="" />
+								<div class="animal-text p-4">
+									<h5 class="text-white mb-0">임댕댕</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card mb-4 rounded-3 shadow-sm">
+						
+						<div class="form-check text-center">
+							<h1><input type="radio" name="flexRadioDefault" id="flexRadioDefault5"></h1>
+							<h4><label class="form-check-label" for="flexRadioDefault5">임댕댕</label></h4>
+						</div>
+						
+						<div class="card-body">
+							<div class="position-relative">
+							<img class="img-fluid" src="../img/animal-md-1.jpg" alt="" />
+								<div class="animal-text p-4">
+									<h5 class="text-white mb-0">임댕댕</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
 
+</div>
+	<!-- ------------------------------ -->
+		
+		
+		
+<div class="text-center mb-5">
+	<button type="button" class="btn btn-primary btn-lg" onclick="location.href='${root}book/bookcheck'">신청하기</button>
 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
 
 	<c:import url="/WEB-INF/views/include/bottom_info.jsp"></c:import>
 
@@ -416,6 +462,7 @@
 $(function(){
   $('#datepicker').datepicker();
 });
+
 </script>
 
 
