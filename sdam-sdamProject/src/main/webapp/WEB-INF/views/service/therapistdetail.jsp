@@ -132,7 +132,7 @@
 	               </i>씨담씨담 위원회 부장
 	              </p>
 	          </div>  
-	          <!--  <div class="col-md-7">
+	          <div class="col-md-7">
 	              <p class="text-dark"><i class="fa fa-check text-primary me-3">
 	               </i>씨담씨담 위원회 부장
 	              </p> 
@@ -148,7 +148,7 @@
 	              <p class="text-dark"><i class="fa fa-check text-primary me-3">
 	               </i>씨담씨담 위원회 부장
 	              </p> 
-	           </div>  -->
+	           </div>  
 	           </div>          
               <a class="btn btn-primary py-3 px-5 mt-3" href="">신청하기</a>
             </div>

@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>마이페이지 회원정보수정</title>
+<title>마이페이지 게시물관리</title>
 <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 <meta content="" name="keywords" />
 <meta content="" name="description" />
@@ -79,7 +79,7 @@
 					<a class="text-white" href="${root }main">Home &nbsp;/ </a>
 				</li>
 				<li class="breadcrumb-item text-primary active" aria-current="page">
-					마이페이지
+					게시물관리
 				</li>
 			</ol>
 		</nav>
@@ -96,9 +96,9 @@
 			<div class="collapse navbar-collapse" >
 				<div class="navbar-nav">
 					<div class="nav-item dropdown">
-						<a class="nav-item nav-link" href="${root }user/modify" aria-current="page" style="padding:0 0 10px 0;"><span class="text-primary me-2">#</span> 회원정보</a> <!-- aria-current 현재페이지 -->
+						<a class="nav-item nav-link" href="${root }user/modify" style="padding:0 0 10px 0;">회원정보</a>
 						<a class="nav-item nav-link" href="#" style="padding:10px 0;">예약관리</a>
-						<a class="nav-item nav-link" href="${root }user/myboard" style="padding:10px 0;">게시물관리</a>
+						<a class="nav-item nav-link" href="${root }user/myboard" aria-current="page" style="padding:10px 0;"><span class="text-primary me-2">#</span> 게시물관리</a> <!-- aria-current 현재페이지 -->
 						<a class="nav-item nav-link" href="#" style="padding:10px 0;">회원탈퇴</a> 
 					</div>
 				</div>
@@ -107,58 +107,18 @@
 		
 	</div>
 	
-	<div class="col-lg-9 bg-white card shadow">  
+	<div class="col-lg-9 ">  
 <!--<div class="owl-carousel testimonial-carousel wow fadeInUp text-center" data-wow-delay="0.1s"> -->
-		<div class="testimonial-item">
-			<div class="mt-4 mb-1 ms-5 wow fadeInUp">
+		<div class="testimonial-item bg-white card shadow py-4">
+			<div class="mt-4 mb-1 ms-5">
 				<img class="img-fluid rounded-circle border border-2 p-2 mx-auto mb-3" src="../image/testimonial-1.jpg" style="width: 100px; height: 100px; display:inline-block;"/> &nbsp;&nbsp;
 				<h4 class="display-7" data-wow-delay="0.1s" style="display:inline-block;"> <c:out value="${loginUserBean.user_name}" />님 안녕하세요.</h4>
 			</div>
-			
-			<div class="testimonial-text rounded p-4 ms-4">	
-				<form:form action="${root }user/modify_pro" method="post" modelAttribute="modifyUserBean">
-					<div class="form-group mb-4">
-						<form:label path="user_name" class="pb-2">이름</form:label>
-						<!-- disabled는 제출 후 값이 전송되지 않기 때문에 수정에 실패했을 때 원래의 값이 사라짐 -->
-						<!-- 반면, readonly는 제출 후에도 값이 전송되는 이점이 있음 -->
-						<form:input path="user_name" class="form-control" readonly="true"/>
-				<%--    <form:errors path="dog_name" style="color:red"/> --%>	
-					</div>
-					<div class="form-group mb-4">
-						<form:label path="user_id" class="pb-2">아이디</form:label>
-						<form:input path="user_id" class="form-control" readonly="true"/>
-				<%--    <form:errors path="dog_name" style="color:red"/> --%>	
-					</div>
-					<div class="form-group mb-4">
-						<form:label path="user_pw" class="pb-2">비밀번호</form:label>
-						<form:password path="user_pw" class="form-control"/>
-						<form:errors path="user_pw" style="color:red"/>
-					</div>
-					<div class="form-group mb-4">
-						<form:label path="user_pw2" class="pb-2">비밀번호 확인</form:label>
-						<form:password path="user_pw2" class="form-control"/>
-						<form:errors path="user_pw2" style="color:red"/>
-					</div>
-					<div class="form-group mb-4">
-						<form:label path="user_tel" class="pb-2">전화번호</form:label>
-						<form:input path="user_tel" class="form-control col-3"/>
-				<%--    <form:errors path="dog_name" style="color:red"/> --%>	
-					</div>
-					<div class="form-group mb-5">
-						<form:label path="user_address" class="pb-2">주소</form:label>
-						<form:input path="user_address" class="form-control col-3 mb-3"/>
-				<%--    <form:errors path="dog_name" style="color:red"/> --%>	
-					</div>
-						
-					<div class="form-group mb-3">
-						<div class="text-end pb-2">
-							<form:button class="btn btn-outline-warning px-5 py-2 mb-3 fst-italic">회원정보수정</form:button>
-						</div>
-					</div>
-				</form:form>				
-			</div>
-			
         </div>
+        
+        <div class="testimonial-text rounded mt-5">	
+			<b>게시물관리</b><hr/>				
+		</div>
         
         <div class="col-sm-3"></div>
 <!--</div> -->

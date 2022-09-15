@@ -118,6 +118,13 @@ public class UserController {
 		binder.addValidators(validator1);
 	}
 	
+	//마이페이지>게시물관리
+	@GetMapping("/myboard")
+	public String myboard() {
+		return "user/myboard";
+	}
+	
+	
 	//MemDelServlet
 //	@RequestMapping(value = "/member/del.do", method = RequestMethod.GET)
 //	public String del(String memId) {
@@ -128,4 +135,5 @@ public class UserController {
 		//2)list를 보여준다
 //		return "redirect:/member/list.do";
 //	}
+	
 }

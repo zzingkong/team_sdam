@@ -34,7 +34,7 @@
 				<div class="h-100 d-inline-flex align-items-center py-3 me-4">
 					<c:choose>
 						<c:when test="${loginUserBean.userLogin == true }">
-							<i class="bi bi-person-circle"></i> <c:out value="${loginUserBean.user_name}" />님 &nbsp;&nbsp;&nbsp;
+							<i class="bi bi-person-circle"></i> &nbsp;<c:out value="${loginUserBean.user_name}" />님 &nbsp;&nbsp;&nbsp;
 						<a role="button" href="${root}/user/modify" class="btn btn-outline-warning me-2">마이페이지</a>
 						<a role="button" href="${root}/user/logout" class="btn btn-outline-warning me-2">로그아웃</a>
 						</c:when>
