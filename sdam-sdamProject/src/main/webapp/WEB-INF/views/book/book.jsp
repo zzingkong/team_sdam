@@ -51,6 +51,9 @@
 
 <!-- Template Stylesheet -->
 <link href="../css/style.css" rel="stylesheet" />
+<link href="../css/rome.css" rel="stylesheet" >
+
+
 
 
 
@@ -121,16 +124,6 @@
 
 
 	<div class="container my-3">
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	
@@ -216,115 +209,118 @@
 		<span class="text-primary me-2">2</span> 날짜 및 시간 선택
 	</h2>
 
+
 	<div class="container-fluid px-0 px-sm-4 mx-auto">
 		<div class="row justify-content-center mx-0">
 			<div class="col-lg-10">
 				<div class="card border-0">
-					<form autocomplete="off"">
-							<div class="row form-group">
-								<label for="date" class="col-sm-1 col-form-label">날짜 선택</label>
-								<div class="col-sm-4">
-									<div class="input-group date" id="datepicker">
-										<input type="text" class="form-control"> <span
-											class="input-group-append" style="cursor: pointer;">
-													<span class="input-group-text bg-white d-block"> <i	class="fa fa-calendar"></i>
-												</span>
-												</span>
-											</div>
-										</div>
-									</div>
-					</form>
-							<form>
-								<div class="card-body p-3 p-sm-5">
-									<div class="row text-center mx-0">
-										<div class="col-md-2 col-4 my-1 px-2">
-											<input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-  											<label class="btn btn-outline-primary" for="btnradio1">09:00 AM</label>
-										</div>
-										<div class="col-md-2 col-4 my-1 px-2">
-											<input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" checked>
-  											<label class="btn btn-outline-primary" for="btnradio2">09:30 AM</label>
-										</div>
-										<div class="col-md-2 col-4 my-1 px-2">
-											<input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" checked>
-  											<label class="btn btn-outline-primary" for="btnradio3">10:00 AM</label>
-										</div>
-										<div class="col-md-2 col-4 my-1 px-2">
-											<input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" checked>
-  											<label class="btn btn-outline-primary" for="btnradio4">10:30 AM</label>
-										</div>
-										<div class="col-md-2 col-4 my-1 px-2">
-											<input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off" checked>
-  											<label class="btn btn-outline-primary" for="btnradio5">11:00 AM</label>
-										</div>
-										<div class="col-md-2 col-4 my-1 px-2">
-											<input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off" checked>
-  											<label class="btn btn-outline-primary" for="btnradio6">11:30 AM</label>
-										</div>
-									</div>
-									<div class="row text-center mx-0">
-										<div class="col-md-2 col-4 my-1 px-2">
-											<input type="radio" class="btn-check" name="btnradio" id="btnradio7" autocomplete="off" checked>
-  											<label class="btn btn-outline-primary" for="btnradio7">12:00 PM</label>
-										</div>
-										<div class="col-md-2 col-4 my-1 px-2">
-											<input type="radio" class="btn-check" name="btnradio" id="btnradio8" autocomplete="off" checked>
-  											<label class="btn btn-outline-primary" for="btnradio8">12:30 PM</label>
-										</div>
-										<div class="col-md-2 col-4 my-1 px-2">
-											<input type="radio" class="btn-check" name="btnradio" id="btnradio9" autocomplete="off" checked>
-  											<label class="btn btn-outline-primary" for="btnradio9">13:00 PM</label>
-										</div>
-										<div class="col-md-2 col-4 my-1 px-2">
-											<input type="radio" class="btn-check" name="btnradio" id="btnradio10" autocomplete="off" checked>
-  											<label class="btn btn-outline-primary" for="btnradio10">13:30 PM</label>
-										</div>
-										<div class="col-md-2 col-4 my-1 px-2">
-											<input type="radio" class="btn-check" name="btnradio" id="btnradio11" autocomplete="off" checked>
-  											<label class="btn btn-outline-primary" for="btnradio11">14:00 PM</label>
-										</div>
-										<div class="col-md-2 col-4 my-1 px-2">
-											<input type="radio" class="btn-check" name="btnradio" id="btnradio12" autocomplete="off" checked>
-  											<label class="btn btn-outline-primary" for="btnradio12">14:30 PM</label>
-										</div>
-									</div>
-									<div class="row text-center mx-0">
-										<div class="col-md-2 col-4 my-1 px-2">
-											<input type="radio" class="btn-check" name="btnradio" id="btnradio13" autocomplete="off" checked>
-  											<label class="btn btn-outline-primary" for="btnradio13">15:00 PM</label>
-										</div>
-										<div class="col-md-2 col-4 my-1 px-2">
-											<input type="radio" class="btn-check" name="btnradio" id="btnradio14" autocomplete="off" checked>
-  											<label class="btn btn-outline-primary" for="btnradio14">15:30 PM</label>
-										</div>
-										<div class="col-md-2 col-4 my-1 px-2">
-											<input type="radio" class="btn-check" name="btnradio" id="btnradio15" autocomplete="off" checked>
-  											<label class="btn btn-outline-primary" for="btnradio15">16:00 PM</label>
-										</div>
-										<div class="col-md-2 col-4 my-1 px-2">
-											<input type="radio" class="btn-check" name="btnradio" id="btnradio16" autocomplete="off" checked>
-  											<label class="btn btn-outline-primary" for="btnradio16">16:30 PM</label>
-										</div>
-										<div class="col-md-2 col-4 my-1 px-2">
-											<input type="radio" class="btn-check" name="btnradio" id="btnradio17" autocomplete="off" checked>
-  											<label class="btn btn-outline-primary" for="btnradio17">17:00 PM</label>
-										</div>		
-									</div>
-								</div>
-							</form>
 
+					<!-- 달력 추가 -->
+					  <div class="content">
+					    
+					    <div class="container text-left">
+					      
+					      <div class="row justify-content-center">
+					        <div class="col-md-10 text-center">
+					          <h4 class="mb-5 text-center">날짜를 선택하세요</h4>
+					          <input type="text" class="form-control w-25 mx-auto mb-3" id="result" placeholder="Select date" disabled="">
+					          <form action="#" class="row">
+					            <div class="col-md-12">
+					              <div id="inline_cal"></div>
+					            </div>
+					          </form>
+					        </div>
+					      </div>
+					          
+					    </div>
+					  </div>
+					<!-- ------------------------- -->
+
+
+					<form>
+						<div class="card-body p-3 p-sm-5">
+							<div class="row text-center mx-0">
+								<div class="col-md-2 col-4 my-1 px-2">
+									<input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+											<label class="btn btn-outline-primary" for="btnradio1">09:00 AM</label>
+								</div>
+								<div class="col-md-2 col-4 my-1 px-2">
+									<input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" checked>
+											<label class="btn btn-outline-primary" for="btnradio2">09:30 AM</label>
+								</div>
+								<div class="col-md-2 col-4 my-1 px-2">
+									<input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" checked>
+											<label class="btn btn-outline-primary" for="btnradio3">10:00 AM</label>
+								</div>
+								<div class="col-md-2 col-4 my-1 px-2">
+									<input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" checked>
+											<label class="btn btn-outline-primary" for="btnradio4">10:30 AM</label>
+								</div>
+								<div class="col-md-2 col-4 my-1 px-2">
+									<input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off" checked>
+											<label class="btn btn-outline-primary" for="btnradio5">11:00 AM</label>
+								</div>
+								<div class="col-md-2 col-4 my-1 px-2">
+									<input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off" checked>
+											<label class="btn btn-outline-primary" for="btnradio6">11:30 AM</label>
+								</div>
+							</div>
+							<div class="row text-center mx-0">
+								<div class="col-md-2 col-4 my-1 px-2">
+									<input type="radio" class="btn-check" name="btnradio" id="btnradio7" autocomplete="off" checked>
+											<label class="btn btn-outline-primary" for="btnradio7">12:00 PM</label>
+								</div>
+								<div class="col-md-2 col-4 my-1 px-2">
+									<input type="radio" class="btn-check" name="btnradio" id="btnradio8" autocomplete="off" checked>
+											<label class="btn btn-outline-primary" for="btnradio8">12:30 PM</label>
+								</div>
+								<div class="col-md-2 col-4 my-1 px-2">
+									<input type="radio" class="btn-check" name="btnradio" id="btnradio9" autocomplete="off" checked>
+											<label class="btn btn-outline-primary" for="btnradio9">13:00 PM</label>
+								</div>
+								<div class="col-md-2 col-4 my-1 px-2">
+									<input type="radio" class="btn-check" name="btnradio" id="btnradio10" autocomplete="off" checked>
+											<label class="btn btn-outline-primary" for="btnradio10">13:30 PM</label>
+								</div>
+								<div class="col-md-2 col-4 my-1 px-2">
+									<input type="radio" class="btn-check" name="btnradio" id="btnradio11" autocomplete="off" checked>
+											<label class="btn btn-outline-primary" for="btnradio11">14:00 PM</label>
+								</div>
+								<div class="col-md-2 col-4 my-1 px-2">
+									<input type="radio" class="btn-check" name="btnradio" id="btnradio12" autocomplete="off" checked>
+											<label class="btn btn-outline-primary" for="btnradio12">14:30 PM</label>
+								</div>
+							</div>
+							<div class="row text-center mx-0">
+								<div class="col-md-2 col-4 my-1 px-2">
+									<input type="radio" class="btn-check" name="btnradio" id="btnradio13" autocomplete="off" checked>
+											<label class="btn btn-outline-primary" for="btnradio13">15:00 PM</label>
+								</div>
+								<div class="col-md-2 col-4 my-1 px-2">
+									<input type="radio" class="btn-check" name="btnradio" id="btnradio14" autocomplete="off" checked>
+											<label class="btn btn-outline-primary" for="btnradio14">15:30 PM</label>
+								</div>
+								<div class="col-md-2 col-4 my-1 px-2">
+									<input type="radio" class="btn-check" name="btnradio" id="btnradio15" autocomplete="off" checked>
+											<label class="btn btn-outline-primary" for="btnradio15">16:00 PM</label>
+								</div>
+								<div class="col-md-2 col-4 my-1 px-2">
+									<input type="radio" class="btn-check" name="btnradio" id="btnradio16" autocomplete="off" checked>
+											<label class="btn btn-outline-primary" for="btnradio16">16:30 PM</label>
+								</div>
+								<div class="col-md-2 col-4 my-1 px-2">
+									<input type="radio" class="btn-check" name="btnradio" id="btnradio17" autocomplete="off" checked>
+											<label class="btn btn-outline-primary" for="btnradio17">17:00 PM</label>
+								</div>		
+							</div>
 						</div>
-					</div>
+					</form>
 				</div>
 			</div>
-
-
-
 		</div>
-		<!-- ----------------------------------------------- -->
-		
-		
-		
+	</div>
+</div>
+<!-- ----------------------------------------------- -->
 		
 		
 		
@@ -458,10 +454,25 @@
 <script src="../js/main.js"></script>
 
 
+<!-- 22.09.15 달력 -->
+<script src="../js/popper.min.js"></script>
+<script src="../js/rome.js"></script>
+
+
+
+
+
 <script type="text/javascript">
 $(function(){
   $('#datepicker').datepicker();
 });
+
+
+$(function() {
+		rome(inline_cal, {time: false, inputFormat: 'MMMM DD, YYYY'}).on('data', function (value) {
+		  result.value = value;
+		});
+	});
 
 </script>
 
