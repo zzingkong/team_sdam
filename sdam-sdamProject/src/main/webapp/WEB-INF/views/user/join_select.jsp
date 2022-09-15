@@ -99,7 +99,7 @@
           어떻게 오셨나요?
         </h3>
         <div class="row g-4 mb-5">
-          <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s" style="cursor: pointer" onclick="location.href='${root }user/join_company';">
+          <div class="col-lg-4 wow fadeInUp pe-3" data-wow-delay="0.1s" style="cursor: pointer" onclick="location.href='${root }user/join_company';">
             <div class="h-100 bg-light d-flex align-items-center p-5">
               <div class="btn-lg-square bg-white flex-shrink-0">
                 <i class="fa fa-hospital-alt text-primary"></i>
@@ -112,7 +112,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s" style="cursor: pointer" onclick="location.href='${root }user/join_therapist';">
+          <div class="col-lg-4 wow fadeInUp px-2" data-wow-delay="0.3s" style="cursor: pointer" onclick="location.href='${root }user/join_therapist';">
             <div class="h-100 bg-light d-flex align-items-center p-5">
               <div class="btn-lg-square bg-white flex-shrink-0">
                 <i class="fa fa-handshake text-primary"></i>
@@ -125,7 +125,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.5s" style="cursor: pointer" onclick="location.href='${root }user/join_user';">
+          <div class="col-lg-4 wow fadeInUp ps-3" data-wow-delay="0.5s" style="cursor: pointer" onclick="location.href='${root }user/join_user';">
             <div class="h-100 bg-light d-flex align-items-center p-5">
               <div class="btn-lg-square bg-white flex-shrink-0">
                 <i class="fa fa-user-circle text-primary"></i>

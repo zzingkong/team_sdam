@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <c:set var="root" value="${pageContext.request.contextPath }/"/>
 <!-- Topbar Start -->
@@ -31,13 +32,24 @@
 						class="fab fa-instagram"></i></a>
 				</div> -->
 				<div class="h-100 d-inline-flex align-items-center py-3 me-4">
-					<a role="button" href="${root }user/join_select" class="btn btn-primary me-2">회원가입</a>
-					<a role="button" href="${root }user/login" class="btn btn-primary me-2">로그인</a>
+					<c:choose>
+						<c:when test="${loginUserBean.userLogin == true }">
+							<i class="bi bi-person-circle"></i> <c:out value="${loginUserBean.user_name}" />님 &nbsp;&nbsp;&nbsp;
+						<a role="button" href="${root}/user/modify" class="btn btn-outline-warning me-2">마이페이지</a>
+						<a role="button" href="${root}/user/logout" class="btn btn-outline-warning me-2">로그아웃</a>
+						</c:when>
+						<c:otherwise>
+							<a role="button" href="${root }user/join_select" class="btn btn-primary me-2">회원가입</a>
+							<a role="button" href="${root }user/login" class="btn btn-primary me-2">로그인</a> 
+						</c:otherwise>
+					</c:choose>				
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- Topbar End -->
+	
+	
 
 	<!-- Navbar Start -->
 	<nav
