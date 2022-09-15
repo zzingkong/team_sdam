@@ -76,8 +76,8 @@
 		<div class="row">
 			<div class="col-sm-3"></div>
 			<div class="col-sm-6">
-				<div class="card shadow">
-					<div class="card-body my-2">
+				<div class="card shadow my-5">
+					<div class="card-body my-4">
 						<c:if test="${fail == true }">
 							<div class="alert alert-danger">
 								<h3>로그인 실패</h3>
@@ -96,14 +96,15 @@
 								<form:errors path="user_pw" style="color:red" />
 							</div>
 							<div class="form-group text-center my-5 mx-2">
-								<form:button class="btn btn-primary w-100">로그인</form:button>
+								<form:button class="btn btn-primary w-100 h-25">로그인</form:button>
 								
 							</div>
-							<div class="text-center my-5 mx-2">
-								<a href="#">아이디 찾기</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								<a href="#">비밀번호 찾기</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								<a href="${root }user/join_select">회원가입</a>
+							<div class="text-center my-3 mx-2">
+								<div class="d-inline-block text-center col-3"><a href="#">아이디 찾기</a></div>
+								<div class="d-inline-block text-center col-3"><a href="#">비밀번호 찾기</a></div>
+								<div class="d-inline-block text-center col-3"><a href="${root }user/join_select">회원가입</a></div>
 							</div>
+
 						</form:form>
 					</div>
 				</div>
