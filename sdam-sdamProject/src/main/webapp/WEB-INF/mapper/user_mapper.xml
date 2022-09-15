@@ -49,4 +49,9 @@
 			where user_idx = #{user_idx}
 		]]>
 	</update>
+	
+	
+<!-- <delete id="delMember" parameterType="java.lang.String">
+  		delete from member where mem_id = #{memId}
+  	</delete> -->
 </mapper>
