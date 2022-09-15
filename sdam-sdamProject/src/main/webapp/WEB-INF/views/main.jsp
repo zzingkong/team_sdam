@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <c:set var="root" value="${pageContext.request.contextPath }/" />
 <!DOCTYPE html>
 <html lang="en">
@@ -91,8 +92,17 @@
 						class="fab fa-instagram"></i></a>
 				</div> -->
 				<div class="h-100 d-inline-flex align-items-center py-3 me-4">
-					<a role="button" href="${root }user/join_select" class="btn btn-primary me-2">회원가입</a>
-					<a role="button" href="${root }user/login" class="btn btn-primary me-2">로그인</a>
+					<c:choose>
+						<c:when test="${loginUserBean.userLogin == true }">
+							<i class="bi bi-person-circle"></i> <c:out value="${loginUserBean.user_name}" />님 &nbsp;&nbsp;&nbsp;
+						<a role="button" href="${root}/user/modify" class="btn btn-outline-warning me-2">마이페이지</a>
+						<a role="button" href="${root}/user/logout" class="btn btn-outline-warning me-2">로그아웃</a>
+						</c:when>
+						<c:otherwise>
+							<a role="button" href="${root }user/join_select" class="btn btn-primary me-2">회원가입</a>
+							<a role="button" href="${root }user/login" class="btn btn-primary me-2">로그인</a> 
+						</c:otherwise>
+					</c:choose>				
 				</div>
 			</div>
 		</div>
@@ -183,7 +193,7 @@
 	<div class="container-xxl py-5">
 		<div class="container">
 			<div class="row g-5">
-				<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+				<div class="col-lg-6 wow fadeInUp pe-3" data-wow-delay="0.1s">
 					<p>
 						<span class="text-primary me-2">#</span>왜 쓰담쓰담인가요?
 					</p>
@@ -210,7 +220,7 @@
 					</h5>
 					<a class="btn btn-primary py-3 px-5 mt-3" href="${root }introduce/intro">서비스 소개</a>
 				</div>
-				<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+				<div class="col-lg-6 wow fadeInUp ps-3" data-wow-delay="0.5s">
 					<div class="img-border">
 						<img class="img-fluid" src="img/about.jpg" alt="" />
 					</div>
@@ -275,7 +285,7 @@
 			<div class="row g-4">
 				<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
 					<div class="row g-4">
-						<div class="col-12">
+						<div class="col-12 pe-3 pb-4">
 							<a class="animal-item" href="img/animal-md-1.jpg"
 								data-lightbox="animal">
 								<div class="position-relative">
@@ -287,7 +297,7 @@
 								</div>
 							</a>
 						</div>
-						<div class="col-12">
+						<div class="col-12 pe-3">
 							<a class="animal-item" href="img/animal-lg-1.jpg"
 								data-lightbox="animal">
 								<div class="position-relative">
@@ -303,7 +313,7 @@
 				</div>
 				<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
 					<div class="row g-4">
-						<div class="col-12">
+						<div class="col-12 px-2 pb-4">
 							<a class="animal-item" href="img/animal-lg-2.jpg"
 								data-lightbox="animal">
 								<div class="position-relative">
@@ -315,7 +325,7 @@
 								</div>
 							</a>
 						</div>
-						<div class="col-12">
+						<div class="col-12 px-2">
 							<a class="animal-item" href="img/animal-md-2.jpg"
 								data-lightbox="animal">
 								<div class="position-relative">
@@ -331,7 +341,7 @@
 				</div>
 				<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
 					<div class="row g-4">
-						<div class="col-12">
+						<div class="col-12 ps-3 pb-4">
 							<a class="animal-item" href="img/animal-md-3.jpg"
 								data-lightbox="animal">
 								<div class="position-relative">
@@ -343,7 +353,7 @@
 								</div>
 							</a>
 						</div>
-						<div class="col-12">
+						<div class="col-12 ps-3">
 							<a class="animal-item" href="img/animal-lg-3.jpg"
 								data-lightbox="animal">
 								<div class="position-relative">

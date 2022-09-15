@@ -162,7 +162,7 @@
         <div>소개글입니다. 귀여운 임댕댕</div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" onclick="pop1();">닫기(X)</button>
+        <button type="button" class="btn btn-secondary" onclick="pop1();"> 닫기 </button>
         <a href="${root}book/book"><button type="button" class="btn btn-primary">테라피신청하기</button></a>
       </div>
     </div>

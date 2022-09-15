@@ -112,7 +112,7 @@
 		<div class="testimonial-item">
 			<div class="mt-4 mb-1 ms-5 wow fadeInUp">
 				<img class="img-fluid rounded-circle border border-2 p-2 mx-auto mb-3" src="../image/testimonial-1.jpg" style="width: 100px; height: 100px; display:inline-block;"/> &nbsp;&nbsp;
-				<h4 class="display-7" data-wow-delay="0.1s" style="display:inline-block;"> 차은우님 안녕하세요.</h4>
+				<h4 class="display-7" data-wow-delay="0.1s" style="display:inline-block;"> <c:out value="${loginUserBean.user_name}" />님 안녕하세요.</h4>
 			</div>
 			
 			<div class="testimonial-text rounded p-4 ms-4">	
