@@ -39,6 +39,7 @@
 
 <!-- Template Stylesheet -->
 <link href="../css/style.css" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -149,7 +150,7 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal modal-center fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
@@ -169,16 +170,25 @@
   </div>
 </div>
 
-
 <script>
 var myModal = new bootstrap.Modal(document.getElementById('myModal'));
 function popup() {
-	myModal.toggle();
 	myModal.show();
+	myModal.toggle();
+//	myModal.handleUpdate();
 }
 function pop1() {
 	myModal.hide();
 }
+
+$('.myModal').modal('show').css({
+	'margin-top': function(){
+		return -($(this).height() / 2);
+	},
+	'margin-left': function(){
+		return -($(this).width() / 2);
+	}
+});
 </script>
 <!-- Animal End -->
 
