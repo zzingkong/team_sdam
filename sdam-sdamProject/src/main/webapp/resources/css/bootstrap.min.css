@@ -5313,6 +5313,11 @@ textarea.form-control-lg {
 	outline: 0
 }
 
+
+.modal .modal-center {
+	text-align: center;
+}
+
 .modal-dialog {
 	position: relative;
 	width: auto;
@@ -5564,7 +5569,7 @@ textarea.form-control-lg {
 	.modal-fullscreen-xl-down .modal-content {
 		height: 100%;
 		border: 0;
-		border-radius: 0
+		-radius: 0
 	}
 	.modal-fullscreen-xl-down .modal-header {
 		border-radius: 0

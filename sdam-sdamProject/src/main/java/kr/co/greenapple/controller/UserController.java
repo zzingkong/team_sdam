@@ -85,6 +85,8 @@ public class UserController {
 		
 		return "user/join_success";
 	}
+	
+	//마이페이지
 	@GetMapping("/modify")
 	public String modify(@ModelAttribute("modifyUserBean") UserBean modifyUserBean) {
 		
@@ -92,6 +94,7 @@ public class UserController {
 		
 		return "user/modify";
 	}
+	
 	@PostMapping("/modify_pro")
 	public String modify_pro(@Valid @ModelAttribute("modifyUserBean") UserBean modifyUserBean, BindingResult result) {
 		if(result.hasErrors()) {
@@ -102,6 +105,7 @@ public class UserController {
 		
 		return "user/modify_success";
 	}
+	
 	@GetMapping("/logout")
 	public String logout() {
 		loginUserBean.setUserLogin(false);
@@ -124,6 +128,11 @@ public class UserController {
 		return "user/myboard";
 	}
 	
+	//마이페이지>예약관리
+	@GetMapping("/myservice")
+	public String myservice() {
+		return "user/myservice";
+	}
 	
 	//MemDelServlet
 //	@RequestMapping(value = "/member/del.do", method = RequestMethod.GET)
