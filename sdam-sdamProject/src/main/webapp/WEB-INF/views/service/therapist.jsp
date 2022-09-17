@@ -134,14 +134,175 @@
 						<option value="1">여자 테라피스트</option>
 						<option value="2">남자 테라피스트</option>
 					</select>
-				</div>
-				
+				</div>	
 				<div class="col-3 p-1 mb-5 offset-1">	
 					<div class="input-group mb-2">
 	  						<input type="text" class="form-control" placeholder="검색어를 입력하세요" aria-label="Recipient's username" aria-describedby="button-addon2">
 	  						<button class="btn btn-primary" type="button" id="button-addon2">검색</button>
-					</div>												
+					</div>	
 				</div>
+ 
+
+ <!--  <div class="album py-5 bg-light"> -->
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm mb-5" style="width:392px" >
+          <div>
+          	<img src="${root}/image/therapist2 .jpg">
+          </div>
+            <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" role="img"  preserveAspectRatio="xMidYMid slice" focusable="false"></svg> -->
+             <div class="card-body">
+              <p class="card-text">김혜진테라피스트<br>주요지역: 제주도</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="col">
+                	 <a href="${root}service/therapistdetail" class="btn btn-primary" style="width:100px">더보기</a>
+                 </div>
+                <small class="text-muted"><img src="${root}/image/heart.png"><span class="align-bottom"></small>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col">
+          <div class="card shadow-sm mb-5" style="width:392px">
+           <!--  <svg class="bd-placeholder-img card-img-top" width="100%" height="225" role="img"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" /></svg> -->
+              <div>
+	          	<img src="${root}/image/therapist2 .jpg">
+	          </div>
+             <div class="card-body">
+              <p class="card-text">김혜진 테라피스트<br>주요지역: 제주도</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="col">
+                	 <a href="${root}service/therapistdetail" class="btn btn-primary" style="width:100px">더보기</a>
+                 </div>
+              <small class="text-muted"><img src="${root}/image/heart.png"><span class="align-bottom"></small> 
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col">
+          <div class="card shadow-sm mb-5" style="width:392px">
+            <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" role="img"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" /></svg> -->
+             <div>
+	          	<img src="${root}/image/therapist2 .jpg">
+	          </div>
+             <div class="card-body">
+              <p class="card-text">김혜진테라피스트<br>주요지역: 제주도</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="col">
+                	 <a href="${root}service/therapistdetail" class="btn btn-primary" style="width:100px">더보기</a>
+                 </div>
+                <small class="text-muted"><img src="${root}/image/heart.png"><span class="align-bottom"></small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+       <div class="col">
+          <div class="card shadow-sm mb-5" style="width:392px" >
+          <div>
+          	<img src="${root}/image/therapist2 .jpg">
+          </div>
+             <div class="card-body">
+              <p class="card-text">김혜진테라피스트<br>주요지역: 제주도</p>
+              <div class="d-flex justify-content-between align-items-center">
+                 <div class="col">
+                	 <a href="${root}service/therapistdetail" class="btn btn-primary" style="width:100px">더보기</a>
+                 </div>
+                <small class="text-muted"><img src="${root}/image/heart.png"><span class="align-bottom"></small>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+       <div class="col">
+          <div class="card shadow-sm mb-5" style="width:392px">
+          <div>
+          	<img src="${root}/image/therapist2 .jpg">
+          </div>          
+             <div class="card-body">
+              <p class="card-text">김혜진테라피스트<br>주요지역: 제주도</p>
+              <div class="d-flex justify-content-between align-items-center">
+                 <div class="col">
+                	 <a href="${root}service/therapistdetail" class="btn btn-primary" style="width:100px">더보기</a>
+                 </div>
+                <small class="text-muted"><img src="${root}/image/heart.png"><span class="align-bottom"></small>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+       <div class="col">
+          <div class="card shadow-sm mb-5" style="width:392px">
+          <div>
+          	<img src="${root}/image/therapist2 .jpg">
+          </div>  
+             <div class="card-body">
+              <p class="card-text">김혜진테라피스트<br>주요지역: 제주도</p>
+              <div class="d-flex justify-content-between align-items-center">
+                 <div class="col">
+                	 <a href="${root}service/therapistdetail" class="btn btn-primary" style="width:100px">더보기</a>
+                 </div>
+                <small class="text-muted"><img src="${root}/image/heart.png"><span class="align-bottom"></small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+       <div class="col">
+          <div class="card shadow-sm mb-5" style="width:392px">
+          <div>
+          	<img src="${root}/image/therapist2 .jpg">
+          </div>  
+             <div class="card-body">
+              <p class="card-text">김혜진테라피스트<br>주요지역: 제주도</p>
+              <div class="d-flex justify-content-between align-items-center">
+                 <div class="col">
+                	 <a href="${root}service/therapistdetail" class="btn btn-primary" style="width:100px">더보기</a>
+                 </div>
+                <small class="text-muted"><img src="${root}/image/heart.png"><span class="align-bottom"></small>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col">
+           <div class="card shadow-sm mb-5" style="width:392px">
+          <div>
+          	<img src="${root}/image/therapist2 .jpg">
+          </div>  
+             <div class="card-body">
+              <p class="card-text">김혜진테라피스트<br>주요지역: 제주도</p>
+              <div class="d-flex justify-content-between align-items-center">
+                 <div class="col">
+                	 <a href="${root}service/therapistdetail" class="btn btn-primary" style="width:100px">더보기</a>
+                 </div>
+                <small class="text-muted"><img src="${root}/image/heart.png"><span class="align-bottom"></small>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+   		<div class="col">
+          <div class="card shadow-sm mb-5" style="width:392px">
+          <div>
+          	<img src="${root}/image/therapist2 .jpg">
+          </div>  
+             <div class="card-body">
+              <p class="card-text">김혜진테라피스트<br>주요지역: 제주도</p>
+              <div class="d-flex justify-content-between align-items-center">
+                 <div class="col">
+                	 <a href="${root}service/therapistdetail" class="btn btn-primary" style="width:100px">더보기</a>
+                 </div>
+                <small class="text-muted"><img src="${root}/image/heart.png"><span class="align-bottom"></small>
+              </div>
+            </div>
+          </div>
+        </div>
+				
+			<%-- 	
 <!-- 					<div class="col-3">									 -->
 <!-- 						<div class="position-relative mx-auto" style="max-width:400px;"> -->
 
@@ -166,50 +327,11 @@
 			           </div>
 					</div>
 				</div>
+						--%>
 				
-				<div class="card" style="width: 18rem; margin-left:7px; margin-right:45px;">
-				  <img src="${root}image/therapist3.PNG" class="card-img-top" style="height:30rem;" alt="...">
-					  <div class="card-body">
-					    <h5 class="card-title">임유리나 테라피스트</h5>
-					    <p class="card-text">주요지역 : 세종 / 대전 <br>
-						경력: 15년<br></p>						
-						 <div class="row">
-				           <div class="col"><a href="${root}service/therapistdetail" class="btn btn-primary" style="width:100px; margin-top:20px;">더보기</a></div>	   
-				           <div class="col text-end pt-4"><img src="${root}/image/heart.png"><span class="align-bottom"> 2,500</span> </div>
-			           	 </div>		           
-						
-					  </div>
-				</div>
-				
-				<div class="card" style="width: 18rem; margin-left:7px; margin-right:45px;">
-				  <img src="${root}image/therapist4.PNG" class="card-img-top" style="height:30rem;" alt="...">
-					  <div class="card-body">
-					    <h5 class="card-title">이세령 테라피스트</h5>
-					    <p class="card-text">주요지역 : 경기 / 서울 <br>
-						경력: 6년<br></p>
-						
-				  		<div class="row">
-				           <div class="col"><a href="${root}service/therapistdetail" class="btn btn-primary" style="width:100px; margin-top:20px;">더보기</a></div>	   
-				           <div class="col text-end pt-4"><img src="${root}/image/heart.png"><span class="align-bottom"> 2,500</span> </div>
-			           	</div>
-					</div>
-				</div>
-				
-				<div class="card" style="width: 18rem; ">
-				  <img src="${root}image/therapist.JPG" class="card-img-top"  style="height:30rem; " alt="...">
-					  <div class="card-body">
-					    <h5 class="card-title">강효선 테라피스트</h5>
-					    <p class="card-text">주요지역 : 충북 / 충남 <br>
-						경력: 6년<br></p>
-					   
-					   <div class="row">
-				           <div class="col"><a href="${root}service/therapistdetail" class="btn btn-primary" style="width:100px; margin-top:20px;">더보기</a></div>	   
-				           <div class="col text-end pt-4"><img src="${root}/image/heart.png"><span class="align-bottom"> 2,500</span> </div>
-			           	 </div>
-					</div>
-				</div>
 			</div>
 		</div>		
+		</div>
 </div>
 
 	<c:import url="/WEB-INF/views/include/bottom_info.jsp"></c:import>
