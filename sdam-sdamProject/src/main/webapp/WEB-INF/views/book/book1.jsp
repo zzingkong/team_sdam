@@ -53,21 +53,14 @@
 <link href="../css/style.css" rel="stylesheet" />
 <link href="../css/rome.css" rel="stylesheet" >
 
-
-
-
-
 <!-- 데이트피커 -->
 <!-- 22.09.13 데이터피커 -->
-<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0ㅊ-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"> -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.bundle.min.js"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 <link href="../css/bootstrap-datepicker.kr.js" rel="stylesheet" />
 
 
-</head>
 
+</head>
 <body>
 	<!-- Spinner Start -->
 	<div id="spinner"
@@ -111,7 +104,6 @@
 						<span class="text-primary me-2">#</span>테라피스트
 					</p>
 					<h1 class="display-6 mb-0 pb-3">예약하기</h1>
-
 				</div>
 			</div>
 		</div>
@@ -135,41 +127,7 @@
 			<h2 class="pb-2 border-bottom my-5">
 				<span class="text-primary me-2">1</span> 지역 선택
 			</h2>
-			
-<!-- 			<div class="btn-group" role="group" aria-label="Basic radio toggle button group"> -->
-<!-- 			  <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked> -->
-<!-- 			  <label class="btn btn-outline-primary" for="btnradio1">Radio 1</label> -->
-			
-<!-- 			  <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off"> -->
-<!-- 			  <label class="btn btn-outline-primary" for="btnradio2">Radio 2</label> -->
-			
-<!-- 			  <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off"> -->
-<!-- 			  <label class="btn btn-outline-primary" for="btnradio3">Radio 3</label> -->
-			
-<!-- 			  <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off"> -->
-<!-- 			  <label class="btn btn-outline-primary" for="btnradio4">Radio 3</label> -->
-			
-<!-- 			  <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off"> -->
-<!-- 			  <label class="btn btn-outline-primary" for="btnradio5">Radio 3</label> -->
-			
-<!-- 			  <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off"> -->
-<!-- 			  <label class="btn btn-outline-primary" for="btnradio6">Radio 3</label> -->
-			
-<!-- 			  <input type="radio" class="btn-check" name="btnradio" id="btnradio7" autocomplete="off"> -->
-<!-- 			  <label class="btn btn-outline-primary" for="btnradio7">Radio 3</label> -->
-			
-<!-- 			  <input type="radio" class="btn-check" name="btnradio" id="btnradio8" autocomplete="off"> -->
-<!-- 			  <label class="btn btn-outline-primary" for="btnradio8">Radio 3</label> -->
-			
-<!-- 			  <input type="radio" class="btn-check" name="btnradio" id="btnradio9" autocomplete="off"> -->
-<!-- 			  <label class="btn btn-outline-primary" for="btnradio9">Radio 3</label> -->
-<!-- 			</div> -->
-			
-			
-			
-			
-			
-		 		<div class="form-check ml-3 text-center">
+				<div class="form-check ml-3 text-center">
 					<div class="form-check form-check-inline">
 						<input class="form-check-input" type="radio"
 							name="flexRadioDefault" id="flexRadioDefault1" checked> <label
@@ -195,6 +153,8 @@
 							name="flexRadioDefault" id="flexRadioDefault5"> <label
 							class="form-check-label" for="flexRadioDefault5"> 대구 </label>
 					</div>
+					
+	<!-- 	---------------------------------	<br> -------------------------------------------------- -->
 					
 					<div class="form-check form-check-inline">
 						<input class="form-check-input" type="radio"
@@ -246,27 +206,30 @@
 		<div class="row justify-content-center mx-0">
 			<div class="col-lg-10">
 				<div class="card border-0">
-
+					<div class="container">
+					
 					<!-- 달력 추가 -->
-					  <div class="content">
-					    
-					    <div class="container text-left">
-					      
-					      <div class="row justify-content-center">
-					        <div class="col-md-10 text-center">
-					          <h4 class="mb-5 text-center">날짜를 선택하세요</h4>
-					          <input type="text" class="form-control w-25 mx-auto mb-3" id="result" placeholder="날짜를 선택하세요" disabled>
-					          <form action="#" class="row">
-					            <div class="col-md-12">
-					              <div id="inline_cal"></div>
-					            </div>
-					          </form>
-					        </div>
-					      </div>
-					          
-					    </div>
-					  </div>
+					<div class="row">
+				      <div class="row w-50 px-5 pb-5 d-inline-block">
+				      	<h3 class="pt-2 pb-4"><i class="bi bi-calendar-check"></i> 날짜·시간 예약안내</h3>
+				      		
+					      		<p><h5><i class="bi bi-check-lg"></i> 원하는 <span class="text-primary me-2">날짜</span>와 <span class="text-primary me-2">시간</span>을 선택하십시오.</h5></p>
+					      		<p><h5><i class="bi bi-check-lg"></i> 테라피독 예약 신청은 10:00 AM부터 17:00 PM까지 가능하며 <span class="text-primary me-2">최소 1시간에서 최대 3시간</span>까지 예약할 수 있습니다.</h5></p>
+					      		<p><i class="bi bi-exclamation-lg"></i> 마지막 신청 시간으로 <span class="text-primary me-2">17:00 PM</span>을 선택한 경우, 당일 테라피독 서비스는 <span class="text-primary me-2">18:00 PM</span>에 종료됩니다.</p>
+					      		<p><h5><i class="bi bi-check-lg"></i> 테라피독 한 마리당 하나의 신청서 작성이 필요합니다.</h5></p>
+				      		
+				      </div>
+				      
+				      <div class="row w-50 d-inline-block">
+				      	<div class="mx-auto">
+				          <input type="text" class="form-control w-50 mb-3" id="result" placeholder="날짜를 선택하세요" disabled />
+				          <form action="#" class="row"> <div id="inline_cal"></div> </form>
+				      	</div>
+				      </div>
+				     </div>
 					<!-- ------------------------- -->
+
+
 
 
 					<h4 class="mt-5 text-center">이용희망 시간을 선택하세요</h4>
@@ -307,6 +270,7 @@
 							</div>
 						</div>
 					</form>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -413,19 +377,33 @@
 						</div>
 					</div>
 				</div>
+			</div>
 		</div>
-
-</div>
 	<!-- ------------------------------ -->
 		
 		
 		
-<div class="text-center mb-5">
-	<button type="button" class="btn btn-primary btn-lg" onclick="location.href='${root}book/bookcheck'">신청하기</button>
-</div>
+		
+		
+		
+	<!-- --------- 신청하기 버튼 --------- -->
+		<div class="text-center mb-5">
+			<button type="button" class="btn btn-primary btn-lg" onclick="location.href='${root}book/bookcheck'">신청하기</button>
+		</div>
+	<!-- ------------------------------ -->
 
 
 </div>
+
+
+
+
+
+
+
+
+
+
 
 <c:import url="/WEB-INF/views/include/bottom_info.jsp"></c:import>
 
@@ -459,12 +437,11 @@ $(function(){
   $('#datepicker').datepicker();
 });
 
-
 $(function() {
-		rome(inline_cal, {time: false, inputFormat: 'YYYY년 M월 D일'}).on('data', function (value) {
-		  result.value = value;
-		});
+	rome(inline_cal, {time: false, inputFormat: 'YYYY년 M월 DD일'}).on('data', function (value) {
+	 result.value = value;
 	});
+});
 	
 	
 //	

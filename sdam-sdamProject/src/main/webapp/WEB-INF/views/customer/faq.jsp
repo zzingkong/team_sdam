@@ -108,7 +108,7 @@
 					</h2>
 					<div id="collapseOne" class="accordion-collapse collapse"
 						aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-						<div class="accordion-body"><strong>선택하신 테라피독 서비스 신청 시간 단위는 최소 30분부터 최대 3시간까지입니다.</strong></div>
+						<div class="accordion-body"><strong>선택하신 테라피독 서비스 신청 시간 단위는 최소 1시간부터 최대 3시간까지입니다.</strong></div>
 					</div>
 				</div>
 	
