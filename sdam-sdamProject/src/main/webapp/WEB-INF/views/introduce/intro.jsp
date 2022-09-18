@@ -118,21 +118,32 @@
 		<div class="container">		
 	 		  <div class="row g-5 mb-5 align-items-end wow fadeInUp" data-wow-delay="0.1s">
 			      <h1 class="display-5 mb-0">#<span class="text-primary"> 입양해요!</span></h1> 
-		      </div>	
-		      <div class="col-4">		           
-	            <img src="${root}image/doptdog.PNG">	           
-	       		 <div>
-		            <a class="btn btn-primary py-3 px-5 mt-3" href="${root }customer/adopt">입양문의</a>
-		     </div>   
-	   		</div> 
-	   		<div class="col-8">
-	   			 <div><p class="fs-3 fw-bold">"내가 만난 테라피독을 입양하여 평생의 반려견으로..!!" <br>
-	            "사지말고 입양해요!!"</p>
-	            <br> 저희 쓰담쓰담은 매년증가하는 유기/유실견 수가 사회적 문제로 주목받는 만큼 
-	     		작은 도움이 되고자 훈련된 테라피 독 입양절차를 진행하고 있습니다.<br>가족을 기다리는 유기/유실견들에게 따뜻한 손길을
-	     		보내주세요정확한 입양절차와 내용은 아래 입양문의 게시판을 이용해 주세요.
-	     		</div> 
-	   		</div>		
+				
+				<div class="row w-40 d-inline-block" style="border: 3px solid red;">	           
+					<img src="${root}image/doptdog.PNG">	           
+				</div>
+		   		<div class="row w-50 d-inline-block" style="border: 5px solid magenta;">
+		   			 <p class="fs-3 fw-bold">"내가 만난 테라피독을 입양하여 평생의 반려견으로..!!" <br>
+		            "사지말고 입양해요!!"</p>
+		            <p> 저희 쓰담쓰담은 매년증가하는 유기/유실견 수가 사회적 문제로 주목받는 만큼 
+		     		작은 도움이 되고자 훈련된 테라피 독 입양절차를 진행하고 있습니다.<br>가족을 기다리는 유기/유실견들에게 따뜻한 손길을
+		     		보내주세요정확한 입양절차와 내용은 아래 입양문의 게시판을 이용해 주세요.
+		     		</p>
+		     		</div> 
+		   		</div>
+		   	
+		   	<div>
+		        <a class="btn btn-primary py-3 px-5 mt-3" href="${root }customer/adopt">입양문의</a>
+		    </div> 
+	   		
+	   		
+	   		</div>
+	   		
+	   		
+	   		
+  
+		     
+		     	
 		</div>
 <!-- Animal End -->
 

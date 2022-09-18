@@ -246,6 +246,18 @@
 		<div class="row justify-content-center mx-0">
 			<div class="col-lg-10">
 				<div class="card border-0">
+				
+					<div class="row w-75 px-5 pb-5 d-inline-block" style="border: 3px solid gold;">
+				      	<h3 class="pt-2 pb-4"><i class="bi bi-calendar-check"></i> 날짜·시간 예약안내</h3>
+				      		
+					      		<p><h5><i class="bi bi-check-lg"></i> 원하는 <span class="text-primary me-2">날짜</span>와 <span class="text-primary me-2">시간</span>을 선택하십시오.</h5></p>
+					      		<p><h5><i class="bi bi-check-lg"></i> 테라피독 예약 신청은 10:00 AM부터 17:00 PM까지 가능하며 <span class="text-primary me-2">최소 1시간에서 최대 3시간</span>까지 예약할 수 있습니다.</h5></p>
+					      		<p><i class="bi bi-exclamation-lg"></i> 마지막 신청 시간으로 <span class="text-primary me-2">17:00 PM</span>을 선택한 경우, 당일 테라피독 서비스는 <span class="text-primary me-2">18:00 PM</span>에 종료됩니다.</p>
+					      		<p><h5><i class="bi bi-check-lg"></i> 테라피독 한 마리당 하나의 신청서 작성이 필요합니다.</h5></p>
+				      		
+				      </div>
+				
+				
 
 					<!-- 달력 추가 -->
 					  <div class="content">
@@ -473,7 +485,7 @@ $('[name="btnradio"]').attr('data-no', function (i){
 });
 	
 	
-$('[name="btnradio"]').on('change', function(){
+$('[name="btnradio"]').on('change', function(e){
 	console.log(this.id, this.checked);
 	
 	if(this.checked == false) {
@@ -490,6 +502,7 @@ $('[name="btnradio"]').on('change', function(){
 		if(endId-startId >2) {
 			alert('안돼');
 			this.checked = false;
+			e.preventDefault();
 			return;
 		}
 		var flag = false;
