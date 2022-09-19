@@ -105,7 +105,7 @@
        <div class="row g-4">
           <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
             <div class="membership-item position-relative" style="height:100%">
-              <img class="img-fluid" style="height:100%" src="${root }image/therapist2 .jpg" alt="" />           
+              <img class="img-fluid" style="height:100%" src="${root }image/therapist.jpg" alt="" />           
             </div>
           </div>
           
@@ -162,10 +162,11 @@
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
       <div class="col d-flex align-items-start">        
         <div class="px-3">
-          <h4>강아지 좋아</h4>
+         <h4>강아지 좋아</h4>
+	        		
           <p>처음 이용하는 서비스라 걱정이 많았는데 자주 질문해서 귀찮으실 법도 한데 너무 친절하고 좋아요! 다음에도 또 이용할게요.</p>
         </div>
-      </div >
+      </div>
       <div class="col d-flex align-items-start">
         <div class="px-3">
           <h4>너와 나의 연결고리</h4>
