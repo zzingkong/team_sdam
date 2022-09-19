@@ -48,7 +48,7 @@ public class CustomerController {
 
 			model.addAttribute("page", page);
 
-			return "board/main";
+			return "customer/qna_board";
 		}
 
 
