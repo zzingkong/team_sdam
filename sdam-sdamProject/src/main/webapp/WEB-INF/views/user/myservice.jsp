@@ -117,16 +117,53 @@
         </div>
         
         <div class="testimonial-text rounded mt-5">	
-			<b><i class="bi bi-clipboard-heart"></i> 서비스이용 2회 &nbsp; / &nbsp; <i class="bi bi-clipboard-check"></i> 서비스대기중 1회 &nbsp; / &nbsp; <i class="bi bi-clipboard-x"></i> 취소 1회</b><hr/>	
+			<b><img alt="서비스이용아이콘" src="../image/myservice_ing.png" width="3.5%"> 서비스이용 2회 &nbsp; / &nbsp; <img alt="서비스대기아이콘" src="../image/myservice_check.png" width="3.5%"> 서비스대기중 1회 &nbsp; / &nbsp; <img alt="서비스취소아이콘" src="../image/myservice_x.png" width="3.5%"> 취소 1회</b><hr/>	
 			
-			<ul>
-				<li>
-					<div><i class="bi bi-clipboard-heart" style="background-image: url(../image/circle_ms.png)"></i> 22.09.17 토 / 13:00 ~ 15:00 (2시간)</div>
-					<div>|</div>
-					<div style="border:1px solid #999; border-radius:10px; width:95%;">
-						<div>임댕댕 <button>다시예약하기</button><hr/></div>
-						<div>김혜진 테라피스트. 정읍</div>
-						<div>방문장소: 대전시 동구 우암로, 나래관 4층</div>
+			<ul style="list-style: none;">
+				<li class="pb-4">
+					<div style="margin-bottom:-0.5em;"><img alt="서비스이용아이콘" src="../image/myservice_ing.png"> &nbsp; <b>서비스이용완료</b> &nbsp; 22.09.17 토 / 13:00 ~ 15:00 (2시간)</div>
+					<div class="link-secondary"> &nbsp;&nbsp;&nbsp;&nbsp; | </div>
+					<div style="width:95%; display:flex;">
+						<div class="col-2"><img class="img-fluid" style="border-top-left-radius:10px; border-bottom-left-radius:10px;" alt="테라피독" src="../image/therapydog1.jpg"></div>
+						<div class="col-10 px-4" style="border:1px solid #999; border-top-right-radius:10px; border-bottom-right-radius:10px;">
+							<div class="py-2">임댕댕 
+								<button type="button" class="btn btn-outline-warning btn-sm float-end">다시예약하기</button>
+								<button type="button" class="btn btn-outline-danger btn-sm float-end mx-2">★별점주러가기★</button>
+							<hr/></div>
+							<div class="py-2">김효선 테라피스트. 의정부</div>
+							<div class="py-2">방문장소: 대전시 동구 우암로, 나래관 4층</div>
+						</div>
+					</div>
+				</li>
+				
+				<li class="pb-4">
+					<div style="margin-bottom:-0.5em;"><img alt="서비스대기아이콘" src="../image/myservice_check.png"> &nbsp; <b>승인 대기중</b> &nbsp; 22.10.16 일 / 13:00 ~ 15:00 (2시간)</div>
+					<div class="link-secondary"> &nbsp;&nbsp;&nbsp;&nbsp; | </div>
+					<div style="width:95%; display:flex;">
+						<div class="col-2"><img class="img-fluid" style="border-top-left-radius:10px; border-bottom-left-radius:10px;" alt="테라피독" src="../image/therapydog1.jpg"></div>
+						<div class="col-10 px-4" style="border:1px solid #999; border-top-right-radius:10px; border-bottom-right-radius:10px;">
+							<div class="py-2">임댕댕 
+								<button type="button" class="btn btn-outline-warning btn-sm float-end">다시예약하기</button>
+								<button type="button" class="btn btn-outline-secondary btn-sm float-end mx-2">예약취소하기</button> 
+							<hr/></div>
+							<div class="py-2">이세령 테라피스트. 서울</div>
+							<div class="py-2">방문장소: 대전시 동구 우암로, 나래관 4층</div>
+						</div>
+					</div>
+				</li>
+				
+				<li class="pb-4">
+					<div style="margin-bottom:-0.5em;"><img alt="서비스취소아이콘" src="../image/myservice_x.png"> &nbsp; <b>서비스취소완료</b> &nbsp; 22.10.16 일 / 13:00 ~ 15:00 (2시간)</div>
+					<div class="link-secondary"> &nbsp;&nbsp;&nbsp;&nbsp; | </div>
+					<div style="width:95%; display:flex;">
+						<div class="col-2"><img class="img-fluid" style="border-top-left-radius:10px; border-bottom-left-radius:10px;" alt="테라피독" src="../image/therapydog1.jpg"></div>
+						<div class="col-10 px-4" style="border:1px solid #999; border-top-right-radius:10px; border-bottom-right-radius:10px;">
+							<div class="py-2">예약취소완료
+								<button type="button" class="btn btn-outline-warning btn-sm float-end">다시예약하기</button>
+							<hr/></div>
+							<div class="py-2">이세령 테라피스트. 서울</div>
+							<div class="py-2">방문장소: 대전시 동구 우암로, 나래관 4층</div>
+						</div>
 					</div>
 				</li>
 			</ul>			
