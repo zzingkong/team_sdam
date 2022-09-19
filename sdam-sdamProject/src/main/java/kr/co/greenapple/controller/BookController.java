@@ -26,6 +26,12 @@ public class BookController {
 		return "book/bookcheck";
 	}
 	
+	@GetMapping("/bookdone")
+	public String bookdone() {
+		
+		return "book/book_done";
+	}
+	
 	
 	/*
 	@GetMapping("/timecheck")
