@@ -119,6 +119,10 @@
         <div class="testimonial-text rounded mt-5">	
 			<b>게시물관리</b><hr/>				
 		</div>
+		
+		<div class="testimonial-text rounded mt-5">	
+			<b>작성 가능한 후기 1건 / 내가 작성한 후기 2건</b><hr/>				
+		</div>
         
         <div class="col-sm-3"></div>
 <!--</div> -->

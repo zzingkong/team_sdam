@@ -128,7 +128,7 @@
 						<div class="col-10 px-4" style="border:1px solid #999; border-top-right-radius:10px; border-bottom-right-radius:10px;">
 							<div class="py-2">임댕댕 
 								<button type="button" class="btn btn-outline-warning btn-sm float-end">다시예약하기</button>
-								<button type="button" class="btn btn-outline-danger btn-sm float-end mx-2">★별점주러가기★</button>
+								<button type="button" class="btn btn-outline-danger btn-sm float-end mx-2">이용후기작성</button>
 							<hr/></div>
 							<div class="py-2">김효선 테라피스트. 의정부</div>
 							<div class="py-2">방문장소: 대전시 동구 우암로, 나래관 4층</div>
@@ -161,7 +161,7 @@
 							<div class="py-2">예약취소완료
 								<button type="button" class="btn btn-outline-warning btn-sm float-end">다시예약하기</button>
 							<hr/></div>
-							<div class="py-2">이세령 테라피스트. 서울</div>
+							<div class="py-2">김혜진 테라피스트. 서울</div>
 							<div class="py-2">방문장소: 대전시 동구 우암로, 나래관 4층</div>
 						</div>
 					</div>

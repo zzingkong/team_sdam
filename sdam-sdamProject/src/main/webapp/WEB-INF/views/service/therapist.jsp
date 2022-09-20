@@ -104,9 +104,17 @@
 				<div class="col-2 p-1 mb-5">
 					<select class="form-select" aria-label="Default select example">
 						<option selected>지역별</option>
-						<option value="1">서울/경기</option>
-						<option value="2">충청도</option>
-						<option value="3">경상도</option>
+						<option value="1">서울</option>
+						<option value="2">경기도</option>
+						<option value="3">대전</option>
+						<option value="4">광주</option>
+						<option value="5">대구</option>
+						<option value="6">울산</option>
+						<option value="7">부산</option>
+						<option value="8">충청</option>
+						<option value="9">전라</option>
+						<option value="10">경상</option>
+						<option value="11">제주</option>
 					</select> 
 				</div>
 				<div class="col-2 p-1 mb-5">
@@ -115,7 +123,7 @@
 							<option value="1">1년~5년</option>
 							<option value="2">5년~10년</option>
 							<option value="3">10년~15년</option>
-							<option value="3">15년 이상</option>
+							<option value="4">15년 이상</option>
 						</select> 
 				</div>
 					
@@ -158,7 +166,19 @@
                 <div class="col">
                 	 <a href="${root}service/therapistdetail" class="btn btn-primary" style="width:100px">더보기</a>
                  </div>
-                <small class="text-muted"><img src="${root}/image/heart1.JPG"><span class="align-bottom"></small>
+               <small class="text-muted">
+                 	<img class="heart" src="${root}/image/heart1.JPG"><!-- <span class="align-bottom"></span> -->
+                 </small> 
+	                <script type="text/javascript">   
+				       $('.heart').on("click",function(){
+				    	   $(this).toggleClass("on");
+				    	   if($(this).hasClass("on")){ 							    	  
+				    		  this.src = "${root}/image/f_heart1.JPG";
+				    	   } else {
+				    		   this.src = "${root}/image/heart1.JPG";
+				    	   }
+				       });
+					 </script>	
               </div>
             </div>
           </div>
@@ -176,7 +196,19 @@
                 <div class="col">
                 	 <a href="${root}service/therapistdetail" class="btn btn-primary" style="width:100px">더보기</a>
                  </div>
-              <small class="text-muted"><img src="${root}/image/f_heart1.JPG"><span class="align-bottom"></small> 
+           		 <small class="text-muted">
+                 	<img class="heart" src="${root}/image/heart1.JPG"><!-- <span class="align-bottom"></span> -->
+                 </small> 
+	                <script type="text/javascript">   
+				       $('.heart').on("click",function(){
+				    	   $(this).toggleClass("on");
+				    	   if($(this).hasClass("on")){ 							    	  
+				    		  this.src = "${root}/image/f_heart1.JPG";
+				    	   } else {
+				    		   this.src = "${root}/image/heart1.JPG";
+				    	   }
+				       });
+					 </script>	
               </div>
             </div>
           </div>
@@ -194,7 +226,19 @@
                 <div class="col">
                 	 <a href="${root}service/therapistdetail" class="btn btn-primary" style="width:100px">더보기</a>
                  </div>
-                <small class="text-muted"><img src="${root}/image/f_heart1.JPG"><span class="align-bottom"></small>
+              	 <small class="text-muted">
+                 	<img class="heart" src="${root}/image/heart1.JPG"><!-- <span class="align-bottom"></span> -->
+                 </small> 
+	                <script type="text/javascript">   
+				       $('.heart').on("click",function(){
+				    	   $(this).toggleClass("on");
+				    	   if($(this).hasClass("on")){ 							    	  
+				    		  this.src = "${root}/image/f_heart1.JPG";
+				    	   } else {
+				    		   this.src = "${root}/image/heart1.JPG";
+				    	   }
+				       });
+					 </script>	
               </div>
             </div>
           </div>
@@ -206,12 +250,24 @@
           	<img src="${root}/image/therapist5.jpg">
           </div>
              <div class="card-body">
-              <p class="card-text">강상모테라피스트<br>주요지역: 제주도</p>
+              <p class="card-text">강상모 테라피스트<br>주요지역: 제주도</p>
               <div class="d-flex justify-content-between align-items-center">
                  <div class="col">
                 	 <a href="${root}service/therapistdetail" class="btn btn-primary" style="width:100px">더보기</a>
                  </div>
-                <small class="text-muted"><img src="${root}/image/heart1.JPG"><span class="align-bottom"></small>
+               	 <small class="text-muted">
+                 	<img class="heart" src="${root}/image/heart1.JPG">
+                 </small> 
+	                <script type="text/javascript">   
+				       $('.heart').on("click",function(){
+				    	   $(this).toggleClass("on");
+				    	   if($(this).hasClass("on")){ 							    	  
+				    		  this.src = "${root}/image/f_heart1.JPG";
+				    	   } else {
+				    		   this.src = "${root}/image/heart1.JPG";
+				    	   }
+				       });
+					 </script>	
               </div>
             </div>
           </div>
@@ -228,7 +284,19 @@
                  <div class="col">
                 	 <a href="${root}service/therapistdetail" class="btn btn-primary" style="width:100px">더보기</a>
                  </div>
-                <small class="text-muted"><img src="${root}/image/f_heart1.JPG"><span class="align-bottom"></small>
+               	 <small class="text-muted">
+                 	<img class="heart" src="${root}/image/heart1.JPG"><!-- <span class="align-bottom"></span> -->
+                 </small> 
+	                <script type="text/javascript">   
+				       $('.heart').on("click",function(){
+				    	   $(this).toggleClass("on");
+				    	   if($(this).hasClass("on")){ 							    	  
+				    		  this.src = "${root}/image/f_heart1.JPG";
+				    	   } else {
+				    		   this.src = "${root}/image/heart1.JPG";
+				    	   }
+				       });
+					 </script>	
               </div>
             </div>
           </div>
@@ -245,7 +313,19 @@
                  <div class="col">
                 	 <a href="${root}service/therapistdetail" class="btn btn-primary" style="width:100px">더보기</a>
                  </div>
-                <small class="text-muted"><img src="${root}/image/heart1.JPG"><span class="align-bottom"></small>
+                <small class="text-muted">
+                 	<img class="heart" src="${root}/image/heart1.JPG"><!-- <span class="align-bottom"></span> -->
+                 </small> 
+	                <script type="text/javascript">   
+				       $('.heart').on("click",function(){
+				    	   $(this).toggleClass("on");
+				    	   if($(this).hasClass("on")){ 							    	  
+				    		  this.src = "${root}/image/f_heart1.JPG";
+				    	   } else {
+				    		   this.src = "${root}/image/heart1.JPG";
+				    	   }
+				       });
+					 </script>	
               </div>
             </div>
           </div>
@@ -261,8 +341,20 @@
               <div class="d-flex justify-content-between align-items-center">
                  <div class="col">
                 	 <a href="${root}service/therapistdetail" class="btn btn-primary" style="width:100px">더보기</a>
-                 </div>
-                <small class="text-muted"><img src="${root}/image/heart1.JPG"><span class="align-bottom"></small>
+                 </div>            
+                  <small class="text-muted">
+                 	<img class="heart" src="${root}/image/heart1.JPG"><!-- <span class="align-bottom"></span> -->
+                  </small> 
+                  <script type="text/javascript">   
+				       $('.heart').on("click",function(){
+				    	   $(this).toggleClass("on");
+				    	   if($(this).hasClass("on")){ 							    	  
+				    		  this.src = "${root}/image/f_heart1.JPG";
+				    	   } else {
+				    		   this.src = "${root}/image/heart1.JPG";
+				    	   }
+				       });
+				  </script>				
               </div>
             </div>
           </div>
@@ -270,33 +362,59 @@
         
         <div class="col">
            <div class="card shadow-sm mb-5" style="width:392px">
-          <div>
-          	<img src="${root}/image/therapist8.jpg">
-          </div>  
-             <div class="card-body">
-              <p class="card-text">제이슨 테라피스트<br>주요지역: 제주도</p>
-              <div class="d-flex justify-content-between align-items-center">
-                 <div class="col">
-                	 <a href="${root}service/therapistdetail" class="btn btn-primary" style="width:100px">더보기</a>
-                 </div>
-                <small class="text-muted"><img src="${root}/image/heart1.JPG"><span class="align-bottom"></small>
-              </div>
-            </div>
+		         <div>
+		         	<img src="${root}/image/therapist8.jpg">
+		         </div>  
+		         
+	             <div class="card-body">
+	              <p class="card-text">제이슨 테라피스트<br>주요지역: 제주도</p>
+	              <div class="d-flex justify-content-between align-items-center">
+	                 <div class="col">
+	                	 <a href="${root}service/therapistdetail" class="btn btn-primary" style="width:100px">더보기</a>
+	                 </div>
+		                <small class="text-muted">
+		                 	<img class="heart" src="${root}/image/heart1.JPG"><!-- <span class="align-bottom"></span> -->
+	                    </small> 
+		                <script type="text/javascript">   
+					       $('.heart').on("click",function(){
+					    	   $(this).toggleClass("on");
+					    	   if($(this).hasClass("on")){ 							    	  
+					    		  this.src = "${root}/image/f_heart1.JPG";
+					    	   } else {
+					    		   this.src = "${root}/image/heart1.JPG";
+					    	   }
+					       });
+						 </script>		
+	              </div>
+	            </div>
           </div>
         </div>
         
    		<div class="col">
           <div class="card shadow-sm mb-5" style="width:392px">
-          <div>
-          	<img src="${root}/image/therapist9.jpg">
-          </div>  
+	          <div>
+	          	<img src="${root}/image/therapist9.jpg">
+	          </div>  
+	          
              <div class="card-body">
               <p class="card-text">홈즈 테라피스트<br>주요지역: 제주도</p>
               <div class="d-flex justify-content-between align-items-center">
                  <div class="col">
                 	 <a href="${root}service/therapistdetail" class="btn btn-primary" style="width:100px">더보기</a>
                  </div>
-                <small class="text-muted"><img src="${root}/image/heart1.JPG"><span class="align-bottom"></small>
+                 <small class="text-muted">
+                 	<img class="heart" src="${root}/image/heart1.JPG"><!-- <span class="align-bottom"></span> -->
+                 </small> 
+	                <script type="text/javascript">   
+				       $('.heart').on("click",function(){
+				    	   $(this).toggleClass("on");
+				    	   if($(this).hasClass("on")){ 							    	  
+				    		  this.src = "${root}/image/f_heart1.JPG";
+				    	   } else {
+				    		   this.src = "${root}/image/heart1.JPG";
+				    	   }
+				       });
+					 </script>	
               </div>
             </div>
           </div>
