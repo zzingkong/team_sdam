@@ -431,7 +431,7 @@ progress {
 }
 
 .display-1 {
-	font-size: calc(1.625rem + 4.5vw);
+	font-size: calc(1.625rem + 4.5vw); /* calc -> 고정값 + 자동계산. 주로 반응형 시 양쪽여백에 사용 */
 	font-weight: 700;
 	line-height: 1.2
 }
