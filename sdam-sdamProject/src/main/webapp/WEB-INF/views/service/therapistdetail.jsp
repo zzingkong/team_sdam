@@ -150,7 +150,7 @@
 	              </p> 
 	           </div>  
 	           </div>          
-              <a class="btn btn-primary py-3 px-5 mt-3" href="">신청하기</a>
+             <!--  <a class="btn btn-primary py-3 px-5 mt-3" href="">신청하기</a> -->
             </div>
           </div>
         </div>

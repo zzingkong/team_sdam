@@ -174,7 +174,7 @@
 					  	</div>
 					  	<div class="col-12 mb-4">
 						    <label for="inputAddress2" class="form-label  mb-1">방문날짜</label>
-						    <input type="text" class="form-control mb-3" placeholder="yyyy-mm-dd">
+						    <input type="text" class="form-control mb-3" placeholder="">
 					  	</div>
 					   	<div class="col-12">
 						    <button type="submit" class="btn btn-primary">제출하기</button>
