@@ -29,7 +29,7 @@ public class BookController {
 	@GetMapping("/bookdone")
 	public String bookdone() {
 		
-		return "book/book_done";
+		return "book/bookdone";
 	}
 	
 	

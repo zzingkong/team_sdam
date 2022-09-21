@@ -65,6 +65,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 <link href="../css/bootstrap-datepicker.kr.js" rel="stylesheet" />
 
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+
 
 </head>
 
@@ -232,9 +238,6 @@
 
 
 
-
-
-
 		<!-- 날짜 및 시간선택 -->
 <div class="py-5">
 	<h2 class="pb-2 border-bottom my-5">
@@ -273,9 +276,7 @@
 
 					<!-- 달력 추가 -->
 					  <div class="content">
-					    
 					    <div class="container text-left">
-					      
 					      <div class="row justify-content-center">
 					        <div class="col-md-10 text-center">
 					          <h4 class="mb-5 text-center">날짜를 선택하세요</h4>
@@ -287,7 +288,6 @@
 					          </form>
 					        </div>
 					      </div>
-					          
 					    </div>
 					  </div>
 					<!-- ------------------------- -->
@@ -337,6 +337,28 @@
 	</div>
 </div>
 <!-- ----------------------------------------------- -->
+		
+		
+		
+		
+
+<!-- 태그 선택하기 -->
+
+<div class="py-5">
+	<h2 class="pb-2 border-bottom my-5">
+		<span class="text-primary me-2">2</span> 날짜 및 시간 선택
+	</h2>
+		<div class="mx-auto w-50">
+			<div class="row g-0">
+				<div class="col-6 col-md-4"><h4>크기</h4></div>
+				<div class="col-sm-6 col-md-8"></div>
+			</div>
+			<div class="row g-0">
+				<div class="col-6 col-md-4"><h4>성격</h4></div>
+				<div class="col-sm-6 col-md-8"></div>
+			</div>
+		</div>
+</div>
 		
 		
 		
@@ -533,7 +555,22 @@ $('[name="btnradio"]').on('change', function(e){
 
 </script>
 
-
+<script type="text/javascript">
+$(document).ready(function(){
+	//datepicker setting ver.kor
+	$(".datepicker").datepicker({
+		dateFormat: 'yy-mm-dd',
+		prevText: '이전 달',
+		nextText: '다음 달',
+		monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+		monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+		dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+		dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+		dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+		showMonthAfterYear: true, //달력 연 다음에 월로 세팅
+		yearSuffix: '년'
+	});
+</script>
 
 </body>
 </html>
