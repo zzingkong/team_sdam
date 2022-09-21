@@ -150,7 +150,7 @@
 	              </p> 
 	           </div>  
 	           </div>          
-              <a class="btn btn-primary py-3 px-5 mt-3" href="">신청하기</a>
+             <!--  <a class="btn btn-primary py-3 px-5 mt-3" href="">신청하기</a> -->
             </div>
           </div>
         </div>
@@ -162,20 +162,22 @@
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
       <div class="col d-flex align-items-start">        
         <div class="px-3">
-         <h4>강아지 좋아</h4>
-	        		
+          <p class="fs-4 text fw-bold">강아지 짱 좋아	
+           <span style="float:right">★★★★☆</span>        		
           <p>처음 이용하는 서비스라 걱정이 많았는데 자주 질문해서 귀찮으실 법도 한데 너무 친절하고 좋아요! 다음에도 또 이용할게요.</p>
         </div>
       </div>
       <div class="col d-flex align-items-start">
         <div class="px-3">
-          <h4>너와 나의 연결고리</h4>
+             <p class="fs-4 text fw-bold">너와 나의 연결고리
+            <span style="float:right">★★★★☆</span>  
           <p>중간중간 연락도 주셔서 마음놓고 서비스를 이용할 수 있었어요! 테라피스트님이 친절하셔서 마음에 드네요! 다른 분들께 추천해요! </p>
         </div>
       </div>
       <div class="col d-flex align-items-start">        
         <div class="px-3">
-          <h4>가양동 전자두뇌</h4>
+         <p class="fs-4 text fw-bold">가양동 전자두뇌
+          <span style="float:right">★★★★★</span>  
           <p>꼼꼼한 케어가 너무 마음에 듭니다. 다음에는 팻캠도 추가해서 서비스를 이요해보고 싶어요! 다른분들께 김혜진 테라피스트님을 추천드립니다!</p>
         </div>
       </div>

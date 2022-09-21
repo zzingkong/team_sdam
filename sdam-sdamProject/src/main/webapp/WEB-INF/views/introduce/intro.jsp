@@ -122,17 +122,29 @@
 					<img src="${root}image/doptdog.PNG">	           
 				</div>
 		   		<div class="row w-60 m-auto d-inline-block">
-		   			 <p class="fs-3 fw-bold">"내가 만난 테라피독을 입양하여 평생의 반려견으로..!!" <br>
-		            "사지말고 입양해요!!"</p>
+		   			 <p class="fs-3 fw-bold">내가 만난 테라피독을 <span class="text-primary me-2">입양</span>하여 평생의 반려견으로..!! <br>
+		            사지말고 <span class="text-primary me-2">입양</span>해요!!</p> <br>
+		            <h5 class="mb-3">
+						<i class="far fa-check-circle text-primary me-3"></i>전문 자격증을 갖춘 테라피스트에게 훈련받은 테라피 독!!
+					</h5>
+					<h5 class="mb-3">
+						<i class="far fa-check-circle text-primary me-3"></i>입양 신청부터 마무리까지 쓰담쓰담과 함께!
+					</h5>
+					<h5 class="mb-3">
+						<i class="far fa-check-circle text-primary me-3"></i>쓰담쓰담에서 입양 시 다양한 혜택이!!
+					</h5> <br>
 		            <p> 저희 쓰담쓰담은 매년증가하는 유기/유실견 수가 사회적 문제로 주목받는 만큼 
-		     		작은 도움이 되고자 <br> 훈련된 테라피 독 입양절차를 진행하고 있습니다.<br>가족을 기다리는 유기/유실견들에게 따뜻한 손길을
-		     		보내주세요! <br> 정확한 입양절차와 내용은 아래 입양문의 게시판을 이용해 주세요.
+		     		작은 도움이 되고자 
+		     		<br> 훈련된 테라피 독 입양절차를 진행하고 있습니다.
+		     		<br> 가족을 기다리는 유기/유실견들에게 따뜻한 손길을
+		     		보내주세요! 
+		     		<br> 정확한 입양절차와 내용은 아래 입양문의 게시판을 이용해 주세요.
 		     		</p>
+			   	<div>
+			        <a class="btn btn-primary py-3 px-5 mt-3" style="float:right" href="${root }customer/adopt">입양문의</a>
+			    </div> 
 		     		</div> 
 		   		</div>
-			   	<div>
-			        <a class="btn btn-primary py-3 px-5 mt-3" href="${root }customer/adopt">입양문의</a>
-			    </div> 
 	   		</div>
 	   		
 	   		
