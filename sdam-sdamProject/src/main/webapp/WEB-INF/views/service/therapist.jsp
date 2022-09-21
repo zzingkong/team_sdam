@@ -168,17 +168,7 @@
                  </div>
                <small class="text-muted">
                  	<img class="heart" src="${root}/image/heart1.JPG"><!-- <span class="align-bottom"></span> -->
-                 </small> 
-	                <script type="text/javascript">   
-				       $('.heart').on("click",function(){
-				    	   $(this).toggleClass("on");
-				    	   if($(this).hasClass("on")){ 							    	  
-				    		  this.src = "${root}/image/f_heart1.JPG";
-				    	   } else {
-				    		   this.src = "${root}/image/heart1.JPG";
-				    	   }
-				       });
-					 </script>	
+                 </small>
               </div>
             </div>
           </div>
@@ -199,16 +189,6 @@
            		 <small class="text-muted">
                  	<img class="heart" src="${root}/image/heart1.JPG"><!-- <span class="align-bottom"></span> -->
                  </small> 
-	                <script type="text/javascript">   
-				       $('.heart').on("click",function(){
-				    	   $(this).toggleClass("on");
-				    	   if($(this).hasClass("on")){ 							    	  
-				    		  this.src = "${root}/image/f_heart1.JPG";
-				    	   } else {
-				    		   this.src = "${root}/image/heart1.JPG";
-				    	   }
-				       });
-					 </script>	
               </div>
             </div>
           </div>
@@ -229,16 +209,6 @@
               	 <small class="text-muted">
                  	<img class="heart" src="${root}/image/heart1.JPG"><!-- <span class="align-bottom"></span> -->
                  </small> 
-	                <script type="text/javascript">   
-				       $('.heart').on("click",function(){
-				    	   $(this).toggleClass("on");
-				    	   if($(this).hasClass("on")){ 							    	  
-				    		  this.src = "${root}/image/f_heart1.JPG";
-				    	   } else {
-				    		   this.src = "${root}/image/heart1.JPG";
-				    	   }
-				       });
-					 </script>	
               </div>
             </div>
           </div>
@@ -258,16 +228,6 @@
                	 <small class="text-muted">
                  	<img class="heart" src="${root}/image/heart1.JPG">
                  </small> 
-	                <script type="text/javascript">   
-				       $('.heart').on("click",function(){
-				    	   $(this).toggleClass("on");
-				    	   if($(this).hasClass("on")){ 							    	  
-				    		  this.src = "${root}/image/f_heart1.JPG";
-				    	   } else {
-				    		   this.src = "${root}/image/heart1.JPG";
-				    	   }
-				       });
-					 </script>	
               </div>
             </div>
           </div>
@@ -287,16 +247,6 @@
                	 <small class="text-muted">
                  	<img class="heart" src="${root}/image/heart1.JPG"><!-- <span class="align-bottom"></span> -->
                  </small> 
-	                <script type="text/javascript">   
-				       $('.heart').on("click",function(){
-				    	   $(this).toggleClass("on");
-				    	   if($(this).hasClass("on")){ 							    	  
-				    		  this.src = "${root}/image/f_heart1.JPG";
-				    	   } else {
-				    		   this.src = "${root}/image/heart1.JPG";
-				    	   }
-				       });
-					 </script>	
               </div>
             </div>
           </div>
@@ -316,16 +266,6 @@
                 <small class="text-muted">
                  	<img class="heart" src="${root}/image/heart1.JPG"><!-- <span class="align-bottom"></span> -->
                  </small> 
-	                <script type="text/javascript">   
-				       $('.heart').on("click",function(){
-				    	   $(this).toggleClass("on");
-				    	   if($(this).hasClass("on")){ 							    	  
-				    		  this.src = "${root}/image/f_heart1.JPG";
-				    	   } else {
-				    		   this.src = "${root}/image/heart1.JPG";
-				    	   }
-				       });
-					 </script>	
               </div>
             </div>
           </div>
@@ -345,16 +285,6 @@
                   <small class="text-muted">
                  	<img class="heart" src="${root}/image/heart1.JPG"><!-- <span class="align-bottom"></span> -->
                   </small> 
-                  <script type="text/javascript">   
-				       $('.heart').on("click",function(){
-				    	   $(this).toggleClass("on");
-				    	   if($(this).hasClass("on")){ 							    	  
-				    		  this.src = "${root}/image/f_heart1.JPG";
-				    	   } else {
-				    		   this.src = "${root}/image/heart1.JPG";
-				    	   }
-				       });
-				  </script>				
               </div>
             </div>
           </div>
@@ -375,16 +305,6 @@
 		                <small class="text-muted">
 		                 	<img class="heart" src="${root}/image/heart1.JPG"><!-- <span class="align-bottom"></span> -->
 	                    </small> 
-		                <script type="text/javascript">   
-					       $('.heart').on("click",function(){
-					    	   $(this).toggleClass("on");
-					    	   if($(this).hasClass("on")){ 							    	  
-					    		  this.src = "${root}/image/f_heart1.JPG";
-					    	   } else {
-					    		   this.src = "${root}/image/heart1.JPG";
-					    	   }
-					       });
-						 </script>		
 	              </div>
 	            </div>
           </div>
@@ -405,16 +325,6 @@
                  <small class="text-muted">
                  	<img class="heart" src="${root}/image/heart1.JPG"><!-- <span class="align-bottom"></span> -->
                  </small> 
-	                <script type="text/javascript">   
-				       $('.heart').on("click",function(){
-				    	   $(this).toggleClass("on");
-				    	   if($(this).hasClass("on")){ 							    	  
-				    		  this.src = "${root}/image/f_heart1.JPG";
-				    	   } else {
-				    		   this.src = "${root}/image/heart1.JPG";
-				    	   }
-				       });
-					 </script>	
               </div>
             </div>
           </div>
@@ -471,5 +381,16 @@
 
 	<!--Template Javascript  -->
 	<script src="../js/main.js"></script>
+	<script type="text/javascript">   
+				       $('.heart').on("click",function(){
+				    	   $(this).toggleClass("on");
+				    	   if($(this).hasClass("on")){ 							    	  
+				    		  this.src = "${root}/image/f_heart1.JPG";
+				    	   } else {
+				    		   this.src = "${root}/image/heart1.JPG";
+				    	   }
+				       });
+				       
+	</script>	
 </body>
 </html>
