@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>쓰담쓰담</title>
+<title>개인회원 회원가입</title>
 <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 <meta content="" name="keywords" />
 <meta content="" name="description" />
@@ -133,13 +133,28 @@
 	<!-- Page Header End -->
 	
 	<!-- Join Form Start -->
-	<div class="row g-4 mb-5">
+	<div class="container-xxl py-5">
+		<div class="container">
+			<div class="row g-5">
+			
+				<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+					<div class="h-100" style="min-height: 400px">
+						<img class="img-fluid" src="../image/join001.jpg" alt="빠르게가입하고 모든 테라피독을 만나보세요" />
+					</div>
+				</div>
+				
+				<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+					<div class="card shadow">
+						<div class="card-body">
+	
+<!-- 	<div class="row g-4 mb-5">
 		<div class="container" style="margin-top: 100px">
 			<div class="row">
 				<div class="col-sm-3"></div>
+				
 				<div class="col-sm-6">
 					<div class="card shadow">
-						<div class="card-body">
+						<div class="card-body"> -->
 							<form:form action="${root }user/join_pro" method="post"
 								modelAttribute="joinUserBean">
 								<form:hidden path="userIdExist" />
@@ -214,8 +229,8 @@
 						}
 						</script>
 								<div class="form-group">
-									<div class="text-right">
-										<form:button class="btn btn-primary">회원가입</form:button>
+									<div class="text-right py-4 text-end">
+										<form:button class="btn btn-primary" style="width:30%">회원가입</form:button>
 									</div>
 								</div>
 							</form:form>
@@ -233,11 +248,4 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
 
