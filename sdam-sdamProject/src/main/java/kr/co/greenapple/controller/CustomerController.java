@@ -53,10 +53,9 @@ public class CustomerController {
 
 
 		@GetMapping("/adopt")
-		public String adopt() //(@ModelAttribute("AdoptBean") AdoptBean adoptBean)
+		public String adopt()
 			{
 			return "customer/adopt";
 		}
 		
-
 }

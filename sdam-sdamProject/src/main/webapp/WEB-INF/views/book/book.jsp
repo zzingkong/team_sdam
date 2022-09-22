@@ -232,6 +232,16 @@
 							name="flexRadioDefault" id="flexRadioDefault11"> <label
 							class="form-check-label" for="flexRadioDefault11"> 제주 </label>
 					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio"
+							name="flexRadioDefault" id="flexRadioDefault11"> <label
+							class="form-check-label" for="flexRadioDefault12"> 제주 </label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio"
+							name="flexRadioDefault" id="flexRadioDefault11"> <label
+							class="form-check-label" for="flexRadioDefault13"> 제주 </label>
+					</div>
 				</div>
 		</div>
 		<!-- ------------- -->
@@ -420,7 +430,7 @@
 					<div class="card mb-4 rounded-3 shadow-sm">
 						
 						<div class="form-check text-center">
-							<h1><input type="radio" name="exampleRadios" id="exampleRadios1" class="list-inline-item"></h1>
+							<h1><input type="radio" name="flexRadioDefault" id="flexRadioDefault1"></h1>
 							<h4><label class="form-check-label list-inline-item" for="exampleRadios1">임댕댕</label></h4>
 						</div>
 
@@ -439,14 +449,14 @@
 						
 						<div class="form-check text-center">
 							<h1><input type="radio" name="flexRadioDefault" id="flexRadioDefault2"></h1>
-							<h4><label class="form-check-label" for="flexRadioDefault2">임댕댕</label></h4>
+							<h4><label class="form-check-label" for="flexRadioDefault2">말랑이</label></h4>
 						</div>
 						
 						<div class="card-body">
 							<div class="position-relative">
-							<img class="img-fluid" src="../img/animal-md-1.jpg" alt="" />
+							<img class="img-fluid" src="../img/select_dog_1.jpg" alt="" />
 								<div class="animal-text p-4">
-									<h5 class="text-white mb-0">임댕댕</h5>
+									<h5 class="text-white mb-0">말랑이</h5>
 								</div>
 							</div>
 						</div>
@@ -457,14 +467,14 @@
 						
 						<div class="form-check text-center">
 							<h1><input type="radio" name="flexRadioDefault" id="flexRadioDefault3"></h1>
-							<h4><label class="form-check-label" for="flexRadioDefault3">임댕댕</label></h4>
+							<h4><label class="form-check-label" for="flexRadioDefault3">이슬이</label></h4>
 						</div>
 						
 						<div class="card-body">
 							<div class="position-relative">
-							<img class="img-fluid" src="../img/animal-md-1.jpg" alt="" />
+							<img class="img-fluid" src="../img/select_dog_3.jpg" alt="" />
 								<div class="animal-text p-4">
-									<h5 class="text-white mb-0">임댕댕</h5>
+									<h5 class="text-white mb-0">이슬이</h5>
 								</div>
 							</div>
 						</div>
@@ -475,14 +485,14 @@
 						
 						<div class="form-check text-center">
 							<h1><input type="radio" name="flexRadioDefault" id="flexRadioDefault4"></h1>
-							<h4><label class="form-check-label" for="flexRadioDefault4">임댕댕</label></h4>
+							<h4><label class="form-check-label" for="flexRadioDefault4">바루</label></h4>
 						</div>
 						
 						<div class="card-body">
 							<div class="position-relative">
-							<img class="img-fluid" src="../img/animal-md-1.jpg" alt="" />
+							<img class="img-fluid" src="../img/select_dog_2.jpg" alt="" />
 								<div class="animal-text p-4">
-									<h5 class="text-white mb-0">임댕댕</h5>
+									<h5 class="text-white mb-0">바루</h5>
 								</div>
 							</div>
 						</div>
@@ -493,14 +503,14 @@
 						
 						<div class="form-check text-center">
 							<h1><input type="radio" name="flexRadioDefault" id="flexRadioDefault5"></h1>
-							<h4><label class="form-check-label" for="flexRadioDefault5">임댕댕</label></h4>
+							<h4><label class="form-check-label" for="flexRadioDefault5">용식이</label></h4>
 						</div>
 						
 						<div class="card-body">
 							<div class="position-relative">
-							<img class="img-fluid" src="../img/animal-md-1.jpg" alt="" />
+							<img class="img-fluid" src="../img/select_dog_4.jpg" alt="" />
 								<div class="animal-text p-4">
-									<h5 class="text-white mb-0">임댕댕</h5>
+									<h5 class="text-white mb-0">용식이</h5>
 								</div>
 							</div>
 						</div>

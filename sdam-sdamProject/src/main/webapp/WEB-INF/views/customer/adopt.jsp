@@ -13,8 +13,7 @@
 <meta content="" name="description" />
 
 <!-- Bootstrap CDN -->
-<!-- <link rel="stylesheet" -->
-<!-- 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"> -->
+
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script
@@ -154,12 +153,23 @@
 <div class="container px-4 py-5 mt-4" id="featured-3">
 	<h2 class="pb-2 border-bottom"><i class="bi bi-check-lg"></i> 입양 신청서 작성하기</h2>	
 
-	<div class="containerpx-4 py-5 mt-4" id="featured-3">
-		<div class="row">
-			<div class="col-sm-3"></div>
-			<div class="col-sm-6">
-				<div class="card shadow">
-					<div class="card-body">
+	
+	<div class="container-xxl py-5">
+		<div class="container">
+			<div class="row g-5">
+			
+				<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+					<div class="h-100" style="min-height: 400px">
+						<img class="img-fluid" src="../img/be_the_family.jpg" alt="테라피독의 새로운 가족이 되어주세요" />
+					</div>
+				</div>
+				
+				<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+					<div class="card shadow">
+						<div class="card-body">
+
+<!-- 		<div class="container px-4 py-2 mt-4" id="featured-3"> -->
+<!-- 			<div class="col-sm-6"> -->
 						<div class="col-12">
 			    			<label for="inputEmail4" class="form-label mb-1">이 름</label>
 			   				 <input type="text" class="form-control mb-3">
@@ -167,6 +177,10 @@
 						<div class="col-12">
 						    <label for="inputPassword4" class="form-label mb-1">전화번호</label>
 						    <input type="text" class="form-control mb-3" placeholder="010-0000-0000">
+					  	</div>
+						<div class="col-12">
+						    <label for="inputPassword" class="form-label mb-1">입양 희망 강아지</label>
+						    <input type="text" class="form-control mb-3">
 					  	</div>
 					   	<div class="col-12">
 						    <label for="inputAddress" class="form-label mb-1">이메일</label>
@@ -182,9 +196,10 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-3"></div>
 		</div>
-</div> 
+
+</div>
+</div>
 </div>
 
 
