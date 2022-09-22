@@ -29,6 +29,8 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,500,0,0" />
+
 <!-- Libraries Stylesheet -->
 <link href="../lib/animate/animate.min.css" rel="stylesheet" />
 <link href="../lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
@@ -91,11 +93,64 @@
 			</div>
 		</div>
 		
-		<div class="row">		
+		
+	<!-- 키워드 선택하기 -->
+		<div class="d-flex pb-1 wow fadeInUp" data-wow-delay="0.2s">
+ 			<div class="my-1">
+				<span class="material-symbols-outlined" style="margin-top:5px;">sound_detection_dog_barking</span>
+			</div>
+			<div class="mt-2 ps-2 pe-3">
+				<b> 덩치 </b> 
+			</div>
+			<div class="my-1 px-3">
+				<input type="checkbox" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" >
+				<label class="btn btn-outline-primary" for="btnradio1"># 대형견</label>
+			</div>
+			<div class="my-1 px-3">
+				<input type="checkbox" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" >
+				<label class="btn btn-outline-primary" for="btnradio2"># 중형견</label>
+			</div>
+			<div class="my-1 px-3">
+				<input type="checkbox" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" >
+				<label class="btn btn-outline-primary" for="btnradio3"># 소형견</label>
+			</div>
+			
+			<div class="px-5"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </div>
+			
+			<div class="my-1 ps-4">
+				<span class="material-symbols-outlined" style="margin-top:5px;">pets</span>
+			</div>
+			<div class="mt-2 ps-2 pe-3">
+				<b> 성격 </b> 
+			</div>
+			<div class="my-1 px-3">
+				<input type="checkbox" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" >
+				<label class="btn btn-outline-primary" for="btnradio4"># 활발한</label>
+			</div>
+			<div class="my-1 px-3">
+				<input type="checkbox" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off" >
+				<label class="btn btn-outline-primary" for="btnradio5"># 조용한</label>
+			</div>
+			<div class="my-1 px-3">
+				<input type="checkbox" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off" >
+				<label class="btn btn-outline-primary" for="btnradio6"># 애교많은</label>
+			</div>
+			<div class="my-1 px-3">
+				<input type="checkbox" class="btn-check" name="btnradio" id="btnradio7" autocomplete="off" >
+				<label class="btn btn-outline-primary" for="btnradio7"># 장난기 많은</label>
+			</div>
+			<div class="my-1 ps-3">
+				<input type="checkbox" class="btn-check" name="btnradio" id="btnradio8" autocomplete="off" >
+				<label class="btn btn-outline-primary" for="btnradio8"># 사교적인</label>
+			</div>
+		</div><hr>
+
+		
+		<div class="row pt-4">		
 			<div class="wow fadeInUp" data-wow-delay="0.2s" style="display:flex; flex-direction:row; flex-wrap:wrap;">
 			
 				<!-- <div class="row g-4"> -->
-					<div class="col-lg-4 col-md-6 pe-3 pb-5">
+					<div class="col col-lg-4 col-md-6 pe-3 pb-5">
 						<a class="animal-item" href="#" onclick="popup();">
 							<div class="position-relative">
 							<img class="img-fluid" src="../img/animal-md-1.jpg" alt="" />
@@ -107,10 +162,10 @@
 						</a>
 					</div>
 					
-					<div class="col-lg-4 col-md-6 px-2 pb-5">
+					<div class="col col-lg-4 col-md-6 px-2 pb-5">
 						<a class="animal-item" href="#" onclick="popup();">
 							<div class="position-relative">
-							<img class="img-fluid" src="../img/animal-md-1.jpg" alt="" />
+							<img class="img-fluid" src="../img/animal-lg-1.jpg" alt="" />
 								<div class="animal-text p-4">
 									<p class="text-white small text-uppercase mb-0">#대전 #리트리버 #귀여움</p>
 									<h5 class="text-white mb-0">임댕댕 >></h5>
@@ -119,10 +174,10 @@
 						</a>
 					</div>
 					
-					<div class="col-lg-4 col-md-6 ps-3 pb-5">
+					<div class="col col-lg-4 col-md-6 ps-3 pb-5">
 						<a class="animal-item" href="#" onclick="popup();">
 							<div class="position-relative">
-							<img class="img-fluid" src="../img/animal-md-1.jpg" alt="" />
+							<img class="img-fluid" src="../img/animal-lg-2.jpg" alt="" />
 								<div class="animal-text p-4">
 									<p class="text-white small text-uppercase mb-0">#대전 #리트리버 #귀여움</p>
 									<h5 class="text-white mb-0">임댕댕 >></h5>
@@ -131,10 +186,10 @@
 						</a>
 					</div>
 					
-					<div class="col-lg-4 col-md-6 pe-3 pb-5">
+					<div class="col col-lg-4 col-md-6 pe-3 pb-5">
 						<a class="animal-item" href="#" onclick="popup();">
 							<div class="position-relative">
-							<img class="img-fluid" src="../img/animal-md-1.jpg" alt="" />
+							<img class="img-fluid" src="../img/animal-md-2.jpg" alt="" />
 								<div class="animal-text p-4">
 									<p class="text-white small text-uppercase mb-0">#대전 #리트리버 #귀여움</p>
 									<h5 class="text-white mb-0">임댕댕 >></h5>
@@ -148,6 +203,8 @@
 		
 	</div>
 </div>
+
+
 
 <!-- Modal -->
 <div class="modal modal-center fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
