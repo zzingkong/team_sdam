@@ -100,21 +100,22 @@
 	<div class="container-xxl py-5">
 		<div class="container">
 			<div class="row g-5 mb-4 wow fadeInUp label" data-wow-delay="0.1s">
-				
 				<div class="col-2 p-1 mb-5">
 					<select class="form-select" aria-label="Default select example">
-						<option selected>지역별</option>
-						<option value="1">서울</option>
-						<option value="2">경기도</option>
-						<option value="3">대전</option>
-						<option value="4">광주</option>
-						<option value="5">대구</option>
-						<option value="6">울산</option>
-						<option value="7">부산</option>
-						<option value="8">충청</option>
-						<option value="9">전라</option>
-						<option value="10">경상</option>
-						<option value="11">제주</option>
+							<option value="1">서울</option>
+							<option value="2">부산</option>
+							<option value="3">대구</option>
+							<option value="4">인천</option>
+							<option value="5">광주</option>
+							<option value="6">대전</option>
+							<option value="7">울산</option>
+							<option value="8">세종</option>
+							<option value="9">경기도</option>
+							<option value="10">강원도</option>
+							<option value="11">충청도</option>
+							<option value="12">전라도</option>
+							<option value="13">경상도</option>
+							<option value="14">제주도</option>
 					</select> 
 				</div>
 				<div class="col-2 p-1 mb-5">

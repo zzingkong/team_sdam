@@ -156,15 +156,33 @@
 					class="header-bg h-100 d-flex flex-column justify-content-center p-5">
 					<h1 class="display-4 text-light mb-5">내 주변 테라피독과 만나기</h1>
 					<div class="d-flex align-items-center pt-4 animated slideInDown">
-						<div class="position-relative" style="max-width: 500px; margin-bottom: 10px">
-						<input class="form-control border-0 w-100 py-3 ps-4 pe-5"
-							type="text" placeholder="원하는 지역을 검색하세요" />
-						<button type="button"
-							class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">
-							Search</button>
-						</div>
-
-
+						<div class="position-relative" style="max-width: 285px; margin-bottom: 10px">
+									<!-- <input class="form-control border-0 w-100 py-3 ps-4 pe-5"
+										type="text" placeholder="원하는 지역을 검색하세요" /> -->
+							<div class="d-sm-inline-block">
+								<select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+								  <option selected>원하는 지역을 선택하세요</option>
+									<option value="1">서울</option>
+									<option value="2">부산</option>
+									<option value="3">대구</option>
+									<option value="4">인천</option>
+									<option value="5">광주</option>
+									<option value="6">대전</option>
+									<option value="7">울산</option>
+									<option value="8">세종</option>
+									<option value="9">경기도</option>
+									<option value="10">강원도</option>
+									<option value="11">충청도</option>
+									<option value="12">전라도</option>
+									<option value="13">경상도</option>
+									<option value="14">제주도</option>
+								</select>
+							</div>
+							<div class=" d-sm-inline-block" style="float:right">
+								<a href="${root }book/book"><button type="button" class="btn btn-primary py-2 position-absolute h-75 top-0 mt-0 me-2 ">
+								<i class="bi bi-search"></i></button></a>
+							</div>
+						</div>	
 						<!-- <div>
 							<a href="" class="btn btn-primary py-sm-3 px-3 px-sm-5 me-5">서비스
 								신청하기</a>
