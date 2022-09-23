@@ -26,18 +26,25 @@ public class UserBean {
 	@Pattern(regexp = "[0-9]{10,11}", message = "10~11자리의 숫자만 입력가능합니다")
 	private String user_tel;
 	
+	private String user_birth;
 	private String user_address;
+	private String user_protector_name;
+	private String user_protector_tel;
 	
-	private String user_license;
-	private String user_resume;
-	private int user_star;
-	private String user_pic;
+	
+	private String therapist_license;
+	private String therapist_picture;
+	private String therapist_career;
+	private int therapist_level;
+	private String therapist_resume;
 	private String user_info;
 	private int company_idx;
 	
 	private boolean userIdExist;
 	private boolean userTelExist;
 	private boolean userLogin;
+	
+	
 	
 	public UserBean() {
 		this.userIdExist = false;
@@ -116,36 +123,70 @@ public class UserBean {
 		this.userTelExist = userTelExist;
 	}
 
-	public String getUser_license() {
-		return user_license;
+	
+
+	public String getUser_birth() {
+		return user_birth;
 	}
 
-	public void setUser_license(String user_license) {
-		this.user_license = user_license;
+	public void setUser_birth(String user_birth) {
+		this.user_birth = user_birth;
 	}
 
-	public String getUser_resume() {
-		return user_resume;
+	public String getUser_protector_name() {
+		return user_protector_name;
 	}
 
-	public void setUser_resume(String user_resume) {
-		this.user_resume = user_resume;
+	public void setUser_protector_name(String user_protector_name) {
+		this.user_protector_name = user_protector_name;
 	}
 
-	public int getUser_star() {
-		return user_star;
+	public String getUser_protector_tel() {
+		return user_protector_tel;
 	}
 
-	public void setUser_star(int user_star) {
-		this.user_star = user_star;
+	public void setUser_protector_tel(String user_protector_tel) {
+		this.user_protector_tel = user_protector_tel;
 	}
 
-	public String getUser_pic() {
-		return user_pic;
+	public String getTherapist_license() {
+		return therapist_license;
 	}
 
-	public void setUser_pic(String user_pic) {
-		this.user_pic = user_pic;
+	public void setTherapist_license(String therapist_license) {
+		this.therapist_license = therapist_license;
+	}
+
+	public String getTherapist_picture() {
+		return therapist_picture;
+	}
+
+	public void setTherapist_picture(String therapist_picture) {
+		this.therapist_picture = therapist_picture;
+	}
+
+	public String getTherapist_career() {
+		return therapist_career;
+	}
+
+	public void setTherapist_career(String therapist_career) {
+		this.therapist_career = therapist_career;
+	}
+
+	public int getTherapist_level() {
+		return therapist_level;
+	}
+
+	public void setTherapist_level(int therapist_level) {
+		this.therapist_level = therapist_level;
+	}
+
+	public String getTherapist_resume() {
+		return therapist_resume;
+	}
+
+	public void setTherapist_resume(String therapist_resume) {
+		this.therapist_resume = therapist_resume;
 	}
 
 	public String getUser_info() {

@@ -66,6 +66,7 @@ public class UserController {
 	public String join_therapist(@ModelAttribute("joinUserBean") UserBean joinUserBean) {
 		return "user/join_therapist";
 	}
+	
 	@GetMapping("/join_company")
 	public String join_company(@ModelAttribute("joinUserBean") UserBean joinUserBean) {
 		return "user/join_company";
@@ -78,6 +79,7 @@ public class UserController {
 	@PostMapping("/join_pro")
 	public String join_pro(@Valid @ModelAttribute("joinUserBean") UserBean joinUserBean, BindingResult result) {
 		if(result.hasErrors()) {
+			System.out.println("검증실패");
 			return "user/join_select";
 		}
 		

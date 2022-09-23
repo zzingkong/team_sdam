@@ -49,7 +49,28 @@
 
 <!-- Template Stylesheet -->
 <link href="../css/style.css" rel="stylesheet" />
+<!-- 회원가입 기업 검색창 js -->
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="../js/data.js"></script>
 </head>
+<script>
+	
+	$(function () {	//화면 로딩후 시작
+		$("#searchInput").autocomplete({  //오토 컴플릿트 시작
+			source: List,	// source는 data.js파일 내부의 List 배열
+			focus : function(event, ui) { // 방향키로 자동완성단어 선택 가능하게 만들어줌	
+				return false;
+			},
+			minLength: 1,// 최소 글자수
+			delay: 100,	//autocomplete 딜레이 시간(ms)
+			//disabled: true, //자동완성 기능 끄기
+		});
+	});
+</script>
+
+
 <script>
 	function checkUserIdExist(){
 		var user_id = $("#user_id").val()
@@ -110,6 +131,10 @@
 					<form:form action="${root }user/join_pro" method="post" modelAttribute="joinUserBean">
 						<form:hidden path="userIdExist"/>
 						<div class="form-group">
+							소속회사 <input id="searchInput">
+						</div>
+						
+						<div class="form-group">
 							<form:label path="user_name">이름</form:label>
 							<form:input path="user_name" class="form-control"/>
 							<form:errors path="user_name" style="color:red"/>
@@ -133,6 +158,10 @@
 							<form:label path="user_pw2">비밀번호 확인</form:label>
 							<form:password path="user_pw2" class="form-control"/>
 							<form:errors path="user_pw2" style="color:red"/>
+						</div>
+						<div class="form-group pb-4">
+							<form:label path="therapist_picture" class="pb-2">프로필사진</form:label>
+							<form:input type="file" path="therapist_picture" class="form-control pb-3" accept="image/*"/>
 						</div>
 						<div class="form-group">
 							<div class="text-right">
