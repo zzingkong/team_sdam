@@ -137,7 +137,7 @@
 			</div>
 			<div class="my-1 px-3">
 				<input type="checkbox" class="btn-check" name="btnradio" id="btnradio7" autocomplete="off" >
-				<label class="btn btn-outline-primary" for="btnradio7"># 장난기 많은</label>
+				<label class="btn btn-outline-primary" for="btnradio7"># 장난기많은</label>
 			</div>
 			<div class="my-1 ps-3">
 				<input type="checkbox" class="btn-check" name="btnradio" id="btnradio8" autocomplete="off" >
@@ -155,7 +155,7 @@
 							<div class="position-relative">
 							<img class="img-fluid" src="../img/animal-md-1.jpg" alt="" />
 								<div class="animal-text p-4">
-									<p class="text-white small text-uppercase mb-0">#대전 #리트리버 #귀여움</p>
+									<p class="text-white small text-uppercase mb-0">#대전 #조용한</p>
 									<h5 class="text-white mb-0">임댕댕 >></h5>
 								</div>
 							</div>
@@ -167,8 +167,8 @@
 							<div class="position-relative">
 							<img class="img-fluid" src="../img/animal-lg-1.jpg" alt="" />
 								<div class="animal-text p-4">
-									<p class="text-white small text-uppercase mb-0">#대전 #리트리버 #귀여움</p>
-									<h5 class="text-white mb-0">임댕댕 >></h5>
+									<p class="text-white small text-uppercase mb-0">#서울 #장난기많은</p>
+									<h5 class="text-white mb-0">말랑 >></h5>
 								</div>
 							</div>
 						</a>
@@ -179,8 +179,8 @@
 							<div class="position-relative">
 							<img class="img-fluid" src="../img/animal-lg-2.jpg" alt="" />
 								<div class="animal-text p-4">
-									<p class="text-white small text-uppercase mb-0">#대전 #리트리버 #귀여움</p>
-									<h5 class="text-white mb-0">임댕댕 >></h5>
+									<p class="text-white small text-uppercase mb-0">#대전 #조용한</p>
+									<h5 class="text-white mb-0">이슬 >></h5>
 								</div>
 							</div>
 						</a>
@@ -191,8 +191,32 @@
 							<div class="position-relative">
 							<img class="img-fluid" src="../img/animal-md-2.jpg" alt="" />
 								<div class="animal-text p-4">
-									<p class="text-white small text-uppercase mb-0">#대전 #리트리버 #귀여움</p>
-									<h5 class="text-white mb-0">임댕댕 >></h5>
+									<p class="text-white small text-uppercase mb-0">#대전 #장난기많은</p>
+									<h5 class="text-white mb-0">바루 >></h5>
+								</div>
+							</div>
+						</a>
+					</div>
+					
+					<div class="col col-lg-4 col-md-6 pe-3 pb-5">
+						<a class="animal-item" href="#" onclick="popup();">
+							<div class="position-relative">
+							<img class="img-fluid" src="../img/animal-md-2.jpg" alt="" />
+								<div class="animal-text p-4">
+									<p class="text-white small text-uppercase mb-0">#서울 #장난기많은</p>
+									<h5 class="text-white mb-0">용식 >></h5>
+								</div>
+							</div>
+						</a>
+					</div>
+					
+					<div class="col col-lg-4 col-md-6 pe-3 pb-5">
+						<a class="animal-item" href="#" onclick="popup();">
+							<div class="position-relative">
+							<img class="img-fluid" src="../img/animal-md-2.jpg" alt="" />
+								<div class="animal-text p-4">
+									<p class="text-white small text-uppercase mb-0">#대전 #조용한</p>
+									<h5 class="text-white mb-0">덕만 >></h5>
 								</div>
 							</div>
 						</a>

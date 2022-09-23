@@ -120,7 +120,7 @@
 			<b><img alt="서비스이용아이콘" src="../image/myservice_ing.png" width="3.5%"> 서비스이용 2회 &nbsp; / &nbsp; <img alt="서비스대기아이콘" src="../image/myservice_check.png" width="3.5%"> 서비스대기중 1회 &nbsp; / &nbsp; <img alt="서비스취소아이콘" src="../image/myservice_x.png" width="3.5%"> 취소 1회</b><hr/>	
 			
 			<ul style="list-style: none;">
-				<li class="pb-4">
+<!-- 				<li class="pb-4">
 					<div style="margin-bottom:-0.5em;"><img alt="서비스이용아이콘" src="../image/myservice_ing.png"> &nbsp; <b>서비스이용완료</b> &nbsp; 22.09.17 토 / 13:00 ~ 15:00 (2시간)</div>
 					<div class="link-secondary"> &nbsp;&nbsp;&nbsp;&nbsp; | </div>
 					<div style="width:95%; display:flex;">
@@ -134,10 +134,10 @@
 							<div class="py-2">방문장소: 대전시 동구 우암로, 나래관 4층</div>
 						</div>
 					</div>
-				</li>
+				</li> -->
 				
 				<li class="pb-4">
-					<div style="margin-bottom:-0.5em;"><img alt="서비스대기아이콘" src="../image/myservice_check.png"> &nbsp; <b>승인 대기중</b> &nbsp; 22.10.16 일 / 13:00 ~ 15:00 (2시간)</div>
+					<div style="margin-bottom:-0.5em;"><img alt="서비스대기아이콘" src="../image/myservice_check.png"> &nbsp; <b>승인 대기중</b> &nbsp; 22.09.26 월 / 13:00 ~ 15:00 (2시간)</div>
 					<div class="link-secondary"> &nbsp;&nbsp;&nbsp;&nbsp; | </div>
 					<div style="width:95%; display:flex;">
 						<div class="col-2"><img class="img-fluid" style="border-top-left-radius:10px; border-bottom-left-radius:10px;" alt="테라피독" src="../image/therapydog1.jpg"></div>
@@ -146,13 +146,13 @@
 								<button type="button" class="btn btn-outline-warning btn-sm float-end">다시예약하기</button>
 								<button type="button" class="btn btn-outline-secondary btn-sm float-end mx-2">예약취소하기</button> 
 							<hr/></div>
-							<div class="py-2">이세령 테라피스트. 서울</div>
-							<div class="py-2">방문장소: 대전시 동구 우암로, 나래관 4층</div>
+							<div class="py-2">이세령 테라피스트. 대전</div>
+							<div class="py-2">방문장소: 대전시 동구 우암로 352-21, 나래관 4층</div>
 						</div>
 					</div>
 				</li>
 				
-				<li class="pb-4">
+<!-- 				<li class="pb-4">
 					<div style="margin-bottom:-0.5em;"><img alt="서비스취소아이콘" src="../image/myservice_x.png"> &nbsp; <b>서비스취소완료</b> &nbsp; 22.10.16 일 / 13:00 ~ 15:00 (2시간)</div>
 					<div class="link-secondary"> &nbsp;&nbsp;&nbsp;&nbsp; | </div>
 					<div style="width:95%; display:flex;">
@@ -165,7 +165,7 @@
 							<div class="py-2">방문장소: 대전시 동구 우암로, 나래관 4층</div>
 						</div>
 					</div>
-				</li>
+				</li> -->
 			</ul>			
 		</div>
         
