@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dog">
+
+<!-- <select id="getDog" parameterType="kr.co.greenapple.beans.DogBean">
+		<![CDATA[
+			select  
+			from tehrapy_dog_table
+			where 
+		]]>
+	</select> -->
+	
+	<insert id="addDog" parameterType="kr.co.greenapple.beans.DogBean">
+		<![CDATA[
+			insert into tehrapy_dog_table
+			(dog_idx, dog_name, dog_type, dog_age, dog_sex, dog_neutralization, dog_memo, doc_picture, dog_tag, company_id)
+			values (dog_seq.nextval, #{dog_name}, #{dog_type}, #{dog_age}, #{dog_sex}, #{dog_neutralization}, #{dog_memo}, #{doc_picture}, #{dog_tag}, #{company_id})
+		]]>
+	</insert>
+	
+</mapper>
