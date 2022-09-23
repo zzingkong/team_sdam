@@ -11,15 +11,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.co.greenapple.beans.ContentBean;
-import kr.co.greenapple.beans.DogBean;
+import kr.co.greenapple.beans.CustomerBean;
 import kr.co.greenapple.beans.PageBean;
 import kr.co.greenapple.service.BoardService;
+import kr.co.greenapple.service.CustomerService;
 
 @Controller
 @RequestMapping("/customer")
 public class CustomerController {
 
 
+	
+	@Autowired
+	private CustomerService adoptService;
+	 
+	
 		@Autowired
 		private BoardService boardService;
 
@@ -52,10 +58,24 @@ public class CustomerController {
 		}
 
 
+		
 		@GetMapping("/adopt")
-		public String adopt()
-			{
+		public String write(@ModelAttribute("customerBean") CustomerBean customerBean) {
+			
+			
+			
 			return "customer/adopt";
 		}
+		
+		
+		@GetMapping("/write")
+		public String write(@ModelAttribute("writeContentBean") ContentBean writeContentBean,
+				@RequestParam("board_info_idx") int board_info_idx) {
+			
+			writeContentBean.setContent_board_idx(board_info_idx);
+			
+			return "board/write";
+		}
+		 
 		
 }

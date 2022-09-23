@@ -170,7 +170,7 @@
 
 <!-- 		<div class="container px-4 py-2 mt-4" id="featured-3"> -->
 <!-- 			<div class="col-sm-6"> -->
-						<div class="col-12">
+<!-- 						<div class="col-12">
 			    			<label for="inputEmail4" class="form-label mb-1">이 름</label>
 			   				 <input type="text" class="form-control mb-3">
 			  			</div>
@@ -192,7 +192,71 @@
 					  	</div>
 					   	<div class="col-12">
 						    <button type="submit" class="btn btn-primary">제출하기</button>
-					 	</div>				
+					 	</div> -->
+					 		<%-- <form:form action="${root }user/join_pro" method="get" modelAttribute="customerBean">
+								<form:hidden path="userIdExist" />
+								<form:hidden path="userTelExist" />
+								<form:hidden path="user_info" value="user" />
+								<div class="form-group">
+									<form:label path="user_name">이름</form:label>
+									<form:input path="user_name" class="form-control" />
+									<form:errors path="user_name" style="color:red" />
+								</div>
+								<div class="form-group">
+									<form:label path="user_id">아이디</form:label>
+									<div class="input-group">
+										<form:input path="user_id" class="form-control"
+											onkeypress="resetUserIdExist()" />
+										<div class="input-group-append">
+											<button type="button" class="btn btn-primary"
+												onclick="checkUserIdExist()">중복확인</button>
+										</div>
+									</div>
+									<form:errors path="user_id" style="color:red" />
+								</div>
+								<div class="form-group">
+									<form:label path="user_pw">비밀번호</form:label>
+									<form:password path="user_pw" class="form-control" />
+									<form:errors path="user_pw" style="color:red" />
+								</div>
+								<div class="form-group">
+									<form:label path="user_pw2">비밀번호 확인</form:label>
+									<form:password path="user_pw2" class="form-control" />
+									<form:errors path="user_pw2" style="color:red" />
+								</div>
+								<div class="form-group">
+									<form:label path="user_tel">전화번호</form:label>
+									<div class="input-group">
+										<form:input path="user_tel" class="form-control"
+											onkeypress="resetUserTelExist()" placeholder="-를 제외하고 작성" />
+										<div class="input-group-append">
+											<button type="button" class="btn btn-primary"
+												onclick="checkUserTelExist()">중복확인</button>
+										</div>
+									</div>
+									<form:errors path="user_tel" style="color:red" />
+								</div>
+								<div class="form-group">
+									<form:label path="user_address">주소</form:label>
+									<div class="input-group mb-1">
+										<form:input path="user_address" id="address_input"
+											class="form-control" readonly="true"/>
+										<div class="input-group-append">
+											<button type="button" class="btn btn-primary"
+												id="address_kakao"">주소검색</button>
+										</div>
+									</div>
+									<form:input path="user_address" id="address_input"
+										class="form-control" placeholder="상세주소 입력" />
+									<form:errors path="user_address" style="color:red" />
+								</div>
+
+								<div class="form-group">
+									<div class="text-right py-4 text-end">
+										<form:button class="btn btn-primary" style="width:30%">회원가입</form:button>
+									</div>
+								</div>
+							</form:form> --%>			
 					</div>
 				</div>
 			</div>

@@ -203,7 +203,7 @@
 									<form:label path="user_address">주소</form:label>
 									<div class="input-group mb-1">
 										<form:input path="user_address" id="address_input"
-											class="form-control" readonly="readonly"/>
+											class="form-control" readonly="true"/>
 										<div class="input-group-append">
 											<button type="button" class="btn btn-primary"
 												id="address_kakao"">주소검색</button>
