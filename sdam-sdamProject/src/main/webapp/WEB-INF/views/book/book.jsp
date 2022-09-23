@@ -40,6 +40,9 @@
 	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
 	rel="stylesheet" />
 
+<!-- google icon -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,500,0,0" />
+
 <!-- Libraries Stylesheet -->
 <link href="../lib/animate/animate.min.css" rel="stylesheet" />
 <link href="../lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
@@ -184,63 +187,68 @@
 					<div class="form-check form-check-inline">
 						<input class="form-check-input" type="radio"
 							name="flexRadioDefault" id="flexRadioDefault2"> <label
-							class="form-check-label" for="flexRadioDefault2"> 경기도 </label>
+							class="form-check-label" for="flexRadioDefault2"> 부산 </label>
 					</div>
 					<div class="form-check form-check-inline">
 						<input class="form-check-input" type="radio"
 							name="flexRadioDefault" id="flexRadioDefault3"> <label
-							class="form-check-label" for="flexRadioDefault3"> 대전 </label>
+							class="form-check-label" for="flexRadioDefault3"> 대구 </label>
 					</div>
 					<div class="form-check form-check-inline">
 						<input class="form-check-input" type="radio"
 							name="flexRadioDefault" id="flexRadioDefault4"> <label
-							class="form-check-label" for="flexRadioDefault4"> 광주 </label>
+							class="form-check-label" for="flexRadioDefault4"> 인천 </label>
 					</div>
 					<div class="form-check form-check-inline">
 						<input class="form-check-input" type="radio"
 							name="flexRadioDefault" id="flexRadioDefault5"> <label
-							class="form-check-label" for="flexRadioDefault5"> 대구 </label>
+							class="form-check-label" for="flexRadioDefault5"> 광주 </label>
 					</div>
 					
 					<div class="form-check form-check-inline">
 						<input class="form-check-input" type="radio"
-							name="flexRadioDefault" id="flexRadioDefault6"> <label
-							class="form-check-label" for="flexRadioDefault6"> 울산 </label>
+							name="flexRadioDefault" id="flexRadioDefault6" checked> <label
+							class="form-check-label" for="flexRadioDefault6"> 대전 </label>
 					</div>
 					<div class="form-check form-check-inline">
 						<input class="form-check-input" type="radio"
 							name="flexRadioDefault" id="flexRadioDefault7"> <label
-							class="form-check-label" for="flexRadioDefault7"> 부산 </label>
+							class="form-check-label" for="flexRadioDefault7"> 울산 </label>
 					</div>
 					<div class="form-check form-check-inline">
 						<input class="form-check-input" type="radio"
 							name="flexRadioDefault" id="flexRadioDefault8"> <label
-							class="form-check-label" for="flexRadioDefault8"> 충청 </label>
+							class="form-check-label" for="flexRadioDefault8"> 세종 </label>
 					</div>
 					<div class="form-check form-check-inline">
 						<input class="form-check-input" type="radio"
 							name="flexRadioDefault" id="flexRadioDefault9"> <label
-							class="form-check-label" for="flexRadioDefault9"> 전라 </label>
+							class="form-check-label" for="flexRadioDefault9"> 경기도 </label>
 					</div>
 					<div class="form-check form-check-inline">
 						<input class="form-check-input" type="radio"
 							name="flexRadioDefault" id="flexRadioDefault10"> <label
-							class="form-check-label" for="flexRadioDefault10"> 경상 </label>
+							class="form-check-label" for="flexRadioDefault10"> 강원도 </label>
 					</div>
 					<div class="form-check form-check-inline">
 						<input class="form-check-input" type="radio"
 							name="flexRadioDefault" id="flexRadioDefault11"> <label
-							class="form-check-label" for="flexRadioDefault11"> 제주 </label>
+							class="form-check-label" for="flexRadioDefault11"> 충청도 </label>
 					</div>
 					<div class="form-check form-check-inline">
 						<input class="form-check-input" type="radio"
-							name="flexRadioDefault" id="flexRadioDefault11"> <label
-							class="form-check-label" for="flexRadioDefault12"> 제주 </label>
+							name="flexRadioDefault" id="flexRadioDefault12"> <label
+							class="form-check-label" for="flexRadioDefault12"> 전라도 </label>
 					</div>
 					<div class="form-check form-check-inline">
 						<input class="form-check-input" type="radio"
-							name="flexRadioDefault" id="flexRadioDefault11"> <label
-							class="form-check-label" for="flexRadioDefault13"> 제주 </label>
+							name="flexRadioDefault" id="flexRadioDefault13"> <label
+							class="form-check-label" for="flexRadioDefault13"> 경상도 </label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio"
+							name="flexRadioDefault" id="flexRadioDefault14"> <label
+							class="form-check-label" for="flexRadioDefault14"> 제주도 </label>
 					</div>
 				</div>
 		</div>
@@ -385,44 +393,55 @@
 	</h2>
 	
 	<!-- 키워드 선택하기 -->
-	<div class="w-75 mx-auto mb-5">
-		<div class="d-flex ">
-			<div class="col-md-2  my-1 px-2">
+			<div class="d-flex pb-5 wow ">
+ 			<div class="my-1">
+				<span class="material-symbols-outlined" style="margin-top:5px;">sound_detection_dog_barking</span>
+			</div>
+			<div class="mt-2 ps-2 pe-3">
+				<b> 덩치 </b> 
+			</div>
+			<div class="my-1 px-3">
 				<input type="checkbox" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" >
 				<label class="btn btn-outline-primary" for="btnradio1"># 대형견</label>
 			</div>
-			<div class="col-md-2  my-1 px-2">
+			<div class="my-1 px-3">
 				<input type="checkbox" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" >
 				<label class="btn btn-outline-primary" for="btnradio2"># 중형견</label>
 			</div>
-			<div class="col-md-2  my-1 px-2">
+			<div class="my-1 px-3">
 				<input type="checkbox" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" >
 				<label class="btn btn-outline-primary" for="btnradio3"># 소형견</label>
 			</div>
-		</div>
-		<div class="d-flex">
-			<div class="col-md-2  my-1 px-2">
+			
+			<div class="px-5"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </div>
+			
+			<div class="my-1 ps-4">
+				<span class="material-symbols-outlined" style="margin-top:5px;">pets</span>
+			</div>
+			<div class="mt-2 ps-2 pe-3">
+				<b> 성격 </b> 
+			</div>
+			<div class="my-1 px-3">
 				<input type="checkbox" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" >
 				<label class="btn btn-outline-primary" for="btnradio4"># 활발한</label>
 			</div>
-			<div class="col-md-2  my-1 px-2">
+			<div class="my-1 px-3">
 				<input type="checkbox" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off" >
 				<label class="btn btn-outline-primary" for="btnradio5"># 조용한</label>
 			</div>
-			<div class="col-md-2  my-1 px-2">
+			<div class="my-1 px-3">
 				<input type="checkbox" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off" >
 				<label class="btn btn-outline-primary" for="btnradio6"># 애교많은</label>
 			</div>
-			<div class="col-md-2  my-1 px-2">
+			<div class="my-1 px-3">
 				<input type="checkbox" class="btn-check" name="btnradio" id="btnradio7" autocomplete="off" >
 				<label class="btn btn-outline-primary" for="btnradio7"># 장난기 많은</label>
 			</div>
-			<div class="col-md-2  my-1 px-2">
+			<div class="my-1 ps-3">
 				<input type="checkbox" class="btn-check" name="btnradio" id="btnradio8" autocomplete="off" >
 				<label class="btn btn-outline-primary" for="btnradio8"># 사교적인</label>
 			</div>
 		</div>
-	</div>
 
 
 			<div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
@@ -435,7 +454,7 @@
 						</div>
 
 						<div class="card-body">
-							<div class="position-relative">
+							<div class="position-relative" style="min-height: 500px;">
 							<img class="img-fluid" src="../img/animal-md-1.jpg" alt="" />
 								<div class="animal-text p-4">
 									<h5 class="text-white mb-0">임댕댕</h5>
@@ -453,7 +472,7 @@
 						</div>
 						
 						<div class="card-body">
-							<div class="position-relative">
+							<div class="position-relative" style="min-height: 500px;">
 							<img class="img-fluid" src="../img/select_dog_1.jpg" alt="" />
 								<div class="animal-text p-4">
 									<h5 class="text-white mb-0">말랑이</h5>
@@ -471,8 +490,8 @@
 						</div>
 						
 						<div class="card-body">
-							<div class="position-relative">
-							<img class="img-fluid" src="../img/select_dog_3.jpg" alt="" />
+							<div class="position-relative" style="min-height: 500px";>
+							<img class="img-fluid" src="../img/select_dog_2.jpg" alt="" />
 								<div class="animal-text p-4">
 									<h5 class="text-white mb-0">이슬이</h5>
 								</div>
@@ -489,8 +508,8 @@
 						</div>
 						
 						<div class="card-body">
-							<div class="position-relative">
-							<img class="img-fluid" src="../img/select_dog_2.jpg" alt="" />
+							<div class="position-relative"  style="min-height: 500px";>
+							<img class="img-fluid" src="../img/select_dog_3.jpg" alt="" />
 								<div class="animal-text p-4">
 									<h5 class="text-white mb-0">바루</h5>
 								</div>
@@ -507,7 +526,7 @@
 						</div>
 						
 						<div class="card-body">
-							<div class="position-relative">
+							<div class="position-relative"  style="min-height: 500px";>
 							<img class="img-fluid" src="../img/select_dog_4.jpg" alt="" />
 								<div class="animal-text p-4">
 									<h5 class="text-white mb-0">용식이</h5>
@@ -524,7 +543,7 @@
 		
 		
 <div class="text-center mb-5">
-	<button type="button" class="btn btn-primary btn-lg" onclick="location.href='${root}book/bookcheck'">신청하기</button>
+	<button type="button" class="btn btn-primary btn-lg" onclick="location.href='${root}book/bookdone'">신청하기</button>
 </div>
 
 
