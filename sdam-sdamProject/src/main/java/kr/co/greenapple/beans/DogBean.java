@@ -11,7 +11,7 @@ public class DogBean {
 	private String dog_memo; 		   //소개
 	private String dog_picture; 	   //사진
 	private String dog_tag; 		   //해시태그
-	private int company_id; 		   //회사ID_FK
+	private String company_id; 		   //회사ID_FK
 	
 	public int getDog_idx() {
 		return dog_idx;
@@ -67,10 +67,10 @@ public class DogBean {
 	public void setDog_tag(String dog_tag) {
 		this.dog_tag = dog_tag;
 	}
-	public int getCompany_id() {
+	public String getCompany_id() {
 		return company_id;
 	}
-	public void setCompany_id(int company_id) {
+	public void setCompany_id(String company_id) {
 		this.company_id = company_id;
 	}
 
