@@ -131,7 +131,8 @@
 					<form:form action="${root }user/join_pro" method="post" modelAttribute="joinUserBean">
 						<form:hidden path="userIdExist"/>
 						<div class="form-group">
-							소속회사 <input id="searchInput">
+							<form:label path="company_name">소속회사 </form:label>
+							<form:input  path="company_name" class="form-control" id="searchInput" />
 						</div>
 						
 						<div class="form-group">
@@ -159,6 +160,18 @@
 							<form:password path="user_pw2" class="form-control"/>
 							<form:errors path="user_pw2" style="color:red"/>
 						</div>
+						<div class="form-group">
+									<form:label path="user_tel">전화번호</form:label>
+									<div class="input-group">
+										<form:input path="user_tel" class="form-control"
+											onkeypress="resetUserTelExist()" placeholder="-를 제외하고 작성" />
+										<div class="input-group-append">
+											<button type="button" class="btn btn-primary"
+												onclick="checkUserTelExist()">중복확인</button>
+										</div>
+									</div>
+									<form:errors path="user_tel" style="color:red" />
+								</div>
 						<div class="form-group pb-4">
 							<form:label path="therapist_picture" class="pb-2">프로필사진</form:label>
 							<form:input type="file" path="therapist_picture" class="form-control pb-3" accept="image/*"/>
