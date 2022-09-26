@@ -3,6 +3,7 @@ package kr.co.greenapple.controller;
 import javax.annotation.Resource;
 import javax.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,10 +12,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import kr.co.greenapple.beans.DogBean;
+import kr.co.greenapple.service.DogService;
 
 @Controller
 @RequestMapping("/service")
 public class ServiceController {
+	
+	@Autowired
+	private DogService dogService;
 	
 	@Resource(name="dogBean")
 	@Lazy
@@ -37,6 +42,8 @@ public class ServiceController {
 	@PostMapping("/joindog")
 	public String adddog_post(@Valid @ModelAttribute("dogBean") DogBean dogBean) {
 
+		dogService.addDog(dogBean);
+		
 		return "service/therapydog";
 	}
 	

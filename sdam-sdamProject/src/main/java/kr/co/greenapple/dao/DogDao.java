@@ -4,7 +4,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import kr.co.greenapple.beans.UserBean;
+import kr.co.greenapple.beans.DogBean;
 
 @Repository
 public class DogDao {
@@ -12,8 +12,8 @@ public class DogDao {
 	@Autowired
 	private SqlSessionTemplate sqlSessionTemplate;
  	
-//	public String checkUserIdExist(String user_id) {
-//		return sqlSessionTemplate.selectOne("user.checkUserIdExist", user_id);  
-//	}
+	public void addDog(DogBean dogBean) {
+		sqlSessionTemplate.insert("dog.addDog", dogBean);
+	}
 	
 }
