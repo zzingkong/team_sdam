@@ -84,7 +84,7 @@
 		<div class="col-sm-6">
 			<div class="card shadow">
 				<div class="card-body">
-					<form:form action="${root }service/joindog" method="post" modelAttribute="dogBean">
+					<form:form action="${root }service/joindog" method="post" modelAttribute="dogBean" enctype="multipart/form-data">
 						<div class="form-group pb-2">
 							<form:label path="dog_name" class="pb-2">이름</form:label>
 							<form:input path="dog_name" class="form-control"/>
@@ -132,8 +132,8 @@
 					    <form:errors path="dog_name" style="color:red"/> --%>	
 						</div>
 						<div class="form-group pb-4">
-							<form:label path="dog_picture" class="pb-2">프로필사진</form:label>
-							<form:input type="file" path="dog_picture" class="form-control pb-3" accept="image/*"/>
+							<form:label path="upload_file" class="pb-2">프로필사진</form:label>
+							<form:input type="file" path="upload_file" class="form-control pb-3" accept="image/*"/>
 						</div>
 						<div class="form-group pb-2">
 							<form:label path="company_id" class="pb-2">company 값 어떻게 넘겨 받을까?</form:label>

@@ -86,6 +86,7 @@
 		<beans:constructor-arg ref="messageSource"/>
 	</beans:bean>
 	
+	<!-- 파일업로드 -->
 	<beans:bean class="org.springframework.web.multipart.support.StandardServletMultipartResolver"
 		id="multipartResolver"/>
 </beans:beans>
