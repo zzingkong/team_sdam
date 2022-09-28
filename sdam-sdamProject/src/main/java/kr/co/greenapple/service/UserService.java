@@ -69,4 +69,9 @@ public class UserService {
 		
 		userDao.modifyUserInfo(modifyUserBean);
 	}
+	
+	public void addTherapist(UserBean joinUserBean) {
+		userDao.addTherapist(joinUserBean);
+	}
+	
 }

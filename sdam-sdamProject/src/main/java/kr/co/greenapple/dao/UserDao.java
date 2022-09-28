@@ -35,4 +35,8 @@ public class UserDao {
 	public void modifyUserInfo(UserBean modifyUserBean) {
 		sqlSessionTemplate.update("user.modifyUserInfo", modifyUserBean);
 	}
+	public void addTherapist(UserBean joinUserBean) {
+		sqlSessionTemplate.insert("user.addTherapist", joinUserBean);
+		}
+		
 }

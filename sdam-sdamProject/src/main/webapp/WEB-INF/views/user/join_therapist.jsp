@@ -98,6 +98,33 @@
 	function resetUserIdExist(){
 		$("#userIdExist").val('false')
 	}
+	
+	function checkUserTelExist(){
+		var user_tel = $("#user_tel").val()
+		
+		if(user_tel.lenght == 0){
+			alert("전화번호를 입력해주세요")
+			return
+		}
+		$.ajax({
+			url : '${root}user/checkUserTelExist/'+user_tel,
+			type : 'get',
+			dataType : 'text',
+			success : function(result){
+				if(result.trim() == 'true'){
+					alert('확인이 완료되었습니다')
+					$("#userTelExist").val('true')
+				}else {
+					alert('이미 가입된 전화번호입니다')
+					$("#userTelExist").val('false')
+				}
+			}
+		})
+	}
+	
+	
+	
+	
 </script>
 <body>
 
@@ -130,9 +157,10 @@
 				<div class="card-body">
 					<form:form action="${root }user/join_pro" method="post" modelAttribute="joinUserBean">
 						<form:hidden path="userIdExist"/>
+						<form:hidden path="userTelExist"/>
 						<div class="form-group">
-							<form:label path="company_name">소속회사 </form:label>
-							<form:input  path="company_name" class="form-control" id="searchInput" />
+							<form:label path="company_id">소속회사 </form:label>
+							<form:input  path="company_id" class="form-control" id="searchInput" />
 						</div>
 						
 						<div class="form-group">
@@ -172,10 +200,10 @@
 									</div>
 									<form:errors path="user_tel" style="color:red" />
 								</div>
-						<div class="form-group pb-4">
+						<%-- <div class="form-group pb-4">
 							<form:label path="therapist_picture" class="pb-2">프로필사진</form:label>
 							<form:input type="file" path="therapist_picture" class="form-control pb-3" accept="image/*"/>
-						</div>
+						</div> --%>
 						<div class="form-group">
 							<div class="text-right">
 								<form:button class="btn btn-primary">회원가입</form:button>

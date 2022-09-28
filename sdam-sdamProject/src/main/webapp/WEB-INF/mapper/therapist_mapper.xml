@@ -4,11 +4,19 @@
 <mapper namespace="therapist">
 	
 	
-	<!-- <insert id="addTherapist" parameterType="kr.co.greenapple.beans.UserBean">
+<!-- 	 <insert id="addTherapist" parameterType="kr.co.greenapple.beans.UserBean">
 		<![CDATA[
 			insert into user_table
-			(user_id, user_name, user_pw, user_tel, therapist_license, therapist_picture, therapist_career, therapist_level, therapist_resume, company_id)
-			values (dog_seq.nextval, #{user_name}, #{user_pw}, #{user_tel}, #{therapist_license}, #{therapist_picture}, #{therapist_career}, #{therapist_level}, #{therapist_resume}, #{company_id})
+			(user_idx, user_name,user_id, user_pw, user_tel, company_id)
+			values (user_seq.nextval, #{user_name}, #{user_id}, #{user_pw}, #{user_tel}, #{company_id})
+		]]>
+	</insert>  -->
+	
+	<!--  <insert id="addTherapist" parameterType="kr.co.greenapple.beans.UserBean">
+		<![CDATA[
+			insert into user_table
+			(user_idx, user_id, user_name, user_pw, user_tel, therapist_license, therapist_picture, therapist_career, therapist_level, therapist_resume, company_id)
+			values (user_seq.nextval,#{user_id}, #{user_name}, #{user_pw}, #{user_tel}, #{therapist_license, jdbcType=VARCHAR}, #{therapist_picture,jdbcType=VARCHAR}, #{therapist_career}, #{therapist_level}, #{therapist_resume,jdbcType=VARCHAR}, #{company_id})
 		]]>
 	</insert> -->
 	
