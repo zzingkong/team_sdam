@@ -88,9 +88,22 @@
 				<p><span class="text-primary me-2">#</span>테라피독(Therapy Dog)</p>
 				<h1 class="display-6 mb-0">우리는 쓰담쓰담의 <span class="text-primary">테라피독</span>입니다</h1>
 			</div>
-			<div class="col-lg-6 text-lg-end">
-				<a class="btn btn-primary py-3 px-5" href="${root}service/adddog">테라피독 등록하기</a>
-			</div>
+			
+			<c:choose>
+				<c:when test="${empty usrBean.user_info}">
+					<div class="col-lg-6 text-lg-end">
+					</div>
+				</c:when>
+				<c:otherwise>
+					<div class="col-lg-6 text-lg-end">
+						<c:url var="uptUrl" value="/board/update.do">
+							<c:param name="boardId" value="${result.boardId}" />
+						</c:url>
+						<a class="btn btn-primary py-3 px-5" href="${root}service/adddog">테라피독 등록하기</a>
+					</div>
+				</c:otherwise>
+			</c:choose>	
+				
 		</div>
 		
 		

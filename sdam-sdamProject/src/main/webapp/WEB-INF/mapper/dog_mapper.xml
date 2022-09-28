@@ -16,9 +16,9 @@
 		<![CDATA[
 			insert into therapy_dog_table
 			(dog_idx, dog_name, dog_type, dog_age, dog_sex, dog_neutralization, dog_memo, dog_picture, dog_tag, company_id)
-			values (dog_seq.nextval, #{dog_name}, #{dog_type}, #{dog_age}, #{dog_sex}, #{dog_neutralization}, #{dog_memo}, #{dog_picture}, #{dog_tag}, #{company_id})
+			values (dog_seq.nextval, #{dog_name}, #{dog_type}, #{dog_age}, #{dog_sex}, #{dog_neutralization}, #{dog_memo}, #{dog_picture, jdbcType=VARCHAR}, #{dog_tag}, #{company_id})
 		]]>
 	</insert>
-	
+	<!-- mybatis 사용 시, NULL허용 컬럼에 NULL이 들어갈 시 오류가 나지 않게 => jdbcType=VARCHAR -->
 	
 </mapper>

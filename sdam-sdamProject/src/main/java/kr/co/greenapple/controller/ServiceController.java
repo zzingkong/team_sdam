@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import kr.co.greenapple.beans.DogBean;
+import kr.co.greenapple.beans.UserBean;
 import kr.co.greenapple.service.DogService;
 
 @Controller
@@ -34,7 +35,7 @@ public class ServiceController {
 	
 	//테라피독 등록
 	@GetMapping("/adddog")
-	public String adddog_get(@ModelAttribute("dogBean") DogBean dogBean) {
+	public String adddog_get(@ModelAttribute("dogBean") DogBean dogBean, UserBean userBean) {
 		
 		return "service/adddog";
 	}
@@ -44,7 +45,7 @@ public class ServiceController {
 
 		dogService.addDog(dogBean);
 		
-		return "service/therapydog";
+		return "service/adddog_success";
 	}
 	
 	//테라피스트
