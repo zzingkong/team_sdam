@@ -1,22 +1,57 @@
 package kr.co.greenapple.service;
 
+import java.io.File;
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Lazy;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import kr.co.greenapple.beans.UserBean;
 import kr.co.greenapple.dao.UserDao;
 
 @Service
+@PropertySource("/WEB-INF/properties/option.properties")
 public class UserService {
+	
+	//첨부파일경로
+	@Value("${path.upload}")
+	private String path_upload;
+	
 	@Autowired
 	private UserDao userDao;
 	
 	@Resource(name = "loginUserBean")
 	@Lazy
 	private UserBean loginUserBean;
+	
+	//파일 저장
+		private String saveUploadFile(MultipartFile upload_file) {
+			String file_name = System.currentTimeMillis() + "_" + upload_file.getOriginalFilename();
+			
+			try {
+				upload_file.transferTo(new File(path_upload + "/" + file_name));
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+			
+			return file_name;
+		}
+		
+		public void addTherapist(UserBean joinUserBean) {
+			MultipartFile upload_file = joinUserBean.getUpload_file();
+			
+			if(upload_file.getSize() > 0) {
+				String file_name = saveUploadFile(upload_file);
+				joinUserBean.setTherapist_picture(file_name);
+			}
+			userDao.addTherapist(joinUserBean);
+		}
 	
 	public boolean checkUserIdExist(String user_id) {
 		String user_name = userDao.checkUserIdExist(user_id);
@@ -69,4 +104,17 @@ public class UserService {
 		
 		userDao.modifyUserInfo(modifyUserBean);
 	}
+
+
+
+	//테라피스트 더보기 했을 때 정보 가져오기
+	public UserBean  getUserInfo(int userIdx) {
+		return userDao.getUser(userIdx);
+	}
+	
+	//테라피스트 했을 때 정보 가져오기
+		public List<UserBean>  getUserInfos() {
+			return userDao.getUsers();
+		}
+	
 }

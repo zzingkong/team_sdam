@@ -84,7 +84,7 @@
 		<div class="col-sm-6">
 			<div class="card shadow">
 				<div class="card-body">
-					<form:form action="${root }service/joindog" method="post" modelAttribute="dogBean">
+					<form:form action="${root }service/joindog" method="post" modelAttribute="dogBean" enctype="multipart/form-data">
 						<div class="form-group pb-2">
 							<form:label path="dog_name" class="pb-2">이름</form:label>
 							<form:input path="dog_name" class="form-control"/>
@@ -108,11 +108,22 @@
 							<form:errors path="dog_name" style="color:red"/> --%>	
 						</div>
 						<div class="form-group pb-2">
-							<form:label path="dog_neu" class="pb-2">중성화</form:label><br>
-							<form:radiobutton path="dog_neu" value="Y" class="col-1"/> 했어요 &nbsp;&nbsp;
-							<form:radiobutton path="dog_neu" value="N" class="col-1"/> 안했어요
+							<form:label path="dog_neutralization" class="pb-2">중성화 여부</form:label><br>
+							<form:radiobutton path="dog_neutralization" value="Y" class="col-1"/> 했다 &nbsp;
+							<form:radiobutton path="dog_neutralization" value="N" class="col-1"/> 안했다
 					<%--	<form:input path="dog_neu" class="form-control"/>		
 							<form:errors path="dog_name" style="color:red"/> --%>	
+						</div>
+						<div class="form-group pb-2">
+							<form:label path="dog_tag" class="pb-2">태그</form:label><br>
+							덩치 : &nbsp;<form:checkbox path="dog_tag" value="ld"/> 대형견 &nbsp;
+								  <form:checkbox path="dog_tag" value="md"/> 중형견 &nbsp;
+								  <form:checkbox path="dog_tag" value="sd"/> 소형견 <br/>
+							성격 : &nbsp;<form:checkbox path="dog_tag" value="k1"/> 활발한 &nbsp;
+	 							  <form:checkbox path="dog_tag" value="k1"/> 조용한 &nbsp;
+	 							  <form:checkbox path="dog_tag" value="k1"/> 애교많은 &nbsp;
+	 							  <form:checkbox path="dog_tag" value="k1"/> 장난기많은 &nbsp;
+	 							  <form:checkbox path="dog_tag" value="k1"/> 사교적인 &nbsp;
 						</div>
 						<div class="form-group pb-2">
 							<form:label path="dog_memo" class="pb-2">소개</form:label>
@@ -121,8 +132,12 @@
 					    <form:errors path="dog_name" style="color:red"/> --%>	
 						</div>
 						<div class="form-group pb-4">
-							<form:label path="dog_pic" class="pb-2">프로필사진</form:label>
-							<form:input type="file" path="dog_pic" class="form-control pb-3" accept="image/*"/>
+							<form:label path="upload_file" class="pb-2">프로필사진</form:label>
+							<form:input type="file" path="upload_file" class="form-control pb-3" accept="image/*"/>
+						</div>
+						<div class="form-group pb-2">
+							<form:label path="company_id" class="pb-2">company 값 어떻게 넘겨 받을까?</form:label>
+							<form:input path="company_id" class="form-control"/>
 						</div>
 						
 						<div class="form-group">

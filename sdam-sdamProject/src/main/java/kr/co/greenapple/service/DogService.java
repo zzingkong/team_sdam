@@ -1,0 +1,72 @@
+package kr.co.greenapple.service;
+
+import java.io.File;
+
+import javax.annotation.Resource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
+
+import kr.co.greenapple.beans.DogBean;
+import kr.co.greenapple.beans.UserBean;
+import kr.co.greenapple.dao.DogDao;
+import kr.co.greenapple.dao.UserDao;
+
+@Service
+@PropertySource("/WEB-INF/properties/option.properties")
+public class DogService {
+	
+	@Value("${path.upload}")
+	private String path_upload; //첨부파일 경로 주입
+	
+	@Autowired
+	private DogDao dogDao;
+	
+	@Resource(name = "dogBean")
+	@Lazy
+	private DogBean dogBean;
+	
+	//일반회원 여부
+	@Autowired
+	private UserDao userDao;
+	
+	@Resource(name = "userBean")
+	@Lazy
+	private UserBean userBean;
+	
+	//파일 저장
+	private String saveUploadFile(MultipartFile upload_file) {
+		String file_name = System.currentTimeMillis() + "_" + upload_file.getOriginalFilename();
+		
+		try {
+			upload_file.transferTo(new File(path_upload + "/" + file_name));
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		return file_name;
+	}
+	
+	public void addDog(DogBean dogBean) {
+		MultipartFile upload_file = dogBean.getUpload_file();
+		
+		if(upload_file.getSize() > 0) {
+			String file_name = saveUploadFile(upload_file);
+			dogBean.setDog_picture(file_name);
+		}
+	//	dogBean.setCompany_id(dogBean.get___());
+		
+		dogDao.addDog(dogBean);
+	}
+	
+	//테라피독 화면 -> 일반회원은 addDog 버튼 안보이게
+//	public void getDog(DogBean dogBean, UserBean userBean) {
+//		UserBean userInfo = userDao.getModifyUserInfo(userBean.getUser_info());
+		
+//	}
+	
+}

@@ -31,9 +31,7 @@ public class UserController {
 	@Lazy
 	private UserBean loginUserBean;
 	
-	@Resource(name = "joinUserBean")
-	@Lazy
-	private UserBean joinUserBean;
+	
 	
 	@GetMapping("/login")
 	public String login(@ModelAttribute("loginInfo") UserBean loginInfo, @RequestParam(value = "fail", defaultValue = "false") boolean fail, Model model) {
@@ -83,10 +81,15 @@ public class UserController {
 			return "user/join_select";
 		}
 		
-		userService.addUserInfo(joinUserBean);
-		
+		if(1 == 2) {
+			userService.addUserInfo(joinUserBean);
+		}else {
+			userService.addTherapist(joinUserBean);
+		}
 		return "user/join_success";
 	}
+	
+
 	
 	//마이페이지
 	@GetMapping("/modify")
