@@ -13,10 +13,12 @@ import kr.co.greenapple.beans.CustomerBean;
 @Repository
 public class CustomerDao {
 
-	@Autowired
-	private SqlSessionTemplate sqlSessionTemplate;
-
-	public void addDogForm(CustomerBean customerBean) {
-			sqlSessionTemplate.insert("customer.addDogForm", customerBean);			
-	}
+//	@Autowired
+//	private SqlSessionTemplate sqlSessionTemplate;
+//
+//	private CustomerMapper customerMapper;
+//
+//	public void addDogForm(CustomerBean customerBean) {
+//		customerMapper.addDogForm();			
+//	}
 }
