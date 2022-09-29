@@ -3,6 +3,8 @@ package kr.co.greenapple.beans;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class UserBean {
 	private int user_idx;
 	
@@ -45,9 +47,12 @@ public class UserBean {
 	private boolean userLogin;
 	
 	private String company_id;
+	private String company_local;
+	
+	private MultipartFile upload_file; //문자열 therapist_ficture를 받기 위해 생성 
 	
 	
-	
+
 	public String getCompany_id() {
 		return company_id;
 	}
@@ -216,4 +221,33 @@ public class UserBean {
 	}
 	
 	
+	public String getCompany_local() {
+		return company_local;
+	}
+
+	public void setCompany_local(String company_local) {
+		this.company_local = company_local;
+	}
+
+	//파일 업로드
+	public MultipartFile getUpload_file() {
+		return upload_file;
+	}
+
+	public void setUpload_file(MultipartFile upload_file) {
+		this.upload_file = upload_file;
+	}
+	
+	@Override
+	public String toString() {
+		return "UserBean [user_idx=" + user_idx + ", user_name=" + user_name + ", user_id=" + user_id + ", user_pw="
+				+ user_pw + ", user_pw2=" + user_pw2 + ", user_tel=" + user_tel + ", user_birth=" + user_birth
+				+ ", user_address=" + user_address + ", user_protector_name=" + user_protector_name
+				+ ", user_protector_tel=" + user_protector_tel + ", therapist_license=" + therapist_license
+				+ ", therapist_picture=" + therapist_picture + ", therapist_career=" + therapist_career
+				+ ", therapist_level=" + therapist_level + ", therapist_resume=" + therapist_resume + ", user_info="
+				+ user_info + ", company_idx=" + company_idx + ", userIdExist=" + userIdExist + ", userTelExist="
+				+ userTelExist + ", userLogin=" + userLogin + ", company_id=" + company_id + ", upload_file="
+				+ upload_file + "]";
+	}
 }

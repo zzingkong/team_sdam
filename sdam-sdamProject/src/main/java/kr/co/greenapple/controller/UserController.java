@@ -31,10 +31,6 @@ public class UserController {
 	@Lazy
 	private UserBean loginUserBean;
 	
-	@Resource(name = "joinUserBean")
-	@Lazy
-	private UserBean joinUserBean;
-	
 	
 	
 	@GetMapping("/login")
@@ -92,23 +88,10 @@ public class UserController {
 		}else {
 			userService.addTherapist(joinUserBean);
 		}
-		
-		
-			
 		return "user/join_success";
 	}
 	
-//	@PostMapping("/join_pro2")
-//	public String join_pro2(@Valid @ModelAttribute("joinUserBean") UserBean joinUserBean, BindingResult result) {
-//		if(result.hasErrors()) {
-//			System.out.println("검증실패");
-//			return "user/join_select";
-//		}
-//		
-//		therapistService.addTherapist(joinUserBean);
-//			
-//		return "user/join_success";
-//	}
+
 	
 	//마이페이지
 	@GetMapping("/modify")

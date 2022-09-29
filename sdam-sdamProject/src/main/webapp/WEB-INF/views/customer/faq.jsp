@@ -202,6 +202,21 @@
 						</div>
 					</div>
 				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="headingEight">
+						<button class="accordion-button collapsed" type="button"
+							data-bs-toggle="collapse" data-bs-target="#collapseEight"
+							aria-expanded="false" aria-controls="collapseEight">
+							Question #8 갑자기 서비스가 취소되었습니다. 무슨 일인가요?</button>
+					</h2>
+					<div id="collapseEight" class="accordion-collapse collapse"
+						aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+						<div class="accordion-body">
+							테라피독의 컨디션 난조로 인하여 간혹 서비스 이용이 취소되는 경우가 있습니다. 보다 나은 서비스 제공을 위한 선택이므로 너른 마음의 양해를 구합니다.
+							추후 기존에 신청했다 취소된 테라피독을 재신청하시면 1시간 서비스 무료 이용권을 드립니다.
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

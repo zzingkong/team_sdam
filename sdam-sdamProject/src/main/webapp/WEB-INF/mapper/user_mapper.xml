@@ -51,6 +51,7 @@
 		]]>
 	</update>
 	
+	<!-- 테라피스트 -->
 	<insert id="addTherapist" parameterType="kr.co.greenapple.beans.UserBean">
 			insert into user_table(
 				user_idx
@@ -80,12 +81,31 @@
 				
 	</insert> 
 	
+	
 	<!-- 테라피스트 여부 / user_nfo 가져오기 -->
-	<select id="getUserInfo" parameterType="java.lang.String" resultType="java.lang.String">
+	<select id="getUserInfo1" parameterType="java.lang.String" resultType="java.lang.String">
 		select user_info 
 		from user_table
 		where user_idx = #{user_idx}
 	</select>
+
+
+	<select id="getUserInfo" parameterType="java.lang.Integer" resultType="kr.co.greenapple.beans.UserBean">
+		<![CDATA[
+			select *
+			from user_table
+			where user_idx=#{userIdx} 
+		]]>
+	</select>
+	
+	<!-- 회사소속되어있는 테라피스트 불러오기 -->
+	<select id="getUserInfos" resultType="kr.co.greenapple.beans.UserBean">
+		<![CDATA[
+			select * 
+			from user_table natural join COMPANY_TABLE
+		]]>
+	</select>
+	
 	
 <!-- <delete id="delMember" parameterType="java.lang.String">
   		delete from member where mem_id = #{memId}

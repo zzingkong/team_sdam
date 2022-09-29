@@ -27,6 +27,9 @@ public class ServiceController {
 	@Autowired
 	private DogService dogService;
 	
+	@Autowired
+	private UserService userService;
+	
 	@Resource(name="dogBean")
 	@Lazy
 	private DogBean dogBean;
@@ -59,6 +62,7 @@ public class ServiceController {
 		
 	}
 	
+		
 	//테라피독 등록
 	@GetMapping("/adddog")
 	public String adddog_get(@ModelAttribute("dogBean") DogBean dogBean, UserBean userBean) {
@@ -83,6 +87,7 @@ public class ServiceController {
 //	}
 	
 	
+<<<<<<< HEAD
 	 @GetMapping("/therapist") 
 	 public String therapist(Model model) {
 		 
@@ -93,11 +98,27 @@ public class ServiceController {
 		 return "service/therapist"; 
 	  
 	 }
+=======
+	 @GetMapping("/therapist") public String therapist(Model model) {
+		 
+	 //db에서 가져옴
+	 List<UserBean> therapistlist = userService.getUserInfos();
+	 model.addAttribute("therapistlist",therapistlist);
+	 
+	  return "service/therapist"; 
+	  
+	 }
+	
+>>>>>>> branch 'develop' of https://github.com/SeryLee/sdam-sdam.git
 	
 	//테라피스트 더보기
 	@GetMapping("/therapistdetail")
 	public String therapistdetail(Model model, @RequestParam int userIdx) {
 		
+<<<<<<< HEAD
+=======
+		
+>>>>>>> branch 'develop' of https://github.com/SeryLee/sdam-sdam.git
 		//tId가 idx 번호에 사람을 DB에서 가져옴
 		UserBean userBean = userService.getUserInfo(userIdx);
 		//그걸 model.addAttribute에서 그 사람을 추가함

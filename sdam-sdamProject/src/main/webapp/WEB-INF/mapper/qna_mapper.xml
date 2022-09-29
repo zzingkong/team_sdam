@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="qna">
+
+	<select id="getQnaList" parameterType="java.lang.Integer" resultType="kr.co.greenapple.beans.QnaBean">
+		<![CDATA[
+			select A.qna_idx, A.qna_subject, B.user_name as user_idx, to_char(A.qna_date, 'YYYY-MM-DD') as qna_date
+			from qna_table A, user_table B
+			where A.user_idx = B.user_idx
+			and A.qna_idx = #{qna_idx}
+			order by A.qna_idx desc
+		]]>
+	</select>
+	
+</mapper>
