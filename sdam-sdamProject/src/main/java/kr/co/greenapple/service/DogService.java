@@ -1,6 +1,7 @@
 package kr.co.greenapple.service;
 
 import java.io.File;
+import java.util.List;
 
 import javax.annotation.Resource;
 
@@ -62,6 +63,17 @@ public class DogService {
 		
 		dogDao.addDog(dogBean);
 	}
+
+	//테라피스트 여부 확인
+	public UserBean getUserInfo(UserBean loginUserBean) {
+		return dogDao.getUserInfo(loginUserBean);
+	}
+
+	//테라피독 불러오기
+	public List<DogBean> getDogs() {
+		return dogDao.getDogs();
+	}
+	
 	
 	//테라피독 화면 -> 일반회원은 addDog 버튼 안보이게
 //	public void getDog(DogBean dogBean, UserBean userBean) {

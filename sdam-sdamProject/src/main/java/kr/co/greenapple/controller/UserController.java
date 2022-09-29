@@ -42,6 +42,8 @@ public class UserController {
 		
 		model.addAttribute("fail", fail);
 		
+
+		
 		return "user/login";
 	}
 	@PostMapping("/login_pro")

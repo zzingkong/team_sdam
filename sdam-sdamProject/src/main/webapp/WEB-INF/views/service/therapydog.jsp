@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <c:set var="root" value="${pageContext.request.contextPath }/"/>
 <!DOCTYPE html>
 <html>
@@ -89,23 +90,30 @@
 				<h1 class="display-6 mb-0">우리는 쓰담쓰담의 <span class="text-primary">테라피독</span>입니다</h1>
 			</div>
 			
-			<c:choose>
-				<c:when test="${empty usrBean.user_info}">
+<%-- 		<c:choose>
+				<c:when test="${usrBean.user_info eq 'Y'}">
 					<div class="col-lg-6 text-lg-end">
+						<c:url var="uptUrl" value="/board/update.do">
+							<c:param name="boardId" value="${result.boardId} " />
+						</c:url>
+						<a class="btn btn-primary py-3 px-5" href="${root}service/adddog">테라피독 등록하기</a>
 					</div>
 				</c:when>
 				<c:otherwise>
 					<div class="col-lg-6 text-lg-end">
-						<c:url var="uptUrl" value="/board/update.do">
-							<c:param name="boardId" value="${result.boardId}" />
-						</c:url>
-						<a class="btn btn-primary py-3 px-5" href="${root}service/adddog">테라피독 등록하기</a>
 					</div>
 				</c:otherwise>
-			</c:choose>	
-				
-		</div>
-		
+			</c:choose>	 --%>
+			
+ 			<c:if test="${userInfoBean.user_info eq 'T'}">
+				<div class="col-lg-6 text-lg-end">
+					<a class="btn btn-primary py-3 px-5" href="${root}service/adddog">테라피독 등록하기</a>
+				</div>
+ 			</c:if>
+ 			<c:out value="${userBean.user_info}" /> / <c:out value="${userLoginBean.user_info}"/> / 
+ 			<c:out value="${loginUserBean.user_info}"/> / <c:out value="${loginUserBean.user_info}"/>
+		</div> 
+
 		
 	<!-- 키워드 선택하기 -->
 		<div class="d-flex pb-1 wow fadeInUp" data-wow-delay="0.2s">
@@ -162,78 +170,38 @@
 		<div class="row pt-4">		
 			<div class="wow fadeInUp" data-wow-delay="0.2s" style="display:flex; flex-direction:row; flex-wrap:wrap;">
 			
+				
 				<!-- <div class="row g-4"> -->
-					<div class="col col-lg-4 col-md-6 pe-3 pb-5">
+				<c:forEach var="obj" items="${dogList}">
+					<div class="col col-lg-4 col-md-6 px-3 py-3">
+						<a class="animal-item" href="#" onclick="popup();">
+							<div class="position-relative">
+							<img class="img-fluid" src="${root }upload/${obj.dog_picture}" alt="테라피독 ${obj.dog_name}" width="100%"/>
+								<div class="animal-text p-4">
+									<c:set var="keyW" value="${fn:split(obj.dog_tag, ',')}"></c:set>
+									<p class="text-white small text-uppercase mb-0"># ${obj.company_local} <c:forEach var="word" items="${keyW}"># ${word} </c:forEach> </p>
+									<h5 class="text-white mb-0">${obj.dog_name} >></h5>
+								</div>
+							</div>
+						</a>
+					</div>
+				</c:forEach> 
+					
+			<!-- 				
+				<c:forEach var="obj" items="${dogList}">
+					<div class="col col-lg-4 col-md-6 px-3 pb-5">
 						<a class="animal-item" href="#" onclick="popup();">
 							<div class="position-relative">
 							<img class="img-fluid" src="../img/animal-md-1.jpg" alt="" />
 								<div class="animal-text p-4">
-									<p class="text-white small text-uppercase mb-0">#대전 #조용한</p>
-									<h5 class="text-white mb-0">임댕댕 >></h5>
+									<p class="text-white small text-uppercase mb-0"># ${obj.company_local} # ${obj.dog_tag} </p>
+									<h5 class="text-white mb-0">${obj.dog_name} >></h5>
 								</div>
 							</div>
 						</a>
 					</div>
-					
-					<div class="col col-lg-4 col-md-6 px-2 pb-5">
-						<a class="animal-item" href="#" onclick="popup();">
-							<div class="position-relative">
-							<img class="img-fluid" src="../img/animal-lg-1.jpg" alt="" />
-								<div class="animal-text p-4">
-									<p class="text-white small text-uppercase mb-0">#서울 #장난기많은</p>
-									<h5 class="text-white mb-0">말랑 >></h5>
-								</div>
-							</div>
-						</a>
-					</div>
-					
-					<div class="col col-lg-4 col-md-6 ps-3 pb-5">
-						<a class="animal-item" href="#" onclick="popup();">
-							<div class="position-relative">
-							<img class="img-fluid" src="../img/animal-lg-2.jpg" alt="" />
-								<div class="animal-text p-4">
-									<p class="text-white small text-uppercase mb-0">#대전 #조용한</p>
-									<h5 class="text-white mb-0">이슬 >></h5>
-								</div>
-							</div>
-						</a>
-					</div>
-					
-					<div class="col col-lg-4 col-md-6 pe-3 pb-5">
-						<a class="animal-item" href="#" onclick="popup();">
-							<div class="position-relative">
-							<img class="img-fluid" src="../img/animal-md-2.jpg" alt="" />
-								<div class="animal-text p-4">
-									<p class="text-white small text-uppercase mb-0">#대전 #장난기많은</p>
-									<h5 class="text-white mb-0">바루 >></h5>
-								</div>
-							</div>
-						</a>
-					</div>
-					
-					<div class="col col-lg-4 col-md-6 pe-3 pb-5">
-						<a class="animal-item" href="#" onclick="popup();">
-							<div class="position-relative">
-							<img class="img-fluid" src="../img/animal-md-2.jpg" alt="" />
-								<div class="animal-text p-4">
-									<p class="text-white small text-uppercase mb-0">#서울 #장난기많은</p>
-									<h5 class="text-white mb-0">용식 >></h5>
-								</div>
-							</div>
-						</a>
-					</div>
-					
-					<div class="col col-lg-4 col-md-6 pe-3 pb-5">
-						<a class="animal-item" href="#" onclick="popup();">
-							<div class="position-relative">
-							<img class="img-fluid" src="../img/animal-md-2.jpg" alt="" />
-								<div class="animal-text p-4">
-									<p class="text-white small text-uppercase mb-0">#대전 #조용한</p>
-									<h5 class="text-white mb-0">덕만 >></h5>
-								</div>
-							</div>
-						</a>
-					</div>
+				</c:forEach>
+			 -->
 				
 			</div>		
 		</div>

@@ -116,14 +116,14 @@
 						</div>
 						<div class="form-group pb-2">
 							<form:label path="dog_tag" class="pb-2">태그</form:label><br>
-							덩치 : &nbsp;<form:checkbox path="dog_tag" value="ld"/> 대형견 &nbsp;
-								  <form:checkbox path="dog_tag" value="md"/> 중형견 &nbsp;
-								  <form:checkbox path="dog_tag" value="sd"/> 소형견 <br/>
-							성격 : &nbsp;<form:checkbox path="dog_tag" value="k1"/> 활발한 &nbsp;
-	 							  <form:checkbox path="dog_tag" value="k1"/> 조용한 &nbsp;
-	 							  <form:checkbox path="dog_tag" value="k1"/> 애교많은 &nbsp;
-	 							  <form:checkbox path="dog_tag" value="k1"/> 장난기많은 &nbsp;
-	 							  <form:checkbox path="dog_tag" value="k1"/> 사교적인 &nbsp;
+							덩치 : &nbsp;<form:checkbox path="dog_tag" value="대형견" id="ld"/> 대형견 &nbsp;
+								  <form:checkbox path="dog_tag" value="중형견" id="md"/> 중형견 &nbsp;
+								  <form:checkbox path="dog_tag" value="소형견" id="sd"/> 소형견 <br/>
+							성격 : &nbsp;<form:checkbox path="dog_tag" value="활발한" id="k1"/> 활발한 &nbsp;
+	 							  <form:checkbox path="dog_tag" value="조용한" id="k2"/> 조용한 &nbsp;
+	 							  <form:checkbox path="dog_tag" value="애교많은" id="k3"/> 애교많은 &nbsp;
+	 							  <form:checkbox path="dog_tag" value="장난기많은" id="k4"/> 장난기많은 &nbsp;
+	 							  <form:checkbox path="dog_tag" value="사교적인" id="k5"/> 사교적인 &nbsp;
 						</div>
 						<div class="form-group pb-2">
 							<form:label path="dog_memo" class="pb-2">소개</form:label>

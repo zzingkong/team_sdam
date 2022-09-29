@@ -37,7 +37,7 @@
 	
 	<select id="getModifyUserInfo" parameterType="java.lang.Integer" resultType="kr.co.greenapple.beans.UserBean">
 		<![CDATA[
-			select user_id, user_name, user_tel, user_address
+			select user_id, user_name, user_tel, user_address, user_info
 			from user_table
 			where user_idx = #{user_idx}
 		]]>
@@ -80,6 +80,12 @@
 				
 	</insert> 
 	
+	<!-- 테라피스트 여부 / user_nfo 가져오기 -->
+	<select id="getUserInfo" parameterType="java.lang.String" resultType="java.lang.String">
+		select user_info 
+		from user_table
+		where user_idx = #{user_idx}
+	</select>
 	
 <!-- <delete id="delMember" parameterType="java.lang.String">
   		delete from member where mem_id = #{memId}

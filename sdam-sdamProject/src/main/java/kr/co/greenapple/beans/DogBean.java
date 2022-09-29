@@ -16,6 +16,16 @@ public class DogBean {
 	private String company_id; 		   //회사ID_FK
 	
 	private MultipartFile upload_file; //문자열 dog_ficture를 받기 위해 생성 //브라우저가 보낸 파일을 담기 위한 변수 (서버)
+	private String company_local; 	   //테라피독 지역
+	
+	private String user_info;
+	
+	public String getUser_info() {
+		return user_info;
+	}
+	public void setUser_info(String user_info) {
+		this.user_info = user_info;
+	}
 	
 	public int getDog_idx() {
 		return dog_idx;
@@ -86,4 +96,12 @@ public class DogBean {
 		this.upload_file = upload_file;
 	}
 
+	//
+	public String getCompany_local() {
+		return company_local;
+	}
+	public void setCompany_local(String company_local) {
+		this.company_local = company_local;
+	}
+	
 }
