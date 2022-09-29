@@ -111,9 +111,9 @@
           
           <div class="col-lg-8 col-md-6 wow fadeInUp"  style="" data-wow-delay="0.3s">
             <div class=" position-relative" style="margin-left:10%">            
-              <h1 class="display-5 mb-3"><span class="text-primary">김혜진</span> 테라피스트    4.5/5</h1>
+              <h1 class="display-5 mb-3"><span class="text-primary">${therapist.user_name}</span>테라피스트    4.5/5</h1>
               <h4 class="text-black mb-3">주요지역 : 세종 / 대전</h4>
-              <h4 class="mb-4">경력 : 6년</h4>
+              <h4 class="mb-4">경력 : ${therapist.therapist_level}년 </h4>
               <div class="row">
               <div class="col-md-5">
 	              <p class="text-dark"><i class="fa fa-check text-primary me-3">

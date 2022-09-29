@@ -155,7 +155,7 @@
 		<div class="col-sm-6">
 			<div class="card shadow">
 				<div class="card-body">
-					<form:form action="${root }user/join_pro" method="post" modelAttribute="joinUserBean">
+					<form:form action="${root }user/join_pro" method="post" modelAttribute="joinUserBean" enctype="multipart/form-data">
 						<form:hidden path="userIdExist"/>
 						<form:hidden path="userTelExist"/>
 						<div class="form-group">
@@ -200,10 +200,10 @@
 									</div>
 									<form:errors path="user_tel" style="color:red" />
 								</div>
-						<%-- <div class="form-group pb-4">
-							<form:label path="therapist_picture" class="pb-2">프로필사진</form:label>
-							<form:input type="file" path="therapist_picture" class="form-control pb-3" accept="image/*"/>
-						</div> --%>
+						<div class="form-group pb-4">
+							<form:label path="upload_file" class="pb-2">프로필사진</form:label>
+							<form:input type="file" path="upload_file" class="form-control pb-3" accept="image/*"/>
+						</div> 
 						<div class="form-group">
 							<div class="text-right">
 								<form:button class="btn btn-primary">회원가입</form:button>
