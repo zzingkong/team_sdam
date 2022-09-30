@@ -33,7 +33,13 @@ public class ServiceController {
 	@Resource(name="dogBean")
 	@Lazy
 	private DogBean dogBean;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> branch 'develop' of https://github.com/SeryLee/sdam-sdam.git
 	
+
 	@Resource(name = "loginUserBean")
 	@Lazy
 	private UserBean loginUserBean;
@@ -66,22 +72,40 @@ public class ServiceController {
 		return "service/adddog_success";
 	}
 	
+<<<<<<< HEAD
 	
 	@GetMapping("/therapist") 
 	public String therapist(Model model) {
+=======
+	
+	 @GetMapping("/therapist") 
+	 public String therapist(Model model) {
+>>>>>>> branch 'develop' of https://github.com/SeryLee/sdam-sdam.git
 		 
 		//db에서 가져옴
 		List<UserBean> therapistlist = userService.getUserInfos();
 		model.addAttribute("therapistlist",therapistlist);
 		 
+<<<<<<< HEAD
 		return "service/therapist"; 
 	  
 	}
+=======
+		 return "service/therapist"; 
+	 }
+	
+
+>>>>>>> branch 'develop' of https://github.com/SeryLee/sdam-sdam.git
 	
 	//테라피스트 더보기
 	@GetMapping("/therapistdetail")
 	public String therapistdetail(Model model, @RequestParam int userIdx) {
+<<<<<<< HEAD
 		
+=======
+
+
+>>>>>>> branch 'develop' of https://github.com/SeryLee/sdam-sdam.git
 		//tId가 idx 번호에 사람을 DB에서 가져옴
 		UserBean userBean = userService.getUserInfo(userIdx);
 		//그걸 model.addAttribute에서 그 사람을 추가함
@@ -91,6 +115,10 @@ public class ServiceController {
 	}
 	
 	//테라피스트 페이징
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> branch 'develop' of https://github.com/SeryLee/sdam-sdam.git
 }
 
