@@ -35,6 +35,7 @@
 		]]>
 	</select>
 	
+	<!-- user_info 추가 -->
 	<select id="getModifyUserInfo" parameterType="java.lang.Integer" resultType="kr.co.greenapple.beans.UserBean">
 		<![CDATA[
 			select user_id, user_name, user_tel, user_address, user_info
@@ -77,18 +78,8 @@
 				, #{therapist_level, jdbcType=VARCHAR}
 				, #{therapist_resume, jdbcType=VARCHAR}
 				, #{company_id}
-			)
-				
+			)		
 	</insert> 
-	
-	
-	<!-- 테라피스트 여부 / user_nfo 가져오기 -->
-	<select id="getUserInfo1" parameterType="java.lang.String" resultType="java.lang.String">
-		select user_info 
-		from user_table
-		where user_idx = #{user_idx}
-	</select>
-
 
 	<select id="getUserInfo" parameterType="java.lang.Integer" resultType="kr.co.greenapple.beans.UserBean">
 		<![CDATA[

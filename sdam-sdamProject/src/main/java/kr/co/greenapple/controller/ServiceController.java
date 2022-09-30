@@ -33,35 +33,23 @@ public class ServiceController {
 	@Resource(name="dogBean")
 	@Lazy
 	private DogBean dogBean;
-
-	@Autowired
-	private UserService userService;
 	
 	@Resource(name = "loginUserBean")
 	@Lazy
 	private UserBean loginUserBean;
 	
-
 	//테라피독
 	@GetMapping("/therapydog")
 	public String therapydog(@ModelAttribute("modifyUserBean") UserBean modifyUserBean,
 							 Model model) {
 		
 		userService.getModifyUserInfo(modifyUserBean);
-				
-//		dogService.getUserInfo(loginUserBean);
-//		model.addAttribute("userLoginBean", loginUserBean);
-	
-//		UserBean userIBean = dogService.getUserInfo();	
-//		model.addAttribute("userInfoBean", userIBean);
 		
 		List<DogBean> list = dogService.getDogs();
 		model.addAttribute("dogList", list);	
 		
 		return "service/therapydog";
-		
 	}
-	
 		
 	//테라피독 등록
 	@GetMapping("/adddog")
@@ -78,47 +66,22 @@ public class ServiceController {
 		return "service/adddog_success";
 	}
 	
-	//테라피스트
-//	@GetMapping("/therapist")
-//	public String therapist(Model model, @RequestParam int userIdx) {
-//		
-//		return "service/therapist";
-//		
-//	}
 	
-	
-<<<<<<< HEAD
-	 @GetMapping("/therapist") 
-	 public String therapist(Model model) {
+	@GetMapping("/therapist") 
+	public String therapist(Model model) {
 		 
-		 //db에서 가져옴
-		 List<UserBean> therapistlist = userService.getUserInfos();
-		 model.addAttribute("therapistlist",therapistlist);
+		//db에서 가져옴
+		List<UserBean> therapistlist = userService.getUserInfos();
+		model.addAttribute("therapistlist",therapistlist);
 		 
-		 return "service/therapist"; 
+		return "service/therapist"; 
 	  
-	 }
-=======
-	 @GetMapping("/therapist") public String therapist(Model model) {
-		 
-	 //db에서 가져옴
-	 List<UserBean> therapistlist = userService.getUserInfos();
-	 model.addAttribute("therapistlist",therapistlist);
-	 
-	  return "service/therapist"; 
-	  
-	 }
-	
->>>>>>> branch 'develop' of https://github.com/SeryLee/sdam-sdam.git
+	}
 	
 	//테라피스트 더보기
 	@GetMapping("/therapistdetail")
 	public String therapistdetail(Model model, @RequestParam int userIdx) {
 		
-<<<<<<< HEAD
-=======
-		
->>>>>>> branch 'develop' of https://github.com/SeryLee/sdam-sdam.git
 		//tId가 idx 번호에 사람을 DB에서 가져옴
 		UserBean userBean = userService.getUserInfo(userIdx);
 		//그걸 model.addAttribute에서 그 사람을 추가함
@@ -126,5 +89,8 @@ public class ServiceController {
 		
 		return "service/therapistdetail";
 	}
+	
+	//테라피스트 페이징
+	
 }
 

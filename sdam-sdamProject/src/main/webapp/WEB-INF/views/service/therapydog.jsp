@@ -105,13 +105,11 @@
 				</c:otherwise>
 			</c:choose>	 --%>
 			
- 			<c:if test="${userInfoBean.user_info eq 'T'}">
+ 			<c:if test="${modifyUserBean.user_info eq 'T'}">
 				<div class="col-lg-6 text-lg-end">
 					<a class="btn btn-primary py-3 px-5" href="${root}service/adddog">테라피독 등록하기</a>
 				</div>
  			</c:if>
- 			<c:out value="${userBean.user_info}" /> / <c:out value="${userLoginBean.user_info}"/> / 
- 			<c:out value="${loginUserBean.user_info}"/> / <c:out value="${loginUserBean.user_info}"/>
 		</div> 
 
 		
@@ -174,21 +172,20 @@
 				<!-- <div class="row g-4"> -->
 				<c:forEach var="obj" items="${dogList}">
 					<div class="col col-lg-4 col-md-6 px-3 py-3">
-						<a class="animal-item" href="#" onclick="popup();">
+						<a class="animal-item" href="#">
 							<div class="position-relative">
-							<img class="img-fluid" src="${root }upload/${obj.dog_picture}" alt="테라피독 ${obj.dog_name}" width="100%"/>
+							<img class="img-fluid dimg" src="${root }upload/${obj.dog_picture}" alt="테라피독 ${obj.dog_name}" width="100%"/>
 								<div class="animal-text p-4">
 									<c:set var="keyW" value="${fn:split(obj.dog_tag, ',')}"></c:set>
 									<p class="text-white small text-uppercase mb-0"># ${obj.company_local} <c:forEach var="word" items="${keyW}"># ${word} </c:forEach> </p>
-									<h5 class="text-white mb-0">${obj.dog_name} >></h5>
+									<h5 class="text-white mb-0 dogname">${obj.dog_name} >></h5>
 								</div>
 							</div>
 						</a>
 					</div>
 				</c:forEach> 
 					
-			<!-- 				
-				<c:forEach var="obj" items="${dogList}">
+			<%-- <c:forEach var="obj" items="${dogList}">
 					<div class="col col-lg-4 col-md-6 px-3 pb-5">
 						<a class="animal-item" href="#" onclick="popup();">
 							<div class="position-relative">
@@ -200,8 +197,7 @@
 							</div>
 						</a>
 					</div>
-				</c:forEach>
-			 -->
+				</c:forEach> --%>
 				
 			</div>		
 		</div>
@@ -210,17 +206,16 @@
 </div>
 
 
-
 <!-- Modal -->
 <div class="modal modal-center fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">임댕댕(dog_name)</h5>
+        <h5 class="modal-title" id="exampleModalLabel"></h5>
         <button type="button" class="btn-close" onclick="pop1();" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <img class="img-fluid" src="../img/animal-md-1.jpg" alt="" />
+        <img class="img-fluid dimgv" src="" width="100%"/>
         <div class="mt-3">견종 / 성별 / 나이 / 지역</div>
         <div>소개글입니다. 귀여운 임댕댕</div>
       </div>
@@ -234,11 +229,43 @@
 
 <script>
 var myModal = new bootstrap.Modal(document.getElementById('myModal'));
-function popup() {
+
+$(".animal-item").on("click", function(){
+	
+	var dname = $(".dogname", this).text(); //엘리먼트의 내용 가져옴 (자바의 함수는 넣고,빼는 이름이 같다)
+//	alert(dname);
+	$("#exampleModalLabel").text(dname); //내용 넣기
+	
+	var dimg = $(".dimg", this).attr("src");
+//	alert(dimg);
+	$(".dimgv").attr("src", dimg);
+
 	myModal.show();
-	myModal.toggle();
-//	myModal.handleUpdate();
-}
+	
+	//ajax 화면에 있는 값 말고 db에 있는 값을 넣을 시, 결과값 받는 함수로 받아온 결과값을 text 넣고 모달에 띄움
+//	$.ajax({
+//		url : 'xxxxxxxxxxxxxxxxxxxxxxx',
+//		type : 'POST',
+//		success : function(result){
+//			$('#myModal').modal('show');
+			// console.log(result); 뭐 이런식으로 값을 찍어보면 나올꺼임.
+//			if (서버에서 넘어온 값 == true){
+//				 $('#okky_con').html('사용 가능한 ID 입니다.');
+//			}else{ $('#okky_con').html('이미 사용중인 ID 입니다.');}
+//		},
+//		error : function(xhr, ajaxOptions, thrownError){
+//			console.log('Error : ' + xhr.status + '\n' +
+//						'Message : ' + xhr.statusText + '\n' +
+//						'Response : ' + xhr.responseText + '\n' + thrownError);
+//			}
+//	});
+
+});
+
+//function popup() {
+//	myModal.show();
+//}
+
 function pop1() {
 	myModal.hide();
 }

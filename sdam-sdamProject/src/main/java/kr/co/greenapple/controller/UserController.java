@@ -1,6 +1,7 @@
 package kr.co.greenapple.controller;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +33,6 @@ public class UserController {
 	private UserBean loginUserBean;
 	
 	
-	
 	@GetMapping("/login")
 	public String login(@ModelAttribute("loginInfo") UserBean loginInfo, @RequestParam(value = "fail", defaultValue = "false") boolean fail, Model model) {
 		
@@ -42,6 +42,7 @@ public class UserController {
 		
 		return "user/login";
 	}
+	
 	@PostMapping("/login_pro")
 	public String login_pro(@Valid @ModelAttribute("loginInfo") UserBean loginInfo, BindingResult result) {
 		if(result.hasErrors()) {
@@ -56,7 +57,6 @@ public class UserController {
 			return "user/login_fail";
 		}
 	}
-	
 	
 	@GetMapping("/join_user")
 	public String join_user(@ModelAttribute("joinUserBean") UserBean joinUserBean) {
@@ -91,7 +91,6 @@ public class UserController {
 		return "user/join_success";
 	}
 	
-
 	
 	//마이페이지
 	@GetMapping("/modify")
@@ -114,10 +113,14 @@ public class UserController {
 	}
 	
 	@GetMapping("/logout")
-	public String logout() {
+	public String logout(HttpServletRequest request) {
 		loginUserBean.setUserLogin(false);
+		
+		request.getSession().invalidate(); //로그아웃시 세션삭제
+
 		return "user/logout";
 	}
+		
 	@GetMapping("/not_login")
 	public String not_login() {
 		return "user/not_login";

@@ -15,7 +15,6 @@ import org.springframework.web.multipart.MultipartFile;
 import kr.co.greenapple.beans.DogBean;
 import kr.co.greenapple.beans.UserBean;
 import kr.co.greenapple.dao.DogDao;
-import kr.co.greenapple.dao.UserDao;
 
 @Service
 @PropertySource("/WEB-INF/properties/option.properties")
@@ -30,10 +29,6 @@ public class DogService {
 	@Resource(name = "dogBean")
 	@Lazy
 	private DogBean dogBean;
-	
-	//일반회원 여부
-	@Autowired
-	private UserDao userDao;
 	
 	@Resource(name = "userBean")
 	@Lazy
@@ -59,7 +54,6 @@ public class DogService {
 			String file_name = saveUploadFile(upload_file);
 			dogBean.setDog_picture(file_name);
 		}
-	//	dogBean.setCompany_id(dogBean.get___());
 		
 		dogDao.addDog(dogBean);
 	}
@@ -73,12 +67,5 @@ public class DogService {
 	public List<DogBean> getDogs() {
 		return dogDao.getDogs();
 	}
-	
-	
-	//테라피독 화면 -> 일반회원은 addDog 버튼 안보이게
-//	public void getDog(DogBean dogBean, UserBean userBean) {
-//		UserBean userInfo = userDao.getModifyUserInfo(userBean.getUser_info());
-		
-//	}
 	
 }

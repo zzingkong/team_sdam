@@ -97,6 +97,9 @@ public class UserService {
 		//회원정보수정
 		modifyUserBean.setUser_tel(loginInfo.getUser_tel());
 		modifyUserBean.setUser_address(loginInfo.getUser_address());
+		
+		//테라피스트확인
+		modifyUserBean.setUser_info(loginInfo.getUser_info());
 	}
 	
 	public void modifyUserInfo(UserBean modifyUserBean) {
