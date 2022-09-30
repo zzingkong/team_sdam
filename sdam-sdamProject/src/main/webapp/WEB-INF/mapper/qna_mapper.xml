@@ -13,4 +13,18 @@
 		]]>
 	</select>
 	
+	<insert id="addQnaContentInfo" parameterType="kr.co.greenapple.beans.ContentBean">
+		<selectKey keyProperty="qna_idx" order="BEFORE" resultType="java.lang.Integer">
+			select qna_seq.nextval from dual
+		</selectKey>
+		<![CDATA[
+			insert into content_table (
+			qna_idx, qna_subject, qna_content, content_file, content_date, user_name
+			)
+			values (
+			#{qna_idx}, #{qna_subject}, #{qna_content}, #{content_file, jdbcType=VARCHAR}, sysdate
+			)
+		]]>
+	</insert>
+	
 </mapper>
