@@ -89,11 +89,11 @@
 		where user_idx = #{user_idx}
 	</select>
 
-
+    <!-- 테라피스트 더보기 정보 불러오기 -->
 	<select id="getUserInfo" parameterType="java.lang.Integer" resultType="kr.co.greenapple.beans.UserBean">
 		<![CDATA[
 			select *
-			from user_table
+			from user_table natural join COMPANY_TABLE
 			where user_idx=#{userIdx} 
 		]]>
 	</select>

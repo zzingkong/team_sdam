@@ -160,8 +160,7 @@
           <div class="card shadow-sm mb-5" style="width:392px" >
           <div>
           	<img src="${root}/image/therapist.jpg">
-          </div>
-            <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" role="img"  preserveAspectRatio="xMidYMid slice" focusable="false"></svg> -->
+          </div>           
              <div class="card-body">
               <p class="card-text">${therapist.user_name}<br>주요지역: ${therapist.company_local}</p>
               <div class="d-flex justify-content-between align-items-center">

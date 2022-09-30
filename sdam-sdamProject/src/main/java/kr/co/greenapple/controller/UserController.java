@@ -91,8 +91,6 @@ public class UserController {
 		return "user/join_success";
 	}
 	
-
-	
 	//마이페이지
 	@GetMapping("/modify")
 	public String modify(@ModelAttribute("modifyUserBean") UserBean modifyUserBean) {
