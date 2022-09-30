@@ -91,10 +91,7 @@ public class UserController {
 		return "user/join_success";
 	}
 	
-<<<<<<< HEAD
-	
-=======
->>>>>>> branch 'develop' of https://github.com/SeryLee/sdam-sdam.git
+
 	//마이페이지
 	@GetMapping("/modify")
 	public String modify(@ModelAttribute("modifyUserBean") UserBean modifyUserBean) {
