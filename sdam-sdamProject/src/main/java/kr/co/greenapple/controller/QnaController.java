@@ -62,7 +62,7 @@ public class QnaController {
 		
 //		model.addAttribute("page", page);
 		
-		return "board/read";
+		return "customer/qna_read";
 	}
 
 	@GetMapping("/write")
@@ -70,18 +70,18 @@ public class QnaController {
 		
 //		writeQnaBean.setContent_board_idx(board_info_idx);
 		
-		return "customer/write";
+		return "customer/qna_write";
 	}
 	
 	@PostMapping("/write_pro")
 	public String write_pro(@Valid @ModelAttribute("writeQnaBean") QnaBean writeQnaBean, BindingResult result) {
 		if(result.hasErrors()) {
-			return "qna/qna_write";
+			return "customer/qna_write";
 		}
 		
 		qnaService.addQnaContentInfo(writeQnaBean);
 		
-		return "customer/write_success";
+		return "customer/qna_write_success";
 	}
 
 	@GetMapping("/modify")
@@ -120,7 +120,7 @@ public class QnaController {
 				
 		qnaService.modifyQnaContentInfo(modifyQnaBean);
 		
-		return "customer/modify_success";
+		return "customer/qna_modify_success";
 	}
 
 	@GetMapping("/delete")
@@ -129,11 +129,11 @@ public class QnaController {
 		
 		qnaService.deleteQnaContentInfo(qna_idx);
 		
-		return "customer/delete";
+		return "customer/qna_delete";
 	}
 	
 	@GetMapping("/not_writer") 
 	public String not_writer() {	
-		return "customer/not_writer";
+		return "customer/qna_not_writer";
 	}
 }

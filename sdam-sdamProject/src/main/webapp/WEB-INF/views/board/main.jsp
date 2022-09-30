@@ -56,12 +56,8 @@
 <c:import url="/WEB-INF/views/include/top_menu.jsp" />
 
 <!-- 22.09.06 QnA 연결(임시) -->
-<c:if test="${board_info_idx == 4}">
     <!-- Page Header Start -->
-    <div
-      class="container-fluid header-bg py-5 mb-5 wow fadeIn"
-      data-wow-delay="0.1s"
-    >
+    <div class="container-fluid header-bg py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
       <div class="container py-5">
         <h1 class="display-4 text-white mb-3 animated slideInDown">
           고객센터
@@ -91,7 +87,6 @@
 		</div>
 		</div>
 	</div>
-</c:if>
 <!-- --------- QnA end ----------- -->
 
 
@@ -176,7 +171,7 @@
 			</div>
 			
 			<div class="text-right">
-				<a href="${root }board/write?board_info_idx=${board_info_idx}" class="btn btn-primary">글쓰기</a>
+				<a href="${root }customer/write" class="btn btn-primary">글쓰기</a>
 			</div>
 			
 		</div>

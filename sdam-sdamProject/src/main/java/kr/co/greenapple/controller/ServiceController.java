@@ -34,6 +34,9 @@ public class ServiceController {
 	@Lazy
 	private DogBean dogBean;
 
+
+	
+
 	@Resource(name = "loginUserBean")
 	@Lazy
 	private UserBean loginUserBean;
@@ -75,16 +78,18 @@ public class ServiceController {
 		return "service/adddog_success";
 	}
 	
-
-
-	 @GetMapping("/therapist") public String therapist(Model model) {
+	
+	 @GetMapping("/therapist") 
+	 public String therapist(Model model) {
 		 
-	 //db에서 가져옴
-	 List<UserBean> therapistlist = userService.getUserInfos();
-	 model.addAttribute("therapistlist",therapistlist);
-	 
-	  return "service/therapist"; 	  
+		 //db에서 가져옴
+		 List<UserBean> therapistlist = userService.getUserInfos();
+		 model.addAttribute("therapistlist",therapistlist);
+		 
+		 return "service/therapist"; 
 	 }
+	
+
 	
 	//테라피스트 더보기
 	@GetMapping("/therapistdetail")
