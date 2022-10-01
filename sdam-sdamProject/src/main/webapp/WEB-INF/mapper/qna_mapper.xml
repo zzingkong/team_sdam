@@ -6,8 +6,7 @@
 	<select id="getQnaList" parameterType="java.lang.Integer" resultType="kr.co.greenapple.beans.QnaBean">
 		<![CDATA[
 			select A.qna_idx, A.qna_subject, B.user_name as user_idx, to_char(A.qna_date, 'YYYY-MM-DD') as qna_date
-			from qna_table A, user_table B
-			where A.user_idx = B.user_idx
+			from qna_table A, user_table B	where A.user_idx = B.user_idx
 			and A.qna_idx = #{qna_idx}
 			order by A.qna_idx desc
 		]]>
@@ -18,12 +17,8 @@
 			select qna_seq.nextval from dual
 		</selectKey>
 		<![CDATA[
-			insert into content_table (
-			qna_idx, qna_subject, qna_content, content_file, content_date, user_name
-			)
-			values (
-			#{qna_idx}, #{qna_subject}, #{qna_content}, #{content_file, jdbcType=VARCHAR}, sysdate
-			)
+			insert into qna_table (qna_idx, qna_subject, qna_content, user_idx, qna_date)
+			values (#{qna_idx}, #{qna_subject}, #{qna_content}, #{user_idx}, sysdate)
 		]]>
 	</insert>
 	
