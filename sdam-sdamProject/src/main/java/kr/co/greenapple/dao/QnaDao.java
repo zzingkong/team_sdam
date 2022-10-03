@@ -38,7 +38,7 @@ public class QnaDao {
 //	}
 	
 	public List<QnaBean> getQnaList(QnaBean qnaBean) {
-		 return sqlSessionTemplate.selectOne("qna.getQnaList", qnaBean);
+		 return sqlSessionTemplate.selectList("qna.getQnaList", qnaBean);
 	}
 	
 	public QnaBean getQnaContentInfo(int qna_idx) {

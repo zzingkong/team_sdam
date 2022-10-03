@@ -108,7 +108,7 @@
 					<c:forEach var="qnaList" items="${qnaList }">
 					<tr>
 						<td class="text-center d-none d-md-table-cell">${qnaList.qna_idx }</td>
-						<td><a href='${root }board/read?qna_idx=${qnaList.qna_idx}&page=${page}' class="text-black-50">${obj.qna_subject }</a></td>
+						<td><a href='${root }qna/read?qna_idx=${qnaList.qna_idx}' class="text-black-50">${qnaList.qna_subject }</a></td>
 						<td class="text-center d-none d-md-table-cell">${qnaList.user_idx}</td>
 						<td class="text-center d-none d-md-table-cell">${qnaList.qna_date }</td>
 					</tr>
@@ -170,7 +170,7 @@
 				</ul>
 			</div>
 			
-			<div class="text-right">
+			<div>
 				<a href="${root }customer/write" class="btn btn-primary">글쓰기</a>
 			</div>
 			
