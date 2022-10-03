@@ -25,6 +25,27 @@ public class QnaBean {
 	private Date qna_date;
 	
 	private int user_idx;
+	
+	private String qna_writer_name;
+	
+	
+	
+
+	public MultipartFile getUpload_file() {
+		return upload_file;
+	}
+
+	public void setUpload_file(MultipartFile upload_file) {
+		this.upload_file = upload_file;
+	}
+
+	public String getContent_file() {
+		return content_file;
+	}
+
+	public void setContent_file(String content_file) {
+		this.content_file = content_file;
+	}
 
 	public int getQna_idx() {
 		return qna_idx;
@@ -66,21 +87,12 @@ public class QnaBean {
 		this.user_idx = user_idx;
 	}
 
-	
-	public MultipartFile getUpload_file() {
-		return upload_file;
+	public String getQna_writer_name() {
+		return qna_writer_name;
 	}
 
-	public void setUpload_file(MultipartFile upload_file) {
-		this.upload_file = upload_file;
+	public void setQna_writer_name(String qna_writer_name) {
+		this.qna_writer_name = qna_writer_name;
 	}
 
-	public String getContent_file() {
-		return content_file;
-	}
-
-	public void setContent_file(String content_file) {
-		this.content_file = content_file;
-	}
-	
 }

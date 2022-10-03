@@ -37,8 +37,8 @@ public class QnaController {
 //			@RequestParam(value = "page", defaultValue = "1") int page,
 			Model model) {
 		
-		List<QnaBean> qnaContentList = qnaService.getQnaList(qnaBean);
-		model.addAttribute("qnaList", qnaContentList);
+		List<QnaBean> qnaList = qnaService.getQnaList(qnaBean);
+		model.addAttribute("qnaList", qnaList);
 		
 //		List<Object> pageBean = qnaService.getQnaCnt(page);
 //		model.addAttribute("pageBean", pageBean);
@@ -48,16 +48,15 @@ public class QnaController {
 	}
 
 	@GetMapping("/read")
-	public String read(
+	public String read(QnaBean qnaBean,
 			@RequestParam("qna_idx") int qna_idx,
 //			@RequestParam("page") int page,
 			Model model) {
 		
-		model.addAttribute("qna_idx", qna_idx);
+		model.addAttribute("readQnaBean", qnaBean);
 		
-//		QnaBean readQnaBean = qnaService.getQnaInfo(qna_idx);
-//		model.addAttribute("readQnaBean", readQnaBean);
-		
+		QnaBean readQnaBean = qnaService.getQnaInfo(qna_idx);
+		model.addAttribute("readQnaBean", readQnaBean);
 		model.addAttribute("loginUserBean", loginUserBean);
 		
 //		model.addAttribute("page", page);
@@ -66,9 +65,16 @@ public class QnaController {
 	}
 
 	@GetMapping("/write")
-	public String write(@ModelAttribute("writeQnaBean") QnaBean writeQnaBean) {
+	public String write(@ModelAttribute("writeQnaBean") QnaBean writeQnaBean,
+			Model model) {
 		
+		System.out.println(loginUserBean.getUser_id());
 //		writeQnaBean.setContent_board_idx(board_info_idx);
+		if(loginUserBean.getUser_id() == null) {
+			return "user/not_login";
+		}
+
+		model.addAttribute("loginUserBean", loginUserBean);
 		
 		return "customer/qna_write";
 	}
@@ -86,22 +92,21 @@ public class QnaController {
 
 	@GetMapping("/modify")
 	public String modify(
-			@RequestParam("qna_idx") int qna_idx,
+//			@RequestParam("qna_idx") int qna_idx,
 			@ModelAttribute("modifyQnaBean") QnaBean modifyQnaBean,
 //			@RequestParam("page") int page,
 			Model model) {
 		
-		model.addAttribute("qna_idx", qna_idx);
+//		model.addAttribute("qna_idx", qna_idx);
+		QnaBean ModifyQnaBean = qnaService.getQnaContentInfo(modifyQnaBean.getQna_idx());
 		
-		QnaBean tempQnaBean = qnaService.getQnaContentInfo(qna_idx);
-		
-//		modifyQnaBean.setContent_writer_name(tempQnaBean.getContent_writer_name());
-		modifyQnaBean.setQna_date(tempQnaBean.getQna_date());
-		modifyQnaBean.setQna_subject(tempQnaBean.getQna_subject());
-		modifyQnaBean.setQna_content(tempQnaBean.getQna_content());
-		modifyQnaBean.setContent_file(tempQnaBean.getContent_file());
-		modifyQnaBean.setUser_idx(tempQnaBean.getUser_idx());
-		modifyQnaBean.setQna_idx(qna_idx);
+		modifyQnaBean.setWriter_name(ModifyQnaBean.getWriter_name());
+		modifyQnaBean.setQna_date(ModifyQnaBean.getQna_date());
+		modifyQnaBean.setQna_subject(ModifyQnaBean.getQna_subject());
+		modifyQnaBean.setQna_content(ModifyQnaBean.getQna_content());
+		modifyQnaBean.setContent_file(ModifyQnaBean.getContent_file());
+		modifyQnaBean.setUser_idx(ModifyQnaBean.getUser_idx());
+//		modifyQnaBean.setQna_idx(qna_idx);
 		
 //		model.addAttribute("page", page);
 				

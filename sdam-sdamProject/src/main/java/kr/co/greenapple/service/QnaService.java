@@ -78,9 +78,6 @@ public class QnaService {
 	}
 	
 	public List<QnaBean> getQnaList(QnaBean qnaBean) {
-		
-
-		
 		return qnaDao.getQnaList(qnaBean);
 		
 	}

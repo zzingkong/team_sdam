@@ -5,8 +5,7 @@
 
 	<select id="getQnaList" parameterType="java.lang.Integer" resultType="kr.co.greenapple.beans.QnaBean">
 		<![CDATA[
-			select rownum, qna_subject, user_name, to_char(qna_date, 'yyyy-mm-dd hh:mm:ss') as qna_date
-			from qna_table natural join user_table order by qna_idx desc
+			select Q.qna_idx, Q.qna_subject, U.user_name as "writer_name", to_char(Q.qna_date, 'yyyy-mm-dd hh:mm:ss') as "qna_date" from qna_table Q, user_table U where Q.user_idx = U.user_idx order by Q.qna_idx desc
 		]]>
 	</select>
 	

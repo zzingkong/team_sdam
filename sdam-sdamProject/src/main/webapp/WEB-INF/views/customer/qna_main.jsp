@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <c:set var="root" value="${pageContext.request.contextPath }/"/>
 <!DOCTYPE html>
 <html>
@@ -109,8 +110,10 @@
 					<tr>
 						<td class="text-center d-none d-md-table-cell">${qnaList.qna_idx }</td>
 						<td><a href='${root }qna/read?qna_idx=${qnaList.qna_idx}' class="text-black-50">${qnaList.qna_subject }</a></td>
-						<td class="text-center d-none d-md-table-cell">${qnaList.user_idx}</td>
-						<td class="text-center d-none d-md-table-cell">${qnaList.qna_date }</td>
+						<td class="text-center d-none d-md-table-cell">${qnaList.qna_writer_name}</td>
+						<td class="text-center d-none d-md-table-cell">
+							<fmt:formatDate value="${qnaList.qna_date }" pattern="yyyy년 MM월 dd일 hh:mm:ss"/>
+						</td>
 					</tr>
 					</c:forEach>
 				</tbody>
