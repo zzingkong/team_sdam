@@ -15,6 +15,7 @@ import org.springframework.web.multipart.MultipartFile;
 import kr.co.greenapple.beans.DogBean;
 import kr.co.greenapple.beans.UserBean;
 import kr.co.greenapple.dao.DogDao;
+import kr.co.greenapple.pager.DogPager;
 
 @Service
 @PropertySource("/WEB-INF/properties/option.properties")
@@ -64,8 +65,15 @@ public class DogService {
 	}
 
 	//테라피독 불러오기
-	public List<DogBean> getDogs() {
-		return dogDao.getDogs();
+//	public List<DogBean> getDogs() {
+//		return dogDao.getDogs();
+//	}
+	
+	public List<DogBean> getDogs(DogPager pager) {
+		int total = dogDao.total(pager);
+		pager.setTotal(total);
+		return dogDao.getDogs(pager);
 	}
+	
 	
 }
