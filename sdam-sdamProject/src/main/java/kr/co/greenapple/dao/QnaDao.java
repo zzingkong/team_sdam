@@ -17,8 +17,8 @@ public class QnaDao {
 	@Autowired
 	private SqlSessionTemplate sqlSessionTemplate;
 
-	public void addQnaContentInfo(QnaBean writeQnaBean) {
-			sqlSessionTemplate.insert("qna.addQnaContentInfo", writeQnaBean);			
+	public void addQna(QnaBean writeQnaBean) {
+			sqlSessionTemplate.insert("qna.addQna", writeQnaBean);			
 	}
 	
 //	public String getBoardInfoName(int board_info_idx) {
@@ -41,21 +41,28 @@ public class QnaDao {
 		 return sqlSessionTemplate.selectList("qna.getQnaList", qnaBean);
 	}
 	
-	public QnaBean getQnaContentInfo(int qna_idx) {
-		return sqlSessionTemplate.selectOne("qna.getQnaContentInfo", qna_idx);
+	public QnaBean readQna(int qna_idx) {
+		return sqlSessionTemplate.selectOne("qna.readQna", qna_idx);
 	}
 	
-	public void modifyQnaContentInfo(QnaBean modifyQnaBean) {
-		sqlSessionTemplate.update("qna.modifyContentInfo", modifyQnaBean);
+	
+	public QnaBean getModify(int qna_idx) {
+		return sqlSessionTemplate.selectOne("qna.getModify", qna_idx);
 	}
 	
-	public void deleteQnaContentInfo(int qna_idx) {
-		sqlSessionTemplate.delete("qna.deleteQnaContentInfo", qna_idx);
+	public void modifyQnaInfo(QnaBean modifyQnaBean) {
+		sqlSessionTemplate.update("qna.modifyQnaInfo", modifyQnaBean);
+	}
+	
+	public void deleteQna(int qna_idx) {
+		sqlSessionTemplate.delete("qna.deleteQna", qna_idx);
 	}
 	
 	public int getQnaContentCnt(int qna_idx) {
 		return sqlSessionTemplate.selectOne("qna.getQnaContentCnt", qna_idx);
 	}
+
+
 
 
 }

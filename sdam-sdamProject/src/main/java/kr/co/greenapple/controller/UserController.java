@@ -37,9 +37,6 @@ public class UserController {
 	public String login(@ModelAttribute("loginInfo") UserBean loginInfo, @RequestParam(value = "fail", defaultValue = "false") boolean fail, Model model) {
 		
 		model.addAttribute("fail", fail);
-		
-
-		
 		return "user/login";
 	}
 	
@@ -52,6 +49,7 @@ public class UserController {
 		userService.getLoginUserInfo(loginInfo);
 		
 		if(loginUserBean.isUserLogin() == true) {
+						
 			return "user/login_success";
 		} else {
 			return "user/login_fail";

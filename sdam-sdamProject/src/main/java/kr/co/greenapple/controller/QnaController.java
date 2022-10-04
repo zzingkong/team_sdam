@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import kr.co.greenapple.beans.ContentBean;
 import kr.co.greenapple.beans.PageBean;
 import kr.co.greenapple.beans.QnaBean;
 import kr.co.greenapple.beans.UserBean;
@@ -44,36 +45,16 @@ public class QnaController {
 //		model.addAttribute("pageBean", pageBean);
 //		model.addAttribute("page", page);
 		
+		System.out.println("로그인한 idx : "+ loginUserBean.getUser_id());
+		
 		return "customer/qna_main";
 	}
 
-	@GetMapping("/read")
-	public String read(QnaBean qnaBean,
-			@RequestParam("qna_idx") int qna_idx,
-//			@RequestParam("page") int page,
-			Model model) {
-		
-		model.addAttribute("readQnaBean", qnaBean);
-		
-		QnaBean readQnaBean = qnaService.getQnaInfo(qna_idx);
-		model.addAttribute("readQnaBean", readQnaBean);
-		model.addAttribute("loginUserBean", loginUserBean);
-		
-//		model.addAttribute("page", page);
-		
-		return "customer/qna_read";
-	}
 
 	@GetMapping("/write")
 	public String write(@ModelAttribute("writeQnaBean") QnaBean writeQnaBean,
 			Model model) {
 		
-		System.out.println(loginUserBean.getUser_id());
-//		writeQnaBean.setContent_board_idx(board_info_idx);
-		if(loginUserBean.getUser_id() == null) {
-			return "user/not_login";
-		}
-
 		model.addAttribute("loginUserBean", loginUserBean);
 		
 		return "customer/qna_write";
@@ -84,56 +65,81 @@ public class QnaController {
 		if(result.hasErrors()) {
 			return "customer/qna_write";
 		}
-		
-		qnaService.addQnaContentInfo(writeQnaBean);
+		qnaService.addQna(writeQnaBean);
 		
 		return "customer/qna_write_success";
 	}
+	
 
+	@GetMapping("/read")
+	public String read(@RequestParam("qna_idx") int qna_idx,
+//			@RequestParam("page") int page,
+			Model model) {
+		
+		model.addAttribute("qna_idx", qna_idx);
+		
+		QnaBean readQnaBean = qnaService.readQna(qna_idx);
+		
+		model.addAttribute("readQnaBean", readQnaBean);
+		
+		System.out.println();
+		
+		model.addAttribute("loginUserBean", loginUserBean);
+//		model.addAttribute("page", page);
+		
+		return "customer/qna_read";
+	}
+	
+	
+	
 	@GetMapping("/modify")
-	public String modify(
-//			@RequestParam("qna_idx") int qna_idx,
+	public String modify(@RequestParam("qna_idx") int qna_idx,
 			@ModelAttribute("modifyQnaBean") QnaBean modifyQnaBean,
 //			@RequestParam("page") int page,
 			Model model) {
 		
-//		model.addAttribute("qna_idx", qna_idx);
-		QnaBean ModifyQnaBean = qnaService.getQnaContentInfo(modifyQnaBean.getQna_idx());
+		model.addAttribute("qna_idx", qna_idx);
 		
-		modifyQnaBean.setWriter_name(ModifyQnaBean.getWriter_name());
-		modifyQnaBean.setQna_date(ModifyQnaBean.getQna_date());
-		modifyQnaBean.setQna_subject(ModifyQnaBean.getQna_subject());
-		modifyQnaBean.setQna_content(ModifyQnaBean.getQna_content());
-		modifyQnaBean.setContent_file(ModifyQnaBean.getContent_file());
-		modifyQnaBean.setUser_idx(ModifyQnaBean.getUser_idx());
-//		modifyQnaBean.setQna_idx(qna_idx);
+		QnaBean modifyBean = qnaService.getModify(qna_idx);
+		
+//		modifyQnaBean.setQna_writer_name(modifyBean.getQna_writer_name());
+		modifyQnaBean.setQna_date(modifyBean.getQna_date());
+		modifyQnaBean.setQna_subject(modifyBean.getQna_subject());
+		modifyQnaBean.setQna_content(modifyBean.getQna_content());
+//		modifyQnaBean.setContent_file(modifyBean.getContent_file());
+		modifyQnaBean.setUser_idx(modifyBean.getUser_idx());
+		modifyQnaBean.setQna_idx(qna_idx);
 		
 //		model.addAttribute("page", page);
-				
+		
+
+		
 		return "customer/qna_modify";
 	}
 	
 	@PostMapping("/modify_pro")
 	public String modify_pro(@Valid @ModelAttribute("modifyQnaBean") QnaBean modifyQnaBean, BindingResult result,
-			@RequestParam("page") int page, Model model) {
+//			@RequestParam("page") int page,
+			Model model) {
 		
-		model.addAttribute("page", page);
+		
+//		model.addAttribute("page", page);
 		
 		if(result.hasErrors()) {
 			return "customer/qna_modify";
 		}
-				
-		qnaService.modifyQnaContentInfo(modifyQnaBean);
+		qnaService.modifyQnaInfo(modifyQnaBean);
 		
 		return "customer/qna_modify_success";
 	}
+	
+
 
 	@GetMapping("/delete")
 	public String delete(@RequestParam("qna_idx") int qna_idx,
 			Model model) {
 		
-		qnaService.deleteQnaContentInfo(qna_idx);
-		
+		qnaService.deleteQna(qna_idx);
 		return "customer/qna_delete";
 	}
 	

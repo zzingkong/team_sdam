@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import kr.co.greenapple.beans.QnaBean;
+import kr.co.greenapple.beans.ContentBean;
 import kr.co.greenapple.beans.PageBean;
 import kr.co.greenapple.beans.QnaBean;
 import kr.co.greenapple.beans.UserBean;
@@ -47,11 +48,10 @@ public class QnaService {
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
-		
 		return file_name;
 	}
 	
-	public void addQnaContentInfo(QnaBean writeQnaBean) {
+	public void addQna(QnaBean writeQnaBean) {
 		MultipartFile upload_file = writeQnaBean.getUpload_file();
 		
 		if(upload_file.getSize() > 0) {
@@ -60,16 +60,13 @@ public class QnaService {
 		}
 		writeQnaBean.setUser_idx(loginUserBean.getUser_idx());
 		
-		qnaDao.addQnaContentInfo(writeQnaBean);
+		qnaDao.addQna(writeQnaBean);
 	}
-	
-	
 	
 	
 //	public String getBoardInfoName(int board_info_idx) {
 //		return qnaDao.getBoardInfoName(board_info_idx);
 //	}
-	
 	
 	
 	public PageBean getContentCnt(int page) {
@@ -79,11 +76,9 @@ public class QnaService {
 	
 	public List<QnaBean> getQnaList(QnaBean qnaBean) {
 		return qnaDao.getQnaList(qnaBean);
-		
 	}
 	
 //	public List<QnaBean> getContentList(int board_info_idx, int page) {
-//		
 //		int start = (page - 1) * page_listcnt;
 //		RowBounds rowBounds = new RowBounds(start, page_listcnt);
 //		
@@ -101,14 +96,18 @@ public class QnaService {
 	}
 	
 	
-	public QnaBean getQnaContentInfo(int qna_idx) {
-		return qnaDao.getQnaContentInfo(qna_idx);
+	public QnaBean readQna(int qna_idx) {
+		return qnaDao.readQna(qna_idx);
 	}
 	
 	
 	
 	
-	public void modifyQnaContentInfo(QnaBean modifyQnaBean) {
+	public QnaBean getModify(int qna_idx) {
+		return qnaDao.getModify(qna_idx);
+	}
+	
+	public void modifyQnaInfo(QnaBean modifyQnaBean) {
 		MultipartFile upload_file = modifyQnaBean.getUpload_file();
 		
 		if(upload_file.getSize() > 0) {
@@ -116,18 +115,20 @@ public class QnaService {
 			modifyQnaBean.setContent_file(file_name);
 		}
 		
-		qnaDao.modifyQnaContentInfo(modifyQnaBean);
+		qnaDao.modifyQnaInfo(modifyQnaBean);
 	}
 	
-	public void deleteQnaContentInfo(int qna_idx) {
-		qnaDao.deleteQnaContentInfo(qna_idx);
+	
+	
+	
+	
+	public void deleteQna(int qna_idx) {
+		qnaDao.deleteQna(qna_idx);
 	}
 	
 	
 //	public PageBean getContentCnt(int currentPage) {
-//		
 //		PageBean pageBean = new PageBean(currentPage, page_listcnt, page_paginationcnt);
-//		
 //		return pageBean;
 //	}
 
