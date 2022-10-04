@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.co.greenapple.beans.DogBean;
 import kr.co.greenapple.beans.UserBean;
+import kr.co.greenapple.pager.DogPager;
 import kr.co.greenapple.service.DogService;
 import kr.co.greenapple.service.UserService;
 
@@ -41,12 +42,16 @@ public class ServiceController {
 	//테라피독
 	@GetMapping("/therapydog")
 	public String therapydog(@ModelAttribute("modifyUserBean") UserBean modifyUserBean,
+							 DogPager pager,
 							 Model model) {
+		
+		List<DogBean> list = dogService.getDogs(pager);
+		model.addAttribute("dogList", list);
 		
 		userService.getModifyUserInfo(modifyUserBean);
 		
-		List<DogBean> list = dogService.getDogs();
-		model.addAttribute("dogList", list);	
+//		List<DogBean> list = dogService.getDogs();
+//		model.addAttribute("dogList", list);	
 		
 		return "service/therapydog";
 	}
