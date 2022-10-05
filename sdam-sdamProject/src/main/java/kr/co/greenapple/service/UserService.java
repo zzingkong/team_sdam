@@ -119,5 +119,8 @@ public class UserService {
 		public List<UserBean>  getUserInfos() {
 			return userDao.getUsers();
 		}
+		
+	//테라피스트 페이지 페이징
+	//	public 
 	
 }
