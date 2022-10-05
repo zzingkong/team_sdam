@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import kr.co.greenapple.beans.UserBean;
+import kr.co.greenapple.pager.TherapistPager;
+
 
 @Repository
 public class UserDao {
@@ -49,9 +51,16 @@ public class UserDao {
 	}
 	
 	//테라피스트 여러명 정보 가져오기
-	public List<UserBean> getUsers() {
-		return sqlSessionTemplate.selectList("user.getUserInfos");
+	public List<UserBean> getUsers(TherapistPager pager) {
+		return sqlSessionTemplate.selectList("user.getUserInfos", pager);
 	}
+
+	public int total(TherapistPager pager) {
+		return sqlSessionTemplate.selectOne("therapist.total", pager);
+	}
+
+	
+	
 	
 	
 		

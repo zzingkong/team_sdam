@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import kr.co.greenapple.beans.DogBean;
 import kr.co.greenapple.beans.UserBean;
 import kr.co.greenapple.pager.DogPager;
+import kr.co.greenapple.pager.TherapistPager;
 import kr.co.greenapple.service.DogService;
 import kr.co.greenapple.service.UserService;
 
@@ -74,7 +75,7 @@ public class ServiceController {
 	
 
 	 @GetMapping("/therapist") 
-	 public String therapist(Model model) {
+	 public String therapist(Model model,TherapistPager pager) {
 
 		//db에서 가져옴
 		List<UserBean> therapistlist = userService.getUserInfos();
@@ -87,6 +88,7 @@ public class ServiceController {
 	@GetMapping("/therapistdetail")
 	public String therapistdetail(Model model, @RequestParam int userIdx) {
 
+				
 		//tId가 idx 번호에 사람을 DB에서 가져옴
 		UserBean userBean = userService.getUserInfo(userIdx);
 		//그걸 model.addAttribute에서 그 사람을 추가함
@@ -95,10 +97,7 @@ public class ServiceController {
 		return "service/therapistdetail";
 	}
 	
-	//테라피스트 페이징 목록 수
-//	public int selectpageCount(PageHandlerBean vo) throws Exception {
-//		return pageCount.selectpageCount(vo);
-// 	}	
+	
 
 
 }
