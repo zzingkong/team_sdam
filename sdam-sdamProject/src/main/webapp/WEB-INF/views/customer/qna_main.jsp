@@ -96,7 +96,7 @@
 <div class="container">
 	<div class="card shadow">
 		<div class="card-body">
-			<table class="table table-hover" id='board_list'>
+			<table class="table table-hover">
 				<thead>
 					<tr>
 						<th class="text-center d-none d-md-table-cell">글번호</th>
@@ -129,7 +129,7 @@
 						</c:when>
 						<c:otherwise>
 							<li class="page-item">
-								<a href="${root }board/main?board_info_idx=${board_info_idx}&page=${pageBean.prevPage}" class="page-link">이전</a>
+								<a href="${root }customer/qna?page=${pageBean.prevPage}" class="page-link">이전</a>
 							</li>
 						</c:otherwise>
 					</c:choose>
@@ -137,12 +137,12 @@
 					<c:choose>
 						<c:when test="${idx == pageBean.currentPage }">
 							<li class="page-item active">
-								<a href="${root }board/main?board_info_idx=${board_info_idx}&page=${idx}" class="page-link">${idx }</a>
+								<a href="${root }customer/qna?page=${idx}" class="page-link">${idx }</a>
 							</li>
 						</c:when>
 						<c:otherwise>
 							<li class="page-item">
-								<a href="${root }board/main?board_info_idx=${board_info_idx}&page=${idx}" class="page-link">${idx }</a>
+								<a href="${root }customer/qna?page=${idx}" class="page-link">${idx }</a>
 							</li>
 						</c:otherwise>
 					</c:choose>
@@ -155,7 +155,7 @@
 						</c:when>
 						<c:otherwise>
 							<li class="page-item">
-								<a href="${root }board/main?board_info_idx=${board_info_idx}&page=${pageBean.nextPage}" class="page-link">다음</a>
+								<a href="${root }customer/qna?page=${pageBean.nextPage}" class="page-link">다음</a>
 							</li>
 						</c:otherwise>
 					</c:choose>

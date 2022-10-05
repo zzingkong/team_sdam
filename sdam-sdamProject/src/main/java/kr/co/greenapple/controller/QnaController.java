@@ -16,8 +16,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import kr.co.greenapple.beans.ContentBean;
-import kr.co.greenapple.beans.PageBean;
 import kr.co.greenapple.beans.QnaBean;
 import kr.co.greenapple.beans.UserBean;
 import kr.co.greenapple.service.QnaService;
@@ -33,33 +31,28 @@ public class QnaController {
 	@Lazy
 	private UserBean loginUserBean;	
 
+	
+	//qna main 목록 출력하기
 	@GetMapping("/qna")
-	public String main(@ModelAttribute QnaBean qnaBean,
-//			@RequestParam(value = "page", defaultValue = "1") int page,
-			Model model) {
+	public String main(QnaBean qnaBean, Model model) {
 		
 		List<QnaBean> qnaList = qnaService.getQnaList(qnaBean);
 		model.addAttribute("qnaList", qnaList);
 		
-//		List<Object> pageBean = qnaService.getQnaCnt(page);
-//		model.addAttribute("pageBean", pageBean);
-//		model.addAttribute("page", page);
-		
-		System.out.println("로그인한 idx : "+ loginUserBean.getUser_id());
-		
 		return "customer/qna_main";
 	}
 
-
+	//qna 게시글 작성 불러오기
 	@GetMapping("/write")
-	public String write(@ModelAttribute("writeQnaBean") QnaBean writeQnaBean,
-			Model model) {
+	public String write(@ModelAttribute("writeQnaBean") QnaBean writeQnaBean, Model model) {
 		
+		System.out.println("로그인한 idx : "+ loginUserBean.getUser_idx());
 		model.addAttribute("loginUserBean", loginUserBean);
 		
 		return "customer/qna_write";
 	}
 	
+	//qna 게시글 작성
 	@PostMapping("/write_pro")
 	public String write_pro(@Valid @ModelAttribute("writeQnaBean") QnaBean writeQnaBean, BindingResult result) {
 		if(result.hasErrors()) {
@@ -71,10 +64,9 @@ public class QnaController {
 	}
 	
 
+	//qna 게시글 읽기
 	@GetMapping("/read")
-	public String read(@RequestParam("qna_idx") int qna_idx,
-//			@RequestParam("page") int page,
-			Model model) {
+	public String read(@RequestParam("qna_idx") int qna_idx, Model model) {
 		
 		model.addAttribute("qna_idx", qna_idx);
 		
@@ -82,27 +74,20 @@ public class QnaController {
 		
 		model.addAttribute("readQnaBean", readQnaBean);
 		
-		System.out.println();
-		
 		model.addAttribute("loginUserBean", loginUserBean);
-//		model.addAttribute("page", page);
 		
 		return "customer/qna_read";
 	}
 	
 	
-	
 	@GetMapping("/modify")
-	public String modify(@RequestParam("qna_idx") int qna_idx,
-			@ModelAttribute("modifyQnaBean") QnaBean modifyQnaBean,
-//			@RequestParam("page") int page,
-			Model model) {
+	public String modify(@ModelAttribute("modifyQnaBean") QnaBean modifyQnaBean, @RequestParam("qna_idx") int qna_idx, Model model) {
 		
 		model.addAttribute("qna_idx", qna_idx);
 		
-		QnaBean modifyBean = qnaService.getModify(qna_idx);
+		QnaBean modifyBean = qnaService.modifyQna(qna_idx);
 		
-//		modifyQnaBean.setQna_writer_name(modifyBean.getQna_writer_name());
+		modifyQnaBean.setQna_writer_name(modifyBean.getQna_writer_name());
 		modifyQnaBean.setQna_date(modifyBean.getQna_date());
 		modifyQnaBean.setQna_subject(modifyBean.getQna_subject());
 		modifyQnaBean.setQna_content(modifyBean.getQna_content());
@@ -110,34 +95,24 @@ public class QnaController {
 		modifyQnaBean.setUser_idx(modifyBean.getUser_idx());
 		modifyQnaBean.setQna_idx(qna_idx);
 		
-//		model.addAttribute("page", page);
-		
-
-		
 		return "customer/qna_modify";
 	}
 	
 	@PostMapping("/modify_pro")
-	public String modify_pro(@Valid @ModelAttribute("modifyQnaBean") QnaBean modifyQnaBean, BindingResult result,
-//			@RequestParam("page") int page,
-			Model model) {
-		
-		
-//		model.addAttribute("page", page);
+	public String modify_pro(@Valid @ModelAttribute("modifyQnaBean") QnaBean modifyQnaBean, BindingResult result, Model model) {
 		
 		if(result.hasErrors()) {
 			return "customer/qna_modify";
 		}
+		
 		qnaService.modifyQnaInfo(modifyQnaBean);
 		
 		return "customer/qna_modify_success";
 	}
 	
 
-
 	@GetMapping("/delete")
-	public String delete(@RequestParam("qna_idx") int qna_idx,
-			Model model) {
+	public String delete(@RequestParam("qna_idx") int qna_idx, Model model) {
 		
 		qnaService.deleteQna(qna_idx);
 		return "customer/qna_delete";

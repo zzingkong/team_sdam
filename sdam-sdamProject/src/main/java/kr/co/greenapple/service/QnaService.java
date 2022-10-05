@@ -75,24 +75,11 @@ public class QnaService {
 	}
 	
 	public List<QnaBean> getQnaList(QnaBean qnaBean) {
-		return qnaDao.getQnaList(qnaBean);
-	}
-	
-//	public List<QnaBean> getContentList(int board_info_idx, int page) {
+		
 //		int start = (page - 1) * page_listcnt;
 //		RowBounds rowBounds = new RowBounds(start, page_listcnt);
-//		
-//		return boardDao.getContentList(board_info_idx, rowBounds);
-//		
-//	}
-	
-	
-	public List<Object> getQnaCnt(int page) {
 		
-		int start = (page - 1) * page_listcnt;
-		RowBounds rowBounds = new RowBounds(start, page_listcnt);
-		
-		return qnaDao.getQnaCnt(page, rowBounds);
+		return qnaDao.getQnaList(qnaBean);
 	}
 	
 	
@@ -103,8 +90,8 @@ public class QnaService {
 	
 	
 	
-	public QnaBean getModify(int qna_idx) {
-		return qnaDao.getModify(qna_idx);
+	public QnaBean modifyQna(int qna_idx) {
+		return qnaDao.modifyQna(qna_idx);
 	}
 	
 	public void modifyQnaInfo(QnaBean modifyQnaBean) {
@@ -114,7 +101,6 @@ public class QnaService {
 			String file_name = saveUloadFile(upload_file);
 			modifyQnaBean.setContent_file(file_name);
 		}
-		
 		qnaDao.modifyQnaInfo(modifyQnaBean);
 	}
 	
@@ -127,12 +113,11 @@ public class QnaService {
 	}
 	
 	
-//	public PageBean getContentCnt(int currentPage) {
-//		PageBean pageBean = new PageBean(currentPage, page_listcnt, page_paginationcnt);
-//		return pageBean;
-//	}
-
-
-
-
+	public PageBean getQnatCnt(int currentPage) {
+		
+		
+		int qna_cnt = qnaDao.getQnaContentCnt(currentPage);
+		PageBean pageBean = new PageBean(currentPage, page_listcnt, page_paginationcnt, qna_cnt);
+		return pageBean;
+	}
 }

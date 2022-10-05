@@ -123,12 +123,10 @@
 					<div class="form-group">
 						<div class="text-right">
 							<a href="${root }customer/qna?page=1" class="btn btn-primary">목록보기</a>
-							<c:choose>
-								<c:when test="${loginUserBean.user_idx == readQnaBean.user_idx}">
-									<a href="${root }customer/modify?qna_idx=${qna_idx}&page=1" class="btn btn-info">수정하기</a>
-									<a href="${root }customer/delete?qna_idx=${qna_idx}" class="btn btn-danger">삭제하기</a>
-								</c:when>
-							</c:choose>
+							<c:if test="${loginUserBean.user_idx == readQnaBean.user_idx}">
+								<a href="${root }customer/modify?qna_idx=${qna_idx}&page=1" class="btn btn-info">수정하기</a>
+								<a href="${root }customer/delete?qna_idx=${qna_idx}" class="btn btn-danger">삭제하기</a>
+							</c:if>
 
 						</div>
 					</div>

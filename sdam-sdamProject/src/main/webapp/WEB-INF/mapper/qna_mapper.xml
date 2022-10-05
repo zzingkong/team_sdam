@@ -5,12 +5,12 @@
 
 	<select id="getQnaList" parameterType="java.lang.Integer" resultType="kr.co.greenapple.beans.QnaBean">
 		<![CDATA[
-			select Q.qna_idx, Q.qna_subject, U.user_name as "writer_name", to_char(Q.qna_date, 'yyyy-mm-dd hh:mm:ss') as "qna_date"
+			select Q.qna_idx, Q.qna_subject, U.user_name as qna_writer_name, to_char(Q.qna_date, 'yyyy-mm-dd hh:mm:ss') as "qna_date"
 			from qna_table Q, user_table U
 			where Q.user_idx = U.user_idx order by Q.qna_idx desc
 		]]>
 	</select>
-	
+		
 	<insert id="addQna" parameterType="kr.co.greenapple.beans.QnaBean">
 		<selectKey keyProperty="qna_idx" order="BEFORE" resultType="java.lang.Integer">
 			select qna_seq.nextval from dual
@@ -31,25 +31,27 @@
 	</select>
 	
 	
-	<select id="getModify" parameterType="java.lang.Integer" resultType="kr.co.greenapple.beans.QnaBean">
+	<select id="modifyQna" parameterType="java.lang.Integer" resultType="kr.co.greenapple.beans.QnaBean">
 		<![CDATA[
-			select U.user_name as qna_writer_name, to_char(Q.qna_date, 'yyyy-mm-dd hh:mm:ss') as qna_date,
-			Q.qna_subject, Q.qna_content, Q.user_idx
+			select
+				U.user_name as qna_writer_name,
+				to_char(Q.qna_date, 'yyyy-mm-dd hh:mm:ss') as qna_date,
+				Q.qna_subject,
+				Q.qna_content,
+				Q.user_idx
 			from qna_table Q, user_table U
-			where Q.qna_idx = U.user_idx and Q.qna_idx = #{qna_idx}
+				where
+				Q.user_idx = U.user_idx and
+				Q.qna_idx = #{qna_idx}
 		]]>
 	</select>
 	
 		<update id="modifyQnaInfo" parameterType="kr.co.greenapple.beans.QnaBean">
 		<![CDATA[
-			update qna_table
-			set qna_subject = #{qna_subject}, qna_content = #{qna_content},
-			
+			update qna_table set qna_subject = #{qna_subject}, qna_content = #{qna_content}
 			where qna_idx = #{qna_idx}
 		]]>
 	</update>
-	
-	
 	
 	<delete id="deleteQna" parameterType="java.lang.Integer">
 		<![CDATA[
