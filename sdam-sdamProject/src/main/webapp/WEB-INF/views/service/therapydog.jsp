@@ -198,23 +198,30 @@
 						</a>
 					</div>
 				</c:forEach> --%>
-				
-			</div>		
-		</div>
-		
-		<div>
-			<ul>
-				<li><a href="?page=1">처음</a></li> 
-				<li><a href="?page=${pager.prev}">이전</a></li>		
-								
-				<c:forEach var="page" items="${pager.list}">
-				<li><a href="?page=${page}">${page}</a></li>
-				</c:forEach>
 							
-				<li><a href="?page=${pager.next}">다음</a></li>
-				<li><a href="?page=${pager.last}">마지막</a></li>
-			</ul>
+			</div>
+			
+				
+		<div class="wow fadeInUp" data-wow-delay="0.4s" style="display:flex; flex-direction:row; flex-wrap:wrap;">
+				
+			<nav aria-label="Page navigation example" style="margin: 0 auto;">
+				<ul class="pagination">
+					<li class="page-item"><a class="page-link" href="?page=1" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li> 
+					<li class="page-item"><a class="page-link" href="?page=${dogPager.prev}"><span aria-hidden="true" style="font-size:0.6em;"><i class="bi bi-chevron-left"></i></span></a></li>		
+									
+					<c:forEach var="page" items="${dogPager.list}">
+					<li class="page-item"><a class="page-link" href="?page=${page}">${page}</a></li>
+					</c:forEach>
+								
+					<li class="page-item"><a class="page-link" href="?page=${dogPager.next}"><span aria-hidden="true" style="font-size:0.6em;"><i class="bi bi-chevron-right"></i></span></a></li>
+					<li class="page-item"><a class="page-link" aria-label="Next" href="?page=${dogPager.last}"><span aria-hidden="true">&raquo;</span></a></li>
+				</ul>
+			</nav>		
+			
 		</div>
+
+		</div>
+				
 		
 	</div>
 </div>
