@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import kr.co.greenapple.beans.DogBean;
 import kr.co.greenapple.beans.UserBean;
+import kr.co.greenapple.pager.DogPager;
 
 @Repository
 public class DogDao {
@@ -25,7 +26,18 @@ public class DogDao {
 	}
 
 	//테라피독 불러오기
-	public List<DogBean> getDogs() {
-		return sqlSessionTemplate.selectList("dog.getDogs");
+//	public List<DogBean> getDogs() {
+//		return sqlSessionTemplate.selectList("dog.getDogs");
+//	}
+
+	public List<DogBean> getDogs(DogPager pager) {
+
+		return sqlSessionTemplate.selectList("dog.getDogs", pager);
+}
+	
+	public int total(DogPager pager) {
+		return sqlSessionTemplate.selectOne("dog.total", pager);
 	}
+	
+
 }

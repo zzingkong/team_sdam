@@ -90,6 +90,8 @@
 
 
 
+
+
 <div class="container" style="margin-top:100px">
 	<div class="row">
 		<div class="col-sm-3"></div>
@@ -97,8 +99,8 @@
 			<div class="card shadow">
 				<div class="card-body">
 					<div class="form-group">
-						<label for="board_writer_name">작성자</label>
-						<input type="text" id="board_writer_name" name="board_writer_name" class="form-control" value="${readQnaBean.content_writer_name }" disabled="disabled"/>
+						<label for="qna_writer_name">작성자</label>
+						<input type="text" id="qna_writer_name" name="qna_writer_name" class="form-control" value="${readQnaBean.qna_writer_name }" disabled="disabled"/>
 					</div>
 					<div class="form-group">
 						<label for="qna_date">작성날짜</label>
@@ -121,10 +123,13 @@
 					<div class="form-group">
 						<div class="text-right">
 							<a href="${root }customer/qna?page=1" class="btn btn-primary">목록보기</a>
-							<c:if test="${loginUserBean.user_idx == readQnaBean.user_idx}">
-							<a href="${root }customer/modify?qna_idx=${qna_idx}&page=1" class="btn btn-info">수정하기</a>
-							<a href="${root }customer/delete?qna_idx=${qna_idx}" class="btn btn-danger">삭제하기</a>
-							</c:if>
+							<c:choose>
+								<c:when test="${loginUserBean.user_idx == readQnaBean.user_idx}">
+									<a href="${root }customer/modify?qna_idx=${qna_idx}&page=1" class="btn btn-info">수정하기</a>
+									<a href="${root }customer/delete?qna_idx=${qna_idx}" class="btn btn-danger">삭제하기</a>
+								</c:when>
+							</c:choose>
+
 						</div>
 					</div>
 				</div>
@@ -133,6 +138,8 @@
 		<div class="col-sm-3"></div>
 	</div>
 </div>
+
+
 
 <c:import url="/WEB-INF/views/include/bottom_info.jsp"></c:import>
 

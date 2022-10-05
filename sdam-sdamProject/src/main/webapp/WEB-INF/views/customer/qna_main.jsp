@@ -109,10 +109,10 @@
 					<c:forEach var="qnaList" items="${qnaList }">
 					<tr>
 						<td class="text-center d-none d-md-table-cell">${qnaList.qna_idx }</td>
-						<td><a href='${root }qna/read?qna_idx=${qnaList.qna_idx}' class="text-black-50">${qnaList.qna_subject }</a></td>
+						<td><a href='${root }customer/read?qna_idx=${qnaList.qna_idx}' class="text-black-50">${qnaList.qna_subject }</a></td>
 						<td class="text-center d-none d-md-table-cell">${qnaList.qna_writer_name}</td>
 						<td class="text-center d-none d-md-table-cell">
-							<fmt:formatDate value="${qnaList.qna_date }" pattern="yyyy년 MM월 dd일 hh:mm:ss"/>
+							<fmt:formatDate value="${qnaList.qna_date }" pattern="yyyy-MM-dd hh:mm:ss"/>
 						</td>
 					</tr>
 					</c:forEach>

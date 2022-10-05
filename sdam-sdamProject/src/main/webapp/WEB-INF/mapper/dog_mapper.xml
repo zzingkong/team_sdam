@@ -30,12 +30,27 @@
 		]]>
 	</select>
 	
-	<select id="getDogs" resultType="kr.co.greenapple.beans.DogBean">
+<!-- <select id="getDogs" resultType="kr.co.greenapple.beans.DogBean">
 		<![CDATA[
 			select d.dog_idx, d.dog_name, d.dog_type, d.dog_age, d.dog_sex, d.dog_neutralization, d.dog_memo, d.dog_picture, d.dog_tag, c.company_local 
 			from therapy_dog_table d, company_table c 
 			where c.company_id = d.company_id 
 		]]>
+	</select>  -->
+	
+	<select id="getDogs" resultType="kr.co.greenapple.beans.DogBean">
+		<![CDATA[
+			select * from
+			(select T1.*, rownum rnum from
+				(select d.dog_idx, d.dog_name, d.dog_type, d.dog_age, d.dog_sex, d.dog_neutralization, d.dog_memo, d.dog_picture, d.dog_tag, c.company_local
+					from therapy_dog_table d, company_table c where c.company_id = d.company_id) T1)
+			where rnum between ((#{page}-1) * #{perPage} + 1) and (#{page} * #{perPage})
+		]]>
 	</select> 
+	
+	<select id="total" resultType="java.lang.Integer">
+		SELECT COUNT(*) FROM therapy_dog_table
+	</select>
+	
 	
 </mapper>
