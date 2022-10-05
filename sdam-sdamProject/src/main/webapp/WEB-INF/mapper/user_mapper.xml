@@ -99,6 +99,22 @@
 		]]>
 	</select>
 	
+	<select id="pageCount" resultType="kr.co.greenapple.beans.UserBean">
+			select(*) count
+			from user_table 
+	</select>
+	
+	<select id="gettherapist" resultType="kr.co.greenapple.beans.UserBean">
+		<![CDATA[
+			select * from
+			(select T1.*, rownum rnum from
+				(select u.user_idx, u.user_name, u.user_pw, u.user_tel, u.therapist_license, u.therapist_picture, u.therapist_career, u.therapist_level, u.therapist_resume, c.company_local
+					from user_table u, company_table c where c.company_id = u.company_id) T1)
+			where rnum between ((#{page}-1) * #{perPage} + 1) and (#{page} * #{perPage})
+		]]>
+	</select> 
+	
+		
 	
 <!-- <delete id="delMember" parameterType="java.lang.String">
   		delete from member where mem_id = #{memId}

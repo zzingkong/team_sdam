@@ -178,6 +178,20 @@
 	</div>
 		</div>		
 	</div>
+
+	
+	  <!-- paging bootstrap -->
+	<ul>
+		<li><a href="?page=1">처음</a></li>
+		<li><a href="?page=${pager.prev}">이전</a></li>
+		
+		<c:forEach var="page" items="${pager.list}">
+			<li><a href="?page=${page}">${page}</a></li>
+		</c:forEach>
+										
+		<li><a href="?page=${pager.next}">다음</a></li>								
+		<li><a href="?page=${pager.last}">마지막</a></li>
+	</ul>
 </div>
 
 	<c:import url="/WEB-INF/views/include/bottom_info.jsp"></c:import>
@@ -209,6 +223,7 @@
 				    	   }
 				       });
 				       
-	</script>	
+	</script>
+		
 </body>
 </html>

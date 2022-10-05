@@ -14,6 +14,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import kr.co.greenapple.beans.UserBean;
 import kr.co.greenapple.dao.UserDao;
+import kr.co.greenapple.pager.TherapistPager;
 
 @Service
 @PropertySource("/WEB-INF/properties/option.properties")
@@ -107,17 +108,23 @@ public class UserService {
 		
 		userDao.modifyUserInfo(modifyUserBean);
 	}
-
-
-
-	//테라피스트 더보기 했을 때 정보 가져오기
+	
+		//테라피스트 더보기 했을 때 정보 가져오기
 	public UserBean  getUserInfo(int userIdx) {
 		return userDao.getUser(userIdx);
 	}
 	
 	//테라피스트 했을 때 정보 가져오기
 		public List<UserBean>  getUserInfos() {
-			return userDao.getUsers();
+			return userDao.getUsers(null);
 		}
+	//therapist page
+	public List<UserBean> gettherapists(TherapistPager pager) {
+		
+		int total = userDao.total(pager);
+		pager.setTotal(total);
+		return userDao.getUsers(pager);
+	}
+		
 	
 }

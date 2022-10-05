@@ -136,8 +136,9 @@
 							<form:input type="file" path="upload_file" class="form-control pb-3" accept="image/*"/>
 						</div>
 						<div class="form-group pb-2">
-							<form:label path="company_id" class="pb-2">company 값 어떻게 넘겨 받을까?</form:label>
-							<form:input path="company_id" class="form-control"/>
+							<form:label path="company_id" class="pb-2">company값 user에서 id받고, user에서 name값 value에 뿌려주기</form:label>
+							<form:input path="company_id" class="form-control" />
+							<form:hidden path=""/>
 						</div>
 						
 						<div class="form-group">
