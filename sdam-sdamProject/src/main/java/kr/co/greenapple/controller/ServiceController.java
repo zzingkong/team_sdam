@@ -1,3 +1,4 @@
+
 package kr.co.greenapple.controller;
 
 import java.util.List;
@@ -94,6 +95,10 @@ public class ServiceController {
 		return "service/therapistdetail";
 	}
 	
-	//테라피스트 페이징
+	//테라피스트 페이징 목록 수
+//	public int selectpageCount(PageHandlerBean vo) throws Exception {
+//		return pageCount.selectpageCount(vo);
+// 	}	
+
 
 }
