@@ -5,6 +5,6 @@
 <script>
 	alert('저장되었습니다')
 // 	location.href = "${root}customer/read?qna_idx=${writeQnaBean.qna_idx}&page=1"
-	location.href = "${root}customer/qna?page=1"
+	location.href = "${root}customer/qna"
 		
 </script>

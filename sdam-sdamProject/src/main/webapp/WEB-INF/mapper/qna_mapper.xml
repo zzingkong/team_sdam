@@ -7,7 +7,7 @@
 		<![CDATA[
 			select Q.qna_idx, Q.qna_subject, U.user_name as qna_writer_name, to_char(Q.qna_date, 'yyyy-mm-dd hh:mm:ss') as "qna_date"
 			from qna_table Q, user_table U
-			where Q.user_idx = U.user_idx order by Q.qna_idx desc
+			where Q.qna_writer_idx = U.user_idx order by Q.qna_idx desc
 		]]>
 	</select>
 		
@@ -16,8 +16,8 @@
 			select qna_seq.nextval from dual
 		</selectKey>
 		<![CDATA[
-			insert into qna_table (qna_idx, qna_subject, qna_content, user_idx, qna_date)
-			values (#{qna_idx}, #{qna_subject}, #{qna_content}, #{user_idx}, sysdate)
+			insert into qna_table (qna_idx, qna_subject, qna_content, qna_writer_idx, qna_date)
+			values (#{qna_idx}, #{qna_subject}, #{qna_content}, #{qna_writer_idx}, sysdate)
 		]]>
 	</insert>
 	
@@ -26,7 +26,7 @@
 			select U.user_name as qna_writer_name, to_char(Q.qna_date, 'yyyy-mm-dd hh:mm:ss') as qna_date,
 			Q.qna_subject, Q.qna_content
 			from qna_table Q, user_table U
-			where Q.user_idx = U.user_idx and Q.qna_idx = #{qna_idx}
+			where Q.qna_writer_idx = U.user_idx and Q.qna_idx = #{qna_idx}
 		]]>
 	</select>
 	
@@ -38,10 +38,10 @@
 				to_char(Q.qna_date, 'yyyy-mm-dd hh:mm:ss') as qna_date,
 				Q.qna_subject,
 				Q.qna_content,
-				Q.user_idx
+				Q.qna_writer_idx
 			from qna_table Q, user_table U
 				where
-				Q.user_idx = U.user_idx and
+				Q.qna_writer_idx = U.user_idx and
 				Q.qna_idx = #{qna_idx}
 		]]>
 	</select>
