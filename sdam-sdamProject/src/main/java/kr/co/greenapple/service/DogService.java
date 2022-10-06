@@ -17,7 +17,6 @@ import kr.co.greenapple.beans.UserBean;
 import kr.co.greenapple.dao.DogDao;
 import kr.co.greenapple.pager.Pager;
 
-
 @Service
 @PropertySource("/WEB-INF/properties/option.properties")
 public class DogService {
