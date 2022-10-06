@@ -51,12 +51,17 @@ public class UserDao {
 	}
 	
 	//테라피스트 여러명 정보 가져오기
-	public List<UserBean> getUsers(TherapistPager pager) {
-		return sqlSessionTemplate.selectList("user.getUserInfos", pager);
+	public List<UserBean> getUsers() {
+		return sqlSessionTemplate.selectList("user.getUserInfos");
 	}
 
+    //테라피스트 페이징
 	public int total(TherapistPager pager) {
-		return sqlSessionTemplate.selectOne("therapist.total", pager);
+		return sqlSessionTemplate.selectOne("user.pageCount", pager);
+	}
+
+	public List<UserBean> gettherapists(TherapistPager pager) {
+		return sqlSessionTemplate.selectList("user.gettherapist", pager);
 	}
 
 	

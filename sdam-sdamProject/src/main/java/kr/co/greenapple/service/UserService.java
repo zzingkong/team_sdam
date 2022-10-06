@@ -109,21 +109,24 @@ public class UserService {
 		userDao.modifyUserInfo(modifyUserBean);
 	}
 	
-		//테라피스트 더보기 했을 때 정보 가져오기
-	public UserBean  getUserInfo(int userIdx) {
-		return userDao.getUser(userIdx);
+	//테라피스트 더보기 했을 때 정보 가져오기
+		public UserBean  getUserInfo(int userIdx) {
+			return userDao.getUser(userIdx);
 	}
 	
 	//테라피스트 했을 때 정보 가져오기
 		public List<UserBean>  getUserInfos() {
-			return userDao.getUsers(null);
+			return userDao.getUsers();
 		}
-	//therapist page
+		
+	//테라피스트 페이지
 	public List<UserBean> gettherapists(TherapistPager pager) {
 		
+		//TODO:테라피스트 가입된 사람 수로 수정해야함
 		int total = userDao.total(pager);
 		pager.setTotal(total);
-		return userDao.getUsers(pager);
+		System.out.println("total: " + total);
+		return userDao.gettherapists(pager);
 	}
 		
 	
