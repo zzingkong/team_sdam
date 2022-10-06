@@ -24,7 +24,7 @@
 	<select id="readQna" parameterType="java.lang.Integer" resultType="kr.co.greenapple.beans.QnaBean">
 		<![CDATA[
 			select U.user_name as qna_writer_name, to_char(Q.qna_date, 'yyyy-mm-dd hh:mm:ss') as qna_date,
-			Q.qna_subject, Q.qna_content
+			Q.qna_subject, Q.qna_content, Q.qna_writer_idx 
 			from qna_table Q, user_table U
 			where Q.qna_writer_idx = U.user_idx and Q.qna_idx = #{qna_idx}
 		]]>

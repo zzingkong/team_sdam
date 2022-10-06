@@ -58,6 +58,7 @@ public class QnaService {
 			String file_name = saveUloadFile(upload_file);
 			writeQnaBean.setContent_file(file_name);
 		}
+		System.out.println("LOGIN USER" + loginUserBean.getUser_idx());
 		writeQnaBean.setQna_writer_idx(loginUserBean.getUser_idx());
 		
 		qnaDao.addQna(writeQnaBean);

@@ -102,7 +102,8 @@ public class QnaController {
 	public String modify_pro(@Valid @ModelAttribute("modifyQnaBean") QnaBean modifyQnaBean, BindingResult result, Model model) {
 		
 		if(result.hasErrors()) {
-			return "customer/qna_modify";
+			model.addAttribute(modifyQnaBean.getQna_idx());
+			return "customer/qna_modify_fail";
 		}
 		
 		qnaService.modifyQnaInfo(modifyQnaBean);
