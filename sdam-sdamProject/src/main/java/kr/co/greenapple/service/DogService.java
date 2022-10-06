@@ -15,7 +15,8 @@ import org.springframework.web.multipart.MultipartFile;
 import kr.co.greenapple.beans.DogBean;
 import kr.co.greenapple.beans.UserBean;
 import kr.co.greenapple.dao.DogDao;
-import kr.co.greenapple.pager.DogPager;
+import kr.co.greenapple.pager.Pager;
+
 
 @Service
 @PropertySource("/WEB-INF/properties/option.properties")
@@ -69,10 +70,10 @@ public class DogService {
 //		return dogDao.getDogs();
 //	}
 	
-	public List<DogBean> getDogs(DogPager pager) {
-		int total = dogDao.total(pager);
-		pager.setTotal(total);
-		return dogDao.getDogs(pager);
+	public List<DogBean> getDogs(Pager dogPager) {
+		int total = dogDao.total(dogPager);
+		dogPager.setTotal(total);
+		return dogDao.getDogs(dogPager);
 	}
 	
 	

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import kr.co.greenapple.beans.DogBean;
 import kr.co.greenapple.beans.UserBean;
-import kr.co.greenapple.pager.DogPager;
+import kr.co.greenapple.pager.Pager;
 
 @Repository
 public class DogDao {
