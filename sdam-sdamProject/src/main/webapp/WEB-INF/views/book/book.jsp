@@ -132,11 +132,8 @@
 
 
 
+	<form action="${root }book/book" method="post">
 	<div class="container my-3">
-	
-	
-	
-	
 	
 	
 	<!-- 지역 선택 -->
@@ -144,39 +141,6 @@
 			<h2 class="pb-2 border-bottom my-5">
 				<span class="text-primary me-2">1</span> 지역 선택
 			</h2>
-			
-<!-- 			<div class="btn-group" role="group" aria-label="Basic radio toggle button group"> -->
-<!-- 			  <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked> -->
-<!-- 			  <label class="btn btn-outline-primary" for="btnradio1">Radio 1</label> -->
-			
-<!-- 			  <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off"> -->
-<!-- 			  <label class="btn btn-outline-primary" for="btnradio2">Radio 2</label> -->
-			
-<!-- 			  <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off"> -->
-<!-- 			  <label class="btn btn-outline-primary" for="btnradio3">Radio 3</label> -->
-			
-<!-- 			  <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off"> -->
-<!-- 			  <label class="btn btn-outline-primary" for="btnradio4">Radio 3</label> -->
-			
-<!-- 			  <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off"> -->
-<!-- 			  <label class="btn btn-outline-primary" for="btnradio5">Radio 3</label> -->
-			
-<!-- 			  <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off"> -->
-<!-- 			  <label class="btn btn-outline-primary" for="btnradio6">Radio 3</label> -->
-			
-<!-- 			  <input type="radio" class="btn-check" name="btnradio" id="btnradio7" autocomplete="off"> -->
-<!-- 			  <label class="btn btn-outline-primary" for="btnradio7">Radio 3</label> -->
-			
-<!-- 			  <input type="radio" class="btn-check" name="btnradio" id="btnradio8" autocomplete="off"> -->
-<!-- 			  <label class="btn btn-outline-primary" for="btnradio8">Radio 3</label> -->
-			
-<!-- 			  <input type="radio" class="btn-check" name="btnradio" id="btnradio9" autocomplete="off"> -->
-<!-- 			  <label class="btn btn-outline-primary" for="btnradio9">Radio 3</label> -->
-<!-- 			</div> -->
-			
-			
-			
-			
 			
 		 		<div class="form-check ml-3 text-center">
 					<div class="form-check form-check-inline">
@@ -298,7 +262,7 @@
 					      <div class="row justify-content-center">
 					        <div class="col-md-10 text-center">
 					          <h4 class="mb-5 text-center">날짜를 선택하세요</h4>
-					          <input type="text" class="form-control w-25 mx-auto mb-3" id="result" placeholder="날짜를 선택하세요" disabled>
+					          <input type="text" name="service_date"  class="form-control w-25 mx-auto mb-3" id="result" placeholder="날짜를 선택하세요" disabled>
 					          <form action="#" class="row">
 					            <div class="col-md-12">
 					              <div id="inline_cal"></div>
@@ -312,66 +276,31 @@
 
 
 					<h4 class="my-5 text-center">이용희망 시간을 선택하세요</h4>
-					<form class="mx-auto">
-<!-- 						<div class="justify-content-center row p-3 p-sm-3 text-center"> -->
-							
-<!-- 								<div class="col-md-1 col-4 my-1 px-2"> -->
-<!-- 									<input type="checkbox" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" > -->
-<!-- 									<label class="btn btn-outline-primary" for="btnradio1">AM 10:00</label> -->
-<!-- 								</div> -->
-<!-- 								<div class="col-md-1 col-4 my-1 px-2"> -->
-<!-- 									<input type="checkbox" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" > -->
-<!-- 									<label class="btn btn-outline-primary" for="btnradio2">AM 11:00</label> -->
-<!-- 								</div> -->
-<!-- 								<div class="col-md-1 col-4 my-1 px-2"> -->
-<!-- 									<input type="checkbox" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" > -->
-<!-- 									<label class="btn btn-outline-primary" for="btnradio3">PM 12:00</label> -->
-<!-- 								</div> -->
-<!-- 								<div class="col-md-1 col-4 my-1 px-2"> -->
-<!-- 									<input type="checkbox" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" > -->
-<!-- 									<label class="btn btn-outline-primary" for="btnradio4">PM 13:00</label> -->
-<!-- 								</div> -->
-<!-- 								<div class="col-md-1 col-4 my-1 px-2"> -->
-<!-- 									<input type="checkbox" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off" > -->
-<!-- 									<label class="btn btn-outline-primary" for="btnradio5">PM 14:00</label> -->
-<!-- 								</div> -->
-<!-- 								<div class="col-md-1 col-4 my-1 px-2"> -->
-<!-- 									<input type="checkbox" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off" > -->
-<!-- 									<label class="btn btn-outline-primary" for="btnradio6">PM 15:00</label> -->
-<!-- 								</div> -->
-<!-- 								<div class="col-md-1 col-4 my-1 px-2"> -->
-<!-- 									<input type="checkbox" class="btn-check" name="btnradio" id="btnradio7" autocomplete="off" > -->
-<!-- 									<label class="btn btn-outline-primary" for="btnradio7">PM 16:00</label> -->
-<!-- 								</div> -->
-<!-- 								<div class="col-md-1 col-4 my-1 px-2"> -->
-<!-- 									<input type="checkbox" class="btn-check" name="btnradio" id="btnradio8" autocomplete="off" > -->
-<!-- 									<label class="btn btn-outline-primary" for="btnradio8">PM 17:00</label> -->
-<!-- 							</div> -->
-<!-- 						</div> -->
+					<form class="mx-auto">				
 						
 						<div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-						  <input type="checkbox" class="btn-check" id="btncheck1" name="timeselect-check" autocomplete="off">
+						  <input type="checkbox" value="10:00AM" class="btn-check" id="btncheck1" name="service_time" autocomplete="off">
 						  <label class="btn btn-outline-warning" for="btncheck1">AM 10:00</label>
 						
-						  <input type="checkbox" class="btn-check" id="btncheck2" name="timeselect-check" autocomplete="off">
+						  <input type="checkbox" value="11:00AM" class="btn-check" id="btncheck2" name="service_time" autocomplete="off">
 						  <label class="btn btn-outline-warning" for="btncheck2">AM 11:00</label>
 						
-						  <input type="checkbox" class="btn-check" id="btncheck3" name="timeselect-check" autocomplete="off">
+						  <input type="checkbox" value="12:00PM" class="btn-check" id="btncheck3" name="service_time" autocomplete="off">
 						  <label class="btn btn-outline-warning" for="btncheck3">PM 12:00</label>
 						
-						  <input type="checkbox" class="btn-check" id="btncheck4" name="timeselect-check" autocomplete="off">
+						  <input type="checkbox" value="13:00PM" class="btn-check" id="btncheck4" name="service_time" autocomplete="off">
 						  <label class="btn btn-outline-warning" for="btncheck4">PM 13:00</label>
 						
-						  <input type="checkbox" class="btn-check" id="btncheck5" name="timeselect-check" autocomplete="off">
+						  <input type="checkbox" value="14:00PM" class="btn-check" id="btncheck5" name="service_time" autocomplete="off">
 						  <label class="btn btn-outline-warning" for="btncheck5">PM 14:00</label>
 						
-						  <input type="checkbox" class="btn-check" id="btncheck6" name="timeselect-check" autocomplete="off">
+						  <input type="checkbox" value="15:00PM" class="btn-check" id="btncheck6" name="service_time" autocomplete="off">
 						  <label class="btn btn-outline-warning" for="btncheck6">PM 15:00</label>
 						
-						  <input type="checkbox" class="btn-check" id="btncheck7" name="timeselect-check" autocomplete="off">
+						  <input type="checkbox" value="16:00PM" class="btn-check" id="btncheck7" name="service_time" autocomplete="off">
 						  <label class="btn btn-outline-warning" for="btncheck7">PM 16:00</label>
 						
-						  <input type="checkbox" class="btn-check" id="btncheck8" name="timeselect-check" autocomplete="off">
+						  <input type="checkbox" value="17:00PM" class="btn-check" id="btncheck8" name="service_time" autocomplete="off">
 						  <label class="btn btn-outline-warning" for="btncheck8">PM 17:00</label>
 						</div>
 					</form>
@@ -401,15 +330,15 @@
 				<b> 덩치 </b> 
 			</div>
 			<div class="my-1 px-3">
-				<input type="checkbox" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" >
+				<input type="checkbox"  class="btn-check" name="dog_tag" id="btnradio1" autocomplete="off" >
 				<label class="btn btn-outline-primary" for="btnradio1"># 대형견</label>
 			</div>
 			<div class="my-1 px-3">
-				<input type="checkbox" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" >
+				<input type="checkbox"  class="btn-check" name="dog_tag" id="btnradio2" autocomplete="off" >
 				<label class="btn btn-outline-primary" for="btnradio2"># 중형견</label>
 			</div>
 			<div class="my-1 px-3">
-				<input type="checkbox" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" >
+				<input type="checkbox"  class="btn-check" name="dog_tag" id="btnradio3" autocomplete="off" >
 				<label class="btn btn-outline-primary" for="btnradio3"># 소형견</label>
 			</div>
 			
@@ -449,7 +378,7 @@
 					<div class="card mb-4 rounded-3 shadow-sm">
 						
 						<div class="form-check text-center">
-							<h1><input type="radio" name="flexRadioDefault" id="flexRadioDefault1"></h1>
+							<h1><input type="radio" value="20" name="flexRadioDefault" id="flexRadioDefault1"></h1>
 							<h4><label class="form-check-label list-inline-item" for="exampleRadios1">임댕댕</label></h4>
 						</div>
 
@@ -467,7 +396,7 @@
 					<div class="card mb-4 rounded-3 shadow-sm">
 						
 						<div class="form-check text-center">
-							<h1><input type="radio" name="flexRadioDefault" id="flexRadioDefault2"></h1>
+							<h1><input type="radio"  value="21" name="dog_idx" id="flexRadioDefault2"></h1>
 							<h4><label class="form-check-label" for="flexRadioDefault2">말랑이</label></h4>
 						</div>
 						
@@ -485,7 +414,7 @@
 					<div class="card mb-4 rounded-3 shadow-sm">
 						
 						<div class="form-check text-center">
-							<h1><input type="radio" name="flexRadioDefault" id="flexRadioDefault3"></h1>
+							<h1><input type="radio" value="22" name="dog_idx" id="flexRadioDefault3"></h1>
 							<h4><label class="form-check-label" for="flexRadioDefault3">이슬이</label></h4>
 						</div>
 						
@@ -503,7 +432,7 @@
 					<div class="card mb-4 rounded-3 shadow-sm">
 						
 						<div class="form-check text-center">
-							<h1><input type="radio" name="flexRadioDefault" id="flexRadioDefault4"></h1>
+							<h1><input type="radio" value="23" name="dog_idx" id="flexRadioDefault4"></h1>
 							<h4><label class="form-check-label" for="flexRadioDefault4">바루</label></h4>
 						</div>
 						
@@ -521,7 +450,7 @@
 					<div class="card mb-4 rounded-3 shadow-sm">
 						
 						<div class="form-check text-center">
-							<h1><input type="radio" name="flexRadioDefault" id="flexRadioDefault5"></h1>
+							<h1><input type="radio" value="24" name="dog_idx" id="flexRadioDefault5"></h1>
 							<h4><label class="form-check-label" for="flexRadioDefault5">용식이</label></h4>
 						</div>
 						
@@ -543,11 +472,13 @@
 		
 		
 <div class="text-center mb-5">
-	<button type="button" class="btn btn-primary btn-lg" onclick="location.href='${root}book/bookdone'">신청하기</button>
+	<button type="submit" class="btn btn-primary btn-lg" onclick="location.href='${root}book/bookdone'">신청하기</button>
 </div>
 
 
 </div>
+</form>
+
 
 <c:import url="/WEB-INF/views/include/bottom_info.jsp"></c:import>
 
@@ -590,21 +521,21 @@ $(function() {
 	
 	
 //	
-$('[name="timeselect-check"]').attr('data-no', function (i){
+$('[name="service_time"]').attr('data-no', function (i){
 	return i;
 });
 	
 	
-$('[name="timeselect-check"]').on('change', function(e){
+$('[name="service_time"]').on('change', function(e){
 	console.log(this.id, this.checked);
 	
 	if(this.checked == false) {
-		$('[name="timeselect-check"]').prop('checked', false);
+		$('[name="service_time"]').prop('checked', false);
 		this.checked = true;
 		return;
 	} //체크된걸 클릭 시 false로 바뀜
 	
-	var $timeCheck = $('[name="timeselect-check"]:checked');
+	var $timeCheck = $('[name="service_time"]:checked');
 	if($timeCheck.length >= 2){
 		var startId = Number($timeCheck.eq(0).attr('data-no'));
 		var endId = Number($timeCheck.eq(-1).attr('data-no'));
@@ -616,7 +547,7 @@ $('[name="timeselect-check"]').on('change', function(e){
 			return;
 		}
 		var flag = false;
-		$('[name="timeselect-check"]').each(function( i, e ){
+		$('[name="service_time"]').each(function( i, e ){
 /* 			if(i == startId) {
 				flag = true;
 			}

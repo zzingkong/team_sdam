@@ -4,15 +4,45 @@ public class BookBean {
 	
 	private int service_idx;
 	
-	private String service_start;
+	private String service_date;
 	
-	private String service_end;
+	private String service_time;
 	
 	private boolean service_check;
 	
 	private int user_idx;
 	
 	private int dog_idx;
+	
+	private String service_local;
+	
+	private String dog_tag; 
+	
+	private String dog_name;
+
+	public String getDog_name() {
+		return dog_name;
+	}
+
+	public void setDog_name(String dog_name) {
+		this.dog_name = dog_name;
+	}
+
+	public String getDog_tag() {
+		return dog_tag;
+	}
+
+	public void setDog_tag(String dog_tag) {
+		this.dog_tag = dog_tag;
+	}
+
+	public String getService_local() {
+		return service_local;
+	}
+
+	public void setService_local(String service_local) {
+		this.service_local = service_local;
+	}
 
 	public int getService_idx() {
 		return service_idx;
@@ -22,20 +52,22 @@ public class BookBean {
 		this.service_idx = service_idx;
 	}
 
-	public String getService_start() {
-		return service_start;
+	
+
+	public String getService_date() {
+		return service_date;
 	}
 
-	public void setService_start(String service_start) {
-		this.service_start = service_start;
+	public void setService_date(String service_date) {
+		this.service_date = service_date;
 	}
 
-	public String getService_end() {
-		return service_end;
+	public String getService_time() {
+		return service_time;
 	}
 
-	public void setService_end(String service_end) {
-		this.service_end = service_end;
+	public void setService_time(String service_time) {
+		this.service_time = service_time;
 	}
 
 	public boolean isService_check() {
