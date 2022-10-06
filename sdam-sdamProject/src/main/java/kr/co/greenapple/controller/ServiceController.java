@@ -15,10 +15,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
+import kr.co.greenapple.pager.Pager;
 import kr.co.greenapple.beans.DogBean;
 import kr.co.greenapple.beans.UserBean;
-import kr.co.greenapple.pager.DogPager;
 import kr.co.greenapple.pager.TherapistPager;
 import kr.co.greenapple.service.DogService;
 import kr.co.greenapple.service.UserService;
@@ -44,10 +43,10 @@ public class ServiceController {
 	//테라피독
 	@GetMapping("/therapydog")
 	public String therapydog(@ModelAttribute("modifyUserBean") UserBean modifyUserBean,
-							 DogPager pager,
+							 Pager dogPager,
 							 Model model) {
 		
-		List<DogBean> list = dogService.getDogs(pager);
+		List<DogBean> list = dogService.getDogs(dogPager);
 		model.addAttribute("dogList", list);
 		
 		userService.getModifyUserInfo(modifyUserBean);
