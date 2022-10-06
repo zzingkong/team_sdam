@@ -155,7 +155,7 @@
  <!--  <div class="album py-5 bg-light"> -->
 
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-      <c:forEach var="therapist" items="${therapistlist}">
+      <c:forEach var="therapist" items="${therapist}">
         <div class="col">
           <div class="card shadow-sm mb-5" style="width:392px" >
           <div>
@@ -181,17 +181,19 @@
 
 	
 	  <!-- paging bootstrap -->
-	<ul>
-		<li><a href="?page=1">처음</a></li>
-		<li><a href="?page=${pager.prev}">이전</a></li>
-		
-		<c:forEach var="page" items="${pager.list}">
-			<li><a href="?page=${page}">${page}</a></li>
+	 <nav aria-label="Page navigation example">
+	  <ul class="pagination">
+	    <li class="page-item"><a class="page-link" href="?page=1" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li> 
+	    <li class="page-item"><a class="page-link" href="?page=${therapistPager.prev}"><span aria-hidden="true" style="font-size:0.6em;"><i class="bi bi-chevron-left"></i></span></a></li>		 
+	      
+		<c:forEach var="page" begin="1" end="${lastPage}">	
+		<li class="page-item"><a class="page-link" href="?page=${page}">${page}</a></li>
 		</c:forEach>
-										
-		<li><a href="?page=${pager.next}">다음</a></li>								
-		<li><a href="?page=${pager.last}">마지막</a></li>
-	</ul>
+								
+		<li class="page-item"><a class="page-link" href="?page=${therapistPager.next}"><span aria-hidden="true" style="font-size:0.6em;"><i class="bi bi-chevron-right"></i></span></a></li>
+		<li class="page-item"><a class="page-link" aria-label="Next" href="?page=${therapistPager.last}"><span aria-hidden="true">&raquo;</span></a></li>
+		</ul>
+	</nav> 
 </div>
 
 	<c:import url="/WEB-INF/views/include/bottom_info.jsp"></c:import>

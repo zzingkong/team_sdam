@@ -99,10 +99,6 @@
 		]]>
 	</select>
 	
-	<select id="pageCount" resultType="kr.co.greenapple.beans.UserBean">
-			select(*) count
-			from user_table 
-	</select>
 	
 	<select id="gettherapist" resultType="kr.co.greenapple.beans.UserBean">
 		<![CDATA[
@@ -113,6 +109,10 @@
 			where rnum between ((#{page}-1) * #{perPage} + 1) and (#{page} * #{perPage})
 		]]>
 	</select> 
+	
+	<select id="pageCount" resultType="java.lang.Integer">
+			select count(*) from user_table 
+	</select>
 	
 		
 	
