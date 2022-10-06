@@ -7,7 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import kr.co.greenapple.beans.UserBean;
-import kr.co.greenapple.pager.TherapistPager;
+import kr.co.greenapple.pager.Pager;
+
 
 
 @Repository
@@ -56,11 +57,11 @@ public class UserDao {
 	}
 
     //테라피스트 페이징
-	public int total(TherapistPager pager) {
+	public int total(Pager pager) {
 		return sqlSessionTemplate.selectOne("user.pageCount", pager);
 	}
 
-	public List<UserBean> gettherapists(TherapistPager pager) {
+	public List<UserBean> gettherapists(Pager pager) {
 		return sqlSessionTemplate.selectList("user.gettherapist", pager);
 	}
 

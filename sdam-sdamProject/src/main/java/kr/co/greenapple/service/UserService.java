@@ -14,7 +14,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import kr.co.greenapple.beans.UserBean;
 import kr.co.greenapple.dao.UserDao;
-import kr.co.greenapple.pager.TherapistPager;
+import kr.co.greenapple.pager.Pager;
 
 @Service
 @PropertySource("/WEB-INF/properties/option.properties")
@@ -120,7 +120,7 @@ public class UserService {
 		}
 		
 	//테라피스트 페이지
-	public List<UserBean> gettherapists(TherapistPager pager) {
+	public List<UserBean> gettherapists(Pager pager) {
 		
 		//TODO:테라피스트 가입된 사람 수로 수정해야함
 		int total = userDao.total(pager);

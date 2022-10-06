@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.co.greenapple.beans.DogBean;
 import kr.co.greenapple.beans.UserBean;
-import kr.co.greenapple.pager.TherapistPager;
 import kr.co.greenapple.pager.Pager;
 import kr.co.greenapple.service.DogService;
 import kr.co.greenapple.service.UserService;
@@ -74,23 +73,20 @@ public class ServiceController {
 	}
 	
 
-//	 @GetMapping("/therapist") 
-//	 public String therapist(Model model,TherapistPager pager) {
+	 @GetMapping("/therapist") 
+	 public String therapist(Model model,Pager pager) {
 
-		 System.out.print(pager);
-		 
+				 
 		 List<UserBean> list = userService.gettherapists(pager);
 		 model.addAttribute("therapist", list);
-		 //1. 전체 11명 리스트 가져옴
-		 // 2. int lastPagae = pager.getLastPage(전체11명 리스트);
-		 //3. model.addAttribute("lastPage", lastPage);
+		
 		 
 		//db에서 가져옴
-//		List<UserBean> therapistlist = userService.getUserInfos();
-//		model.addAttribute("therapistlist",therapistlist);
+		List<UserBean> therapistlist = userService.getUserInfos();
+		model.addAttribute("therapistlist",therapistlist);
 		 
-//		return "service/therapist"; 
-//	}
+		return "service/therapist"; 
+	}
 	
 	//테라피스트 더보기
 	@GetMapping("/therapistdetail")
