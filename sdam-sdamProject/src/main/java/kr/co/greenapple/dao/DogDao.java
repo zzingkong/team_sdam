@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import kr.co.greenapple.beans.DogBean;
 import kr.co.greenapple.beans.UserBean;
-import kr.co.greenapple.pager.DogPager;
+import kr.co.greenapple.pager.Pager;
 
 @Repository
 public class DogDao {
@@ -30,13 +30,13 @@ public class DogDao {
 //		return sqlSessionTemplate.selectList("dog.getDogs");
 //	}
 
-	public List<DogBean> getDogs(DogPager pager) {
+	public List<DogBean> getDogs(Pager dogPager) {
 
-		return sqlSessionTemplate.selectList("dog.getDogs", pager);
+		return sqlSessionTemplate.selectList("dog.getDogs", dogPager);
 }
 	
-	public int total(DogPager pager) {
-		return sqlSessionTemplate.selectOne("dog.total", pager);
+	public int total(Pager dogPager) {
+		return sqlSessionTemplate.selectOne("dog.total", dogPager);
 	}
 	
 

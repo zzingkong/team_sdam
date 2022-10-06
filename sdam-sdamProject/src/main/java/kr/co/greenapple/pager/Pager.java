@@ -8,7 +8,7 @@ public class Pager {
 	private int page = 1;
 	private int perPage = 9; //한 페이지당 수
 	private float total;
-	private int perGroup = 5; //한번에 보여주는거?
+	private int perGroup = 5; //한 페이지에 한번에 보여주는 수
 	
 	public float getTotal() {
 		return total;
@@ -52,7 +52,6 @@ public class Pager {
 		return (int) Math.ceil(total/perPage);
 	}
 	
-	//계산만
 	
 	public List<Integer> getList() {
 		List<Integer> list = new ArrayList<Integer>();
