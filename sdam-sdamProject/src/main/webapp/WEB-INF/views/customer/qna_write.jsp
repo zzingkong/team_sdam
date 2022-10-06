@@ -97,7 +97,7 @@
 				<div class="card-body">
 					<form:form action="${root }customer/write_pro" method="post" modelAttribute="writeQnaBean" enctype="multipart/form-data">
 						<form:hidden path="qna_idx"/>
-						<form:hidden path="user_idx"/>
+						<form:hidden path="qna_writer_idx"/>
 						<div class="form-group">
 							<form:label path="qna_subject">제목</form:label>
 							<form:input path="qna_subject" class="form-control"/>

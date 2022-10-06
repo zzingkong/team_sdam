@@ -30,7 +30,7 @@ public class CheckWriterInterceptor implements HandlerInterceptor {
 		
 		QnaBean qnaBean = qnaService.readQna(qna_idx);
 		
-		if(qnaBean.getUser_idx() != loginUserBean.getUser_idx()) {
+		if(qnaBean.getQna_writer_idx() != loginUserBean.getUser_idx()) {
 			String contextPath = request.getContextPath();
 			response.sendRedirect(contextPath + "/qna/not_writer");
 			return false;

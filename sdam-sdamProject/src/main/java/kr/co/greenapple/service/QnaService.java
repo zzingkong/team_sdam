@@ -58,7 +58,7 @@ public class QnaService {
 			String file_name = saveUloadFile(upload_file);
 			writeQnaBean.setContent_file(file_name);
 		}
-		writeQnaBean.setUser_idx(loginUserBean.getUser_idx());
+		writeQnaBean.setQna_writer_idx(loginUserBean.getUser_idx());
 		
 		qnaDao.addQna(writeQnaBean);
 	}
@@ -113,11 +113,10 @@ public class QnaService {
 	}
 	
 	
-	public PageBean getQnatCnt(int currentPage) {
-		
-		
-		int qna_cnt = qnaDao.getQnaContentCnt(currentPage);
-		PageBean pageBean = new PageBean(currentPage, page_listcnt, page_paginationcnt, qna_cnt);
-		return pageBean;
-	}
+//	public PageBean getQnatCnt(int currentPage) {
+//		
+//		int qna_cnt = qnaDao.getQnaContentCnt(currentPage);
+//		PageBean pageBean = new PageBean(currentPage, page_listcnt, page_paginationcnt, qna_cnt);
+//		return pageBean;
+//	}
 }

@@ -81,19 +81,19 @@ public class QnaController {
 	
 	
 	@GetMapping("/modify")
-	public String modify(@ModelAttribute("modifyQnaBean") QnaBean modifyQnaBean, @RequestParam("qna_idx") int qna_idx, Model model) {
+	public String modify(@ModelAttribute("modifyQnaBean") QnaBean modifyBean, @RequestParam("qna_idx") int qna_idx, Model model) {
 		
 		model.addAttribute("qna_idx", qna_idx);
 		
-		QnaBean modifyBean = qnaService.modifyQna(qna_idx);
+		QnaBean modiBean = qnaService.modifyQna(qna_idx);
 		
-		modifyQnaBean.setQna_writer_name(modifyBean.getQna_writer_name());
-		modifyQnaBean.setQna_date(modifyBean.getQna_date());
-		modifyQnaBean.setQna_subject(modifyBean.getQna_subject());
-		modifyQnaBean.setQna_content(modifyBean.getQna_content());
-//		modifyQnaBean.setContent_file(modifyBean.getContent_file());
-		modifyQnaBean.setUser_idx(modifyBean.getUser_idx());
-		modifyQnaBean.setQna_idx(qna_idx);
+		modifyBean.setQna_writer_name(modiBean.getQna_writer_name());
+		modifyBean.setQna_date(modiBean.getQna_date());
+		modifyBean.setQna_subject(modiBean.getQna_subject());
+		modifyBean.setQna_content(modiBean.getQna_content());
+//		modifyBean.setContent_file(modifyBean.getContent_file());
+		modifyBean.setQna_writer_idx(modiBean.getQna_writer_idx());
+		modifyBean.setQna_idx(qna_idx);
 		
 		return "customer/qna_modify";
 	}

@@ -46,8 +46,8 @@ public class QnaDao {
 		sqlSessionTemplate.delete("qna.deleteQna", qna_idx);
 	}
 	
-	public int getQnaContentCnt(int qna_idx) {
-		return sqlSessionTemplate.selectOne("qna.getQnaContentCnt", qna_idx);
-	}
+//	public int getQnaContentCnt(int qna_idx) {
+//		return sqlSessionTemplate.selectOne("qna.getQnaContentCnt", qna_idx);
+//	}
 
 }

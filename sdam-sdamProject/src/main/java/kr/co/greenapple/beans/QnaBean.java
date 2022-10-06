@@ -24,12 +24,9 @@ public class QnaBean {
 	
 	private Date qna_date;
 	
-	private int user_idx;
+	private int qna_writer_idx;
 	
 	private String qna_writer_name;
-	
-	
-	
 
 	public MultipartFile getUpload_file() {
 		return upload_file;
@@ -79,12 +76,12 @@ public class QnaBean {
 		this.qna_date = qna_date;
 	}
 
-	public int getUser_idx() {
-		return user_idx;
+	public int getQna_writer_idx() {
+		return qna_writer_idx;
 	}
 
-	public void setUser_idx(int user_idx) {
-		this.user_idx = user_idx;
+	public void setQna_writer_idx(int qna_writer_idx) {
+		this.qna_writer_idx = qna_writer_idx;
 	}
 
 	public String getQna_writer_name() {
