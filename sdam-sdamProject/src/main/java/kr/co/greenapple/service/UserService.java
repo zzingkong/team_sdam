@@ -124,8 +124,7 @@ public class UserService {
 		
 		//TODO:테라피스트 가입된 사람 수로 수정해야함
 		int total = userDao.total(pager);
-		pager.setTotal(total);
-		System.out.println("total: " + total);
+		pager.setTotal(total);		
 		return userDao.gettherapists(pager);
 	}
 		
