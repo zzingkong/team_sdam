@@ -3,7 +3,7 @@ package kr.co.greenapple.pager;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DogPager {
+public class Pager {
 		
 	private int page = 1;
 	private int perPage = 9; //한 페이지당 수
