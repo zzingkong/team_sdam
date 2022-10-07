@@ -42,16 +42,14 @@ public class ServiceController {
 	
 	//테라피독
 	@GetMapping("/therapydog")
-	public String therapydog(@ModelAttribute("loginInfo") UserBean loginInfo,
-//	public String therapydog(@ModelAttribute("modifyUserBean") UserBean modifyUserBean,
+	public String therapydog(@ModelAttribute("modifyUserBean") UserBean modifyUserBean,
 							 Pager dogPager,
 							 Model model) {
 		
 		List<DogBean> list = dogService.getDogs(dogPager);
 		model.addAttribute("dogList", list);
 		
-		userService.getLoginUserInfo(loginInfo);
-//		userService.getModifyUserInfo(modifyUserBean);
+		userService.getModifyUserInfo(modifyUserBean);
 		
 //		List<DogBean> list = dogService.getDogs();
 //		model.addAttribute("dogList", list);	
@@ -59,7 +57,7 @@ public class ServiceController {
 		return "service/therapydog";
 	}
 	
-	//modal에 테라피독 정보 출력
+	
 	@GetMapping("/getdoginfo")
 	@ResponseBody
 	public String getdoginfo(@RequestParam int dog_idx,
@@ -69,6 +67,18 @@ public class ServiceController {
 
 		return "        <div class=\"mt-3\">견종 / 성별 / 나이 / 지역</div>\r\n"
 				+ "        <div>소개글입니다. 귀여운 임댕댕</div>";
+	}
+
+		
+	@GetMapping("/getdoginfo")
+	//@ResponseBody  jsp파일 자체를 return할 때는 @ResponseBody 없어야함
+	public String getdoginfo(@RequestParam int dog_idx,
+							 Model model) {
+		
+		//dog_idx값 받아서 쿼리 작성 ->
+		//model.addAttribute부분 작성
+
+		return "doginfo jsp 경로";
 	}
 		
 	//테라피독 등록
