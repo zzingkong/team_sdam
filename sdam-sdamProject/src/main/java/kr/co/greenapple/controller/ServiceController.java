@@ -42,14 +42,16 @@ public class ServiceController {
 	
 	//테라피독
 	@GetMapping("/therapydog")
-	public String therapydog(@ModelAttribute("modifyUserBean") UserBean modifyUserBean,
+	public String therapydog(@ModelAttribute("loginInfo") UserBean loginInfo,
+//	public String therapydog(@ModelAttribute("modifyUserBean") UserBean modifyUserBean,
 							 Pager dogPager,
 							 Model model) {
 		
 		List<DogBean> list = dogService.getDogs(dogPager);
 		model.addAttribute("dogList", list);
 		
-		userService.getModifyUserInfo(modifyUserBean);
+		userService.getLoginUserInfo(loginInfo);
+//		userService.getModifyUserInfo(modifyUserBean);
 		
 //		List<DogBean> list = dogService.getDogs();
 //		model.addAttribute("dogList", list);	
@@ -57,7 +59,7 @@ public class ServiceController {
 		return "service/therapydog";
 	}
 	
-	
+	//modal에 테라피독 정보 출력
 	@GetMapping("/getdoginfo")
 	@ResponseBody
 	public String getdoginfo(@RequestParam int dog_idx,
