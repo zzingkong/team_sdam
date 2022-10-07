@@ -95,7 +95,7 @@
 		<div class="col-sm-6">
 			<div class="card shadow">
 				<div class="card-body">
-					<form:form action="${root }customer/modify_pro" method="post" modelAttribute="modifyQnaBean" enctype="multipart/form-data">
+					<form:form action="${root }customer/modify_pro" method="post" modelAttribute="modifyQnaBean">
 						<form:hidden path="qna_idx"/>
 						<form:hidden path="qna_writer_idx"/>
 						<div class="form-group">
@@ -104,7 +104,7 @@
 						</div>
 						<div class="form-group">
 							<form:label path="qna_date">작성날짜</form:label>
-							<form:input path="qna_date" class="form-control" readonly="true"/>
+							<form:input path="qna_date" class="form-control" disabled="true"/>
 						</div>
 						<div class="form-group">
 							<form:label path="qna_subject">제목</form:label>
@@ -129,7 +129,7 @@
 								<form:button class="btn btn-primary">수정완료</form:button>
 								<%-- 	<a href="${root }board/read?board_info_idx=${board_info_idx}&content_idx=${content_idx}&page=${page}" class="btn btn-info">취소</a> --%>
 								<%-- 	<a href="${root }customer/read?qna_idx=${qna_idx}&page=1" class="btn btn-info">취소</a> --%>
-								<a href="${root }customer/qna" class="btn btn-info">취소</a>
+								<a href="${root }customer/read?qna_idx=${qna_idx}" class="btn btn-info">취소</a>
 							</div>
 						</div>
 					</form:form>

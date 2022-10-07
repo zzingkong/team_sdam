@@ -58,20 +58,14 @@ public class QnaService {
 			String file_name = saveUloadFile(upload_file);
 			writeQnaBean.setContent_file(file_name);
 		}
-		System.out.println("LOGIN USER" + loginUserBean.getUser_idx());
 		writeQnaBean.setQna_writer_idx(loginUserBean.getUser_idx());
 		
 		qnaDao.addQna(writeQnaBean);
 	}
 	
 	
-//	public String getBoardInfoName(int board_info_idx) {
-//		return qnaDao.getBoardInfoName(board_info_idx);
-//	}
-	
 	
 	public PageBean getContentCnt(int page) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 	
@@ -79,14 +73,13 @@ public class QnaService {
 		
 //		int start = (page - 1) * page_listcnt;
 //		RowBounds rowBounds = new RowBounds(start, page_listcnt);
-		
 		return qnaDao.getQnaList(qnaBean);
 	}
 	
 	
 	public QnaBean readQna(int qna_idx) {
 		return qnaDao.readQna(qna_idx);
-	}
+	} 
 	
 	
 	
@@ -96,18 +89,17 @@ public class QnaService {
 	}
 	
 	public void modifyQnaInfo(QnaBean modifyQnaBean) {
-		MultipartFile upload_file = modifyQnaBean.getUpload_file();
+		/*
+		 * MultipartFile upload_file = modifyQnaBean.getUpload_file();
+		 * 
+		 * if(upload_file.getSize() > 0) { String file_name =
+		 * saveUloadFile(upload_file); modifyQnaBean.setContent_file(file_name); }
+		 */
+		System.out.println(modifyQnaBean);
 		
-		if(upload_file.getSize() > 0) {
-			String file_name = saveUloadFile(upload_file);
-			modifyQnaBean.setContent_file(file_name);
-		}
 		qnaDao.modifyQnaInfo(modifyQnaBean);
 	}
-	
-	
-	
-	
+		
 	
 	public void deleteQna(int qna_idx) {
 		qnaDao.deleteQna(qna_idx);

@@ -1,5 +1,6 @@
 package kr.co.greenapple.controller;
 
+import java.util.Iterator;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -10,12 +11,14 @@ import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import kr.co.greenapple.beans.ContentBean;
 import kr.co.greenapple.beans.QnaBean;
 import kr.co.greenapple.beans.UserBean;
 import kr.co.greenapple.service.QnaService;
@@ -46,7 +49,6 @@ public class QnaController {
 	@GetMapping("/write")
 	public String write(@ModelAttribute("writeQnaBean") QnaBean writeQnaBean, Model model) {
 		
-		System.out.println("로그인한 idx : "+ loginUserBean.getUser_idx());
 		model.addAttribute("loginUserBean", loginUserBean);
 		
 		return "customer/qna_write";
@@ -81,28 +83,37 @@ public class QnaController {
 	
 	
 	@GetMapping("/modify")
-	public String modify(@ModelAttribute("modifyQnaBean") QnaBean modifyBean, @RequestParam("qna_idx") int qna_idx, Model model) {
+	public String modify(
+//			@ModelAttribute("modifyQnaBean") QnaBean modifyBean,
+			@RequestParam("qna_idx") int qna_idx, Model model) {
 		
-		model.addAttribute("qna_idx", qna_idx);
+//		model.addAttribute("qna_idx", qna_idx);
 		
 		QnaBean modiBean = qnaService.modifyQna(qna_idx);
+		model.addAttribute("modifyQnaBean", modiBean);
+//		modifyBean.setQna_writer_name(modiBean.getQna_writer_name());
+//		modifyBean.setQna_date(modiBean.getQna_date());
+//		modifyBean.setQna_subject(modiBean.getQna_subject());
+//		modifyBean.setQna_content(modiBean.getQna_content());
+////		modifyBean.setContent_file(modifyBean.getContent_file());
+//		modifyBean.setQna_writer_idx(modiBean.getQna_writer_idx());
+//		modifyBean.setQna_idx(qna_idx);
 		
-		modifyBean.setQna_writer_name(modiBean.getQna_writer_name());
-		modifyBean.setQna_date(modiBean.getQna_date());
-		modifyBean.setQna_subject(modiBean.getQna_subject());
-		modifyBean.setQna_content(modiBean.getQna_content());
-//		modifyBean.setContent_file(modifyBean.getContent_file());
-		modifyBean.setQna_writer_idx(modiBean.getQna_writer_idx());
-		modifyBean.setQna_idx(qna_idx);
 		
 		return "customer/qna_modify";
 	}
 	
 	@PostMapping("/modify_pro")
-	public String modify_pro(@Valid @ModelAttribute("modifyQnaBean") QnaBean modifyQnaBean, BindingResult result, Model model) {
+	public String modify_pro(@Valid @ModelAttribute("modifyQnaBean") QnaBean modifyQnaBean,
+			BindingResult result, Model model) {
+		
+		
+//		for (ObjectError e : result.getAllErrors()) {
+//			System.out.println(e.getDefaultMessage());
+//		}
 		
 		if(result.hasErrors()) {
-			model.addAttribute(modifyQnaBean.getQna_idx());
+			model.addAttribute("qna_idx", modifyQnaBean.getQna_idx());
 			return "customer/qna_modify_fail";
 		}
 		
@@ -110,6 +121,24 @@ public class QnaController {
 		
 		return "customer/qna_modify_success";
 	}
+	
+
+	/*
+	public String modify_pro(@Valid @ModelAttribute("modifyContentBean") ContentBean modifyContentBean, BindingResult result,
+			@RequestParam("page") int page,
+			Model model) {
+		
+		model.addAttribute("page", page);
+		
+		if(result.hasErrors()) {
+			return "board/modify";
+		}
+				
+		boardService.modifyContentInfo(modifyContentBean);
+		
+		return "board/modify_success";
+	}
+	*/
 	
 
 	@GetMapping("/delete")
