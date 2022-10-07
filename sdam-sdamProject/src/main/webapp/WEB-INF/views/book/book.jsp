@@ -132,8 +132,8 @@
 
 
 
+	<form action="${root }book/book" method="post">
 	<div class="container my-3">
-	
 	
 	
 	
@@ -548,6 +548,8 @@
 
 
 </div>
+</form>
+
 
 <c:import url="/WEB-INF/views/include/bottom_info.jsp"></c:import>
 
