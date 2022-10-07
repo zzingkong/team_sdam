@@ -174,7 +174,9 @@
 			</div>
 			
 			<div>
+			<c:if test="${loginUserBean.user_idx !=0 }">
 				<a href="${root }customer/write" class="btn btn-primary">글쓰기</a>
+			</c:if>	
 			</div>
 			
 		</div>

@@ -158,6 +158,7 @@
 					<form:form action="${root }user/join_pro" method="post" modelAttribute="joinUserBean" enctype="multipart/form-data">
 						<form:hidden path="userIdExist"/>
 						<form:hidden path="userTelExist"/>
+						<form:hidden path="user_info" value="T"/>
 						<div class="form-group">
 							<form:label path="company_id">소속회사 </form:label>
 							<form:input  path="company_id" class="form-control" id="searchInput" />

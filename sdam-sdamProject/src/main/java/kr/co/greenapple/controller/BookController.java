@@ -1,33 +1,46 @@
 package kr.co.greenapple.controller;
 
-import java.text.*;
-import java.util.*;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+
+import kr.co.greenapple.beans.BookBean;
+import kr.co.greenapple.service.BookService;
 
 @Controller
 @RequestMapping("/book")
 public class BookController {
 
+	@Autowired
+	private BookService bookService;
+	
+	
 	@GetMapping("/book")
 	public String book() {
-
-		return "book/book";
-	}
-	
-	
-	@GetMapping("/bookcheck")
-	public String bookcheck() {
 		
-		return "book/bookcheck";
-	}
+		return "book/book";
+	}	
 	
-	@GetMapping("/bookdone")
-	public String bookdone() {
+	/*
+	 * @GetMapping("/bookdone") public String bookdone() {
+	 * 
+	 * return "book/bookdone"; }
+	 */
+	
+	//예약 신청서 등록
+	@PostMapping("/book")
+	public String addbook(@RequestParam(value="service_time", required=false) String service_time)  {
+//	BookBean bookAddbean = new BookBean(); 
+//		bookService.addBook(bookBean);
+		
+//		model.addAttribute("",bookbean);
+			
+		System.out.print(service_time+ "야호");
 		
 		return "book/bookdone";
 	}

@@ -81,10 +81,10 @@ public class UserController {
 			return "user/join_select";
 		}
 		
-		if(1 == 2) {
-			userService.addUserInfo(joinUserBean);
+		if(joinUserBean.getUser_info() != null && joinUserBean.getUser_info().equals("T")  ) {
+			userService.addTherapist(joinUserBean);			
 		}else {
-			userService.addTherapist(joinUserBean);
+			userService.addUserInfo(joinUserBean);
 		}
 		return "user/join_success";
 	}
