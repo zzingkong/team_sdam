@@ -159,7 +159,7 @@
         <div class="col">
           <div class="card shadow-sm mb-5" style="width:392px" >
           <div>
-          	<img src="${root}/image/therapist.jpg">
+          	<img src="${root }upload/${therapist.therapist_picture}">
           </div>           
              <div class="card-body">
               <p class="card-text">${therapist.user_name}<br>주요지역: ${therapist.company_local}</p>
@@ -181,7 +181,9 @@
 
 	
 	  <!-- paging bootstrap -->
-	 <nav aria-label="Page navigation example" style="margin: 0 auto;">
+	  
+	 <div class="wow fadeInUp" data-wow-delay="0.4s" style="display:flex; flex-direction:row; flex-wrap:wrap;"> 
+	 	<nav aria-label="Page navigation example" style="margin: 0 auto;">
 				<ul class="pagination">
 					<li class="page-item"><a class="page-link" href="?page=1" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li> 
 					<li class="page-item"><a class="page-link" href="?page=${pager.prev}"><span aria-hidden="true" style="font-size:0.6em;"><i class="bi bi-chevron-left"></i></span></a></li>		
@@ -193,7 +195,8 @@
 					<li class="page-item"><a class="page-link" href="?page=${pager.next}"><span aria-hidden="true" style="font-size:0.6em;"><i class="bi bi-chevron-right"></i></span></a></li>
 					<li class="page-item"><a class="page-link" aria-label="Next" href="?page=${pager.last}"><span aria-hidden="true">&raquo;</span></a></li>
 				</ul>
-			</nav>		
+			</nav>
+		</div>		
 </div>
 
 	<c:import url="/WEB-INF/views/include/bottom_info.jsp"></c:import>
