@@ -33,7 +33,7 @@ public class DogDao {
 	public List<DogBean> getDogs(Pager dogPager) {
 
 		return sqlSessionTemplate.selectList("dog.getDogs", dogPager);
-}
+	}
 	
 	public int total(Pager dogPager) {
 		return sqlSessionTemplate.selectOne("dog.total", dogPager);

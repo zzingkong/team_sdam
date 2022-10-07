@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import kr.co.greenapple.beans.DogBean;
 import kr.co.greenapple.beans.UserBean;
@@ -55,6 +56,18 @@ public class ServiceController {
 //		model.addAttribute("dogList", list);	
 		
 		return "service/therapydog";
+	}
+	
+	
+	@GetMapping("/getdoginfo")
+	@ResponseBody
+	public String getdoginfo(@RequestParam int dog_idx,
+							 Model model) {
+		
+		//dog_idx값 받아서 쿼리 작성 ->
+
+		return "        <div class=\"mt-3\">견종 / 성별 / 나이 / 지역</div>\r\n"
+				+ "        <div>소개글입니다. 귀여운 임댕댕</div>";
 	}
 		
 	//테라피독 등록
