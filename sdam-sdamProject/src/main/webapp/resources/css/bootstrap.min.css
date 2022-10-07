@@ -4241,6 +4241,17 @@ textarea.form-control-lg {
 	border-radius: 0px
 }
 
+.card2 {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	word-wrap: break-word;
+	background-color: #fff;
+	background-clip: border-box;
+	border-radius: 0px
+}
+
 .card>hr {
 	margin-right: 0;
 	margin-left: 0
