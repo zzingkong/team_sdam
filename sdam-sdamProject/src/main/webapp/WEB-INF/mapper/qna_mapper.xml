@@ -34,6 +34,7 @@
 	<select id="modifyQna" parameterType="java.lang.Integer" resultType="kr.co.greenapple.beans.QnaBean">
 		<![CDATA[
 			select
+				Q.qna_idx,
 				U.user_name as qna_writer_name,
 				to_char(Q.qna_date, 'yyyy-mm-dd hh:mm:ss') as qna_date,
 				Q.qna_subject,
@@ -41,15 +42,14 @@
 				Q.qna_writer_idx
 			from qna_table Q, user_table U
 				where
-				Q.qna_writer_idx = U.user_idx and
-				Q.qna_idx = #{qna_idx}
+				Q.qna_writer_idx = U.user_idx and Q.qna_idx = #{qna_idx}
 		]]>
 	</select>
 	
 		<update id="modifyQnaInfo" parameterType="kr.co.greenapple.beans.QnaBean">
 		<![CDATA[
 			update qna_table set qna_subject = #{qna_subject}, qna_content = #{qna_content}
-			where qna_idx = #{qna_idx}
+				where qna_idx = #{qna_idx}
 		]]>
 	</update>
 	

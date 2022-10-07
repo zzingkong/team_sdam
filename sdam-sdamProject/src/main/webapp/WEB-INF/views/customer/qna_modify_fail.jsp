@@ -3,6 +3,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="root" value="${pageContext.request.contextPath }/"/>
 <script>
-	alert('수정되었습니다')
-	location.href = "${root}customer/read?qna_idx=${modifyQnaBean.qna_idx}"
+	alert('수정 오류!')
+	location.href = "${root}customer/modify?qna_idx=${qna_idx}"
 </script>
