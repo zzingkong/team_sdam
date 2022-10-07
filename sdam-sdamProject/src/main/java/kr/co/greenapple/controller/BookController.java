@@ -4,6 +4,7 @@ package kr.co.greenapple.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -34,13 +35,18 @@ public class BookController {
 	
 	//예약 신청서 등록
 	@PostMapping("/book")
-	public String addbook(@RequestParam(value="service_time", required=false) String service_time)  {
-//	BookBean bookAddbean = new BookBean(); 
-//		bookService.addBook(bookBean);
+	public String addbook(BookBean bookBean, BindingResult bindingResult
+//			@RequestParam(value="service_time", required=false) String service_time,
+//			@RequestParam(value="service_date", required=false) String service_date
+			)  {
 		
-//		model.addAttribute("",bookbean);
-			
-		System.out.print(service_time+ "야호");
+		System.out.println("신청날짜: " + bookBean.getService_date());
+		System.out.println("신청시간: " + bookBean.getService_time());
+		System.out.println("갱얼쥐idx: " + bookBean.getDog_idx());
+		
+		if(bindingResult.hasErrors()) {
+			return "book/book";
+		}
 		
 		return "book/bookdone";
 	}

@@ -262,12 +262,12 @@
 					      <div class="row justify-content-center">
 					        <div class="col-md-10 text-center">
 					          <h4 class="mb-5 text-center">날짜를 선택하세요</h4>
-					          <input type="text" name="service_date"  class="form-control w-25 mx-auto mb-3" id="result" placeholder="날짜를 선택하세요" disabled>
-					          <form action="#" class="row">
+					          <input type="text" name="service_date"  class="form-control datepicker w-25 mx-auto mb-3" id="result" placeholder="날짜를 선택하세요">
+<!-- 					          <form action="#" class="row"> -->
 					            <div class="col-md-12">
 					              <div id="inline_cal"></div>
 					            </div>
-					          </form>
+<!-- 					          </form> -->
 					        </div>
 					      </div>
 					    </div>
@@ -276,7 +276,7 @@
 
 
 					<h4 class="my-5 text-center">이용희망 시간을 선택하세요</h4>
-					<form class="mx-auto">				
+<!-- 					<form class="mx-auto">				 -->
 						
 						<div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
 						  <input type="checkbox" value="10:00AM" class="btn-check" id="btncheck1" name="service_time" autocomplete="off">
@@ -303,7 +303,7 @@
 						  <input type="checkbox" value="17:00PM" class="btn-check" id="btncheck8" name="service_time" autocomplete="off">
 						  <label class="btn btn-outline-warning" for="btncheck8">PM 17:00</label>
 						</div>
-					</form>
+<!-- 					</form> -->
 				</div>
 			</div>
 		</div>
@@ -514,7 +514,7 @@ $(function(){
 
 
 $(function() {
-		rome(inline_cal, {time: false, inputFormat: 'YYYY년 M월 D일'}).on('data', function (value) {
+		rome(inline_cal, {time: false, inputFormat: 'YYYY-MM-DD'}).on('data', function (value) {
 		  result.value = value;
 		});
 	});
