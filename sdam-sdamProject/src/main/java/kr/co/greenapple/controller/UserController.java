@@ -1,5 +1,7 @@
 package kr.co.greenapple.controller;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
@@ -17,6 +19,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import kr.co.greenapple.beans.ContentBean;
 import kr.co.greenapple.beans.UserBean;
 import kr.co.greenapple.service.UserService;
 import kr.co.greenapple.validator.UserValidator;
@@ -152,5 +155,26 @@ public class UserController {
 		//2)list를 보여준다
 //		return "redirect:/member/list.do";
 //	}
+	
+	
+	//admin 페이지
+	@GetMapping("/adminpage")
+	public String getUserList(UserBean userList, Model model) {
+		
+		List<UserBean> userInfoList = userService.getUserList(userList);
+		model.addAttribute("adminUserList", userInfoList);
+		
+		return "user/admin_page";
+	}
+
+	@GetMapping("/admindelete")
+	public String deleteUser(@RequestParam("user_idx") int user_idx, Model model
+			) {
+		
+		userService.deleteUser(user_idx);
+		model.addAttribute(user_idx);
+		
+		return "user/admin_user_delete";
+	}
 	
 }

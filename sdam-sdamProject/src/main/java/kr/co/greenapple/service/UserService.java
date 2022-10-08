@@ -127,6 +127,14 @@ public class UserService {
 		pager.setTotal(total);		
 		return userDao.gettherapists(pager);
 	}
-		
 	
+	//admin user 관리
+	public List<UserBean> getUserList(UserBean userList) {
+		return userDao.getUserList(userList);
+	}
+
+	//admin user 탈퇴
+	public void deleteUser(int user_idx) {
+		userDao.deleteUser(user_idx);
+	}
 }
