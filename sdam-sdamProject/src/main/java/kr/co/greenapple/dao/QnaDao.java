@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import kr.co.greenapple.beans.QnaBean;
+import kr.co.greenapple.pager.Pager;
 import kr.co.greenapple.beans.PageBean;
 import kr.co.greenapple.beans.QnaBean;
 
@@ -21,14 +22,11 @@ public class QnaDao {
 	public List<QnaBean> getQnaList(QnaBean qnaBean) {
 		 return sqlSessionTemplate.selectList("qna.getQnaList", qnaBean);
 	}
-	
 
 	public void addQna(QnaBean writeQnaBean) {
-			sqlSessionTemplate.insert("qna.addQna", writeQnaBean);			
+		sqlSessionTemplate.insert("qna.addQna", writeQnaBean);
 	}
 		
-
-	
 	public QnaBean readQna(int qna_idx) {
 		return sqlSessionTemplate.selectOne("qna.readQna", qna_idx);
 	}
@@ -44,6 +42,16 @@ public class QnaDao {
 	
 	public void deleteQna(int qna_idx) {
 		sqlSessionTemplate.delete("qna.deleteQna", qna_idx);
+	}
+
+
+	public float qnaTotal(Pager pager) {
+		return sqlSessionTemplate.selectOne("qna.qnaTotal", pager);
+	}
+
+
+	public int getQnaCnt() {
+		return sqlSessionTemplate.selectOne("qna.getQnaCnt");
 	}
 	
 //	public int getQnaContentCnt(int qna_idx) {

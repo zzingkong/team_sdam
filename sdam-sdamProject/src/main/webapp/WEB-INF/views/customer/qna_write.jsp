@@ -108,10 +108,10 @@
 							<form:textarea path="qna_content" class="form-control" rows="10" style="resize:none"/>
 							<form:errors path="qna_content" style="color:red"/>
 						</div>
-						<div class="form-group">
-							<form:label path="upload_file">첨부 이미지</form:label>
-							<form:input type="file" path="upload_file" class="form-control" accept="image/*"/>
-						</div>
+<!-- 						<div class="form-group"> -->
+<%-- 							<form:label path="upload_file">첨부 이미지</form:label> --%>
+<%-- 							<form:input type="file" path="upload_file" class="form-control" accept="image/*"/> --%>
+<!-- 						</div> -->
 						<div class="form-group">
 							<div class="text-right">
 								<button type="submit" class="btn btn-primary">작성하기</button>

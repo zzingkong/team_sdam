@@ -19,6 +19,7 @@ import kr.co.greenapple.beans.PageBean;
 import kr.co.greenapple.beans.QnaBean;
 import kr.co.greenapple.beans.UserBean;
 import kr.co.greenapple.dao.QnaDao;
+import kr.co.greenapple.pager.Pager;
 
 @Service
 @PropertySource("/WEB-INF/properties/option.properties")
@@ -54,34 +55,21 @@ public class QnaService {
 	public void addQna(QnaBean writeQnaBean) {
 		MultipartFile upload_file = writeQnaBean.getUpload_file();
 		
-		if(upload_file.getSize() > 0) {
-			String file_name = saveUloadFile(upload_file);
-			writeQnaBean.setContent_file(file_name);
-		}
+//		if(upload_file.getSize() > 0) {
+//			String file_name = saveUloadFile(upload_file);
+//			writeQnaBean.setContent_file(file_name);
+//		}
+		
 		writeQnaBean.setQna_writer_idx(loginUserBean.getUser_idx());
 		
 		qnaDao.addQna(writeQnaBean);
 	}
 	
-	
-	
-	public PageBean getContentCnt(int page) {
-		return null;
-	}
-	
-	public List<QnaBean> getQnaList(QnaBean qnaBean) {
-		
-//		int start = (page - 1) * page_listcnt;
-//		RowBounds rowBounds = new RowBounds(start, page_listcnt);
-		return qnaDao.getQnaList(qnaBean);
-	}
-	
+
 	
 	public QnaBean readQna(int qna_idx) {
 		return qnaDao.readQna(qna_idx);
 	} 
-	
-	
 	
 	
 	public QnaBean modifyQna(int qna_idx) {
@@ -99,12 +87,27 @@ public class QnaService {
 		
 		qnaDao.modifyQnaInfo(modifyQnaBean);
 	}
-		
 	
 	public void deleteQna(int qna_idx) {
 		qnaDao.deleteQna(qna_idx);
 	}
+
+	public List<QnaBean> getQnaList(QnaBean qnaBean) {
+		return qnaDao.getQnaList(qnaBean);
+		
+	}
 	
+
+//	public PageBean getQnaCnt(int currentPage) {
+//		
+//		int content_cnt = qnaDao.getQnaCnt();
+//		
+//		PageBean pageBean = new PageBean(content_cnt, currentPage, page_listcnt, page_paginationcnt);
+//		
+//		return pageBean;
+//	}
+	
+
 	
 //	public PageBean getQnatCnt(int currentPage) {
 //		

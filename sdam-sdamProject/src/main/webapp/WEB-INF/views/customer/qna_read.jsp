@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <c:set var="root" value="${pageContext.request.contextPath }/"/>
 <!DOCTYPE html>
 <html>
@@ -104,7 +105,8 @@
 					</div>
 					<div class="form-group">
 						<label for="qna_date">작성날짜</label>
-						<input type="text" id="qna_date" name="qna_date" class="form-control" value="${readQnaBean.qna_date }" disabled="disabled"/>
+						<input type="text" id="qna_date" name="qna_date" class="form-control" value="<fmt:formatDate value="${readQnaBean.qna_date}" pattern="yyyy-MM-dd hh:mm:ss" />" disabled="disabled"/>
+
 					</div>
 					<div class="form-group">
 						<label for="qna_subject">제목</label>
@@ -137,8 +139,6 @@
 		<div class="col-sm-3"></div>
 	</div>
 </div>
-
-
 
 <c:import url="/WEB-INF/views/include/bottom_info.jsp"></c:import>
 

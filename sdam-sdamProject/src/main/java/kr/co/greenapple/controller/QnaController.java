@@ -19,8 +19,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.co.greenapple.beans.ContentBean;
+import kr.co.greenapple.beans.DogBean;
+import kr.co.greenapple.beans.PageBean;
 import kr.co.greenapple.beans.QnaBean;
 import kr.co.greenapple.beans.UserBean;
+import kr.co.greenapple.pager.Pager;
 import kr.co.greenapple.service.QnaService;
 
 @Controller
@@ -37,13 +40,17 @@ public class QnaController {
 	
 	//qna main 목록 출력하기
 	@GetMapping("/qna")
-	public String main(QnaBean qnaBean, Model model) {
+	public String main(QnaBean qnaBean, @RequestParam(value = "page", defaultValue = "1") int page, Model model) {
 		
 		List<QnaBean> qnaList = qnaService.getQnaList(qnaBean);
 		model.addAttribute("qnaList", qnaList);
 		
+//		PageBean pageBean = qnaService.getQnaCnt(page);
+//		model.addAttribute("pageBean", pageBean);
+		
 		return "customer/qna_main";
 	}
+		
 
 	//qna 게시글 작성 불러오기
 	@GetMapping("/write")
@@ -87,18 +94,9 @@ public class QnaController {
 //			@ModelAttribute("modifyQnaBean") QnaBean modifyBean,
 			@RequestParam("qna_idx") int qna_idx, Model model) {
 		
-//		model.addAttribute("qna_idx", qna_idx);
 		
-		QnaBean modiBean = qnaService.modifyQna(qna_idx);
-		model.addAttribute("modifyQnaBean", modiBean);
-//		modifyBean.setQna_writer_name(modiBean.getQna_writer_name());
-//		modifyBean.setQna_date(modiBean.getQna_date());
-//		modifyBean.setQna_subject(modiBean.getQna_subject());
-//		modifyBean.setQna_content(modiBean.getQna_content());
-////		modifyBean.setContent_file(modifyBean.getContent_file());
-//		modifyBean.setQna_writer_idx(modiBean.getQna_writer_idx());
-//		modifyBean.setQna_idx(qna_idx);
-		
+		QnaBean modifyBean = qnaService.modifyQna(qna_idx);
+		model.addAttribute("modifyQnaBean", modifyBean);
 		
 		return "customer/qna_modify";
 	}
@@ -107,14 +105,12 @@ public class QnaController {
 	public String modify_pro(@Valid @ModelAttribute("modifyQnaBean") QnaBean modifyQnaBean,
 			BindingResult result, Model model) {
 		
-		
 //		for (ObjectError e : result.getAllErrors()) {
 //			System.out.println(e.getDefaultMessage());
 //		}
 		
 		if(result.hasErrors()) {
-			model.addAttribute("qna_idx", modifyQnaBean.getQna_idx());
-			return "customer/qna_modify_fail";
+			return "customer/qna_modify";
 		}
 		
 		qnaService.modifyQnaInfo(modifyQnaBean);
