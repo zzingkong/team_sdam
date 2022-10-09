@@ -94,15 +94,25 @@
 				<div class="h-100 d-inline-flex align-items-center py-3 me-4">
 					<c:choose>
 						<c:when test="${loginUserBean.userLogin == true }">
-							<i class="bi bi-person-circle"></i> &nbsp;<c:out value="${loginUserBean.user_name}" />님 &nbsp;&nbsp;&nbsp;
-						<a role="button" href="${root}/user/modify" class="btn btn-outline-warning me-2">마이페이지</a>
-						<a role="button" href="${root}/user/logout" class="btn btn-outline-warning me-2">로그아웃</a>
+								<c:choose>
+									<c:when test="${loginUserBean.user_idx eq 1}">
+										<i class="bi bi-person-circle"></i> &nbsp;<c:out value="${loginUserBean.user_name}" />님 &nbsp;&nbsp;&nbsp;
+										<a role="button" href="${root}user/adminpage" class="btn btn-outline-warning me-2">관리페이지</a>
+										<a role="button" href="${root}/user/modify" class="btn btn-outline-warning me-2">마이페이지</a>
+										<a role="button" href="${root}user/logout" class="btn btn-outline-warning me-2">로그아웃</a>
+									</c:when>
+									<c:otherwise>
+										<i class="bi bi-person-circle"></i> &nbsp;<c:out value="${loginUserBean.user_name}" />님 &nbsp;&nbsp;&nbsp;
+										<a role="button" href="${root}/user/modify" class="btn btn-outline-warning me-2">마이페이지</a>
+										<a role="button" href="${root}/user/logout" class="btn btn-outline-warning me-2">로그아웃</a>
+									</c:otherwise>
+								</c:choose>
 						</c:when>
 						<c:otherwise>
 							<a role="button" href="${root }user/join_select" class="btn btn-primary me-2">회원가입</a>
 							<a role="button" href="${root }user/login" class="btn btn-primary me-2">로그인</a> 
 						</c:otherwise>
-					</c:choose>				
+					</c:choose>
 				</div>
 			</div>
 		</div>

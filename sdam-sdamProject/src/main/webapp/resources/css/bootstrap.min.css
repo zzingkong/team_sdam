@@ -2823,20 +2823,20 @@ textarea.form-control-lg {
 
 .btn-info {
 	color: #000;
-	background-color: #0dcaf0;
-	border-color: #0dcaf0
+	background-color: #ccc;
+	border-color: #ccc;
 }
 
 .btn-info:hover {
 	color: #000;
-	background-color: #31d2f2;
-	border-color: #25cff2
+	background-color: #EC9532;
+	border-color: #EC9532;
 }
 
 .btn-check:focus+.btn-info, .btn-info:focus {
 	color: #000;
-	background-color: #31d2f2;
-	border-color: #25cff2;
+	background-color: #EC9532;
+	border-color: #EC9532;
 	box-shadow: 0 0 0 .25rem rgba(11, 172, 204, 0.5)
 }
 

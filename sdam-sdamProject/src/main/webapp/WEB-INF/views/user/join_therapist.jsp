@@ -169,6 +169,12 @@
 							<form:input path="user_name" class="form-control"/>
 							<form:errors path="user_name" style="color:red"/>
 						</div>
+						
+						<div class="form-group">
+							<form:label path="therapist_level">테라피스트 경력</form:label>
+							<form:input path="therapist_level" class="form-control" placeholder="숫자를 입력해주세요"/>
+						</div>
+						
 						<div class="form-group">
 							<form:label path="user_id">아이디</form:label>
 							<div class="input-group">

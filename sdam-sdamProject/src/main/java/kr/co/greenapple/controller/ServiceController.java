@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+
 
 import kr.co.greenapple.beans.DogBean;
 import kr.co.greenapple.beans.UserBean;
@@ -87,7 +87,7 @@ public class ServiceController {
 		
 		return "service/therapydog";
 	}
-		
+
 	//modal 테라피독 정보
 	@GetMapping("/getdoginfo")
 	//@ResponseBody  jsp파일 자체를 return할 때는 @ResponseBody 없어야함

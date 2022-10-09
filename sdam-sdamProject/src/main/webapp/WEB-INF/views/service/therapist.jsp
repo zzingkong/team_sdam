@@ -144,7 +144,7 @@
 						<option value="2">남자 테라피스트</option>
 					</select>
 				</div>	
-				<div class="col-3 p-1 mb-5 offset-1">	
+				<div class="col-3 p-1 mb-5" style="margin-left:5%">	
 					<div class="input-group mb-2">
 	  						<input type="text" class="form-control" placeholder="검색어를 입력하세요" aria-label="Recipient's username" aria-describedby="button-addon2">
 	  						<button class="btn btn-primary" type="button" id="button-addon2">검색</button>
@@ -162,14 +162,23 @@
           	<img src="${root }upload/${therapist.therapist_picture}">
           </div>           
              <div class="card-body">
-              <p class="card-text">${therapist.user_name}<br>주요지역: ${therapist.company_local}</p>
+              <p class="card-text fw-bold">테라피스트 「 ${therapist.user_name} 」 <br> 주요지역  : ${therapist.company_local} </p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="col">
                 	 <a href="${root}service/therapistdetail?userIdx=${therapist.user_idx}" class="btn btn-primary" style="width:100px">더보기</a>
                  </div>
-               <small class="text-muted">
-                 	<img class="heart" src="${root}/image/heart1.JPG"><!-- <span class="align-bottom"></span> -->
-                 </small>
+                 
+                <c:choose> 
+                 	<c:when test="${loginUserBean.userLogin == true }">    		
+		               <small class="text-muted">
+		                 	<img class="heart" src="${root}/image/heart1.JPG"><!-- <span class="align-bottom"></span> -->
+		               </small>
+	               </c:when>
+	               <c:otherwise>
+	               
+	               </c:otherwise>	               
+               </c:choose>
+               
               </div>
             </div>
           </div>

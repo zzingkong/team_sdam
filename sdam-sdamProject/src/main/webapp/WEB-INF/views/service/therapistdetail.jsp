@@ -105,13 +105,13 @@
        <div class="row g-4">
           <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
             <div class="membership-item position-relative" style="height:100%">
-              <img class="img-fluid" style="height:100%" src="${root }image/therapist.jpg" alt="" />           
+              <img class="img-fluid" style="height:100%" src="${root }upload/${therapist.therapist_picture}" alt="" />           
             </div>
           </div>
           
           <div class="col-lg-8 col-md-6 wow fadeInUp"  style="" data-wow-delay="0.3s">
             <div class=" position-relative" style="margin-left:10%">            
-              <h1 class="display-5 mb-3"><span class="text-primary">${therapist.user_name}</span>테라피스트    4.5/5</h1>
+              <h1 class="display-5 mb-3"><span class="text-primary">${therapist.user_name} </span>테라피스트    4.5/5</h1>
               <h4 class="text-black mb-3">주요지역 : ${therapist.company_local}</h4>
               <h4 class="mb-4">경력 : ${therapist.therapist_level}년 </h4>
               <div class="row">

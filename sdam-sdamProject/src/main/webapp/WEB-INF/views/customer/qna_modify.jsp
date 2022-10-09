@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <c:set var="root" value="${pageContext.request.contextPath }/"/>
 <!DOCTYPE html>
 <html>
@@ -103,8 +104,12 @@
 							<form:input path="qna_writer_name" class="form-control" readonly="true"/>
 						</div>
 						<div class="form-group">
-							<form:label path="qna_date">작성날짜</form:label>
-							<form:input path="qna_date" class="form-control" disabled="true"/>
+<%-- 							<form:label path="qna_date">작성날짜</form:label> --%>
+<%-- 							<form:input path="qna_date" class="form-control" disabled="true"/> --%>
+							<div>작성날짜</div>
+							<div class="form-control">
+								<fmt:formatDate value="${modifyQnaBean.qna_date}" pattern="yyyy-MM-dd hh:mm:ss" />
+							</div>
 						</div>
 						<div class="form-group">
 							<form:label path="qna_subject">제목</form:label>
@@ -127,9 +132,7 @@
 						<div class="form-group">
 							<div class="text-right">
 								<form:button class="btn btn-primary">수정완료</form:button>
-								<%-- 	<a href="${root }board/read?board_info_idx=${board_info_idx}&content_idx=${content_idx}&page=${page}" class="btn btn-info">취소</a> --%>
-								<%-- 	<a href="${root }customer/read?qna_idx=${qna_idx}&page=1" class="btn btn-info">취소</a> --%>
-								<a href="${root }customer/read?qna_idx=${qna_idx}" class="btn btn-info">취소</a>
+								<a href="${root }customer/read?qna_idx=${modifyQnaBean.qna_idx}" class="btn btn-info">취소</a>
 							</div>
 						</div>
 					</form:form>
