@@ -105,11 +105,17 @@
 				</c:otherwise>
 			</c:choose>	 --%>
 			
- 			<c:if test="${modifyUserBean.user_info eq 'T'}"> loginUserBean
+ 		<%-- <c:if test="${getDogUserInfo.user_info eq 'T'}"> loginUserBean
 				<div class="col-lg-6 text-lg-end">
 					<a class="btn btn-primary py-3 px-5" href="${root}service/adddog">테라피독 등록하기</a>
 				</div>
- 			</c:if>
+ 			</c:if> --%>
+ 			
+ 			<div class="col-lg-6 text-lg-end">
+				<a class="btn btn-primary py-3 px-5" href="${root}service/adddog">테라피독 등록하기</a>
+			</div>
+				
+ 			 ${modifyUserBean.user_info}
 		</div> 
 
 		
@@ -272,7 +278,7 @@ $(".animal-item").on("click", function(){
 		type : 'GET',
 		success : function(result){
 			$('.dog_info').html(result).show();
-		},
+		}
 //		error : function(xhr, ajaxOptions, thrownError){
 //			console.log('Error : ' + xhr.status + '\n' +
 //						'Message : ' + xhr.statusText + '\n' +

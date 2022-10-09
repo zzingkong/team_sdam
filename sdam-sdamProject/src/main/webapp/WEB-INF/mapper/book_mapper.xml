@@ -14,5 +14,7 @@
 		     values (#{service_idx}, #{service_date}, #{service_time}, #{service_check}, #{user_idx}, #{dog_idx})		
 		]]>
 	</insert>	
+	
+	
 
 </mapper>

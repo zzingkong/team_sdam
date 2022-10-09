@@ -38,6 +38,10 @@ public class DogDao {
 	public int total(Pager dogPager) {
 		return sqlSessionTemplate.selectOne("dog.total", dogPager);
 	}
+
+	public DogBean modalDogs(int dog_idx) {
+		return sqlSessionTemplate.selectOne("dog.modalDogs", dog_idx);
+	}
 	
 
 }

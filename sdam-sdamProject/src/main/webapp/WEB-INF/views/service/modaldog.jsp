@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>테라피독 정보</title>
 </head>
 <body>
-        <div class="mt-3">견종 / 성별 / 나이 / 지역</div>
-        <div>소개글입니다. 귀여운 임댕댕</div>
+	<div class="mt-3"> ${dogInfo.dog_type} / ${dogInfo.dog_sex} / ${dogInfo.dog_age} / ${dogInfo.company_local}</div>
+	<div>${dogInfo.dog_memo}</div>
 </body>
 </html>

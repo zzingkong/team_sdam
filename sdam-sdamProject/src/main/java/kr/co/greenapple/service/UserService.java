@@ -86,7 +86,11 @@ public class UserService {
 			loginUserBean.setUser_name(loginInfo2.getUser_name());
 			loginUserBean.setUserLogin(true);
 		}
-	}
+		
+		//테라피스트확인
+		loginInfo.setUser_info(loginInfo2.getUser_info());
+		System.out.println("로그인 시 user info : " + loginInfo2.getUser_info());
+	} 
 	
 	public void getModifyUserInfo(UserBean modifyUserBean) {
 		UserBean loginInfo = userDao.getModifyUserInfo(loginUserBean.getUser_idx());
@@ -101,6 +105,8 @@ public class UserService {
 		
 		//테라피스트확인
 		modifyUserBean.setUser_info(loginInfo.getUser_info());
+		System.out.println("user info : " + loginInfo.getUser_info());
+
 	}
 	
 	public void modifyUserInfo(UserBean modifyUserBean) {
@@ -127,6 +133,5 @@ public class UserService {
 		pager.setTotal(total);		
 		return userDao.gettherapists(pager);
 	}
-		
 	
 }

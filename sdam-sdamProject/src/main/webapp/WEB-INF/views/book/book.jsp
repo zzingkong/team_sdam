@@ -135,7 +135,7 @@
 
 	<form action="${root }book/book" method="post">
 	<div class="container my-3">
-	
+	<input type="hidden" name="user_idx" value="${user_idx}">
 	
 	<!-- 지역 선택 -->
 		<div class="pb-5">
