@@ -116,7 +116,7 @@ public class ServiceController {
 		return "service/adddog_success";
 	}
 	
-
+	//테라피스트 페이징
 	 @GetMapping("/therapist") 
 	 public String therapist(Model model,Pager pager) {
 

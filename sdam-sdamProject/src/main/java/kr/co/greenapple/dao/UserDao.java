@@ -65,6 +65,14 @@ public class UserDao {
 		return sqlSessionTemplate.selectList("user.gettherapist", pager);
 	}
 
+	public List<UserBean> getUserList(UserBean userList) {
+		return sqlSessionTemplate.selectList("user.getUserList", userList);
+	}
+
+	public void deleteUser(int user_idx) {
+		sqlSessionTemplate.selectList("user.deleteUser", user_idx);
+	}
+
 	
 	
 	

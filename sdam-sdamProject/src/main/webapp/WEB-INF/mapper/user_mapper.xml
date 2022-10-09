@@ -38,7 +38,7 @@
 	
 	<select id="getModifyUserInfo" parameterType="java.lang.Integer" resultType="kr.co.greenapple.beans.UserBean">
 		<![CDATA[
-			select user_id, user_name, user_tel, user_address
+			select user_id, user_name, user_tel, user_address, user_info
 			from user_table
 			where user_idx = #{user_idx}
 		]]>
@@ -118,6 +118,21 @@
 			where user_info = 'T' 
 	</select>
 	
+	
+	<!-- admin 회원 관리 -->
+	<select id="getUserList" parameterType="java.lang.Integer" resultType="kr.co.greenapple.beans.UserBean">
+		<![CDATA[
+			select user_idx, user_id, user_name, user_address, user_birth, user_tel
+			from user_table
+			order by user_idx
+		]]>
+	</select>
+	
+	<delete id="deleteUser" parameterType="java.lang.Integer">
+		<![CDATA[
+			delete from user_table where user_idx = #{user_idx}
+		]]>
+	</delete>
 		
 	
 <!-- <delete id="delMember" parameterType="java.lang.String">
