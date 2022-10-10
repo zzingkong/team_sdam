@@ -24,19 +24,11 @@
 	<!-- 테라피스트 여부 / user_info 가져오기 / 넘어오는값 parameterType / 반환타입 resultType -->
 	<select id="getUserInfo" parameterType="java.lang.Integer"  resultType="kr.co.greenapple.beans.UserBean">
 		<![CDATA[
-			select user_info 
+			select user_idx, user_info 
 			from user_table
 			where user_idx = #{user_idx}
 		]]>
 	</select>
-	
-<!-- <select id="getDogs" resultType="kr.co.greenapple.beans.DogBean">
-		<![CDATA[
-			select d.dog_idx, d.dog_name, d.dog_type, d.dog_age, d.dog_sex, d.dog_neutralization, d.dog_memo, d.dog_picture, d.dog_tag, c.company_local 
-			from therapy_dog_table d, company_table c 
-			where c.company_id = d.company_id 
-		]]>
-	</select>  -->
 	
 	<select id="getDogs" resultType="kr.co.greenapple.beans.DogBean">
 		<![CDATA[
@@ -52,5 +44,13 @@
 		SELECT COUNT(*) FROM therapy_dog_table
 	</select>
 	
+	
+	<select id="modalDogs" parameterType="java.lang.Integer" resultType="kr.co.greenapple.beans.DogBean">
+		<![CDATA[
+			select t.dog_idx, t.dog_type, t.dog_sex, t.dog_age, c.company_local, t.dog_memo 
+			from therapy_dog_table t, company_table c 
+			where t.company_id=c.company_id and t.dog_idx = #{dog_idx}
+		]]>
+	</select> 
 	
 </mapper>

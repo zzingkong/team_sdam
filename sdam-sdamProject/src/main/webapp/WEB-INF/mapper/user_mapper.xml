@@ -27,15 +27,15 @@
 		]]>
 	</insert>
 	
+	<!-- user_info 추가 -->
 	<select id="getLoginUserInfo" parameterType="kr.co.greenapple.beans.UserBean" resultType="kr.co.greenapple.beans.UserBean">
 		<![CDATA[
-			select user_idx, user_name
+			select user_idx, user_name, user_info
 			from user_table
 			where user_id=#{user_id} and user_pw=#{user_pw}
 		]]>
 	</select>
 	
-	<!-- user_info 추가 -->
 	<select id="getModifyUserInfo" parameterType="java.lang.Integer" resultType="kr.co.greenapple.beans.UserBean">
 		<![CDATA[
 			select user_id, user_name, user_tel, user_address, user_info

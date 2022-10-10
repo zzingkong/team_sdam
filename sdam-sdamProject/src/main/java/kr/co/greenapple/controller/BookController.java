@@ -36,10 +36,16 @@ public class BookController {
 	
 	@Autowired
 	private BookService bookService;
+
+	@Resource(name="loginUserBean")
+	@Lazy
+	private UserBean loginUserBean;
+
 	
 	@GetMapping("/book")
 	public String book(Pager dogBookPager, Model model) {
 		
+		model.addAttribute("user_idx",loginUserBean.getUser_idx() );
 		List<DogBean> dogBookList = dogService.getDogs(dogBookPager);
 		model.addAttribute("dogBookList", dogBookList);
 		
@@ -59,10 +65,13 @@ public class BookController {
 		System.out.println("신청날짜: " + bookBean.getService_date());
 		System.out.println("신청시간: " + bookBean.getService_time());
 		System.out.println("갱얼쥐idx: " + bookBean.getDog_idx());
+		System.out.println("유저idx: " + bookBean.getUser_idx());
 		
 		if(bindingResult.hasErrors()) {
 			return "book/book";
 		}
+		
+		bookService.addBook(bookBean);
 				
 		return "book/bookdone";
 	}

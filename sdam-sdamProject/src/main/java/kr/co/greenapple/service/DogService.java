@@ -74,6 +74,11 @@ public class DogService {
 		dogPager.setTotal(total);
 		return dogDao.getDogs(dogPager);
 	}
+
+	public DogBean modalDogs(int dog_idx) {
+		
+		return dogDao.modalDogs(dog_idx);
+	}
 	
 	
 }
