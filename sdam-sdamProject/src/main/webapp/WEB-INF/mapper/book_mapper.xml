@@ -7,7 +7,6 @@
 		<selectKey keyProperty="service_idx" order="BEFORE" resultType="java.lang.Integer">
 			select service_seq.nextval from dual
 	</selectKey>
-		
 		<![CDATA[
 			insert into service_table
 			(service_idx, service_date, service_time, service_check, user_idx, dog_idx)

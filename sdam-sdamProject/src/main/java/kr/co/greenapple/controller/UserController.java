@@ -156,25 +156,4 @@ public class UserController {
 //		return "redirect:/member/list.do";
 //	}
 	
-	
-	//admin 페이지
-	@GetMapping("/adminpage")
-	public String getUserList(UserBean userList, Model model) {
-		
-		List<UserBean> userInfoList = userService.getUserList(userList);
-		model.addAttribute("adminUserList", userInfoList);
-		
-		return "user/admin_page";
-	}
-
-	@GetMapping("/admindelete")
-	public String deleteUser(@RequestParam("user_idx") int user_idx, Model model
-			) {
-		
-		userService.deleteUser(user_idx);
-		model.addAttribute(user_idx);
-		
-		return "user/admin_user_delete";
-	}
-	
 }

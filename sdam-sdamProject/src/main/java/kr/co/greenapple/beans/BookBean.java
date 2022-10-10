@@ -8,9 +8,11 @@ public class BookBean {
 	
 	private String service_time;
 	
-	private boolean service_check;
+	private String service_check;
 	
 	private int user_idx;
+	
+	private String user_id;
 	
 	private int dog_idx;
 	
@@ -20,30 +22,6 @@ public class BookBean {
 	
 	private String dog_name;
 
-	public String getDog_name() {
-		return dog_name;
-	}
-
-	public void setDog_name(String dog_name) {
-		this.dog_name = dog_name;
-	}
-
-	public String getDog_tag() {
-		return dog_tag;
-	}
-
-	public void setDog_tag(String dog_tag) {
-		this.dog_tag = dog_tag;
-	}
-
-	public String getService_local() {
-		return service_local;
-	}
-
-	public void setService_local(String service_local) {
-		this.service_local = service_local;
-	}
-
 	public int getService_idx() {
 		return service_idx;
 	}
@@ -51,8 +29,6 @@ public class BookBean {
 	public void setService_idx(int service_idx) {
 		this.service_idx = service_idx;
 	}
-
-	
 
 	public String getService_date() {
 		return service_date;
@@ -70,11 +46,11 @@ public class BookBean {
 		this.service_time = service_time;
 	}
 
-	public boolean isService_check() {
+	public String getService_check() {
 		return service_check;
 	}
 
-	public void setService_check(boolean service_check) {
+	public void setService_check(String service_check) {
 		this.service_check = service_check;
 	}
 
@@ -86,6 +62,14 @@ public class BookBean {
 		this.user_idx = user_idx;
 	}
 
+	public String getUser_id() {
+		return user_id;
+	}
+
+	public void setUser_id(String user_id) {
+		this.user_id = user_id;
+	}
+
 	public int getDog_idx() {
 		return dog_idx;
 	}
@@ -94,4 +78,31 @@ public class BookBean {
 		this.dog_idx = dog_idx;
 	}
 
+	public String getService_local() {
+		return service_local;
+	}
+
+	public void setService_local(String service_local) {
+		this.service_local = service_local;
+	}
+
+	public String getDog_tag() {
+		return dog_tag;
+	}
+
+	public void setDog_tag(String dog_tag) {
+		this.dog_tag = dog_tag;
+	}
+
+	public String getDog_name() {
+		return dog_name;
+	}
+
+	public void setDog_name(String dog_name) {
+		this.dog_name = dog_name;
+	}
+	
+
+
+	
 }
