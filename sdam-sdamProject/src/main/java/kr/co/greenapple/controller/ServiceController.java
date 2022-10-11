@@ -55,17 +55,13 @@ public class ServiceController {
 		List<DogBean> list = dogService.getDogs(dogPager);
 		model.addAttribute("dogList", list);
 		
-//		userService.getLoginUserInfo(modifyUserBean);
+//		userService.getLoginUserInfo(userInfoBean);
 		
 //		userService.getDogUserInfo(user_idx);
-//		userService.getModifyUserInfo(userInfoBean);
+//		userService.getUserInfo(userInfoBean.getUser_idx());
 //		userService.getDogUserInfo(userInfoBean);
 //		userService.getUserInfo(user_idx);
 		
-		//tId가 idx 번호에 사람을 DB에서 가져옴
-//		UserBean userBean1 = userService.getUserInfo(user_idx);
-		//그걸 model.addAttribute에서 그 사람을 추가함
-//		model.addAttribute("therapistInfo", userBean1);
 		
 //		UserBean ubean = userService.getUserInfo(user_idx);
 //		model.addAttribute("userInfo", ubean);
@@ -73,17 +69,11 @@ public class ServiceController {
 //		List<DogBean> list = dogService.getDogs();
 //		model.addAttribute("dogList", list);	
 		
-//		dogService.getUserInfo(loginUserBean);
-//		System.out.println("메인 컨트롤러: " + dogService.getUserInfo(loginUserBean)); 
-//		System.out.println("메인 컨트롤러: " + userService.getUserInfo(0).getUser_info());  
-		
 //		userService.getLoginUserInfo(modifyUserBean);
 		
 //		for (ObjectError e : result.getAllErrors()) {
 //		System.out.println(e.getDefaultMessage());
 //	}
-		
-//		System.out.println("메인컨트롤러2222 :" + modifyUserBean.getUser_info() ); 
 		
 		return "service/therapydog";
 	}

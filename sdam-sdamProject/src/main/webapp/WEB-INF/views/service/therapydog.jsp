@@ -115,7 +115,7 @@
 				<a class="btn btn-primary py-3 px-5" href="${root}service/adddog">테라피독 등록하기</a>
 			</div>
 				
- 			 ${modifyUserBean.user_info}
+ 			 ${userInfoBean.user_info}
 		</div> 
 
 		
