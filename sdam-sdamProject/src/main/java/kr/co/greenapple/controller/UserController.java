@@ -145,6 +145,11 @@ public class UserController {
 		return "user/myservice";
 	}
 	
+	
+	
+	
+	
+	
 	//MemDelServlet
 //	@RequestMapping(value = "/member/del.do", method = RequestMethod.GET)
 //	public String del(String memId) {

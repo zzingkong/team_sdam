@@ -145,8 +145,8 @@
 			
 		 		<div class="form-check ml-3 text-center">
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio"
-							name="flexRadioDefault" id="flexRadioDefault1" checked> <label
+						<input class="form-check-input" type="radio" 
+							name="flexRadioDefault" id="flexRadioDefault1"> <label
 							class="form-check-label" for="flexRadioDefault1"> 서울 </label>
 					</div>
 					<div class="form-check form-check-inline">
@@ -374,43 +374,27 @@
 		</div>
 
 
-			<div class="row row-cols-1 row-cols-md-3 mb-3 text-center" style="display:flex; flex-direction:row; flex-wrap:wrap;">
+			<div class="row row-cols-1 row-cols-md-3 mb-3 text-center" id="showDogs" style="display:none; flex-direction:row; flex-wrap:wrap;">
 			
 				<c:forEach var="obj" items="${dogBookList}">
-<%-- 					<div class="col col-lg-4 col-md-6 px-3 py-3">
-						<a class="animal-item" data-dog-id="${obj.dog_idx}" href="#">
-							<div class="position-relative">
-							<img class="img-fluid dimg" src="${root }upload/${obj.dog_picture}" alt="테라피독 ${obj.dog_name}" width="100%"/>
-								<div class="animal-text p-4">
-									<c:set var="keyW" value="${fn:split(obj.dog_tag, ',')}"></c:set>
-									<p class="text-white small text-uppercase mb-0"># ${obj.company_local} <c:forEach var="word" items="${keyW}"># ${word} </c:forEach> </p>
-									<h5 class="text-white mb-0 dogname">${obj.dog_name} >></h5>
-								</div>
-							</div>
-						</a>
-					</div> --%>
-					
 					<div class="col">
-					<div class="card mb-4 rounded-3">
-						
-						<div class="form-check form-check-inline">
-							<input class="form-check-input" type="radio" value="24" name="dog_idx" id="${obj.dog_idx}"></h1>
-							<label class="form-check-label" for="${obj.dog_idx}">${obj.dog_name}</label></h4>
-						</div>
-						
-						<div class="card-body">
-							<div class="position-relative"  style="min-height: 500px;">
-							<img class="img-fluid" src="${root }upload/${obj.dog_picture}"  alt="테라피독 ${obj.dog_name}" />
-								<div class="animal-text p-4">
-									<h5 class="text-white mb-0">${obj.dog_name}</h5>
+						<div class="card2 mb-4 rounded-3">
+							
+							<div class="form-check form-inline-block py-3" style="margin: 0 auto;">
+								<input class="form-check-input h4" type="radio" value="24" name="dog_idx" id="${obj.dog_idx}">
+								<label class="form-check-label h5 pt-2" for="${obj.dog_idx}">${obj.dog_name}</label>
+							</div>
+							
+							<div class="card-body">
+								<div class="position-relative"  style="min-height: 500px;">
+								<img class="img-fluid" src="${root }upload/${obj.dog_picture}" alt="테라피독 ${obj.dog_name}" />
+									<div class="animal-text p-4">
+										<h5 class="text-white mb-0">${obj.dog_name}</h5>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-					
-					
-					
 				</c:forEach> 
 				
 				
@@ -430,80 +414,6 @@
 			</nav>	
 			
 			
-<!-- 				<div class="col">
-					<div class="card mb-4 rounded-3 shadow-sm">
-						
-						<div class="form-check text-center">
-							<h1><input type="radio" value="20" name="flexRadioDefault" id="flexRadioDefault1"></h1>
-							<h4><label class="form-check-label list-inline-item" for="exampleRadios1">임댕댕</label></h4>
-						</div>
-
-						<div class="card-body">
-							<div class="position-relative" style="min-height: 500px;">
-							<img class="img-fluid" src="../img/animal-md-1.jpg" alt="" />
-								<div class="animal-text p-4">
-									<h5 class="text-white mb-0">임댕댕</h5>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col">
-					<div class="card mb-4 rounded-3 shadow-sm">
-						
-						<div class="form-check text-center">
-							<h1><input type="radio"  value="21" name="dog_idx" id="flexRadioDefault2"></h1>
-							<h4><label class="form-check-label" for="flexRadioDefault2">말랑이</label></h4>
-						</div>
-						
-						<div class="card-body">
-							<div class="position-relative" style="min-height: 500px;">
-							<img class="img-fluid" src="../img/select_dog_1.jpg" alt="" />
-								<div class="animal-text p-4">
-									<h5 class="text-white mb-0">말랑이</h5>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col">
-					<div class="card mb-4 rounded-3 shadow-sm">
-						
-						<div class="form-check text-center">
-							<h1><input type="radio" value="22" name="dog_idx" id="flexRadioDefault3"></h1>
-							<h4><label class="form-check-label" for="flexRadioDefault3">이슬이</label></h4>
-						</div>
-						
-						<div class="card-body">
-							<div class="position-relative" style="min-height: 500px";>
-							<img class="img-fluid" src="../img/select_dog_2.jpg" alt="" />
-								<div class="animal-text p-4">
-									<h5 class="text-white mb-0">이슬이</h5>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col">
-					<div class="card mb-4 rounded-3 shadow-sm">
-						
-						<div class="form-check text-center">
-							<h1><input type="radio" value="23" name="dog_idx" id="flexRadioDefault4"></h1>
-							<h4><label class="form-check-label" for="flexRadioDefault4">바루</label></h4>
-						</div>
-						
-						<div class="card-body">
-							<div class="position-relative"  style="min-height: 500px";>
-							<img class="img-fluid" src="../img/select_dog_3.jpg" alt="" />
-								<div class="animal-text p-4">
-									<h5 class="text-white mb-0">바루</h5>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>   -->
-				
-				
 		</div>
 
 </div>
@@ -547,6 +457,20 @@
 
 
 
+
+<script type="text/javascript">
+$(document).ready(function(){
+   $('[name="flexRadioDefault"]').on("click", function(){
+      const mode = document.getElementById("showDogs");
+       mode.style.display = 'flex';
+//        mode.style.flex-direction = 'row';
+//        mode.style.flex-wrap = 'wrap';
+//        flex-direction:row; flex-wrap:wrap;
+   });
+});
+</script>
+
+
 <script type="text/javascript">
 $(function(){
   $('#datepicker').datepicker();
@@ -560,7 +484,8 @@ $(function() {
 	});
 	
 	
-//	
+
+
 $('[name="service_time"]').attr('data-no', function (i){
 	return i;
 });
@@ -617,7 +542,11 @@ $(document).ready(function(){
 		showMonthAfterYear: true, //달력 연 다음에 월로 세팅
 		yearSuffix: '년'
 	});
+	
+	});
 </script>
+
+
 
 </body>
 </html>

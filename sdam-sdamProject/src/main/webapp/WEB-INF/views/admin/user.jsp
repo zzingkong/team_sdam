@@ -113,7 +113,7 @@
 			
 				
 				
-				<div class="container">
+<div class="container">
 	<div class="card shadow">
 		<div class="card-body">
 			<table class="table table-hover">
@@ -144,9 +144,6 @@
 					</c:forEach>
 				</tbody>
 			</table>
-			
-			
-			
 		</div>
 	</div>
 </div>
