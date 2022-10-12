@@ -172,7 +172,7 @@
 					
 					<div class="form-check form-check-inline">
 						<input class="form-check-input" type="radio"
-							name="flexRadioDefault" id="flexRadioDefault6" checked> <label
+							name="flexRadioDefault" id="flexRadioDefault6"> <label
 							class="form-check-label" for="flexRadioDefault6"> 대전 </label>
 					</div>
 					<div class="form-check form-check-inline">
@@ -399,7 +399,7 @@
 						</div>
 						
 						<div class="card-body">
-							<div class="position-relative"  style="min-height: 500px";>
+							<div class="position-relative"  style="min-height: 500px;">
 							<img class="img-fluid" src="${root }upload/${obj.dog_picture}"  alt="테라피독 ${obj.dog_name}" />
 								<div class="animal-text p-4">
 									<h5 class="text-white mb-0">${obj.dog_name}</h5>

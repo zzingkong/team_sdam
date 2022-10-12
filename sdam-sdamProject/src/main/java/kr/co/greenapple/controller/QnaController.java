@@ -1,6 +1,5 @@
 package kr.co.greenapple.controller;
 
-import java.util.Iterator;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -11,19 +10,14 @@ import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import kr.co.greenapple.beans.ContentBean;
-import kr.co.greenapple.beans.DogBean;
-import kr.co.greenapple.beans.PageBean;
 import kr.co.greenapple.beans.QnaBean;
 import kr.co.greenapple.beans.UserBean;
-import kr.co.greenapple.pager.Pager;
 import kr.co.greenapple.service.QnaService;
 
 @Controller

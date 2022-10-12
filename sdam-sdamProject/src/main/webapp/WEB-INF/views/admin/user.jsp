@@ -107,9 +107,8 @@
 	
 	<div class="col-lg-9 bg-white card shadow">  
 		<div class="testimonial-item">
-			<div class="mt-4 mb-1 ms-5 wow fadeInUp">
-				<img class="img-fluid rounded-circle border border-2 p-2 mx-auto mb-3" src="../image/testimonial-1.jpg" style="width: 100px; height: 100px; display:inline-block;"/> &nbsp;&nbsp;
-				<h4 class="display-7" data-wow-delay="0.1s" style="display:inline-block;"> <c:out value="${loginUserBean.user_name}" />님 안녕하세요.</h4>
+			<div class="mt-4 mb-1 ms-5 my-5 wow fadeInUp">
+				<h4 class="display-7" data-wow-delay="0.1s" style="display:inline-block;">회원관리</h4>
 			</div>
 			
 				
