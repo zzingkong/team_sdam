@@ -1,10 +1,12 @@
 package kr.co.greenapple.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import kr.co.greenapple.beans.BookBean;
-
+import kr.co.greenapple.beans.DogBean;
 import kr.co.greenapple.dao.BookDao;
 
 
@@ -20,12 +22,10 @@ public class BookService {
 		bookDao.addBook(bookBean);
 	}
 
-	public BookBean showDog(BookBean bookParamBean) {
-		return bookDao.showDog(bookParamBean);
-		
+	public List<BookBean> showDog(BookBean bookBean) {
+		return bookDao.showDog(bookBean);
 	}
 
-	
-	
+
 	//테라피독 리스트 불러오기
 }

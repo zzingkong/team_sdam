@@ -13,6 +13,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -58,9 +59,10 @@ public class BookController {
 	
 	@GetMapping("/showdog")
 	public String showDog(Pager dogBookPager,
-			@RequestParam(defaultValue = "") String company_local,
-			@RequestParam(defaultValue = "") String service_date,
-			@RequestParam(defaultValue = "") String dog_tag,
+//			@RequestParam(defaultValue = "") String company_local,
+//			@RequestParam(defaultValue = "") String service_date,
+//			@RequestParam(defaultValue = "") String dog_tag,
+			BookBean bookBean,
 			Model model) {
 		
 		List<DogBean> dogBookList = dogService.getDogs(dogBookPager);
@@ -69,20 +71,18 @@ public class BookController {
 		model.addAttribute("dogBookList", dogBookList);
 		
 		
-		System.out.println(company_local);
-		System.out.println(service_date);
-		System.out.println(dog_tag);
-		
-		BookBean bookParamBean = new BookBean();
-		
-		bookParamBean.setCompany_local(company_local);
-		bookParamBean.setService_date(service_date);
-		bookParamBean.setDog_tag(dog_tag);
-		
-		bookService.showDog(bookParamBean);
+		System.out.println(bookBean.getCompany_local());
+		System.out.println(bookBean.getService_date());
+		System.out.println(bookBean.getDog_tag());
 		
 		
-		model.addAttribute("dogBookList", bookParamBean);
+		List<BookBean> showDogList = bookService.showDog(bookBean);
+		
+		for(BookBean bb : showDogList) {
+		 	System.out.println(bb.getDog_idx()); 
+		}
+		
+		model.addAttribute("dogBookList", showDogList);
 		
 		return "book/dogs";
 	}	

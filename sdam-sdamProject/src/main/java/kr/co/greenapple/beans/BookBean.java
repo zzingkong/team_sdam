@@ -22,6 +22,10 @@ public class BookBean {
 	
 	private String dog_name;
 
+	private String dog_picture;
+
+	
+	
 	public int getService_idx() {
 		return service_idx;
 	}
@@ -101,5 +105,14 @@ public class BookBean {
 	public void setDog_name(String dog_name) {
 		this.dog_name = dog_name;
 	}
+
+	public String getDog_picture() {
+		return dog_picture;
+	}
+
+	public void setDog_picture(String dog_picture) {
+		this.dog_picture = dog_picture;
+	}
+	
 
 }
