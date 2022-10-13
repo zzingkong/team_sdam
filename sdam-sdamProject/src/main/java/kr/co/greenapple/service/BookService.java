@@ -20,4 +20,12 @@ public class BookService {
 		bookDao.addBook(bookBean);
 	}
 
+	public BookBean showDog(BookBean bookParamBean) {
+		return bookDao.showDog(bookParamBean);
+		
+	}
+
+	
+	
+	//테라피독 리스트 불러오기
 }

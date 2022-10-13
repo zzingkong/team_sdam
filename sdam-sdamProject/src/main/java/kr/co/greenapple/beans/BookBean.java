@@ -16,7 +16,7 @@ public class BookBean {
 	
 	private int dog_idx;
 	
-	private String service_local;
+	private String company_local;
 	
 	private String dog_tag; 
 	
@@ -78,12 +78,12 @@ public class BookBean {
 		this.dog_idx = dog_idx;
 	}
 
-	public String getService_local() {
-		return service_local;
+	public String getCompany_local() {
+		return company_local;
 	}
 
-	public void setService_local(String service_local) {
-		this.service_local = service_local;
+	public void setCompany_local(String company_local) {
+		this.company_local = company_local;
 	}
 
 	public String getDog_tag() {
@@ -101,8 +101,5 @@ public class BookBean {
 	public void setDog_name(String dog_name) {
 		this.dog_name = dog_name;
 	}
-	
 
-
-	
 }

@@ -145,73 +145,73 @@
 			
 		 		<div class="form-check ml-3 text-center">
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" 
+						<input class="form-check-input" type="radio" value="서울"
 							name="flexRadioDefault" id="flexRadioDefault1"> <label
 							class="form-check-label" for="flexRadioDefault1"> 서울 </label>
 					</div>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio"
+						<input class="form-check-input" type="radio" value="부산"
 							name="flexRadioDefault" id="flexRadioDefault2"> <label
 							class="form-check-label" for="flexRadioDefault2"> 부산 </label>
 					</div>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio"
+						<input class="form-check-input" type="radio" value="대구"
 							name="flexRadioDefault" id="flexRadioDefault3"> <label
 							class="form-check-label" for="flexRadioDefault3"> 대구 </label>
 					</div>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio"
+						<input class="form-check-input" type="radio" value="인천"
 							name="flexRadioDefault" id="flexRadioDefault4"> <label
 							class="form-check-label" for="flexRadioDefault4"> 인천 </label>
 					</div>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio"
+						<input class="form-check-input" type="radio" value="광주"
 							name="flexRadioDefault" id="flexRadioDefault5"> <label
 							class="form-check-label" for="flexRadioDefault5"> 광주 </label>
 					</div>
 					
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio"
+						<input class="form-check-input" type="radio" value="대전"
 							name="flexRadioDefault" id="flexRadioDefault6"> <label
 							class="form-check-label" for="flexRadioDefault6"> 대전 </label>
 					</div>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio"
+						<input class="form-check-input" type="radio" value="울산"
 							name="flexRadioDefault" id="flexRadioDefault7"> <label
 							class="form-check-label" for="flexRadioDefault7"> 울산 </label>
 					</div>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio"
+						<input class="form-check-input" type="radio" value="세종"
 							name="flexRadioDefault" id="flexRadioDefault8"> <label
 							class="form-check-label" for="flexRadioDefault8"> 세종 </label>
 					</div>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio"
+						<input class="form-check-input" type="radio" value="경기도"
 							name="flexRadioDefault" id="flexRadioDefault9"> <label
 							class="form-check-label" for="flexRadioDefault9"> 경기도 </label>
 					</div>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio"
+						<input class="form-check-input" type="radio" value="강원도"
 							name="flexRadioDefault" id="flexRadioDefault10"> <label
 							class="form-check-label" for="flexRadioDefault10"> 강원도 </label>
 					</div>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio"
+						<input class="form-check-input" type="radio" value="충청도"
 							name="flexRadioDefault" id="flexRadioDefault11"> <label
 							class="form-check-label" for="flexRadioDefault11"> 충청도 </label>
 					</div>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio"
+						<input class="form-check-input" type="radio" value="전라도"
 							name="flexRadioDefault" id="flexRadioDefault12"> <label
 							class="form-check-label" for="flexRadioDefault12"> 전라도 </label>
 					</div>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio"
+						<input class="form-check-input" type="radio" value="경상도"
 							name="flexRadioDefault" id="flexRadioDefault13"> <label
 							class="form-check-label" for="flexRadioDefault13"> 경상도 </label>
 					</div>
 					<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio"
+						<input class="form-check-input" type="radio" value="제주도"
 							name="flexRadioDefault" id="flexRadioDefault14"> <label
 							class="form-check-label" for="flexRadioDefault14"> 제주도 </label>
 					</div>
@@ -374,46 +374,42 @@
 		</div>
 
 
-			<div class="row row-cols-1 row-cols-md-3 mb-3 text-center" id="showDogs" style="display:none; flex-direction:row; flex-wrap:wrap;">
+			<div class="row row-cols-1 row-cols-md-3 mb-3 text-center" id="showDogs" style="display:flex; flex-direction:row; flex-wrap:wrap;">
 			
-				<c:forEach var="obj" items="${dogBookList}">
-					<div class="col">
-						<div class="card2 mb-4 rounded-3">
+<%-- 				<c:forEach var="obj" items="${dogBookList}"> --%>
+<!-- 					<div class="col"> -->
+<!-- 						<div class="card2 mb-4 rounded-3"> -->
 							
-							<div class="form-check form-inline-block py-3" style="margin: 0 auto;">
-								<input class="form-check-input h4" type="radio" value="24" name="dog_idx" id="${obj.dog_idx}">
-								<label class="form-check-label h5 pt-2" for="${obj.dog_idx}">${obj.dog_name}</label>
-							</div>
+<!-- 							<div class="form-check form-inline-block py-3" style="margin: 0 auto;"> -->
+<%-- 								<input class="form-check-input h4" type="radio" value="24" name="dog_idx" id="${obj.dog_idx}"> --%>
+<%-- 								<label class="form-check-label h5 pt-2" for="${obj.dog_idx}">${obj.dog_name}</label> --%>
+<!-- 							</div> -->
 							
-							<div class="card-body">
-								<div class="position-relative"  style="min-height: 500px;">
-								<img class="img-fluid" src="${root }upload/${obj.dog_picture}" alt="테라피독 ${obj.dog_name}" />
-									<div class="animal-text p-4">
-										<h5 class="text-white mb-0">${obj.dog_name}</h5>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</c:forEach> 
-				
-				
+<!-- 							<div class="card-body"> -->
+<!-- 								<div class="position-relative"  style="min-height: 500px;"> -->
+<%-- 								<img class="img-fluid" src="${root }upload/${obj.dog_picture}" alt="테라피독 ${obj.dog_name}" /> --%>
+<!-- 									<div class="animal-text p-4"> -->
+<%-- 										<h5 class="text-white mb-0">${obj.dog_name}</h5> --%>
+<!-- 									</div> -->
+<!-- 								</div> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+<%-- 				</c:forEach>  --%>
 			
-			<nav aria-label="Page navigation example" style="margin: 0 auto;">
-				<ul class="pagination">
-					<li class="page-item"><a class="page-link" href="?page=1" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li> 
-					<li class="page-item"><a class="page-link" href="?page=${pager.prev}"><span aria-hidden="true" style="font-size:0.6em;"><i class="bi bi-chevron-left"></i></span></a></li>		
+<!-- 			<nav aria-label="Page navigation example" style="margin: 0 auto;"> -->
+<!-- 				<ul class="pagination"> -->
+<!-- 					<li class="page-item"><a class="page-link" href="?page=1" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>  -->
+<%-- 					<li class="page-item"><a class="page-link" href="?page=${pager.prev}"><span aria-hidden="true" style="font-size:0.6em;"><i class="bi bi-chevron-left"></i></span></a></li>		 --%>
 									
-					<c:forEach var="page" items="${pager.list}">
-					<li class="page-item"><a class="page-link" href="?page=${page}">${page}</a></li>
-					</c:forEach>
+<%-- 					<c:forEach var="page" items="${pager.list}"> --%>
+<%-- 					<li class="page-item"><a class="page-link" href="?page=${page}">${page}</a></li> --%>
+<%-- 					</c:forEach> --%>
 								
-					<li class="page-item"><a class="page-link" href="?page=${pager.next}"><span aria-hidden="true" style="font-size:0.6em;"><i class="bi bi-chevron-right"></i></span></a></li>
-					<li class="page-item"><a class="page-link" aria-label="Next" href="?page=${pager.last}"><span aria-hidden="true">&raquo;</span></a></li>
-				</ul>
-			</nav>	
-			
-			
+<%-- 					<li class="page-item"><a class="page-link" href="?page=${pager.next}"><span aria-hidden="true" style="font-size:0.6em;"><i class="bi bi-chevron-right"></i></span></a></li> --%>
+<%-- 					<li class="page-item"><a class="page-link" aria-label="Next" href="?page=${pager.last}"><span aria-hidden="true">&raquo;</span></a></li> --%>
+<!-- 				</ul> -->
+<!-- 			</nav>	 -->
 		</div>
 
 </div>
@@ -459,14 +455,63 @@
 
 
 <script type="text/javascript">
+
+function loadDogs(company_local, sevice_date, dog_tag) {
+    $.ajax({
+   	    url: "${pageContext.request.contextPath}/book/showdog?company_local=" + company_local + "&sevice_date=" + sevice_date + "&dog_tag=" + dog_tag,
+   	    method: "get",
+
+   	    success: function (html) {
+			$('#showDogs').html(html).show();  // ajax로 강아지 목록만 있는 dogs.jsp 페이지를 불러옴
+   	    }
+   	});
+}
+
+
+// let company_local = 기본값;
+// let sevice_date = 기본값;
+// let dog_tag = 기본값;
+
+
+//지역선택시 강아지 선택하기
 $(document).ready(function(){
+	
+	
    $('[name="flexRadioDefault"]').on("click", function(){
-      const mode = document.getElementById("showDogs");
-       mode.style.display = 'flex';
-//        mode.style.flex-direction = 'row';
-//        mode.style.flex-wrap = 'wrap';
-//        flex-direction:row; flex-wrap:wrap;
+	   
+	   var company_local = $("input:radio[name='flexRadioDefault']:checked").val();
+	   console.log(company_local)
+	   
+// 	   const decodeUri = decodeURI(HISTORY.location?.search);
+	   
+//       const mode = document.getElementById("showDogs");
+//        mode.style.display = 'flex';
+
+// 		var company_local = $(this).val();
+
+	//상기의 loadDogs function을 불러와서 click이벤트 발생 시 실행함
+ 	loadDogs(company_local, '', '')
    });
+   
+   
+   
+   
+   
+//    $('[name="service_date"]').on("click", function(){
+
+// //		var company_local = $(this).val();
+
+// 	loadDogs('company_local', 'sevice_date', 'dog_tag')
+//  });
+   
+//    $('[name="dog_tag"]').on("click", function(){
+
+// //		var company_local = $(this).val();
+
+// 	//상기의 loadDogs function을 불러와서 click이벤트 발생 시 실행함
+// 	loadDogs('company_local', 'sevice_date', 'dog_tag')
+//  });
+   
 });
 </script>
 

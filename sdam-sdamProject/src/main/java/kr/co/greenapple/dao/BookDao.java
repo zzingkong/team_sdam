@@ -13,8 +13,10 @@ public class BookDao {
 	private SqlSessionTemplate sqlSessionTemplate;
 	
 	public void addBook(BookBean bookBean) {
-		sqlSessionTemplate.insert("book.addBook", bookBean);			
-	
+		sqlSessionTemplate.insert("book.addBook", bookBean);		
 	}
-	
+
+	public BookBean showDog(BookBean bookParamBean) {
+		return sqlSessionTemplate.selectList("book.showDog", bookParamBean);
+	}
 }

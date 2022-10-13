@@ -40,6 +40,10 @@ public class BookController {
 	@Resource(name="loginUserBean")
 	@Lazy
 	private UserBean loginUserBean;
+	
+//	@Resource(name="bookParamBean")
+//	@Lazy
+//	private BookBean bookParamBean;
 
 	
 	@GetMapping("/book")
@@ -52,30 +56,48 @@ public class BookController {
 		return "book/book";
 	}	
 	
-	/*
-	 * @GetMapping("/bookdone") public String bookdone() {
-	 * 
-	 * return "book/bookdone"; }
-	 */
+	@GetMapping("/showdog")
+	public String showDog(Pager dogBookPager,
+			@RequestParam(defaultValue = "") String company_local,
+			@RequestParam(defaultValue = "") String service_date,
+			@RequestParam(defaultValue = "") String dog_tag,
+			Model model) {
+		
+		List<DogBean> dogBookList = dogService.getDogs(dogBookPager);
+		
+		model.addAttribute("user_idx",loginUserBean.getUser_idx() );
+		model.addAttribute("dogBookList", dogBookList);
+		
+		
+		System.out.println(company_local);
+		System.out.println(service_date);
+		System.out.println(dog_tag);
+		
+		BookBean bookParamBean = new BookBean();
+		
+		bookParamBean.setCompany_local(company_local);
+		bookParamBean.setService_date(service_date);
+		bookParamBean.setDog_tag(dog_tag);
+		
+		bookService.showDog(bookParamBean);
+		
+		
+		model.addAttribute("dogBookList", bookParamBean);
+		
+		return "book/dogs";
+	}	
+	
 	
 	//예약 신청서 등록
 	@PostMapping("/book")
 	public String addbook(BookBean bookBean, BindingResult bindingResult) {
-		
-		System.out.println("신청날짜: " + bookBean.getService_date());
-		System.out.println("신청시간: " + bookBean.getService_time());
-		System.out.println("갱얼쥐idx: " + bookBean.getDog_idx());
-		System.out.println("유저idx: " + bookBean.getUser_idx());
 		
 		if(bindingResult.hasErrors()) {
 			return "book/book";
 		}
 		
 		bookService.addBook(bookBean);
-				
 		return "book/bookdone";
 	}
 	
-	//지역선택시 강아지 리스트 불러오기
-//	@GetMapping("/show")
 }
