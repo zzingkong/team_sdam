@@ -14,16 +14,14 @@
 		]]>
 	</insert>
 	
-	
 	<!-- select company_local as service_local, dog_idx, dog_name -->
 	<!-- from THERAPY_DOG_TABLE T, COMPANY_TABLE C -->
 	<!-- where T.COMPANY_ID=C.COMPANY_ID and service_local = #{company_local} -->
 	<select id="showDog" parameterType="kr.co.greenapple.beans.BookBean" resultType="kr.co.greenapple.beans.BookBean">
 		<![CDATA[
-			select c.company_local, dog_idx, dog_name
-			from THERAPY_DOG_TABLE T, COMPANY_TABLE C
-			where T.COMPANY_ID=C.COMPANY_ID and company_local = #{company_local}
+			select t.dog_idx, t.dog_name, t.dog_picture
+			from therapy_dog_table t, company_table c
+			where t.company_id = c.company_id and c.company_local = #{company_local}
 		]]>
 	</select>
-
 </mapper>

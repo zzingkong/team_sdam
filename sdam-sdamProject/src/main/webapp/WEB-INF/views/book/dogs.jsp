@@ -37,22 +37,20 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
 
 
-
-
-<c:forEach var="obj" items="${dogBookList}">
+<c:forEach var="dog" items="${dogBookList}">
         <div class="col">
             <div class="card2 mb-4 rounded-3">
                 
                 <div class="form-check form-inline-block py-3" style="margin: 0 auto;">
-                    <input class="form-check-input h4" type="radio" value="24" name="dog_idx" id="${obj.dog_idx}">
-                    <label class="form-check-label h5 pt-2" for="${obj.dog_idx}">${obj.dog_name}</label>
+                    <input class="form-check-input h4" type="radio" name="dog_idx" id="${dog.dog_idx}">
+                    <label class="form-check-label h5 pt-2" for="${dog.dog_idx}">${dog.dog_name}</label>
                 </div>
                 
                 <div class="card-body">
-                    <div class="position-relative"  style="min-height: 500px;">
-                    <img class="img-fluid" src="${root }upload/${obj.dog_picture}" alt="테라피독 ${obj.dog_name}" />
+                    <div class="position-relative" style="min-height: 500px;">
+                    <img class="img-fluid" src="${root}upload/${dog.dog_picture}" alt="테라피독 ${dog.dog_name}" />
                         <div class="animal-text p-4">
-                            <h5 class="text-white mb-0">${obj.dog_name}</h5>
+                            <h5 class="text-white mb-0">${dog.dog_name}</h5>
                         </div>
                     </div>
                 </div>
