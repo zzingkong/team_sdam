@@ -21,5 +21,5 @@ public class BookDao {
 	public List<BookBean> showDog(BookBean bookBean) {
 		return sqlSessionTemplate.selectList("book.showDog", bookBean);
 	}
-	
+
 }
