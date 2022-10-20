@@ -75,6 +75,7 @@ public class BookController {
 		System.out.println(bookBean.getService_date());
 		System.out.println(bookBean.getDog_tag());
 		
+		//String을
 		
 		List<BookBean> showDogList = bookService.showDog(bookBean);
 		
@@ -87,6 +88,11 @@ public class BookController {
 		return "book/dogs";
 	}	
 	
+	@PostMapping("/dogIdxCheck.json")
+	public String dogIdxCheck() {
+		
+		return "book/book";
+	}
 	
 	//예약 신청서 등록
 	@PostMapping("/book")
@@ -95,6 +101,10 @@ public class BookController {
 		if(bindingResult.hasErrors()) {
 			return "book/book";
 		}
+		
+		System.out.println(bookBean.getCompany_local());
+	    System.out.println(bookBean.getDog_idx());
+	    System.out.println(bookBean.getService_date());
 		
 		bookService.addBook(bookBean);
 		return "book/bookdone";

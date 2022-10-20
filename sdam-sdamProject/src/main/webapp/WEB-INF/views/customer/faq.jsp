@@ -60,7 +60,7 @@
     >
       <div class="container py-5">
         <h1 class="display-4 text-white mb-3 animated slideInDown">
-          고객센터
+          FAQ
         </h1>
         <nav aria-label="breadcrumb animated slideInDown">
           <ol class="breadcrumb mb-0">

@@ -1,5 +1,8 @@
 package kr.co.greenapple.beans;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class BookBean {
 	
 	private int service_idx;
@@ -18,14 +21,13 @@ public class BookBean {
 	
 	private String company_local;
 	
-	private String dog_tag; 
+	private List<String> dog_tag = new ArrayList<String>();
+//	private String dog_tag;
 	
 	private String dog_name;
 
 	private String dog_picture;
 
-	
-	
 	public int getService_idx() {
 		return service_idx;
 	}
@@ -90,11 +92,11 @@ public class BookBean {
 		this.company_local = company_local;
 	}
 
-	public String getDog_tag() {
+	public List<String> getDog_tag() {
 		return dog_tag;
 	}
 
-	public void setDog_tag(String dog_tag) {
+	public void setDog_tag(List<String> dog_tag) {
 		this.dog_tag = dog_tag;
 	}
 
@@ -113,6 +115,5 @@ public class BookBean {
 	public void setDog_picture(String dog_picture) {
 		this.dog_picture = dog_picture;
 	}
-	
 
 }
