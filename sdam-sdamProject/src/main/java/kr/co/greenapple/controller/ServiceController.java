@@ -47,7 +47,7 @@ public class ServiceController {
 	public String therapydog(
 //			@Valid @ModelAttribute("modifyUserBean") UserBean modifyUserBean, BindingResult result,
 //			@RequestParam("user_idx") int user_idx,
-//			@ModelAttribute("userInfoBean") UserBean userInfoBean,
+			@ModelAttribute("userInfoBean") UserBean userInfoBean,
 //			@ModelAttribute("userInfo") DogBean userInfo,
 			Pager dogPager,
 			Model model) {
@@ -55,7 +55,7 @@ public class ServiceController {
 		List<DogBean> list = dogService.getDogs(dogPager);
 		model.addAttribute("dogList", list);
 		
-//		userService.getLoginUserInfo(userInfoBean);
+		userService.getLoginUserInfo(userInfoBean);
 		
 //		userService.getDogUserInfo(user_idx);
 //		userService.getUserInfo(userInfoBean.getUser_idx());

@@ -84,12 +84,19 @@ public class UserService {
 		if(loginInfo2 != null) {
 			loginUserBean.setUser_idx(loginInfo2.getUser_idx());
 			loginUserBean.setUser_name(loginInfo2.getUser_name());
+			loginUserBean.setUser_info(loginInfo2.getUser_info());
 			loginUserBean.setUserLogin(true);
 		}
 		
+//		https://soobindeveloper8.tistory.com/443		
+//		try {
+//			String infoT = loginInfo2.getUser_info();
+//		} catch (NullPointerException e) {
+//			loginInfo2 = new UserBean();
+//		}
+
 		//테라피스트확인
 		loginInfo.setUser_info(loginInfo2.getUser_info());
-		System.out.println("로그인 시 user info : " + loginInfo2.getUser_info());
 	} 
 	
 	public void getModifyUserInfo(UserBean modifyUserBean) {
@@ -105,8 +112,6 @@ public class UserService {
 		
 		//테라피스트확인
 		modifyUserBean.setUser_info(loginInfo.getUser_info());
-		System.out.println("user info : " + loginInfo.getUser_info());
-
 	}
 	
 	public void modifyUserInfo(UserBean modifyUserBean) {
