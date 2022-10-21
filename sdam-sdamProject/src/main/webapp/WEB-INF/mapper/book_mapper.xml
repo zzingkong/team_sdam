@@ -19,21 +19,21 @@
 	<!-- where T.COMPANY_ID=C.COMPANY_ID and service_local = #{company_local} -->
 	<select id="showDog" parameterType="kr.co.greenapple.beans.BookBean" resultType="kr.co.greenapple.beans.BookBean">
         SELECT * FROM THERAPY_DOG_TABLE T
-		LEFT JOIN COMPANY_TABLE C ON T.COMPANY_ID = C.COMPANY_ID
+		LEFT JOIN COMPANY_TABLE C ON T.COMPANY_ID = C.COMPANY_ID 
 		WHERE 1=1
-		<if test='company_local != null or company_local != ""'>
+		<if test='company_local != null and company_local != ""'>
 			 AND C.company_local = #{company_local} 
 		</if>
 
-		<if test='service_date != null or service_date != ""'>
-			AND NOT EXISTS (
+		<if test='service_date != null and service_date != ""'>
+			AND DOG_IDX  NOT IN  (
 				SELECT DOG_IDX FROM SERVICE_TABLE S
 				WHERE S.service_date = #{service_date}
 			)
 		</if>
 		<if test='!dog_tag.empty'>
-			<foreach collection="dog_tag" index="index" item="dog_tag" open="" close="" separator="">
-				(OR T.DOG_TAG like CONCAT('%', #{dog_tag} ,'%'))
+			<foreach collection="dog_tag" item="dog" >
+				 AND T.DOG_TAG like '%'|| #{dog} ||'%'
 			</foreach>
 		</if>
 	</select>
