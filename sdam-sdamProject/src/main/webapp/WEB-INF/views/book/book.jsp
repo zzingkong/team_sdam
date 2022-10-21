@@ -474,28 +474,32 @@ $(window).ready(function(){
 
 
 function notBook(){
-	   if($("input:radio[name='company_local']:checked").val() == "" || $("input:radio[name='company_local']:checked").val() == null) {
-			console.log($("input:radio[name='company_local']:checked").val());
+	   if($('input:radio[name="company_local"]:checked').val() == null || $('input:radio[name="company_local"]:checked').val() == "") {
+			console.log("희망지역: " + $("input:radio[name='company_local']:checked").val());
 		   alert('희망 지역을 선택하세요');
-		   $('[name="company_local"]').focus();
+		   setTimeout(function(){ $('[name="company_local"]').focus(); }, 1);
+		   //setTimeout: chrome에서 간혹 일어나는 focus(); 미작동 오류 방지 위해 사용
 		   return false;
 	   }
-	   else if($('#result1').value == "" || $('#result1').value == null) {
+	   else if($('#result1').val() == "" || $('#result1').val() == null) {
+			console.log("희망날짜: " + $('#result1').val());
 		   alert('날짜를 선택하세요.');
-		   $('#result1').focus();
+		   setTimeout(function(){ $('#result1').focus(); }, 1);
+		   
 		   return false;
 	   }
-	   else if($('[name="service_time"]').value == null || $('[name="service_time"]').value == "") {
+	   else if($('input:checkbox[name="service_time"]:checked').val() == null || $('input:checkbox[name="service_time"]:checked').val() == "") {
+			console.log("희망시간: " + $("input:checkbox[name='service_time']:checked").val());
 		   alert('이용 희망 시간을 선택해주세요.');
-		   $('[name="service_time"]').focus();
+		   setTimeout(function(){ $('[name="service_time"]').focus(); }, 1);
 		   return false;
 	   }
-	   else if($('#dog_idx').value == 0 || $('#dog_idx').value == null || $('#dog_idx').value == "") {
+	   else if($('input:radio[name="dog_idx"]:checked').val() == 0 || $('input:radio[name="dog_idx"]:checked').val() == "") {
+			console.log("개idx: " + $('input:radio[name="dog_idx"]:checked').val());
 		   alert('테라피 독을 선택해주세요.');
-		   $('#dog_idx').focus();
+		   setTimeout(function(){ $('#dog_idx').focus(); }, 1);
 		   return false;
 	   }
-	   return true;
 }
 </script>
 
