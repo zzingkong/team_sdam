@@ -71,12 +71,15 @@
 <div class="container-fluid header-bg py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
 	<div class="container py-5">
 		<h1 class="display-4 text-white mb-3 animated slideInDown">
-          관리 페이지
+          회원관리
 		</h1>
 		<nav aria-label="breadcrumb animated slideInDown">
 			<ol class="breadcrumb mb-0">
 				<li class="breadcrumb-item">
 					<a class="text-white" href="${root }main">Home &nbsp;/ </a>
+				</li>
+				<li class="breadcrumb-item text-white active" aria-current="page">
+					관리페이지 &nbsp;/ 
 				</li>
 				<li class="breadcrumb-item text-primary active" aria-current="page">
 					회원관리
@@ -114,7 +117,7 @@
 				
 				
 <div class="container">
-	<div class="card shadow">
+	<div class="card">
 		<div class="card-body">
 			<table class="table table-hover">
 				<thead>

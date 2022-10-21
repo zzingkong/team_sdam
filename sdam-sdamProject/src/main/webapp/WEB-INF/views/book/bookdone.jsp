@@ -107,7 +107,7 @@
 		<div class="container">
 			<div class="row g-5 mb-5 align-items-end ">
 				<div class="text-center">
-					<h2 class="display-6 mb-0 pb-3">예약이 완료되었습니다</h2>
+					<h2 class="display-6 mb-0 pb-5">예약이 완료되었습니다</h2>
 					<p>서비스 이용 당일 하루 전에 방문 예정 문자를 송부드리니 확인해 주시기 바랍니다.</p>
 					<p>귀여운 테라피독이 신청하신 일정에 따라 곧 방문합니다. 조금만 기다려 주세요!</p>
 				</div>
