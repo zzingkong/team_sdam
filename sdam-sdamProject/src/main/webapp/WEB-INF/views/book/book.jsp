@@ -143,10 +143,10 @@
 				<span class="text-primary me-2">1</span> 지역 선택
 			</h2>
 			
-		 		<div class="form-check ml-3 text-center" id="bookLocal">
+		 		<div class="form-check ml-3 text-center">
 		 			<div class="form-check form-check-inline">
 						<input class="form-check-input" type="radio" value=""
-							name="company_local" id="flexRadioDefault0" checked="checked"> <label
+							name="company_local" id="flexRadioDefault0"> <label
 							class="form-check-label" for="flexRadioDefault0"> 전국 </label>
 					</div>
 					<div class="form-check form-check-inline">
@@ -268,7 +268,7 @@
 					      <div class="row justify-content-center">
 					        <div class="col-md-10 text-center">
 					          <h4 class="mb-5 text-center">날짜를 선택하세요</h4>
-					          <input type="text" name="service_date" class="form-control datepicker w-25 mx-auto mb-3 dogdogdog" id="result1" placeholder="날짜를 선택하세요">
+					          <input type="text" name="service_date" class="form-control w-25 mx-auto mb-3 dogdogdog" id="result1" placeholder="날짜를 선택하세요" readonly="readonly">
 <!-- 					          <form action="#" class="row"> -->
 					            <div class="col-md-12">
 					              <div id="inline_cal"></div>
@@ -328,7 +328,7 @@
 	</h2>
 	
 	<!-- 키워드 선택하기 -->
-			<div class="d-flex pb-5 wow " id="dogTags">
+			<div class="d-flex pb-5 wow">
  			<div class="my-1">
 				<span class="material-symbols-outlined" style="margin-top:5px;">sound_detection_dog_barking</span>
 			</div>
@@ -380,41 +380,6 @@
 
 
 			<div class="row row-cols-1 row-cols-md-3 mb-3 text-center" id="showDogs" style="display:flex; flex-direction:row; flex-wrap:wrap;">
-			
-<%-- 				<c:forEach var="obj" items="${dogBookList}"> --%>
-<!-- 					<div class="col"> -->
-<!-- 						<div class="card2 mb-4 rounded-3"> -->
-							
-<!-- 							<div class="form-check form-inline-block py-3" style="margin: 0 auto;"> -->
-<%-- 								<input class="form-check-input h4" type="radio" value="24" name="dog_idx" id="${obj.dog_idx}"> --%>
-<%-- 								<label class="form-check-label h5 pt-2" for="${obj.dog_idx}">${obj.dog_name}</label> --%>
-<!-- 							</div> -->
-							
-<!-- 							<div class="card-body"> -->
-<!-- 								<div class="position-relative"  style="min-height: 500px;"> -->
-<%-- 								<img class="img-fluid" src="${root }upload/${obj.dog_picture}" alt="테라피독 ${obj.dog_name}" /> --%>
-<!-- 									<div class="animal-text p-4"> -->
-<%-- 										<h5 class="text-white mb-0">${obj.dog_name}</h5> --%>
-<!-- 									</div> -->
-<!-- 								</div> -->
-<!-- 							</div> -->
-<!-- 						</div> -->
-<!-- 					</div> -->
-<%-- 				</c:forEach>  --%>
-			
-<!-- 			<nav aria-label="Page navigation example" style="margin: 0 auto;"> -->
-<!-- 				<ul class="pagination"> -->
-<!-- 					<li class="page-item"><a class="page-link" href="?page=1" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>  -->
-<%-- 					<li class="page-item"><a class="page-link" href="?page=${pager.prev}"><span aria-hidden="true" style="font-size:0.6em;"><i class="bi bi-chevron-left"></i></span></a></li>		 --%>
-									
-<%-- 					<c:forEach var="page" items="${pager.list}"> --%>
-<%-- 					<li class="page-item"><a class="page-link" href="?page=${page}">${page}</a></li> --%>
-<%-- 					</c:forEach> --%>
-								
-<%-- 					<li class="page-item"><a class="page-link" href="?page=${pager.next}"><span aria-hidden="true" style="font-size:0.6em;"><i class="bi bi-chevron-right"></i></span></a></li> --%>
-<%-- 					<li class="page-item"><a class="page-link" aria-label="Next" href="?page=${pager.last}"><span aria-hidden="true">&raquo;</span></a></li> --%>
-<!-- 				</ul> -->
-<!-- 			</nav>	 -->
 		</div>
 
 </div>
@@ -423,7 +388,8 @@
 		
 		
 <div class="text-center mb-5">
-	<button type="submit" class="btn btn-primary btn-lg" onclick="location.href='${root}book/bookdone'">신청하기</button>
+	<button type="submit" class="btn btn-primary btn-lg" id="bookSubmit" onclick="return notBook()">신청하기</button>
+<%-- 	<button type="submit" class="btn btn-primary btn-lg" onclick="location.href='${root}book/bookdone'" id="bookSubmit">신청하기</button> --%>
 </div>
 
 
@@ -466,17 +432,6 @@ function loadDogs(company_local, service_date, dog_tag_list) {
 		
 	console.log('시간'+service_date);
 	
-//	if(!company_local) {
-//		company_local = "";
-//	}
-	
-//	var url="${pageContext.request.contextPath}/book/showdog?company_local=" + company_local + "&service_date=" + service_date + "&importAt=Y";
-
-//	dog_tag 나중에 써보기 
-//	for(var i=0;i<dog_tag_list.length;i++) {
-//		url += '&dog_tag=' + dog_tag_list[i];
-//	}
-	
     $.ajax({
    	    url: '${pageContext.request.contextPath}/book/showdog',
    	    method: "get",
@@ -488,77 +443,60 @@ function loadDogs(company_local, service_date, dog_tag_list) {
 }
 
 
-// let sevice_date = 기본값;
-// let dog_tag = 기본값;
-
-/* window.addEventListener('DOMContentLoaded', function(){
-	
-}
-	$('#bookLocal, #result1').on("click", function(){
-		   
-		   var company_local = $("input:radio[name='flexRadioDefault']:checked").val();
-		   console.log(company_local)
-		   
-		   var service_date = document.getElementById('result1').value;
-		   console.log(service_date)
-
-		//상기의 loadDogs function을 불러와서 click이벤트 발생 시 실행함
-	 	loadDogs(company_local, service_date)
-	
-}) ; */
-
-
-//지역선택시 강아지 선택하기
 $(window).ready(function(){
-	
-//	$('#bookLocal, #result, #dogTags').on("click", function(){
+	//지역선택시 강아지 선택하기
    $('[name="company_local"], #result1, [name="dog_tag"]').on("click", function(){
-	   
-//	   var company_local = $("input:radio[name='flexRadioDefault']:checked").val();
-//	   console.log(company_local)
-	/*    
-	   var service_date = document.getElementById('result1').value;
-	   console.log(service_date)
-	   
-	   //
-	   var checkBoxes = document.getElementsByName("dog_tag");
-
-//	   	var list = [];
-      var dog_tag_string = "";
-        
-	   	for (var i = 0; i < checkBoxes.length; i++) {
-                if (checkBoxes[i].checked) {
-                   list.push(checkBoxes[i].value);
-                   dog_tag_string+=checkBoxes[i].value+',';
-                }
-            }
-       console.log(dog_tag_string);
-
- */
 	//상기의 loadDogs function을 불러와서 click이벤트 발생 시 실행함
- //	loadDogs(company_local, service_date)
  	loadDogs()
    });
    
-   
-   
-   
-//    $('[name="service_date"]').on("click", function(){
+//    $('#bookSubmit').on('click', function(e){
+// 	   if($('[name="company_local"]').value == null) {
+// 	      alert('미친놈아 어디사는지는 알려줘야지.');
+// 	      location.href = '${root}book/book';
+// 	      return false;
+// 	   }
+// 	   if($('[name="service_time"]').value == null) {
+// 	      alert('시간을 선택해주세요.');
+// 	      return false;
+// 	   }
+// 	   if($('[name="service_time"]').value == null) {
+// 	      alert('시간을 선택해주세요.');
+// 	      return false;
+// 	   }
 
-// //		var company_local = $(this).val();
-
-// 	loadDogs('company_local', 'sevice_date', 'dog_tag')
-//  });
+//    });
    
-//    $('[name="dog_tag"]').on("click", function(){
 
-// //		var company_local = $(this).val();
-
-// 	//상기의 loadDogs function을 불러와서 click이벤트 발생 시 실행함
-// 	loadDogs('company_local', 'sevice_date', 'dog_tag')
-//  });
+   
    
 });
+
+
+function notBook(){
+	   if($("input:radio[name='company_local']:checked").val() == "" || $("input:radio[name='company_local']:checked").val() == null) {
+			console.log($("input:radio[name='company_local']:checked").val());
+		   alert('희망 지역을 선택하세요');
+		   $('[name="company_local"]').focus();
+		   return false;
+	   }
+	   else if($('#result1').value == "" || $('#result1').value == null) {
+		   alert('날짜를 선택하세요.');
+		   $('#result1').focus();
+		   return false;
+	   }
+	   else if($('[name="service_time"]').value == null || $('[name="service_time"]').value == "") {
+		   alert('이용 희망 시간을 선택해주세요.');
+		   $('[name="service_time"]').focus();
+		   return false;
+	   }
+	   else if($('#dog_idx').value == 0 || $('#dog_idx').value == null || $('#dog_idx').value == "") {
+		   alert('테라피 독을 선택해주세요.');
+		   $('#dog_idx').focus();
+		   return false;
+	   }
+	   return true;
+}
 </script>
 
 
@@ -581,7 +519,6 @@ $(function() {
 $('[name="service_time"]').attr('data-no', function (i){
 	return i;
 });
-	
 	
 $('[name="service_time"]').on('change', function(e){
 	console.log(this.id, this.checked);
