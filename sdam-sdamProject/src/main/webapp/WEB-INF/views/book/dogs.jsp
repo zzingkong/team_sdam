@@ -34,7 +34,7 @@
 		                
 		                <div class="form-check form-inline-block py-3" style="margin: 0 auto;">
 		                    <input class="form-check-input h4" type="radio" id="${dog.dog_idx}" value="${dog.dog_idx}" name="dog_idx">
-		                    <label class="form-check-label h5 pt-2" for="${dog.dog_idx}" id="bookDogName">${dog.dog_name}</label>
+		                    <label class="form-check-label h5 pt-2" for="${dog.dog_idx}">${dog.dog_name}</label>
 		                </div>
 		                
 		                <div class="card-body">

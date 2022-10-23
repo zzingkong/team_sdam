@@ -144,11 +144,11 @@
 			</h2>
 			
 		 		<div class="form-check ml-3 text-center">
-		 			<div class="form-check form-check-inline">
-						<input class="form-check-input" type="radio" value=""
-							name="company_local" id="flexRadioDefault0"> <label
-							class="form-check-label" for="flexRadioDefault0"> 전국 </label>
-					</div>
+<!-- 		 			<div class="form-check form-check-inline"> -->
+<!-- 						<input class="form-check-input" type="radio" value="" -->
+<!-- 							name="company_local" id="flexRadioDefault0"> <label -->
+<!-- 							class="form-check-label" for="flexRadioDefault0"> 전국 </label> -->
+<!-- 					</div> -->
 					<div class="form-check form-check-inline">
 						<input class="form-check-input" type="radio" value="서울"
 							name="company_local" id="flexRadioDefault1"> <label
@@ -479,7 +479,7 @@ function notBook(){
 	var bookDate = $('#result1').val();
 	var bookTime = $('input:checkbox[name="service_time"]:checked').val();
 	var bookDog = $('input:radio[name="dog_idx"]:checked').val();
-	var bookDogName = $('#bookDogName').text();
+	var bookDogName = $('input[name="dog_idx"]:checked').next().text();
 	
 	   if(bookLocal == null || bookLocal == "") {
 		   alert('희망 지역을 선택하세요');
