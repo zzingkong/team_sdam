@@ -474,31 +474,40 @@ $(window).ready(function(){
 
 
 function notBook(){
-	   if($('input:radio[name="company_local"]:checked').val() == null || $('input:radio[name="company_local"]:checked').val() == "") {
-			console.log("희망지역: " + $("input:radio[name='company_local']:checked").val());
+	
+	var bookLocal = $('input:radio[name="company_local"]:checked').val();
+	var bookDate = $('#result1').val();
+	var bookTime = $('input:checkbox[name="service_time"]:checked').val();
+	var bookDog = $('input:radio[name="dog_idx"]:checked').val();
+	var bookDogName = $('#bookDogName').text();
+	
+	   if(bookLocal == null || bookLocal == "") {
 		   alert('희망 지역을 선택하세요');
 		   setTimeout(function(){ $('[name="company_local"]').focus(); }, 1);
 		   //setTimeout: chrome에서 간혹 일어나는 focus(); 미작동 오류 방지 위해 사용
 		   return false;
 	   }
-	   else if($('#result1').val() == "" || $('#result1').val() == null) {
-			console.log("희망날짜: " + $('#result1').val());
+	   if(bookDate == "" || bookDate == null) {
 		   alert('날짜를 선택하세요.');
 		   setTimeout(function(){ $('#result1').focus(); }, 1);
 		   
 		   return false;
 	   }
-	   else if($('input:checkbox[name="service_time"]:checked').val() == null || $('input:checkbox[name="service_time"]:checked').val() == "") {
-			console.log("희망시간: " + $("input:checkbox[name='service_time']:checked").val());
+	   if(bookTime == null || bookTime == "") {
 		   alert('이용 희망 시간을 선택해주세요.');
 		   setTimeout(function(){ $('[name="service_time"]').focus(); }, 1);
 		   return false;
 	   }
-	   else if($('input:radio[name="dog_idx"]:checked').val() == 0 || $('input:radio[name="dog_idx"]:checked').val() == "") {
-			console.log("개idx: " + $('input:radio[name="dog_idx"]:checked').val());
+	   if(bookDog == 0 || bookDog == "" || bookDog == null) {
 		   alert('테라피 독을 선택해주세요.');
-		   setTimeout(function(){ $('#dog_idx').focus(); }, 1);
+		   setTimeout(function(){ $('[name="dog_idx"]').focus(); }, 1);
 		   return false;
+	   }
+	   else{
+		   var bookCheckAlarm = confirm("테라피 서비스 예약을 완료하시겠습니까? \n\n"  + "희망 지역: " + bookLocal + "\n희망 날짜: " + bookDate + "\n희망 시간: " + bookTime + " ~ " + "\n희망 테라피독: " + bookDogName);
+	   
+		   if(bookCheckAlarm == true) return true;
+		   else return false;
 	   }
 }
 </script>
