@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <c:set var="root" value="${pageContext.request.contextPath }/"/>
 <!DOCTYPE html>
 <html>
@@ -131,73 +131,94 @@
 
 
 
-<form:form  modelAttribute="bookBean" action="${pageContext.request.contextPath}book/book" method="post">
+
+
+	<form action="${root }book/book" method="post" name="form">
 	<div class="container my-3">
-		
+	<input type="hidden" name="user_idx" value="${user_idx}">
+	
 	<!-- 지역 선택 -->
 		<div class="pb-5">
 			<h2 class="pb-2 border-bottom my-5">
 				<span class="text-primary me-2">1</span> 지역 선택
-			</h2>			
-		 		<div class="form-check ml-3 text-center">
-					<div class="form-check form-check-inline">
-						<form:radiobutton class="form-check-input" name="flexRadioDefault" id="flexRadioDefault1" path="service_local" />
-							 <form:label class="form-check-label" for="flexRadioDefault1" path="service_local"> 서울 </form:label>
+			</h2>
+			
+		 		<div class="form-check ml-3 text-center" id="bookLocal">
+		 			<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" value=""
+							name="company_local" id="flexRadioDefault0" checked="checked"> <label
+							class="form-check-label" for="flexRadioDefault0"> 전국 </label>
 					</div>
 					<div class="form-check form-check-inline">
-						<form:radiobutton class="form-check-input" 
-							name="flexRadioDefault" id="flexRadioDefault2" path="service_local"/> 
-							<form:label class="form-check-label" for="flexRadioDefault2" path="service_local"> 부산 </form:label>
+						<input class="form-check-input" type="radio" value="서울"
+							name="company_local" id="flexRadioDefault1"> <label
+							class="form-check-label" for="flexRadioDefault1"> 서울 </label>
 					</div>
 					<div class="form-check form-check-inline">
-						<form:radiobutton class="form-check-input" name="flexRadioDefault" id="flexRadioDefault3" path="service_local"/> 
-							<form:label	class="form-check-label" for="flexRadioDefault3" path="service_local"> 대구 </form:label>
+						<input class="form-check-input" type="radio" value="부산"
+							name="company_local" id="flexRadioDefault2"> <label
+							class="form-check-label" for="flexRadioDefault2"> 부산 </label>
 					</div>
 					<div class="form-check form-check-inline">
-						<form:radiobutton class="form-check-input" 
-							name="flexRadioDefault" id="flexRadioDefault4" path="service_local"/> <form:label
-							class="form-check-label" for="flexRadioDefault4" path="service_local"> 인천 </form:label>
+						<input class="form-check-input" type="radio" value="대구"
+							name="company_local" id="flexRadioDefault3"> <label
+							class="form-check-label" for="flexRadioDefault3"> 대구 </label>
 					</div>
 					<div class="form-check form-check-inline">
-						<form:radiobutton class="form-check-input"  name="flexRadioDefault" id="flexRadioDefault5" path="service_local"/> 
-						<form:label class="form-check-label" for="flexRadioDefault5" path="service_local"> 광주 </form:label>
+						<input class="form-check-input" type="radio" value="인천"
+							name="company_local" id="flexRadioDefault4"> <label
+							class="form-check-label" for="flexRadioDefault4"> 인천 </label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" value="광주"
+							name="company_local" id="flexRadioDefault5"> <label
+							class="form-check-label" for="flexRadioDefault5"> 광주 </label>
 					</div>
 					
 					<div class="form-check form-check-inline">
-						<form:radiobutton class="form-check-input"  name="flexRadioDefault" id="flexRadioDefault6" path="service_local"/> 
-						<form:label class="form-check-label" for="flexRadioDefault6" path="service_local"> 대전 </form:label>
+						<input class="form-check-input" type="radio" value="대전"
+							name="company_local" id="flexRadioDefault6"> <label
+							class="form-check-label" for="flexRadioDefault6"> 대전 </label>
 					</div>
 					<div class="form-check form-check-inline">
-						<form:radiobutton class="form-check-input"  name="flexRadioDefault" id="flexRadioDefault7" path="service_local"/>
-						 <form:label class="form-check-label" for="flexRadioDefault7" path="service_local"> 울산 </form:label>
+						<input class="form-check-input" type="radio" value="울산"
+							name="company_local" id="flexRadioDefault7"> <label
+							class="form-check-label" for="flexRadioDefault7"> 울산 </label>
 					</div>
 					<div class="form-check form-check-inline">
-						<form:radiobutton class="form-check-input"  name="flexRadioDefault" id="flexRadioDefault8" path="service_local"/> 
-						<form:label	class="form-check-label" for="flexRadioDefault8" path="service_local"> 세종 </form:label>
+						<input class="form-check-input" type="radio" value="세종"
+							name="company_local" id="flexRadioDefault8"> <label
+							class="form-check-label" for="flexRadioDefault8"> 세종 </label>
 					</div>
 					<div class="form-check form-check-inline">
-						<form:radiobutton class="form-check-input"  	name="flexRadioDefault" id="flexRadioDefault9" path="service_local"/>
-						 <form:label class="form-check-label" for="flexRadioDefault9" path="service_local"> 경기도 </form:label>
+						<input class="form-check-input" type="radio" value="경기도"
+							name="company_local" id="flexRadioDefault9"> <label
+							class="form-check-label" for="flexRadioDefault9"> 경기도 </label>
 					</div>
 					<div class="form-check form-check-inline">
-						<form:radiobutton class="form-check-input" name="flexRadioDefault" id="flexRadioDefault10" path="service_local"/>
-						 <form:label class="form-check-label" for="flexRadioDefault10" path="service_local"> 강원도 </form:label>
+						<input class="form-check-input" type="radio" value="강원도"
+							name="company_local" id="flexRadioDefault10"> <label
+							class="form-check-label" for="flexRadioDefault10"> 강원도 </label>
 					</div>
 					<div class="form-check form-check-inline">
-						<form:radiobutton class="form-check-input"  name="flexRadioDefault" id="flexRadioDefault11" path="service_local"/> <form:label
-							class="form-check-label" for="flexRadioDefault11" path="service_local"> 충청도 </form:label>
+						<input class="form-check-input" type="radio" value="충청도"
+							name="company_local" id="flexRadioDefault11"> <label
+							class="form-check-label" for="flexRadioDefault11"> 충청도 </label>
 					</div>
 					<div class="form-check form-check-inline">
-						<form:radiobutton class="form-check-input"  name="flexRadioDefault" id="flexRadioDefault12" path="service_local"/>
-						 <form:label class="form-check-label" for="flexRadioDefault12" path="service_local"> 전라도 </form:label>
+						<input class="form-check-input" type="radio" value="전라도"
+							name="company_local" id="flexRadioDefault12"> <label
+							class="form-check-label" for="flexRadioDefault12"> 전라도 </label>
 					</div>
 					<div class="form-check form-check-inline">
-						<form:radiobutton class="form-check-input"  name="flexRadioDefault" id="flexRadioDefault13" path="service_local"/> 
-						<form:label class="form-check-label" for="flexRadioDefault13" path="service_local"> 경상도 </form:label>
+						<input class="form-check-input" type="radio" value="경상도"
+							name="company_local" id="flexRadioDefault13"> <label
+							class="form-check-label" for="flexRadioDefault13"> 경상도 </label>
 					</div>
 					<div class="form-check form-check-inline">
-						<form:radiobutton class="form-check-input"  name="flexRadioDefault" id="flexRadioDefault14" path="service_local"/>
-						 <form:label class="form-check-label" for="flexRadioDefault14" path="service_local"> 제주도 </form:label>
+						<input class="form-check-input" type="radio" value="제주도"
+							name="company_local" id="flexRadioDefault14"> <label
+							class="form-check-label" for="flexRadioDefault14"> 제주도 </label>
 					</div>
 				</div>
 		</div>
@@ -247,12 +268,12 @@
 					      <div class="row justify-content-center">
 					        <div class="col-md-10 text-center">
 					          <h4 class="mb-5 text-center">날짜를 선택하세요</h4>
-					          <form:input type="text" class="form-control w-25 mx-auto mb-3" id="result" placeholder="날짜를 선택하세요" disabled="true" path="service_date"/>
-					          <form action="#" class="row">
+					          <input type="text" name="service_date" class="form-control datepicker w-25 mx-auto mb-3 dogdogdog" id="result1" placeholder="날짜를 선택하세요">
+<!-- 					          <form action="#" class="row"> -->
 					            <div class="col-md-12">
 					              <div id="inline_cal"></div>
 					            </div>
-					          </form>
+<!-- 					          </form> -->
 					        </div>
 					      </div>
 					    </div>
@@ -261,35 +282,34 @@
 
 
 					<h4 class="my-5 text-center">이용희망 시간을 선택하세요</h4>
-					<form class="mx-auto">
-
+<!-- 					<form class="mx-auto">				 -->
 						
 						<div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-						  <form:checkbox class="btn-check" value="btncheck01" id="btncheck1" name="timeselect-check" autocomplete="off" path="service_time" />
-						  <form:label class="btn btn-outline-warning" for="btncheck1" path="service_time">AM 10:00</form:label>
+						  <input type="checkbox" value="10:00AM" class="btn-check" id="btncheck1" name="service_time" autocomplete="off">
+						  <label class="btn btn-outline-warning" for="btncheck1">AM 10:00</label>
 						
-						  <form:checkbox class="btn-check" value="btncheck02" id="btncheck2" name="timeselect-check" autocomplete="off" path="service_time"/>
-						  <form:label class="btn btn-outline-warning" for="btncheck2" path="service_time">AM 11:00</form:label>
+						  <input type="checkbox" value="11:00AM" class="btn-check" id="btncheck2" name="service_time" autocomplete="off">
+						  <label class="btn btn-outline-warning" for="btncheck2">AM 11:00</label>
 						
-						  <form:checkbox class="btn-check" value="btncheck03" id="btncheck3" name="timeselect-check" autocomplete="off" path="service_time"/>
-						  <form:label class="btn btn-outline-warning" for="btncheck3" path="service_time">PM 12:00</form:label>
+						  <input type="checkbox" value="12:00PM" class="btn-check" id="btncheck3" name="service_time" autocomplete="off">
+						  <label class="btn btn-outline-warning" for="btncheck3">PM 12:00</label>
 						
-						  <form:checkbox class="btn-check" value="btncheck04" id="btncheck4" name="timeselect-check" autocomplete="off" path="service_time"/>
-						  <form:label class="btn btn-outline-warning" for="btncheck4" path="service_time">PM 13:00</form:label>
+						  <input type="checkbox" value="13:00PM" class="btn-check" id="btncheck4" name="service_time" autocomplete="off">
+						  <label class="btn btn-outline-warning" for="btncheck4">PM 13:00</label>
 						
-						  <form:checkbox class="btn-check" value="btncheck5" name="timeselect-check" autocomplete="off" path="service_time"/>
-						  <form:label class="btn btn-outline-warning" for="btncheck5" path="service_time">PM 14:00</form:label>
+						  <input type="checkbox" value="14:00PM" class="btn-check" id="btncheck5" name="service_time" autocomplete="off">
+						  <label class="btn btn-outline-warning" for="btncheck5">PM 14:00</label>
 						
-						  <form:checkbox class="btn-check" value="btncheck6" name="timeselect-check" autocomplete="off" path="service_time"/>
-						  <form:label class="btn btn-outline-warning" for="btncheck6" path="service_time">PM 15:00</form:label>
+						  <input type="checkbox" value="15:00PM" class="btn-check" id="btncheck6" name="service_time" autocomplete="off">
+						  <label class="btn btn-outline-warning" for="btncheck6">PM 15:00</label>
 						
-						  <form:checkbox class="btn-check" value="btncheck7" name="timeselect-check" autocomplete="off" path="service_time"/>
-						  <form:label class="btn btn-outline-warning" for="btncheck7" path="service_time">PM 16:00</form:label>
+						  <input type="checkbox" value="16:00PM" class="btn-check" id="btncheck7" name="service_time" autocomplete="off">
+						  <label class="btn btn-outline-warning" for="btncheck7">PM 16:00</label>
 						
-						  <form:checkbox class="btn-check" value="btncheck8" name="timeselect-check" autocomplete="off" path="service_time"/>
-						  <form:label class="btn btn-outline-warning" for="btncheck8" path="service_time">PM 17:00</form:label>
+						  <input type="checkbox" value="17:00PM" class="btn-check" id="btncheck8" name="service_time" autocomplete="off">
+						  <label class="btn btn-outline-warning" for="btncheck8">PM 17:00</label>
 						</div>
-					</form>
+<!-- 					</form> -->
 				</div>
 			</div>
 		</div>
@@ -298,14 +318,17 @@
 <!-- ----------------------------------------------- -->
 		
 
-<!-- 테라피독 선택 -->
+		
+		
+		
+		<!-- 테라피독 선택 -->
 <div class="py-5">
 	<h2 class="pb-2 border-bottom my-5">
 		<span class="text-primary me-2">4</span> 테라피독 선택
 	</h2>
 	
 	<!-- 키워드 선택하기 -->
-		<div class="d-flex pb-5 wow ">
+			<div class="d-flex pb-5 wow">
  			<div class="my-1">
 				<span class="material-symbols-outlined" style="margin-top:5px;">sound_detection_dog_barking</span>
 			</div>
@@ -313,17 +336,17 @@
 				<b> 덩치 </b> 
 			</div>
 			<div class="my-1 px-3">
-				<form:checkbox class="btn-check" name="btnradio" value="btnradio1" autocomplete="off" path="dog_tag"/>
-				<form:label class="btn btn-outline-primary" for="btnradio1" path="dog_tag"># 대형견</form:label>
+				<input type="checkbox" value="대형견" class="btn-check" name="dog_tag" id="btnradio1" autocomplete="off" >
+				<label class="btn btn-outline-primary" for="btnradio1"># 대형견</label>
 			</div>
 			<div class="my-1 px-3">
-				<form:checkbox class="btn-check" name="btnradio" value="btnradio2" autocomplete="off" path="dog_tag"/>
-				<form:label class="btn btn-outline-primary" for="btnradio2" path="dog_tag"># 중형견</form:label>
+				<input type="checkbox" value="중형견" class="btn-check" name="dog_tag" id="btnradio2" autocomplete="off" >
+				<label class="btn btn-outline-primary" for="btnradio2"># 중형견</label>
 			</div>
 			<div class="my-1 px-3">
-				<form:checkbox class="btn-check" name="btnradio" value="btnradio3" autocomplete="off" path="dog_tag"/>
-				<form:label class="btn btn-outline-primary" for="btnradio3" path="dog_tag"># 소형견</form:label>
-			</div> 
+				<input type="checkbox" value="소형견" class="btn-check" name="dog_tag" id="btnradio3" autocomplete="off" >
+				<label class="btn btn-outline-primary" for="btnradio3"># 소형견</label>
+			</div>
 			
 			<div class="px-5"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </div>
 			
@@ -334,119 +357,64 @@
 				<b> 성격 </b> 
 			</div>
 			<div class="my-1 px-3">
-				<form:checkbox class="btn-check" name="btnradio" value="btnradio4" autocomplete="off" path="dog_tag" />
-				<form:label class="btn btn-outline-primary" for="btnradio4" path="dog_tag"># 활발한</form:label>
+				<input type="checkbox" value="활발한" class="btn-check" name="dog_tag" id="btnradio4" autocomplete="off" >
+				<label class="btn btn-outline-primary" for="btnradio4"># 활발한</label>
 			</div>
 			<div class="my-1 px-3">
-				<form:checkbox class="btn-check" name="btnradio" value="btnradio5" autocomplete="off" path="dog_tag"/>
-				<form:label class="btn btn-outline-primary" for="btnradio5" path="dog_tag"># 조용한</form:label>
+				<input type="checkbox" value="조용한" class="btn-check" name="dog_tag" id="btnradio5" autocomplete="off" >
+				<label class="btn btn-outline-primary" for="btnradio5"># 조용한</label>
 			</div>
 			<div class="my-1 px-3">
-				<form:checkbox class="btn-check" name="btnradio" value="btnradio6" autocomplete="off" path="dog_tag"/>
-				<form:label class="btn btn-outline-primary" for="btnradio6" path="dog_tag"># 애교많은</form:label>
+				<input type="checkbox" value="애교많은" class="btn-check" name="dog_tag" id="btnradio6" autocomplete="off" >
+				<label class="btn btn-outline-primary" for="btnradio6"># 애교많은</label>
 			</div>
 			<div class="my-1 px-3">
-				<form:checkbox class="btn-check" name="btnradio" value="btnradio7" autocomplete="off" path="dog_tag"/>
-				<form:label class="btn btn-outline-primary" for="btnradio7" path="dog_tag"># 장난기 많은</form:label>
+				<input type="checkbox" value="장난기많은" class="btn-check" name="dog_tag" id="btnradio7" autocomplete="off" >
+				<label class="btn btn-outline-primary" for="btnradio7"># 장난기많은</label>
 			</div>
 			<div class="my-1 ps-3">
-				<form:checkbox class="btn-check" name="btnradio" value="btnradio8" autocomplete="off" path="dog_tag"/>
-				<form:label class="btn btn-outline-primary" for="btnradio8" path="dog_tag"># 사교적인</form:label>
+				<input type="checkbox" value="사교적인" class="btn-check" name="dog_tag" id="btnradio8" autocomplete="off" >
+				<label class="btn btn-outline-primary" for="btnradio8"># 사교적인</label>
 			</div>
 		</div>
 
 
-			<div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
-				<div class="col">
-					<div class="card mb-4 rounded-3 shadow-sm">
-						
-						<div class="form-check text-center">
-							<h1><form:radiobutton name="flexRadioDefault" id="flexRadioDefault1" path="dog_name"/></h1>
-							<h4><form:label class="form-check-label list-inline-item" for="exampleRadios1" path="dog_name">임댕댕</form:label></h4>
-						</div>
-
-						<div class="card-body">
-							<div class="position-relative" style="min-height: 500px;">
-							<img class="img-fluid" src="../img/animal-md-1.jpg" alt="" />
-								<div class="animal-text p-4">
-									<h5 class="text-white mb-0">임댕댕</h5>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col">
-					<div class="card mb-4 rounded-3 shadow-sm">
-						
-						<div class="form-check text-center">
-							<h1><form:radiobutton  name="flexRadioDefault" id="flexRadioDefault2" path="dog_name" /></h1>
-							<h4><form:label class="form-check-label" for="flexRadioDefault2" path="dog_name">말랑이</form:label></h4>
-						</div>
-						
-						<div class="card-body">
-							<div class="position-relative" style="min-height: 500px;">
-							<img class="img-fluid" src="../img/select_dog_1.jpg" alt="" />
-								<div class="animal-text p-4">
-									<h5 class="text-white mb-0">말랑이</h5>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col">
-					<div class="card mb-4 rounded-3 shadow-sm">
-						
-						<div class="form-check text-center">
-							<h1><form:radiobutton name="flexRadioDefault" id="flexRadioDefault3" path="dog_name"/></h1>
-							<h4><form:label class="form-check-label" for="flexRadioDefault3" path="dog_name">이슬이</form:label></h4>
-						</div>
-						
-						<div class="card-body">
-							<div class="position-relative" style="min-height: 500px";>
-							<img class="img-fluid" src="../img/select_dog_2.jpg" alt="" />
-								<div class="animal-text p-4">
-									<h5 class="text-white mb-0">이슬이</h5>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col">
-					<div class="card mb-4 rounded-3 shadow-sm">
-						
-						<div class="form-check text-center">
-							<h1><form:radiobutton name="flexRadioDefault" id="flexRadioDefault4" path="dog_name"/></h1>
-							<h4><form:label class="form-check-label" for="flexRadioDefault4" path="dog_name">바루</form:label></h4>
-						</div>
-						
-						<div class="card-body">
-							<div class="position-relative"  style="min-height: 500px";>
-							<img class="img-fluid" src="../img/select_dog_3.jpg" alt="" />
-								<div class="animal-text p-4">
-									<h5 class="text-white mb-0">바루</h5>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col">
-					<div class="card mb-4 rounded-3 shadow-sm">
-						
-						<div class="form-check text-center">
-							<h1><form:radiobutton  name="flexRadioDefault" id="flexRadioDefault5" path="dog_name"/></h1>
-							<h4><form:label class="form-check-label" for="flexRadioDefault5" path="dog_name">용식이</form:label></h4>
-						</div>
-						
-						<div class="card-body">
-							<div class="position-relative"  style="min-height: 500px";>
-							<img class="img-fluid" src="../img/select_dog_4.jpg" alt="" />
-								<div class="animal-text p-4">
-									<h5 class="text-white mb-0">용식이</h5>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+			<div class="row row-cols-1 row-cols-md-3 mb-3 text-center" id="showDogs" style="display:flex; flex-direction:row; flex-wrap:wrap;">
+			
+<%-- 				<c:forEach var="obj" items="${dogBookList}"> --%>
+<!-- 					<div class="col"> -->
+<!-- 						<div class="card2 mb-4 rounded-3"> -->
+							
+<!-- 							<div class="form-check form-inline-block py-3" style="margin: 0 auto;"> -->
+<%-- 								<input class="form-check-input h4" type="radio" value="24" name="dog_idx" id="${obj.dog_idx}"> --%>
+<%-- 								<label class="form-check-label h5 pt-2" for="${obj.dog_idx}">${obj.dog_name}</label> --%>
+<!-- 							</div> -->
+							
+<!-- 							<div class="card-body"> -->
+<!-- 								<div class="position-relative"  style="min-height: 500px;"> -->
+<%-- 								<img class="img-fluid" src="${root }upload/${obj.dog_picture}" alt="테라피독 ${obj.dog_name}" /> --%>
+<!-- 									<div class="animal-text p-4"> -->
+<%-- 										<h5 class="text-white mb-0">${obj.dog_name}</h5> --%>
+<!-- 									</div> -->
+<!-- 								</div> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+<%-- 				</c:forEach>  --%>
+			
+<!-- 			<nav aria-label="Page navigation example" style="margin: 0 auto;"> -->
+<!-- 				<ul class="pagination"> -->
+<!-- 					<li class="page-item"><a class="page-link" href="?page=1" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>  -->
+<%-- 					<li class="page-item"><a class="page-link" href="?page=${pager.prev}"><span aria-hidden="true" style="font-size:0.6em;"><i class="bi bi-chevron-left"></i></span></a></li>		 --%>
+									
+<%-- 					<c:forEach var="page" items="${pager.list}"> --%>
+<%-- 					<li class="page-item"><a class="page-link" href="?page=${page}">${page}</a></li> --%>
+<%-- 					</c:forEach> --%>
+								
+<%-- 					<li class="page-item"><a class="page-link" href="?page=${pager.next}"><span aria-hidden="true" style="font-size:0.6em;"><i class="bi bi-chevron-right"></i></span></a></li> --%>
+<%-- 					<li class="page-item"><a class="page-link" aria-label="Next" href="?page=${pager.last}"><span aria-hidden="true">&raquo;</span></a></li> --%>
+<!-- 				</ul> -->
+<!-- 			</nav>	 -->
 		</div>
 
 </div>
@@ -455,12 +423,14 @@
 		
 		
 <div class="text-center mb-5">
-	<button type="button" class="btn btn-primary btn-lg" onclick="location.href='${root}book/bookdone'">신청하기</button>
+	<button type="submit" class="btn btn-primary btn-lg" onclick="location.href='${root}book/bookdone'">신청하기</button>
 </div>
 
 
 </div>
-</form:form>
+</form>
+
+
 <c:import url="/WEB-INF/views/include/bottom_info.jsp"></c:import>
 
 <!-- Back to Top -->
@@ -488,6 +458,110 @@
 
 
 
+
+<script type="text/javascript">
+
+function loadDogs(company_local, service_date, dog_tag_list) {
+//function loadDogs(company_local, service_date) {
+		
+	console.log('시간'+service_date);
+	
+//	if(!company_local) {
+//		company_local = "";
+//	}
+	
+//	var url="${pageContext.request.contextPath}/book/showdog?company_local=" + company_local + "&service_date=" + service_date + "&importAt=Y";
+
+//	dog_tag 나중에 써보기 
+//	for(var i=0;i<dog_tag_list.length;i++) {
+//		url += '&dog_tag=' + dog_tag_list[i];
+//	}
+	
+    $.ajax({
+   	    url: '${pageContext.request.contextPath}/book/showdog',
+   	    method: "get",
+		data: $(document.forms.form).serialize(),
+   	    success: function (html) {
+			$('#showDogs').html(html).show();  // ajax로 강아지 목록만 있는 dogs.jsp 페이지를 불러옴 -> jquery load 사용으로 편하게 사용 할 수 있음. 알아보기
+   	    }
+   	});
+}
+
+
+// let sevice_date = 기본값;
+// let dog_tag = 기본값;
+
+/* window.addEventListener('DOMContentLoaded', function(){
+	
+}
+	$('#bookLocal, #result1').on("click", function(){
+		   
+		   var company_local = $("input:radio[name='flexRadioDefault']:checked").val();
+		   console.log(company_local)
+		   
+		   var service_date = document.getElementById('result1').value;
+		   console.log(service_date)
+
+		//상기의 loadDogs function을 불러와서 click이벤트 발생 시 실행함
+	 	loadDogs(company_local, service_date)
+	
+}) ; */
+
+
+//지역선택시 강아지 선택하기
+$(window).ready(function(){
+	
+//	$('#bookLocal, #result, #dogTags').on("click", function(){
+   $('[name="company_local"], #result1, [name="dog_tag"]').on("click", function(){
+	   
+//	   var company_local = $("input:radio[name='flexRadioDefault']:checked").val();
+//	   console.log(company_local)
+	/*    
+	   var service_date = document.getElementById('result1').value;
+	   console.log(service_date)
+	   
+	   //
+	   var checkBoxes = document.getElementsByName("dog_tag");
+
+//	   	var list = [];
+      var dog_tag_string = "";
+        
+	   	for (var i = 0; i < checkBoxes.length; i++) {
+                if (checkBoxes[i].checked) {
+                   list.push(checkBoxes[i].value);
+                   dog_tag_string+=checkBoxes[i].value+',';
+                }
+            }
+       console.log(dog_tag_string);
+
+ */
+	//상기의 loadDogs function을 불러와서 click이벤트 발생 시 실행함
+ //	loadDogs(company_local, service_date)
+ 	loadDogs()
+   });
+   
+   
+   
+   
+//    $('[name="service_date"]').on("click", function(){
+
+// //		var company_local = $(this).val();
+
+// 	loadDogs('company_local', 'sevice_date', 'dog_tag')
+//  });
+   
+//    $('[name="dog_tag"]').on("click", function(){
+
+// //		var company_local = $(this).val();
+
+// 	//상기의 loadDogs function을 불러와서 click이벤트 발생 시 실행함
+// 	loadDogs('company_local', 'sevice_date', 'dog_tag')
+//  });
+   
+});
+</script>
+
+
 <script type="text/javascript">
 $(function(){
   $('#datepicker').datepicker();
@@ -495,40 +569,42 @@ $(function(){
 
 
 $(function() {
-		rome(inline_cal, {time: false, inputFormat: 'YYYY년 M월 D일'}).on('data', function (value) {
-		  result.value = value;
+		rome(inline_cal, {time: false, inputFormat: 'YYYY-MM-DD'}).on('data', function (value) {
+		  result1.value = value;
+		  result1.click();
 		});
 	});
 	
 	
-//	
-$('[name="timeselect-check"]').attr('data-no', function (i){
+
+
+$('[name="service_time"]').attr('data-no', function (i){
 	return i;
 });
 	
 	
-$('[name="timeselect-check"]').on('change', function(e){
+$('[name="service_time"]').on('change', function(e){
 	console.log(this.id, this.checked);
 	
 	if(this.checked == false) {
-		$('[name="timeselect-check"]').prop('checked', false);
+		$('[name="service_time"]').prop('checked', false);
 		this.checked = true;
 		return;
 	} //체크된걸 클릭 시 false로 바뀜
 	
-	var $timeCheck = $('[name="timeselect-check"]:checked');
+	var $timeCheck = $('[name="service_time"]:checked');
 	if($timeCheck.length >= 2){
 		var startId = Number($timeCheck.eq(0).attr('data-no'));
 		var endId = Number($timeCheck.eq(-1).attr('data-no'));
 		console.log(startId, endId);
 		if(endId-startId >2) {
-			alert('3시간 이상 예약이 불가합니다');
+			alert('안돼');
 			this.checked = false;
 			e.preventDefault();
 			return;
 		}
 		var flag = false;
-		$('[name="timeselect-check"]').each(function( i, e ){
+		$('[name="service_time"]').each(function( i, e ){
 /* 			if(i == startId) {
 				flag = true;
 			}
@@ -558,7 +634,11 @@ $(document).ready(function(){
 		showMonthAfterYear: true, //달력 연 다음에 월로 세팅
 		yearSuffix: '년'
 	});
+	
+	});
 </script>
+
+
 
 </body>
 </html>
