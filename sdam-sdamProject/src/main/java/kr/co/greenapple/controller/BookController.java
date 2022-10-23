@@ -98,13 +98,27 @@ public class BookController {
 	@PostMapping("/book")
 	public String addbook(BookBean bookBean, BindingResult bindingResult) {
 		
+		
+		
+		//넘어오는 값
+		System.out.println("============= 신청서 ============");
+		System.out.println("신청자idx: "+ bookBean.getUser_idx());
+		System.out.println("지역: "+ bookBean.getCompany_local());
+	    System.out.println("테라피독idx: "+ bookBean.getDog_idx());
+	    System.out.println("날짜: "+ bookBean.getService_date());
+	    System.out.println("시간: "+ bookBean.getService_time());
+	    System.out.println("================================");
+		
+		
+		
+		
 		if(bindingResult.hasErrors()) {
+			if(bookBean.getService_time()==null) {
+				return "book/book";
+			}
 			return "book/book";
 		}
 		
-		System.out.println(bookBean.getCompany_local());
-	    System.out.println(bookBean.getDog_idx());
-	    System.out.println(bookBean.getService_date());
 		
 		bookService.addBook(bookBean);
 		return "book/bookdone";
