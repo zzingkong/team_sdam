@@ -428,7 +428,6 @@
 <script type="text/javascript">
 
 function loadDogs(company_local, service_date, dog_tag_list) {
-//function loadDogs(company_local, service_date) {
 		
 	console.log('시간'+service_date);
 	
@@ -448,27 +447,32 @@ $(window).ready(function(){
    $('[name="company_local"], #result1, [name="dog_tag"]').on("click", function(){
 	//상기의 loadDogs function을 불러와서 click이벤트 발생 시 실행함
  	loadDogs()
+	
+	
+   
    });
-   
-//    $('#bookSubmit').on('click', function(e){
-// 	   if($('[name="company_local"]').value == null) {
-// 	      alert('미친놈아 어디사는지는 알려줘야지.');
-// 	      location.href = '${root}book/book';
-// 	      return false;
-// 	   }
-// 	   if($('[name="service_time"]').value == null) {
-// 	      alert('시간을 선택해주세요.');
-// 	      return false;
-// 	   }
-// 	   if($('[name="service_time"]').value == null) {
-// 	      alert('시간을 선택해주세요.');
-// 	      return false;
-// 	   }
-
-//    });
-   
-
-   
+	
+	
+	//현재날짜 계산해서 이전 날짜는 alert창 띄우기
+	$("#result1").on("click", function(){
+	 	
+		var today = new Date();
+	
+	 	var year = today.getFullYear();
+	 	var month = ('0' + (today.getMonth() + 1)).slice(-2);
+	 	var day = ('0' + today.getDate()).slice(-2);
+	
+	 	var dateString = year + '-' + month  + '-' + day;
+	
+//	 	console.log(dateString);
+//	 	console.log($("#result1").val());
+	 	
+	 	if($("#result1").val() < dateString) {
+			alert(dateString + " 이후의 날짜를 선택해주세요");
+			return false;
+		}
+		// 			
+	});
    
 });
 
@@ -548,7 +552,7 @@ $('[name="service_time"]').on('change', function(e){
 		var endId = Number($timeCheck.eq(-1).attr('data-no'));
 		console.log(startId, endId);
 		if(endId-startId >2) {
-			alert('안돼');
+			alert('테라피독의 컨디션 관리를 위해 3시간 이상 예약 불가합니다.");
 			this.checked = false;
 			e.preventDefault();
 			return;

@@ -96,7 +96,7 @@ public class UserService {
 //		}
 
 		//테라피스트확인
-		loginInfo.setUser_info(loginInfo2.getUser_info());
+//		loginInfo.setUser_info(loginInfo2.getUser_info());
 	} 
 	
 	public void getModifyUserInfo(UserBean modifyUserBean) {

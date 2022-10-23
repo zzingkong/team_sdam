@@ -102,15 +102,15 @@
 						</div>
 						<div class="form-group pb-2">
 							<form:label path="dog_sex" class="pb-2">성별</form:label><br>
-							<form:radiobutton path="dog_sex" value="XX" class="col-1"/> 여아 &nbsp;
-							<form:radiobutton path="dog_sex" value="XY" class="col-1"/> 남아
+							<form:radiobutton path="dog_sex" value="여아" id="XX" class="col-1"/> 여아 &nbsp;
+							<form:radiobutton path="dog_sex" value="남아" id="XY" class="col-1"/> 남아
 				<%--		<form:input path="dog_sex" class="form-control"/>
 							<form:errors path="dog_name" style="color:red"/> --%>	
 						</div>
 						<div class="form-group pb-2">
 							<form:label path="dog_neutralization" class="pb-2">중성화 여부</form:label><br>
-							<form:radiobutton path="dog_neutralization" value="Y" class="col-1"/> 했다 &nbsp;
-							<form:radiobutton path="dog_neutralization" value="N" class="col-1"/> 안했다
+							<form:radiobutton path="dog_neutralization" value="중성화 했어요" id="Y" class="col-1"/> 했다 &nbsp;
+							<form:radiobutton path="dog_neutralization" value="중성화 안했어요" id="N" class="col-1"/> 안했다
 					<%--	<form:input path="dog_neu" class="form-control"/>		
 							<form:errors path="dog_name" style="color:red"/> --%>	
 						</div>
@@ -136,10 +136,11 @@
 							<form:input type="file" path="upload_file" class="form-control pb-3" accept="image/*"/>
 						</div>
 						<div class="form-group pb-2">
-							<form:label path="company_id" class="pb-2">company값 user에서 id받고, user에서 name값 value에 뿌려주기</form:label>
+							<form:label path="company_id" class="pb-2">회사이름</form:label>
 							<form:input path="company_id" class="form-control" />
 							<form:hidden path=""/>
 						</div>
+						<!-- company값 user에서 id받고, user에서 name값 value에 뿌려주기? -->
 						
 						<div class="form-group">
 							<div class="text-end pb-1">

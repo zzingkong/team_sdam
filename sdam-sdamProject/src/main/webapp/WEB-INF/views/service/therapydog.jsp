@@ -109,13 +109,12 @@
 				<div class="col-lg-6 text-lg-end">
 					<a class="btn btn-primary py-3 px-5" href="${root}service/adddog">테라피독 등록하기</a>
 				</div>
+				 
  			</c:if> --%>
  			
  			<div class="col-lg-6 text-lg-end">
 				<a class="btn btn-primary py-3 px-5" href="${root}service/adddog">테라피독 등록하기</a>
 			</div>
-				
- 			 ${userInfoBean.user_info}
 		</div> 
 
 		

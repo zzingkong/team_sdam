@@ -32,9 +32,13 @@
 			)
 		</if>
 		<if test='!dog_tag.empty'>
-			<foreach collection="dog_tag" item="dog" >
+			<foreach collection="dog_tag" item="dog">
 				 AND T.DOG_TAG like '%'|| #{dog} ||'%'
 			</foreach>
 		</if>
 	</select>
 </mapper>
+
+<!-- <foreach collection="dog_tag" index="index" item="dog" open="" close="" separator="">
+	AND T.DOG_TAG like '%'|| #{dog} ||'%'
+</foreach> -->

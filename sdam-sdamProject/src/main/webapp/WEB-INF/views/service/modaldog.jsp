@@ -7,7 +7,7 @@
 <title>테라피독 정보</title>
 </head>
 <body>
-	<div class="mt-3"> ${dogInfo.dog_type} / ${dogInfo.dog_sex} / ${dogInfo.dog_age} / ${dogInfo.company_local}</div>
+	<div class="mt-3"> 견종 : ${dogInfo.dog_type} | 성별 : ${dogInfo.dog_sex} | 나이 : ${dogInfo.dog_age} | 지역 : ${dogInfo.company_local} | 중성화여부 : ${dogInfo.dog_neutralization}</div>
 	<div>${dogInfo.dog_memo}</div>
 </body>
 </html>

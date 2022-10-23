@@ -45,36 +45,28 @@ public class ServiceController {
 	//테라피독
 	@GetMapping("/therapydog")
 	public String therapydog(
-//			@Valid @ModelAttribute("modifyUserBean") UserBean modifyUserBean, BindingResult result,
 //			@RequestParam("user_idx") int user_idx,
-			@ModelAttribute("userInfoBean") UserBean userInfoBean,
-//			@ModelAttribute("userInfo") DogBean userInfo,
+//			@ModelAttribute("userInfoBean") UserBean userInfoBean,
 			Pager dogPager,
 			Model model) {
 		
 		List<DogBean> list = dogService.getDogs(dogPager);
 		model.addAttribute("dogList", list);
 		
-		userService.getLoginUserInfo(userInfoBean);
-		
+//		userService.getLoginUserInfo(userInfoBean);
 //		userService.getDogUserInfo(user_idx);
-//		userService.getUserInfo(userInfoBean.getUser_idx());
+//		userService.getUserInfo();
 //		userService.getDogUserInfo(userInfoBean);
 //		userService.getUserInfo(user_idx);
 		
 		
+//테라피스트 정보를 가져오려면 /service/therapydog?user_idx=3 이런식으로 해당 테라피스트 user_idx를 같이 넘겨줘야될 것 같고
 //		UserBean ubean = userService.getUserInfo(user_idx);
+//		UserBean ubean = userService.getUserInfo(userInfoBean.getUser_idx());
 //		model.addAttribute("userInfo", ubean);
-		
-//		List<DogBean> list = dogService.getDogs();
-//		model.addAttribute("dogList", list);	
-		
-//		userService.getLoginUserInfo(modifyUserBean);
-		
-//		for (ObjectError e : result.getAllErrors()) {
-//		System.out.println(e.getDefaultMessage());
-//	}
-		
+				
+//		System.out.println(ubean.getUser_info());
+				
 		return "service/therapydog";
 	}
 

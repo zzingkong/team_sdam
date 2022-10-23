@@ -26,7 +26,7 @@
 		<![CDATA[
 			select user_idx, user_info 
 			from user_table
-			where user_idx = #{user_idx}
+			where user_idx = #{user_idx} and user_info = 'T'
 		]]>
 	</select>
 	
@@ -47,7 +47,7 @@
 	
 	<select id="modalDogs" parameterType="java.lang.Integer" resultType="kr.co.greenapple.beans.DogBean">
 		<![CDATA[
-			select t.dog_idx, t.dog_type, t.dog_sex, t.dog_age, c.company_local, t.dog_memo 
+			select t.dog_idx, t.dog_type, t.dog_sex, t.dog_age, c.company_local, t.dog_memo, t.dog_neutralization
 			from therapy_dog_table t, company_table c 
 			where t.company_id=c.company_id and t.dog_idx = #{dog_idx}
 		]]>
