@@ -268,7 +268,7 @@
 					      <div class="row justify-content-center">
 					        <div class="col-md-10 text-center">
 					          <h4 class="mb-5 text-center">날짜를 선택하세요</h4>
-					          <input type="text" name="service_date" class="form-control w-25 mx-auto mb-3 dogdogdog" id="result1" placeholder="날짜를 선택하세요" readonly="readonly">
+					          <input type="text" name="service_date" class="form-control w-25  mx-auto mb-3 dogdogdog" id="result1" placeholder="날짜를 선택하세요" readonly="readonly">
 <!-- 					          <form action="#" class="row"> -->
 					            <div class="col-md-12">
 					              <div id="inline_cal"></div>
@@ -447,14 +447,12 @@ $(window).ready(function(){
    $('[name="company_local"], #result1, [name="dog_tag"]').on("click", function(){
 	//상기의 loadDogs function을 불러와서 click이벤트 발생 시 실행함
  	loadDogs()
-	
-	
    
    });
 	
 	
 	//현재날짜 계산해서 이전 날짜는 alert창 띄우기
-	$("#result1").on("click", function(){
+/* 	$('#result1').on('click', function(){
 	 	
 		var today = new Date();
 	
@@ -467,12 +465,12 @@ $(window).ready(function(){
 //	 	console.log(dateString);
 //	 	console.log($("#result1").val());
 	 	
-	 	if($("#result1").val() < dateString) {
+	 	if($('#result1').val() < dateString) {
 			alert(dateString + " 이후의 날짜를 선택해주세요");
 			return false;
 		}
 		// 			
-	});
+	}); */
    
 });
 
@@ -552,7 +550,7 @@ $('[name="service_time"]').on('change', function(e){
 		var endId = Number($timeCheck.eq(-1).attr('data-no'));
 		console.log(startId, endId);
 		if(endId-startId >2) {
-			alert('테라피독의 컨디션 관리를 위해 3시간 이상 예약 불가합니다.");
+			alert("테라피독의 컨디션 관리를 위해 3시간 이상 예약 불가합니다.");
 			this.checked = false;
 			e.preventDefault();
 			return;
