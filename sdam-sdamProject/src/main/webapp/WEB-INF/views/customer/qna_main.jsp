@@ -120,59 +120,23 @@
 				</tbody>
 			</table>
 			
-			<div class="d-none d-md-block">
-				<ul class="pagination justify-content-center">
-					<c:choose>
-						<c:when test="${pageBean.prevPage <= 0 }">
-							<li class="page-item disabled">
-								<a href="#" class="page-link">이전</a>
-							</li>
-						</c:when>
-						<c:otherwise>
-							<li class="page-item">
-								<a href="${root }customer/qna?page=${pageBean.prevPage}" class="page-link">이전</a>
-							</li>
-						</c:otherwise>
-					</c:choose>
-					<c:forEach var="idx" begin="${pageBean.min }" end="${pageBean.max }">
-					<c:choose>
-						<c:when test="${idx == pageBean.currentPage }">
-							<li class="page-item active">
-								<a href="${root }customer/qna?page=${idx}" class="page-link">${idx }</a>
-							</li>
-						</c:when>
-						<c:otherwise>
-							<li class="page-item">
-								<a href="${root }customer/qna?page=${idx}" class="page-link">${idx }</a>
-							</li>
-						</c:otherwise>
-					</c:choose>
+		<div style="display:flex; flex-direction:row; flex-wrap:wrap;">
+				
+			<nav aria-label="Page navigation example" style="margin: 0 auto;">
+				<ul class="pagination">
+					<li class="page-item"><a class="page-link" href="?page=1" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li> 
+					<li class="page-item"><a class="page-link" href="?page=${pager.prev}"><span aria-hidden="true" style="font-size:0.6em;"><i class="bi bi-chevron-left"></i></span></a></li>		
+									
+					<c:forEach var="page" items="${pager.list}">
+					<li class="page-item"><a class="page-link" href="?page=${page}">${page}</a></li>
 					</c:forEach>
-					<c:choose>
-						<c:when test="${pageBean.max >= pageBean.pageCnt }">
-							<li class="page-item disabled">
-								<a href="#" class="page-link">다음</a>
-							</li>
-						</c:when>
-						<c:otherwise>
-							<li class="page-item">
-								<a href="${root }customer/qna?page=${pageBean.nextPage}" class="page-link">다음</a>
-							</li>
-						</c:otherwise>
-					</c:choose>
+								
+					<li class="page-item"><a class="page-link" href="?page=${pager.next}"><span aria-hidden="true" style="font-size:0.6em;"><i class="bi bi-chevron-right"></i></span></a></li>
+					<li class="page-item"><a class="page-link" aria-label="Next" href="?page=${pager.last}"><span aria-hidden="true">&raquo;</span></a></li>
 				</ul>
-			</div>
+			</nav>		
+		</div>
 			
-			<div class="d-block d-md-none">
-				<ul class="pagination justify-content-center">
-					<li class="page-item">
-						<a href="#" class="page-link">이전</a>
-					</li>
-					<li class="page-item">
-						<a href="#" class="page-link">다음</a>
-					</li>
-				</ul>
-			</div>
 			
 			<div>
 			<c:if test="${loginUserBean.user_idx !=0 }">
