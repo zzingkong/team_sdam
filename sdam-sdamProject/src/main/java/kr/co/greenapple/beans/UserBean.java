@@ -51,11 +51,6 @@ public class UserBean {
 	
 	private MultipartFile upload_file; //문자열 therapist_ficture를 받기 위해 생성 
 	
-	
-	private int page;
-	
-	
-	
 
 	public String getCompany_id() {
 		return company_id;
@@ -255,12 +250,4 @@ public class UserBean {
 				+ upload_file + "]";
 	}
 
-	public int getPage() {
-		return page;
-	}
-
-	public void setPage(int page) {
-		this.page = page;
-	}
-	
 }
