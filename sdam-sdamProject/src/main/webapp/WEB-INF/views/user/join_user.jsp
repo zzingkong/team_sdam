@@ -51,6 +51,16 @@
 
 <!-- Template Stylesheet -->
 <link href="../css/style.css" rel="stylesheet" />
+
+
+<style type="text/css">
+input::placeholder{
+color: #ccc;
+font-size: 0.7em;
+}
+</style>
+
+
 </head>
 <script>
 	function checkUserIdExist(){
@@ -162,7 +172,7 @@
 								<form:hidden path="user_info" value="user" />
 								<div class="form-group">
 									<form:label path="user_name">이름</form:label>
-									<form:input path="user_name" class="form-control" />
+									<form:input path="user_name" class="form-control" placeholder="2 ~ 4자리의 한글 이름 입력"/>
 									<form:errors path="user_name" style="color:red" />
 								</div>
 								<div class="form-group">

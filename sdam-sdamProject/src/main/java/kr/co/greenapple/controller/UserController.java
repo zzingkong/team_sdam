@@ -79,9 +79,10 @@ public class UserController {
 	
 	@PostMapping("/join_pro")
 	public String join_pro(@Valid @ModelAttribute("joinUserBean") UserBean joinUserBean, BindingResult result) {
+		
 		if(result.hasErrors()) {
-			System.out.println("검증실패");
-			return "user/join_select";
+			System.out.println("가입 실패");
+			return "user/join_user_fail";
 		}
 		
 		if(joinUserBean.getUser_info() != null && joinUserBean.getUser_info().equals("T")  ) {
