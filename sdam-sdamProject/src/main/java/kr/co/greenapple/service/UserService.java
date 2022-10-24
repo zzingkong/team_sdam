@@ -12,6 +12,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import kr.co.greenapple.beans.QnaBean;
 import kr.co.greenapple.beans.UserBean;
 import kr.co.greenapple.dao.UserDao;
 import kr.co.greenapple.pager.Pager;
@@ -138,5 +139,11 @@ public class UserService {
 		pager.setTotal(total);		
 		return userDao.gettherapists(pager);
 	}
+
+	public List<QnaBean> myQnaBoard(int user_idx) {
+		return userDao.myQnaBoard(user_idx);
+	}
+
+	
 	
 }

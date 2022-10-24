@@ -27,6 +27,7 @@ public class QnaBean {
 	private int qna_writer_idx;
 	
 	private String qna_writer_name;
+	
 
 	public MultipartFile getUpload_file() {
 		return upload_file;

@@ -19,8 +19,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import kr.co.greenapple.beans.BookBean;
 import kr.co.greenapple.beans.ContentBean;
+import kr.co.greenapple.beans.QnaBean;
 import kr.co.greenapple.beans.UserBean;
+import kr.co.greenapple.pager.Pager;
 import kr.co.greenapple.service.UserService;
 import kr.co.greenapple.validator.UserValidator;
 
@@ -136,7 +139,12 @@ public class UserController {
 	
 	//마이페이지>게시물관리
 	@GetMapping("/myboard")
-	public String myboard() {
+	public String myboard(Model model) {
+		
+		int user_idx = loginUserBean.getUser_idx();
+		List<QnaBean> myQnaBoardList = userService.myQnaBoard(user_idx);
+		model.addAttribute("qnaList", myQnaBoardList);
+		
 		return "user/myboard";
 	}
 	
