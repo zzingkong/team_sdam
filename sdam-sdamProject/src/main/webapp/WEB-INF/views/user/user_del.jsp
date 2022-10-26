@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>마이페이지 회원정보수정</title>
+<title>마이페이지 회원탈퇴</title>
 <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 <meta content="" name="keywords" />
 <meta content="" name="description" />
@@ -80,7 +80,7 @@
 				</li>
 				<li class="breadcrumb-item text-white">마이페이지 &nbsp;/ </li>
 				<li class="breadcrumb-item text-primary active" aria-current="page">
-					회원정보
+					회원탈퇴
 				</li>
 			</ol>
 		</nav>
@@ -97,10 +97,10 @@
 			<div class="collapse navbar-collapse" >
 				<div class="navbar-nav">
 					<div class="nav-item dropdown">
-						<a class="nav-item nav-link" href="${root }user/modify" aria-current="page" style="padding:0 0 10px 0;"><span class="text-primary me-2">#</span> 회원정보</a> <!-- aria-current 현재페이지 -->
+						<a class="nav-item nav-link" href="${root }user/modify" style="padding:10px 0;">회원정보</a>
 						<a class="nav-item nav-link" href="${root }user/myservice" style="padding:10px 0;">예약관리</a>
 						<a class="nav-item nav-link" href="${root }user/myboard" style="padding:10px 0;">게시물관리</a>
-						<a class="nav-item nav-link" href="${root }user/mydelete" style="padding:10px 0;">회원탈퇴</a> 
+						<a class="nav-item nav-link" href="${root }user/mydelete" aria-current="page" style="padding:0 0 10px 0;"><span class="text-primary me-2">#</span> 회원탈퇴</a> 
 					</div>
 				</div>
 			</div>
@@ -117,14 +117,9 @@
 			</div>
 			
 			<div class="testimonial-text rounded p-4 ms-4">	
-				<form:form action="${root }user/modify_pro" method="post" modelAttribute="modifyUserBean">
-					<div class="form-group mb-4">
-						<form:label path="user_name" class="pb-2">이름</form:label>
-						<!-- disabled는 제출 후 값이 전송되지 않기 때문에 수정에 실패했을 때 원래의 값이 사라짐 -->
-						<!-- 반면, readonly는 제출 후에도 값이 전송되는 이점이 있음 -->
-						<form:input path="user_name" class="form-control" readonly="true"/>
-				<%--    <form:errors path="dog_name" style="color:red"/> --%>	
-					</div>
+				<form:form action="${root }user/mydelete_pro" method="post" modelAttribute="">
+					<!-- disabled는 제출 후 값이 전송되지 않기 때문에 수정에 실패했을 때 원래의 값이 사라짐 -->
+					<!-- 반면, readonly는 제출 후에도 값이 전송되는 이점이 있음 -->
 					<div class="form-group mb-4">
 						<form:label path="user_id" class="pb-2">아이디</form:label>
 						<form:input path="user_id" class="form-control" readonly="true"/>
@@ -134,21 +129,6 @@
 						<form:label path="user_pw" class="pb-2">비밀번호</form:label>
 						<form:password path="user_pw" class="form-control"/>
 						<form:errors path="user_pw" style="color:red"/>
-					</div>
-					<div class="form-group mb-4">
-						<form:label path="user_pw2" class="pb-2">비밀번호 확인</form:label>
-						<form:password path="user_pw2" class="form-control"/>
-						<form:errors path="user_pw2" style="color:red"/>
-					</div>
-					<div class="form-group mb-4">
-						<form:label path="user_tel" class="pb-2">전화번호</form:label>
-						<form:input path="user_tel" class="form-control col-3"/>
-				<%--    <form:errors path="dog_name" style="color:red"/> --%>	
-					</div>
-					<div class="form-group mb-5">
-						<form:label path="user_address" class="pb-2">주소</form:label>
-						<form:input path="user_address" class="form-control col-3 mb-3"/>
-				<%--    <form:errors path="dog_name" style="color:red"/> --%>	
 					</div>
 						
 					<div class="form-group mb-3">

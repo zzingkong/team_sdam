@@ -114,7 +114,7 @@
  			
  			<div class="col-lg-6 text-lg-end">
 				<a class="btn btn-primary py-3 px-5" href="${root}service/adddog">테라피독 등록하기</a>
-			</div>
+			</div> 
 		</div> 
 
 		
@@ -250,7 +250,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" onclick="pop1();"> 닫기 </button>
-        <a href="${root}book/book"><button type="button" class="btn btn-primary">테라피신청하기</button></a>
+        <a href="${root }user/login"><button type="button" class="btn btn-primary" onclick="logingo()">테라피신청하기</button></a>
       </div>
     </div>
   </div>
@@ -306,6 +306,11 @@ $('.myModal').modal('show').css({
 		return -($(this).width() / 2);
 	}
 });
+
+function logingo(){
+	alert("로그인 시 예약 가능합니다.");
+	return false; 
+}
 </script>
 <!-- Animal End -->
 

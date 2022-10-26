@@ -111,7 +111,7 @@ public class UserService {
 		modifyUserBean.setUser_address(loginInfo.getUser_address());
 		
 		//테라피스트확인
-		modifyUserBean.setUser_info(loginInfo.getUser_info());
+//		modifyUserBean.setUser_info(loginInfo.getUser_info());
 	}
 	
 	public void modifyUserInfo(UserBean modifyUserBean) {

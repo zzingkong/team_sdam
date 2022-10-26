@@ -100,7 +100,7 @@
 						<a class="nav-item nav-link" href="${root }user/modify" style="padding:0 0 10px 0;">회원정보</a>
 						<a class="nav-item nav-link" href="${root }user/myservice" aria-current="page" style="padding:10px 0;"><span class="text-primary me-2">#</span>예약관리</a>
 						<a class="nav-item nav-link" href="${root }user/myboard" style="padding:10px 0;"> 게시물관리</a>
-						<a class="nav-item nav-link" href="#" style="padding:10px 0;">회원탈퇴</a> 
+						<a class="nav-item nav-link" href="${root }user/mydelete" style="padding:10px 0;">회원탈퇴</a> 
 					</div>
 				</div>
 			</div>
