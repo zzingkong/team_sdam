@@ -168,9 +168,9 @@
 					<div class="card shadow">
 						<div class="card-body">
 
-<!-- 		<div class="container px-4 py-2 mt-4" id="featured-3"> -->
-<!-- 			<div class="col-sm-6"> -->
-<!-- 						<div class="col-12">
+				<div class="container px-4 py-2 mt-4" id="featured-3">
+					<div class="col-sm-6">
+ 						<div class="col-12">
 			    			<label for="inputEmail4" class="form-label mb-1">이 름</label>
 			   				 <input type="text" class="form-control mb-3">
 			  			</div>
@@ -192,55 +192,55 @@
 					  	</div>
 					   	<div class="col-12">
 						    <button type="submit" class="btn btn-primary">제출하기</button>
-					 	</div> -->
+					 	</div>
 					 	
 					 	
-  <%-- <form:form action="${root }customer/adoptdone" method="post" modelAttribute="customerBean">
-    enctype="multipart/form-data"
-			<form:hidden path="adopt_idx" />
-			<form:hidden path="userTelExist" />
-			<form:hidden path="user_info" value="user" />
-			<div class="form-group">
-		<%-- 	path~~> customerBean의 변수 이름 확인해서 기입! --%>
-		<%--	<form:label path="adopt_idx">입양 idx</form:label>
-				<form:input path="adopt_idx" class="form-control" />
-				<form:errors path="adopt_idx" style="color:red" />
-			</div>
-			<div class="form-group">
-				<form:label path="user_idx">입양인 idx</form:label>
-				<form:input path="user_idx" class="form-control" />
-				<form:errors path="user_idx" style="color:red" />
-			</div>
-			<div class="form-group">
-				<form:label path="dog_idx">강아지 idx</form:label>
-				<form:input path="dog_idx" class="form-control" />
-				<form:errors path="dog_idx" style="color:red" />
-			</div>
-			<div class="form-group">
-				<form:label path="adopt_email">이메일</form:label>
-				<form:input path="adopt_email" class="form-control" />
-			</div>
-			<div class="form-group">
-				<form:label path="adopt_visitdate">방문 날짜</form:label>
-				<form:input path="adopt_visitdate" class="form-control" />
-			</div>
-			<div class="form-group">
-				<form:label path="adopt_tel">전화번호</form:label>
-				<form:input path="adopt_tel" class="form-control" />
-				<form:errors path="adopt_tel" style="color:red" />
-			</div>
-
-			<div class="form-group">
-				<div class="text-right py-4 text-end">
-					<form:button class="btn btn-primary" style="width:30%">입양 신청하기</form:button>
-				</div>
-			</div>
-		</form:form>   --%>
+<%-- 			<form:form action="${root }customer/adoptdone" method="post" modelAttribute="customerBean"> --%>
+<!-- 			<!--     enctype="multipart/form-data" --> -->
+<%-- 						<form:hidden path="adopt_idx" /> --%>
+<%-- 						<form:hidden path="userTelExist" /> --%>
+<%-- 						<form:hidden path="user_info" value="user" /> --%>
+<!-- 						<div class="form-group"> -->
+<%-- 						path~~> customerBean의 변수 이름 확인해서 기입! --%>
+<%-- 						<form:label path="adopt_idx">입양 idx</form:label> --%>
+<%-- 							<form:input path="adopt_idx" class="form-control" /> --%>
+<%-- 							<form:errors path="adopt_idx" style="color:red" /> --%>
+<!-- 						</div> -->
+<!-- 						<div class="form-group"> -->
+<%-- 							<form:label path="user_idx">입양인 idx</form:label> --%>
+<%-- 							<form:input path="user_idx" class="form-control" /> --%>
+<%-- 							<form:errors path="user_idx" style="color:red" /> --%>
+<!-- 						</div> -->
+<!-- 						<div class="form-group"> -->
+<%-- 							<form:label path="dog_idx">강아지 idx</form:label> --%>
+<%-- 							<form:input path="dog_idx" class="form-control" /> --%>
+<%-- 							<form:errors path="dog_idx" style="color:red" /> --%>
+<!-- 						</div> -->
+<!-- 						<div class="form-group"> -->
+<%-- 							<form:label path="adopt_email">이메일</form:label> --%>
+<%-- 							<form:input path="adopt_email" class="form-control" /> --%>
+<!-- 						</div> -->
+<!-- 						<div class="form-group"> -->
+<%-- 							<form:label path="adopt_visitdate">방문 날짜</form:label> --%>
+<%-- 							<form:input path="adopt_visitdate" class="form-control" /> --%>
+<!-- 						</div> -->
+<!-- 						<div class="form-group"> -->
+<%-- 							<form:label path="adopt_tel">전화번호</form:label> --%>
+<%-- 							<form:input path="adopt_tel" class="form-control" /> --%>
+<%-- 							<form:errors path="adopt_tel" style="color:red" /> --%>
+<!-- 						</div> -->
+			
+<!-- 						<div class="form-group"> -->
+<!-- 							<div class="text-right py-4 text-end"> -->
+<%-- 								<form:button class="btn btn-primary" style="width:30%">입양 신청하기</form:button> --%>
+<!-- 							</div> -->
+<!-- 						</div> -->
+<%-- 					</form:form> --%>
 					</div>
 				</div>
 			</div>
 		</div>
-
+</div>
 </div>
 </div>
 </div>

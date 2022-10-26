@@ -19,8 +19,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import kr.co.greenapple.beans.BookBean;
 import kr.co.greenapple.beans.ContentBean;
+import kr.co.greenapple.beans.QnaBean;
 import kr.co.greenapple.beans.UserBean;
+import kr.co.greenapple.pager.Pager;
 import kr.co.greenapple.service.UserService;
 import kr.co.greenapple.validator.UserValidator;
 
@@ -79,9 +82,10 @@ public class UserController {
 	
 	@PostMapping("/join_pro")
 	public String join_pro(@Valid @ModelAttribute("joinUserBean") UserBean joinUserBean, BindingResult result) {
+		
 		if(result.hasErrors()) {
-			System.out.println("검증실패");
-			return "user/join_select";
+			System.out.println("가입 실패");
+			return "user/join_user_fail";
 		}
 		
 		if(joinUserBean.getUser_info() != null && joinUserBean.getUser_info().equals("T")  ) {
@@ -135,7 +139,12 @@ public class UserController {
 	
 	//마이페이지>게시물관리
 	@GetMapping("/myboard")
-	public String myboard() {
+	public String myboard(Model model) {
+		
+		int user_idx = loginUserBean.getUser_idx();
+		List<QnaBean> myQnaBoardList = userService.myQnaBoard(user_idx);
+		model.addAttribute("qnaList", myQnaBoardList);
+		
 		return "user/myboard";
 	}
 	
@@ -145,7 +154,36 @@ public class UserController {
 		return "user/myservice";
 	}
 	
+	//마이페이지>예약관리
+	@GetMapping("/mydelete")
+	public String mydelete() {
+		return "user/user_del";
+	}
 	
+	@PostMapping("/mydelete_pro")
+	public String mydelete_pro() {
+//		if(result.hasErrors()) {
+//			return "user/user_del";
+//		}		
+//		userService.modifyUserInfo(modifyUserBean);
+		return "user/userdel_success";
+	}
+	
+	//마이페이지
+//		@GetMapping("/modify")
+//		public String modify(@ModelAttribute("modifyUserBean") UserBean modifyUserBean) {
+//			userService.getModifyUserInfo(modifyUserBean);
+//			return "user/modify";
+//		}
+		
+//		@PostMapping("/modify_pro")
+//		public String modify_pro(@Valid @ModelAttribute("modifyUserBean") UserBean modifyUserBean, BindingResult result) {
+//			if(result.hasErrors()) {
+//				return "user/modify";
+//			}		
+//			userService.modifyUserInfo(modifyUserBean);
+//			return "user/modify_success";
+//		}
 	
 	
 	

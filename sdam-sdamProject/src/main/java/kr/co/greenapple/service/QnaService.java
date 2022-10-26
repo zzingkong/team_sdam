@@ -41,19 +41,19 @@ public class QnaService {
 	@Lazy
 	private UserBean loginUserBean;	
 	
-	private String saveUloadFile(MultipartFile upload_file) {
-		String file_name = System.currentTimeMillis() + "_" + upload_file.getOriginalFilename();
-		
-		try {
-			upload_file.transferTo(new File(path_upload + "/" + file_name));
-		}catch(Exception e) {
-			e.printStackTrace();
-		}
-		return file_name;
-	}
+//	private String saveUloadFile(MultipartFile upload_file) {
+//		String file_name = System.currentTimeMillis() + "_" + upload_file.getOriginalFilename();
+//		
+//		try {
+//			upload_file.transferTo(new File(path_upload + "/" + file_name));
+//		}catch(Exception e) {
+//			e.printStackTrace();
+//		}
+//		return file_name;
+//	}
 	
 	public void addQna(QnaBean writeQnaBean) {
-		MultipartFile upload_file = writeQnaBean.getUpload_file();
+//		MultipartFile upload_file = writeQnaBean.getUpload_file();
 		
 //		if(upload_file.getSize() > 0) {
 //			String file_name = saveUloadFile(upload_file);
@@ -83,7 +83,7 @@ public class QnaService {
 		 * if(upload_file.getSize() > 0) { String file_name =
 		 * saveUloadFile(upload_file); modifyQnaBean.setContent_file(file_name); }
 		 */
-		System.out.println(modifyQnaBean);
+//		System.out.println(modifyQnaBean);
 		
 		qnaDao.modifyQnaInfo(modifyQnaBean);
 	}
@@ -92,27 +92,10 @@ public class QnaService {
 		qnaDao.deleteQna(qna_idx);
 	}
 
-	public List<QnaBean> getQnaList(QnaBean qnaBean) {
-		return qnaDao.getQnaList(qnaBean);
+	public List<QnaBean> getQnaList(Pager qnaPager) {
+		int total = qnaDao.total(qnaPager);
+		qnaPager.setTotal(total);
 		
+		return qnaDao.getQnaList(qnaPager);
 	}
-	
-
-//	public PageBean getQnaCnt(int currentPage) {
-//		
-//		int content_cnt = qnaDao.getQnaCnt();
-//		
-//		PageBean pageBean = new PageBean(content_cnt, currentPage, page_listcnt, page_paginationcnt);
-//		
-//		return pageBean;
-//	}
-	
-
-	
-//	public PageBean getQnatCnt(int currentPage) {
-//		
-//		int qna_cnt = qnaDao.getQnaContentCnt(currentPage);
-//		PageBean pageBean = new PageBean(currentPage, page_listcnt, page_paginationcnt, qna_cnt);
-//		return pageBean;
-//	}
 }

@@ -19,8 +19,12 @@ public class QnaDao {
 	private SqlSessionTemplate sqlSessionTemplate;
 	
 	
-	public List<QnaBean> getQnaList(QnaBean qnaBean) {
-		 return sqlSessionTemplate.selectList("qna.getQnaList", qnaBean);
+	public List<QnaBean> getQnaList(Pager qnaPager) {
+		 return sqlSessionTemplate.selectList("qna.getQnaList", qnaPager);
+	}
+	
+	public int total(Pager qnaPager) {
+		return sqlSessionTemplate.selectOne("qna.total", qnaPager);
 	}
 
 	public void addQna(QnaBean writeQnaBean) {
@@ -30,7 +34,6 @@ public class QnaDao {
 	public QnaBean readQna(int qna_idx) {
 		return sqlSessionTemplate.selectOne("qna.readQna", qna_idx);
 	}
-	
 	
 	public QnaBean modifyQna(int qna_idx) {
 		return sqlSessionTemplate.selectOne("qna.modifyQna", qna_idx);
@@ -43,19 +46,5 @@ public class QnaDao {
 	public void deleteQna(int qna_idx) {
 		sqlSessionTemplate.delete("qna.deleteQna", qna_idx);
 	}
-
-
-	public float qnaTotal(Pager pager) {
-		return sqlSessionTemplate.selectOne("qna.qnaTotal", pager);
-	}
-
-
-	public int getQnaCnt() {
-		return sqlSessionTemplate.selectOne("qna.getQnaCnt");
-	}
-	
-//	public int getQnaContentCnt(int qna_idx) {
-//		return sqlSessionTemplate.selectOne("qna.getQnaContentCnt", qna_idx);
-//	}
 
 }

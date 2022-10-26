@@ -118,6 +118,16 @@
 			where user_info = 'T' 
 	</select>
 	
+		<select id="myQnaBoard" parameterType="java.lang.Integer" resultType="kr.co.greenapple.beans.QnaBean">
+		<![CDATA[
+		select qna_idx, qna_subject, to_char(qna_date, 'yyyy-mm-dd hh:mm:ss') as "qna_date" from qna_table
+			where qna_writer_idx = #{user_idx}
+			order by qna_idx
+		]]>
+	</select>
+	
+	
+	
 	
 <!-- <delete id="delMember" parameterType="java.lang.String">
   		delete from member where mem_id = #{memId}

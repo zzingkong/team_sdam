@@ -98,11 +98,10 @@
 									<c:when test="${loginUserBean.user_idx eq 1}">
 										<i class="bi bi-person-circle"></i> &nbsp;<c:out value="${loginUserBean.user_name}" />님 &nbsp;&nbsp;&nbsp;
 										<a role="button" href="${root}admin/user" class="btn btn-outline-warning me-2">관리페이지</a>
-										<a role="button" href="${root}/user/modify" class="btn btn-outline-warning me-2">마이페이지</a>
 										<a role="button" href="${root}user/logout" class="btn btn-outline-warning me-2">로그아웃</a>
 									</c:when>
 									<c:otherwise>
-										<i class="bi bi-person-circle"></i> &nbsp;<c:out value="${loginUserBean.user_name}" />님 &nbsp;&nbsp;&nbsp;
+										<i class="bi bi-person-circle"></i> &nbsp;<c:if test="${not empty loginUserBean.user_info}">테라피스트</c:if> <c:out value="${loginUserBean.user_name}" />님 &nbsp;&nbsp;&nbsp;
 										<a role="button" href="${root}/user/modify" class="btn btn-outline-warning me-2">마이페이지</a>
 										<a role="button" href="${root}/user/logout" class="btn btn-outline-warning me-2">로그아웃</a>
 									</c:otherwise>
@@ -328,8 +327,8 @@
 								<div class="position-relative">
 									<img class="img-fluid" src="img/animal-md-1.jpg" alt="" />
 									<div class="animal-text p-4">
-										<p class="text-white small text-uppercase mb-0">#대전 #리트리버 #귀여움</p>
-										<h5 class="text-white mb-0">임댕댕 >></h5>
+										<p class="text-white small text-uppercase mb-0">#광주 #중형견 #활발한 #사교적인</p>
+										<h5 class="text-white mb-0">바둑이 >></h5>
 									</div>
 								</div>
 							</a>
@@ -340,8 +339,8 @@
 								<div class="position-relative">
 									<img class="img-fluid" src="img/animal-lg-1.jpg" alt="" />
 									<div class="animal-text p-4">
-										<p class="text-white small text-uppercase mb-0">#대전 #리트리버 #귀여움</p>
-										<h5 class="text-white mb-0">임댕댕 >></h5>
+										<p class="text-white small text-uppercase mb-0">#세종 #소형견 #조용한 #애교많은</p>
+										<h5 class="text-white mb-0">아리 >></h5>
 									</div>
 								</div>
 							</a>
@@ -356,8 +355,8 @@
 								<div class="position-relative">
 									<img class="img-fluid" src="img/animal-lg-2.jpg" alt="" />
 									<div class="animal-text p-4">
-										<p class="text-white small text-uppercase mb-0">#대전 #리트리버 #귀여움</p>
-										<h5 class="text-white mb-0">임댕댕 >></h5>
+										<p class="text-white small text-uppercase mb-0">#광주 #대형견 #조용한 #애교많은</p>
+										<h5 class="text-white mb-0">봄이 >></h5>
 									</div>
 								</div>
 							</a>
@@ -368,8 +367,8 @@
 								<div class="position-relative">
 									<img class="img-fluid" src="img/animal-md-2.jpg" alt="" />
 									<div class="animal-text p-4">
-										<p class="text-white small text-uppercase mb-0">#대전 #리트리버 #귀여움</p>
-										<h5 class="text-white mb-0">임댕댕 >></h5>
+										<p class="text-white small text-uppercase mb-0">#세종 #중형견 #애교많은 #사교적인</p>
+										<h5 class="text-white mb-0">초롱이 >></h5>
 									</div>
 								</div>
 							</a>
@@ -384,8 +383,8 @@
 								<div class="position-relative">
 									<img class="img-fluid" src="img/animal-md-3.jpg" alt="" />
 									<div class="animal-text p-4">
-										<p class="text-white small text-uppercase mb-0">#대전 #리트리버 #귀여움</p>
-										<h5 class="text-white mb-0">임댕댕 >></h5>
+										<p class="text-white small text-uppercase mb-0">#대전 #대형견 #애교많은</p>
+										<h5 class="text-white mb-0">용식 >></h5>
 									</div>
 								</div>
 							</a>
@@ -396,8 +395,8 @@
 								<div class="position-relative">
 									<img class="img-fluid" src="img/animal-lg-3.jpg" alt="" />
 									<div class="animal-text p-4">
-										<p class="text-white small text-uppercase mb-0">#대전 #리트리버 #귀여움</p>
-										<h5 class="text-white mb-0">임댕댕 >></h5>
+										<p class="text-white small text-uppercase mb-0">#서울 #중형견 #애교많은 #장난기많은</p>
+										<h5 class="text-white mb-0">사랑이 >></h5>
 									</div>
 								</div>
 							</a>

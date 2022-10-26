@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.co.greenapple.beans.QnaBean;
 import kr.co.greenapple.beans.UserBean;
+import kr.co.greenapple.pager.Pager;
 import kr.co.greenapple.service.QnaService;
 
 @Controller
@@ -34,13 +35,14 @@ public class QnaController {
 	
 	//qna main 목록 출력하기
 	@GetMapping("/qna")
-	public String main(QnaBean qnaBean, @RequestParam(value = "page", defaultValue = "1") int page, Model model) {
+	public String main(
+//			QnaBean qnaBean,
+//			@RequestParam(value = "page", defaultValue = "1") int page,
+			Pager QnaPager,
+			Model model) {
 		
-		List<QnaBean> qnaList = qnaService.getQnaList(qnaBean);
+		List<QnaBean> qnaList = qnaService.getQnaList(QnaPager);
 		model.addAttribute("qnaList", qnaList);
-		
-//		PageBean pageBean = qnaService.getQnaCnt(page);
-//		model.addAttribute("pageBean", pageBean);
 		
 		return "customer/qna_main";
 	}
