@@ -6,6 +6,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import kr.co.greenapple.beans.QnaBean;
 import kr.co.greenapple.beans.UserBean;
 import kr.co.greenapple.pager.Pager;
 
@@ -63,6 +64,10 @@ public class UserDao {
 
 	public List<UserBean> gettherapists(Pager pager) {
 		return sqlSessionTemplate.selectList("user.gettherapist", pager);
+	}
+
+	public List<QnaBean> myQnaBoard(int user_idx) {
+		return sqlSessionTemplate.selectList("user.myQnaBoard", user_idx);
 	}
 
 }

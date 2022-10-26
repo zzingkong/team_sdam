@@ -35,8 +35,10 @@ public class AdminService {
 	
 	
 	//admin user 관리
-	public List<UserBean> getAdminUserList(UserBean userList) {
-		return adminDao.getAdminUserList(userList);
+	public List<UserBean> getAdminUserList(Pager userPager) {
+		int total = adminDao.userTotal(userPager);
+		userPager.setTotal(total);
+		return adminDao.getAdminUserList(userPager);
 	}
 
 	//admin user 탈퇴
@@ -45,8 +47,10 @@ public class AdminService {
 	}
 
 	//admin 예약 목록 관리
-	public List<BookBean> getAdminUserBook(BookBean bookList) {
-		return adminDao.getAdminUserBook(bookList);
+	public List<BookBean> getAdminUserBook(Pager bookPager) {
+		int total = adminDao.bookTotal(bookPager);
+		bookPager.setTotal(total);
+		return adminDao.getAdminUserBook(bookPager);
 	}
 
 	public void adminUserBookAllow(int service_idx) {

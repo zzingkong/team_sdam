@@ -51,7 +51,6 @@ public class UserBean {
 	
 	private MultipartFile upload_file; //문자열 therapist_ficture를 받기 위해 생성 
 	
-	
 
 	public String getCompany_id() {
 		return company_id;
@@ -250,4 +249,5 @@ public class UserBean {
 				+ userTelExist + ", userLogin=" + userLogin + ", company_id=" + company_id + ", upload_file="
 				+ upload_file + "]";
 	}
+
 }

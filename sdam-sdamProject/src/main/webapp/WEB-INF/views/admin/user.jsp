@@ -128,7 +128,6 @@
 						<th class="text-center d-none d-md-table-cell">전화번호</th>
 						<th class="text-center d-none d-md-table-cell">생일</th>
 						<th class="text-center d-none d-md-table-cell">주소</th>
-						<th class="text-center d-none d-md-table-cell">수정</th>
 						<th class="text-center d-none d-md-table-cell">탈퇴</th>
 					</tr>
 				</thead>
@@ -141,12 +140,27 @@
 						<td class="text-center d-none d-md-table-cell">${adminUserList.user_tel}</td>
 						<td class="text-center d-none d-md-table-cell">${adminUserList.user_birth}</td>
 						<td class="text-center d-none d-md-table-cell">${adminUserList.user_address}</td>
-						<td><a href="#">수정</a></td>
 						<td><a href="${root }admin/userdelete?user_idx=${adminUserList.user_idx}">탈퇴</a></td>
 					</tr>
 					</c:forEach>
 				</tbody>
 			</table>
+			
+			<div style="display:flex; flex-direction:row; flex-wrap:wrap;">
+				<nav aria-label="Page navigation example" style="margin: 0 auto;">
+					<ul class="pagination">
+						<li class="page-item"><a class="page-link" href="?page=1" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li> 
+						<li class="page-item"><a class="page-link" href="?page=${pager.prev}"><span aria-hidden="true" style="font-size:0.6em;"><i class="bi bi-chevron-left"></i></span></a></li>		
+										
+						<c:forEach var="page" items="${pager.list}">
+						<li class="page-item"><a class="page-link" href="?page=${page}">${page}</a></li>
+						</c:forEach>
+									
+						<li class="page-item"><a class="page-link" href="?page=${pager.next}"><span aria-hidden="true" style="font-size:0.6em;"><i class="bi bi-chevron-right"></i></span></a></li>
+						<li class="page-item"><a class="page-link" aria-label="Next" href="?page=${pager.last}"><span aria-hidden="true">&raquo;</span></a></li>
+					</ul>
+				</nav>		
+			</div>
 		</div>
 	</div>
 </div>

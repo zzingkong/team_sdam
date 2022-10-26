@@ -17,16 +17,24 @@ public class AdminDao {
 	private SqlSessionTemplate sqlSessionTemplate;
  	
 	
-	public List<UserBean> getAdminUserList(UserBean userList) {
-		return sqlSessionTemplate.selectList("admin.getAdminUserList", userList);
+	public List<UserBean> getAdminUserList(Pager userPager) {
+		return sqlSessionTemplate.selectList("admin.getAdminUserList", userPager);
+	}
+
+	public int userTotal(Pager userPager) {
+		return sqlSessionTemplate.selectOne("admin.userTotal", userPager);
 	}
 
 	public void AdmindeleteUser(int user_idx) {
 		sqlSessionTemplate.selectList("admin.AdmindeleteUser", user_idx);
 	}
 
-	public List<BookBean> getAdminUserBook(BookBean bookList) {
-		return sqlSessionTemplate.selectList("admin.getAdminUserBook", bookList);
+	public List<BookBean> getAdminUserBook(Pager bookPager) {
+		return sqlSessionTemplate.selectList("admin.getAdminUserBook", bookPager);
+	}
+	
+	public int bookTotal(Pager bookPager) {
+		return sqlSessionTemplate.selectOne("admin.bookTotal", bookPager);
 	}
 
 	public void adminUserBookAllow(int service_idx) {
@@ -36,7 +44,4 @@ public class AdminDao {
 	public void adminUserBookNotAllow(int service_idx) {
 		sqlSessionTemplate.selectOne("admin.adminUserBookNotAllow", service_idx);
 	}
-
-
-
 }

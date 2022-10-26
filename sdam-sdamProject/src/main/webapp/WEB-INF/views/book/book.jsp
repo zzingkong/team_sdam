@@ -452,7 +452,11 @@ $(window).ready(function(){
 	
 	
 	//현재날짜 계산해서 이전 날짜는 alert창 띄우기
+<<<<<<< HEAD
 	$('#result1').on('click', function(){
+=======
+ 	$('#result1').on('click', function(){
+>>>>>>> branch 'develop' of https://github.com/SeryLee/sdam-sdam.git
 	 	
 		var today = new Date();
 	
@@ -470,7 +474,11 @@ $(window).ready(function(){
 			return false;
 		}
 		// 			
+<<<<<<< HEAD
 	});
+=======
+	}); 
+>>>>>>> branch 'develop' of https://github.com/SeryLee/sdam-sdam.git
    
 });
 
@@ -506,7 +514,7 @@ function notBook(){
 		   return false;
 	   }
 	   else{
-		   var bookCheckAlarm = confirm("테라피 서비스 예약을 완료하시겠습니까? \n\n"  + "희망 지역: " + bookLocal + "\n희망 날짜: " + bookDate + "\n희망 시간: " + bookTime + " ~ " + "\n희망 테라피독: " + bookDogName);
+		   var bookCheckAlarm = confirm("테라피 서비스 예약을 완료하시겠습니까? \n\n"  + "ㆍ희망 지역: " + bookLocal + "\nㆍ희망 날짜: " + bookDate + "\nㆍ희망 시간: " + bookTime + " ~ " + "\nㆍ희망 테라피독: " + bookDogName);
 	   
 		   if(bookCheckAlarm == true) return true;
 		   else return false;

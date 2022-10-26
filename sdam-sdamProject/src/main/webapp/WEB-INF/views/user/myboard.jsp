@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <c:set var="root" value="${pageContext.request.contextPath }/"/>
 <!DOCTYPE html>
 <html>
@@ -118,7 +119,52 @@
         </div>
         
         <div class="testimonial-text rounded mt-5">	
-			<b>게시물관리</b><hr/>				
+			<b>게시물관리</b><hr/>
+							<div class="container">
+	<div class="card">
+		<div class="card-body">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th class="text-center d-none d-md-table-cell">게시판</th>
+						<th class="text-center d-none d-md-table-cell">글번호</th>
+						<th class="text-center d-none d-md-table-cell">작성일자</th>
+						<th class="text-center d-none d-md-table-cell">제목</th>
+						<th class="text-center d-none d-md-table-cell">답변</th>
+					</tr>
+				</thead>
+				<tbody>
+					<c:forEach var="qnaList" items="${qnaList}">
+					<tr>
+						<td class="text-center d-none d-md-table-cell">QnA</td>
+						<td class="text-center d-none d-md-table-cell">${qnaList.qna_idx }</td>
+						<td class="text-center d-none d-md-table-cell">
+							<fmt:formatDate value="${qnaList.qna_date}" pattern="yyyy-MM-dd hh:mm:ss" />
+						</td>
+						<td class="text-center d-none d-md-table-cell">${qnaList.qna_subject }</td>
+						<td class="text-center d-none d-md-table-cell" style="color: #ccc;">미답변</td>
+					</tr>
+					</c:forEach>
+				</tbody>
+			</table>
+<!-- 			<div style="display:flex; flex-direction:row; flex-wrap:wrap;"> -->
+<!-- 				<nav aria-label="Page navigation example" style="margin: 0 auto;"> -->
+<!-- 					<ul class="pagination"> -->
+<!-- 						<li class="page-item"><a class="page-link" href="?page=1" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>  -->
+<%-- 						<li class="page-item"><a class="page-link" href="?page=${pager.prev}"><span aria-hidden="true" style="font-size:0.6em;"><i class="bi bi-chevron-left"></i></span></a></li>		 --%>
+										
+<%-- 						<c:forEach var="page" items="${pager.list}"> --%>
+<%-- 						<li class="page-item"><a class="page-link" href="?page=${page}">${page}</a></li> --%>
+<%-- 						</c:forEach> --%>
+									
+<%-- 						<li class="page-item"><a class="page-link" href="?page=${pager.next}"><span aria-hidden="true" style="font-size:0.6em;"><i class="bi bi-chevron-right"></i></span></a></li> --%>
+<%-- 						<li class="page-item"><a class="page-link" aria-label="Next" href="?page=${pager.last}"><span aria-hidden="true">&raquo;</span></a></li> --%>
+<!-- 					</ul> -->
+<!-- 				</nav>		 -->
+<!-- 			</div> -->
+		</div>
+	</div>
+</div>				
 		</div>
 		
 		<div class="testimonial-text rounded mt-5">	

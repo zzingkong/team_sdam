@@ -99,33 +99,8 @@
           어떻게 오셨나요?
         </h3>
         <div class="row g-4 mb-5">
-          <div class="col-lg-4 wow fadeInUp pe-3" data-wow-delay="0.1s" style="cursor: pointer" onclick="location.href='${root }user/join_company';">
-            <div class="h-100 bg-light d-flex align-items-center p-5">
-              <div class="btn-lg-square bg-white flex-shrink-0">
-                <i class="fa fa-hospital-alt text-primary"></i>
-              </div>
-              <div class="ms-4">
-                <h5 class="mb-2"><span class="text-primary me-2">♥</span>기업</h5>
-                <p class="mb-2">
-                  보호소 또는 훈련소 등 단체회원은 사업자등록증 인증을 통해 기업 등록을 할 수 있습니다
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 wow fadeInUp px-2" data-wow-delay="0.3s" style="cursor: pointer" onclick="location.href='${root }user/join_therapist';">
-            <div class="h-100 bg-light d-flex align-items-center p-5">
-              <div class="btn-lg-square bg-white flex-shrink-0">
-                <i class="fa fa-handshake text-primary"></i>
-              </div>
-              <div class="ms-4">
-              	<h5 class="mb-2"><span class="text-primary me-2">♥</span>테라피스트</h5>
-                <p class="mb-2">
-                  기업에 소속되어 있거나 개인 활동을 하는 테라피스트는 자격증 인증을 통해 가입할 수 있습니다
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 wow fadeInUp ps-3" data-wow-delay="0.5s" style="cursor: pointer" onclick="location.href='${root }user/join_user';">
+        
+          <div class="col-lg-4 wow fadeInUp pe-2" data-wow-delay="0.1s" style="cursor: pointer" onclick="location.href='${root }user/join_user';">
             <div class="h-100 bg-light d-flex align-items-center p-5">
               <div class="btn-lg-square bg-white flex-shrink-0">
                 <i class="fa fa-user-circle text-primary"></i>
@@ -138,11 +113,39 @@
               </div>
             </div>
           </div>
+        
+          <div class="col-lg-4 wow fadeInUp ps-3" data-wow-delay="0.3s" style="cursor: pointer" onclick="location.href='${root }user/join_therapist';">
+            <div class="h-100 bg-light d-flex align-items-center p-5">
+              <div class="btn-lg-square bg-white flex-shrink-0">
+                <i class="fa fa-handshake text-primary"></i>
+              </div>
+              <div class="ms-4">
+              	<h5 class="mb-2"><span class="text-primary me-2">♥</span>테라피스트</h5>
+                <p class="mb-2">
+                  기업에 소속되어 있거나 개인 활동을 하는 테라피스트는 자격증 인증을 통해 가입할 수 있습니다
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div id="companyLogin" class="col-lg-4 wow fadeInUp ps-3" data-wow-delay="0.5s" style="cursor: pointer" onclick="location.href='${root }user/join_company';">
+            <div class="h-100 bg-light d-flex align-items-center p-5">
+              <div class="btn-lg-square bg-white flex-shrink-0">
+                <i class="fa fa-hospital-alt text-primary"></i>
+              </div>
+              <div class="ms-4">
+                <h5 class="mb-2"><span class="text-primary me-2">♥</span>기업</h5>
+                <p class="mb-2">
+                  보호소 또는 훈련소 등 단체회원은 사업자등록증 인증을 통해 기업 등록을 할 수 있습니다
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <!-- Join Select End -->
-
+    
    	<c:import url="/WEB-INF/views/include/bottom_info.jsp"></c:import>
 
     <!-- Back to Top -->
@@ -165,14 +168,13 @@
   </body>
 
 
+<script type="text/javascript">
+	$('#companyLogin').on('click', function(){
+		alert("가입을 희망하는 기업(훈련소, 보호소)은 기업 인증 절차가 필요합니다." + "\n" + "관리자의 이메일로 연락하여 상세한 가입 절차를 안내받기 바랍니다." +"\n\n"+ "※ 관리자 이메일: admin@sdamsdam.com");
+		location.href = "${root}user/join_select";
+	})
+</script>
+
 
 </body>
 </html>
-
-
-
-
-
-
-
-

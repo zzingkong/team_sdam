@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.co.greenapple.beans.BookBean;
 import kr.co.greenapple.beans.UserBean;
+import kr.co.greenapple.pager.Pager;
 import kr.co.greenapple.service.AdminService;
 import kr.co.greenapple.service.BookService;
 import kr.co.greenapple.service.UserService;
@@ -40,9 +41,9 @@ public class AdminController {
 	
 	//admin user List 출력
 	@GetMapping("/user")
-	public String getAdminUserList(UserBean userList, Model model) {
+	public String getAdminUserList(Pager userPager, Model model) {
 		
-		List<UserBean> userInfoList = adminService.getAdminUserList(userList);
+		List<UserBean> userInfoList = adminService.getAdminUserList(userPager);
 		model.addAttribute("adminUserList", userInfoList);
 		
 		return "admin/user";
@@ -51,8 +52,7 @@ public class AdminController {
 	
 	//admin user 삭제
 	@GetMapping("/userdelete")
-	public String AdmindeleteUser(@RequestParam("user_idx") int user_idx, Model model
-			) {
+	public String AdmindeleteUser(@RequestParam("user_idx") int user_idx, Model model) {
 		
 		adminService.AdmindeleteUser(user_idx);
 		model.addAttribute(user_idx);
@@ -63,9 +63,9 @@ public class AdminController {
 	
 	//admin 예약 List 출력
 	@GetMapping("/book")
-	public String getAdminUserBook(BookBean bookList, Model model) {
+	public String getAdminUserBook(Pager bookPager, Model model) {
 		
-		List<BookBean> userBookList = adminService.getAdminUserBook(bookList);
+		List<BookBean> userBookList = adminService.getAdminUserBook(bookPager);
 		model.addAttribute("userBookList", userBookList);
 		
 		return "admin/book";
